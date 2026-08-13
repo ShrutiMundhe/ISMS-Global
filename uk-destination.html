@@ -824,34 +824,75 @@ h4 { font-size: 1rem; }
 .dtu-logo-circle img { width: 50px; height: 50px; object-fit: contain; }
 
 .guide-table-responsive {
-    width: 100%;
-    overflow-x: auto;
-    margin: 1.5rem 0;
-    border-radius: 14px;
-    border: 1px solid #E2E8F0;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    width: 100% !important;
+    overflow: hidden !important;
+    overflow-x: auto !important;
+    margin: 2rem 0 !important;
+    border-radius: 16px !important;
+    border: 1px solid #E2E8F0 !important;
+    box-shadow: 0 8px 24px rgba(11, 34, 101, 0.06) !important;
+    background: #FFFFFF !important;
+    padding: 0 !important;
 }
+
 .guide-data-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #FFFFFF;
-    text-align: left;
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    background: #FFFFFF !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
-.guide-data-table th, .guide-data-table td {
-    padding: 14px 18px;
-    border-bottom: 1px solid #E2E8F0;
-    font-size: 14px;
+
+.guide-data-table thead,
+.guide-data-table thead tr {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
 }
+
 .guide-data-table th {
-    background: #0A1940;
-    color: #FFFFFF;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 12.5px;
-    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    font-size: 12.5px !important;
+    letter-spacing: 0.6px !important;
+    padding: 16px 20px !important;
+    border: none !important;
+    margin: 0 !important;
 }
-.guide-data-table tbody tr:nth-child(even) { background: #F8FAFC; }
-.guide-data-table tbody tr:hover { background: #F0F4FF; }
+
+.guide-data-table td {
+    padding: 16px 20px !important;
+    border-bottom: 1px solid #F1F5F9 !important;
+    font-size: 14px !important;
+    color: #334155 !important;
+    line-height: 1.5 !important;
+    vertical-align: middle !important;
+}
+
+.guide-data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.guide-data-table tbody tr:nth-child(even) {
+    background: #F8FAFC;
+}
+
+.guide-data-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.guide-data-table tbody tr:hover {
+    background: #EFF6FF;
+}
+
+.guide-data-table td strong {
+    color: #0F172A;
+    font-weight: 700;
+}
 
 .guide-tip-box {
     background: #EFF6FF;
@@ -888,10 +929,12 @@ h4 { font-size: 1rem; }
    ==== */
 .dfe-main-grid {
     display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 24px;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
     align-items: stretch;
     margin-top: 24px;
+    max-width: 100%;
+    width: 100%;
 }
 
 .dfe-accordion-list {
@@ -928,8 +971,21 @@ h4 { font-size: 1rem; }
 
 .dfe-q-left { display: flex; align-items: center; gap: 12px; }
 .dfe-q-badge {
-    width: 32px; height: 32px; border-radius: 50%; background: #EEF4FF; color: #2563EB;
-    font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    min-height: 32px;
+    border-radius: 50%;
+    background: #EEF4FF;
+    color: #2563EB;
+    font-size: 12px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
+    aspect-ratio: 1 / 1;
 }
 .dfe-faq-item.active .dfe-q-badge { background: #2563EB; color: #FFFFFF; }
 .dfe-q-text { font-size: 14px; font-weight: 800; color: #0A1940; }
@@ -944,10 +1000,10 @@ h4 { font-size: 1rem; }
     border-top: 1px dashed #EFF6FF;
     padding-top: 12px;
 }
-.dfe-faq-item.active .dfe-faq-answer { display: block; background: #F8FAFF; }
+.dfe-faq-item.active .dfe-faq-answer { display: block; background: transparent; }
 
 .dfe-questions-card {
-    background: linear-gradient(135deg, #EEF4FF 0%, #E0EAFD 100%);
+    background: transparent;
     border: 1px solid #BFDBFE;
     border-radius: 24px;
     padding: 28px;
@@ -961,12 +1017,14 @@ h4 { font-size: 1rem; }
 .dfe-girl-img {
     position: absolute;
     bottom: 0;
-    right: -10px;
-    height: 85%;
-    width: auto;
-    object-fit: contain;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
     pointer-events: none;
     z-index: 2;
+    display: none;
 }
 
 .dfe-card-content { position: relative; z-index: 5; max-width: 280px; }
@@ -982,6 +1040,43 @@ h4 { font-size: 1rem; }
 .dfe-action-icon { width: 34px; height: 34px; border-radius: 50%; background: #EEF4FF; color: #2563EB; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
 .dfe-action-info strong { display: block; font-size: 12px; font-weight: 800; color: #0A1940; }
 .dfe-action-info span { font-size: 10.5px; color: #64748B; }
+
+.dfe-confidential-box {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(11,34,101,0.03);
+}
+
+.dfe-conf-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #EEF4FF;
+    color: #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.dfe-conf-text strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    color: #0A1940 !important;
+}
+
+.dfe-conf-text p {
+    font-size: 10.5px;
+    color: #0A1940 !important;
+    margin: 2px 0 0 0;
+}
 
 /* ====
    PROFILE EVALUATION CONTACT FORM SECTION (MATCH DUBAI PAGE)
@@ -1606,7 +1701,96 @@ i.fa-solid.fa-star {
     .nav-dropdown.open .nav-dropdown-menu { display: block !important; }
   }
   </style>
-    <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    /* ============================================================
+       TABLE OVERRIDE FOR UK DESTINATION PAGE (AFTER RESPONSIVE.CSS)
+       ============================================================ */
+    div.guide-table-responsive,
+    .guide-table-responsive {
+        width: 100% !important;
+        overflow: hidden !important;
+        overflow-x: auto !important;
+        margin: 0 0 2rem 0 !important;
+        border-radius: 16px !important;
+        border: 1px solid #E2E8F0 !important;
+        box-shadow: 0 8px 24px rgba(11, 34, 101, 0.06) !important;
+        background: #FFFFFF !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .guide-table-responsive table,
+    table.guide-data-table,
+    .guide-data-table {
+        width: 100% !important;
+        min-width: 100% !important;
+        border-collapse: collapse !important;
+        border-spacing: 0 !important;
+        background: #FFFFFF !important;
+        text-align: left !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        table-layout: auto !important;
+    }
+
+    .guide-table-responsive thead,
+    .guide-table-responsive thead tr,
+    .guide-data-table thead,
+    .guide-data-table thead tr {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    .guide-table-responsive th,
+    .guide-table-responsive table th,
+    table.guide-data-table th,
+    .guide-data-table th {
+        background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
+        color: #FFFFFF !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        font-size: 12.5px !important;
+        letter-spacing: 0.6px !important;
+        padding: 16px 20px !important;
+        border: none !important;
+        margin: 0 !important;
+    }
+
+    .guide-table-responsive td,
+    .guide-table-responsive table td,
+    table.guide-data-table td,
+    .guide-data-table td {
+        padding: 16px 20px !important;
+        border-bottom: 1px solid #F1F5F9 !important;
+        font-size: 14px !important;
+        color: #334155 !important;
+        line-height: 1.5 !important;
+        vertical-align: middle !important;
+    }
+
+    .guide-table-responsive tbody tr:last-child td,
+    .guide-data-table tbody tr:last-child td {
+        border-bottom: none !important;
+    }
+
+    .guide-table-responsive tbody tr:nth-child(even),
+    .guide-data-table tbody tr:nth-child(even) {
+        background: #F8FAFC !important;
+    }
+
+    .guide-table-responsive tbody tr:hover,
+    .guide-data-table tbody tr:hover {
+        background: #EFF6FF !important;
+    }
+
+    .guide-table-responsive td strong,
+    .guide-data-table td strong {
+        color: #0F172A !important;
+        font-weight: 700 !important;
+    }
+    </style>
 </head>
 <body>
 
@@ -1998,7 +2182,7 @@ i.fa-solid.fa-star {
                 </div>
 
                 <!-- Tuition Table -->
-                <h3 class="mt-5 mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-graduation-cap text-blue"></i> Average Tuition Fees in the UK</h3>
+                <h3 class="mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-graduation-cap text-blue"></i> Average Tuition Fees in the UK</h3>
                 <div class="guide-table-responsive">
                     <table class="guide-data-table">
                         <thead>
@@ -2029,7 +2213,7 @@ i.fa-solid.fa-star {
                 </div>
 
                 <!-- Living Costs Table -->
-                <h3 class="mt-5 mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-house-user text-blue"></i> Monthly Living Costs Breakdown</h3>
+                <h3 class="mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-house-user text-blue"></i> Monthly Living Costs Breakdown</h3>
                 <div class="guide-table-responsive">
                     <table class="guide-data-table">
                         <thead>
@@ -2070,7 +2254,7 @@ i.fa-solid.fa-star {
                 </div>
 
                 <!-- Part Time Jobs Table -->
-                <h3 class="mt-5 mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-coins text-blue"></i> Part-Time Earnings &amp; Pay Rates</h3>
+                <h3 class="mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-coins text-blue"></i> Part-Time Earnings &amp; Pay Rates</h3>
                 <div class="guide-table-responsive">
                     <table class="guide-data-table">
                         <thead>
@@ -2168,7 +2352,7 @@ i.fa-solid.fa-star {
                 </div>
 
                 <!-- Visa Overview Table -->
-                <h3 class="mt-5 mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-circle-info text-blue"></i> Student Visa Requirements Summary</h3>
+                <h3 class="mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-circle-info text-blue"></i> Student Visa Requirements Summary</h3>
                 <div class="guide-table-responsive">
                     <table class="guide-data-table">
                         <thead>
@@ -2208,7 +2392,7 @@ i.fa-solid.fa-star {
                 </div>
 
                 <!-- Intakes Grid -->
-                <h3 class="mt-5 mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-calendar-days text-blue"></i> Academic Intakes in the UK</h3>
+                <h3 class="mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-calendar-days text-blue"></i> Academic Intakes in the UK</h3>
                 <div class="intake-cards-grid">
                     <div class="intake-card">
                         <div class="intake-season">Autumn / Fall Intake</div>
@@ -2230,7 +2414,7 @@ i.fa-solid.fa-star {
                 </div>
 
                 <!-- Scholarships Table -->
-                <h3 class="mt-5 mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-award text-blue"></i> Popular Scholarships for Indian Students</h3>
+                <h3 class="mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-award text-blue"></i> Popular Scholarships for Indian Students</h3>
                 <div class="guide-table-responsive">
                     <table class="guide-data-table">
                         <thead>
@@ -2308,7 +2492,7 @@ i.fa-solid.fa-star {
                 </div>
 
                 <!-- Document Checklist Table -->
-                <h3 class="mt-5 mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-folder-open text-blue"></i> Complete Application Document Checklist</h3>
+                <h3 class="mb-3 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-folder-open text-blue"></i> Complete Application Document Checklist</h3>
                 <div class="guide-table-responsive">
                     <table class="guide-data-table">
                         <thead>
@@ -2347,7 +2531,7 @@ i.fa-solid.fa-star {
         <!-- ====
              SECTION 11 & 12: FAQS ACCORDION & STILL HAVE QUESTIONS BOX
              ==== -->
-        <section class="section bg-soft" id="faqs">
+        <section class="section" id="faqs">
             <div class="container">
                 <div class="text-center" style="max-width: 850px; margin: 0 auto 48px auto; text-align: center;" data-reveal>
                     <div style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #DBEAFE; background: #FFFFFF; color: #2563EB; border-radius: 999px; padding: 6px 22px; font-size: 13px; font-weight: 700; margin-bottom: 18px; box-shadow: 0 2px 10px rgba(37,99,235,0.06);">
@@ -2418,7 +2602,7 @@ i.fa-solid.fa-star {
 
                     <!-- Right Still Have Questions Box (Match Dubai Cutout Theme) -->
                     <div class="dfe-questions-card">
-                        <img src="assets/graduate.png" alt="Student Counsellor" class="dfe-girl-img">
+                        <img src="assets/Scene.png" alt="Student Counsellor" class="dfe-girl-img">
                         <div class="dfe-card-content">
                             <div class="dfe-card-header">
                                 <h3>Still Have Questions?</h3>

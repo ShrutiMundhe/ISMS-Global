@@ -5404,6 +5404,196 @@ body .blog-exact-section {
 
 /* Remove box styling from FAQ section */
 .faq-exact-section {
+/* =========================================================
+   FINAL WEBSITE ALIGNMENT
+   ========================================================= */
+
+:root {
+    --site-container-width: 1320px;
+    --site-container-padding: 32px;
+}
+
+
+/* ALL MAIN CONTAINERS */
+.container,
+.header-inner,
+.content-container,
+.main-container {
+    width: 100% !important;
+    max-width: var(--site-container-width) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: var(--site-container-padding) !important;
+    padding-right: var(--site-container-padding) !important;
+    box-sizing: border-box !important;
+}
+
+
+/* HERO */
+.hero,
+.hero-section {
+    padding-right: 0 !important;
+}
+
+.hero-inner {
+    padding-right: 0 !important;
+}
+
+
+/* WHY CHOOSE */
+#why-choose .why-trust-card-block {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+#why-choose .why-trust-grid {
+    width: 100% !important;
+    max-width: none !important;
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    gap: 16px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+/* WHY CHOOSE — TOP 4 */
+#why-choose .why-trust-item:nth-child(1),
+#why-choose .why-trust-item:nth-child(2),
+#why-choose .why-trust-item:nth-child(3),
+#why-choose .why-trust-item:nth-child(4) {
+    grid-column: span 3 !important;
+    width: 100% !important;
+}
+
+
+/* WHY CHOOSE — BOTTOM 3 */
+#why-choose .why-trust-item:nth-child(5),
+#why-choose .why-trust-item:nth-child(6),
+#why-choose .why-trust-item:nth-child(7) {
+    grid-column: span 4 !important;
+    width: 100% !important;
+}
+
+
+/* 6 STEP PROCESS */
+.process-card-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+/* TABLET */
+@media (max-width: 768px) {
+    :root {
+        --site-container-padding: 20px;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 480px) {
+    :root {
+        --site-container-padding: 16px;
+    }
+}
+
+/* =========================================================================================
+   BLOG SECTION — FULL WIDTH LAYOUT WITHOUT WHITE CONTAINER
+   ========================================================================================= */
+/* Make blog section container match default site container width (1480px) */
+/*.blog-exact-section .container {*/
+/*  max-width: 1480px !important;*/
+/*  width: 100% !important;*/
+/*  margin: 0 auto !important;*/
+/*  padding-left: 24px !important;*/
+/*  padding-right: 24px !important;*/
+/*}*/
+.blog-exact-section .container {
+    max-width: none !important;
+    width: calc(100% + 48px) !important;
+    margin-left: -24px !important;
+    margin-right: -24px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* Blog grid inherits container width naturally */
+.blog-layout {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Section header and chip row also match container */
+.blog-exact-section .section-head,
+.blog-exact-section .chip-row {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* =========================================================================================
+   BLOG SECTION — REMOVE ALL WHITE BACKGROUNDS AND CONTAINERS
+   ========================================================================================= */
+/* Remove any wrapper or container backgrounds */
+.blog-exact-section,
+.blog-exact-section .container,
+.blog-exact-section .section-head,
+.blog-exact-section .chip-row,
+.blog-exact-section > div,
+.blog-exact-section *:not(.featured-blog-card):not(.blog-card):not(.btn):not(.chip) {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Remove box styling from blog section */
+.blog-exact-section {
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+/* If there's a white wrapper div, make it transparent */
+.blog-exact-section::before,
+.blog-exact-section::after {
+  display: none !important;
+}
+
+/* Ensure section background is inherited from body */
+body .blog-exact-section {
+  background: transparent !important;
+}
+
+/* Remove any parent container backgrounds */
+.section.blog-exact-section {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* =========================================================================================
+   FAQ SECTION — REMOVE ALL WHITE BACKGROUNDS AND CONTAINERS
+   ========================================================================================= */
+/* Remove any wrapper or container backgrounds */
+.faq-exact-section,
+.faq-exact-section .container,
+.faq-exact-section .section-head,
+.faq-exact-section > div {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Remove box styling from FAQ section */
+.faq-exact-section {
   box-shadow: none !important;
   border: none !important;
   border-radius: 0 !important;
@@ -5415,19 +5605,23 @@ body .blog-exact-section {
   display: none !important;
 }
 
-/* Make FAQ section container match default site container width (1480px) */
+/* Make FAQ section container match blog section width exactly */
 .faq-exact-section .container {
-  max-width: 1480px !important;
-  width: 100% !important;
-  margin: 0 auto !important;
+  max-width: none !important;
+  width: calc(100% + 48px) !important;
+  margin-left: -24px !important;
+  margin-right: -24px !important;
   padding-left: 24px !important;
   padding-right: 24px !important;
+  box-sizing: border-box !important;
 }
 
 /* FAQ layout and content inherit container width naturally */
 .faq-exact-section .section-head,
+.faq-exact-grid,
 .faq-layout,
 .faq-grid {
+  width: 100% !important;
   max-width: none !important;
   margin-left: 0 !important;
   margin-right: 0 !important;

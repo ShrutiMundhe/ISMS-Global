@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -592,6 +592,130 @@ i.fa-solid.fa-star {
     font-weight: 600 !important;
     letter-spacing: 0.02em !important;
 }
+
+/* ===== FIX: Hero Badge Floating Card - Cap Icon Properly Contained ===== */
+.uni-hero-badge-floating {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  background: #FFFFFF !important;
+  padding: 14px 18px !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 32px rgba(10, 18, 51, 0.12) !important;
+  border: 1px solid #E8EFFC !important;
+  z-index: 4 !important;
+  flex-shrink: 0 !important;
+  width: fit-content !important;
+}
+
+.uni-badge-icon {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px !important;
+  min-height: 52px !important;
+  background-color: #EEF2FF !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  overflow: hidden !important;
+}
+
+.uni-badge-icon svg {
+  width: 36px !important;
+  height: 36px !important;
+  display: block !important;
+}
+
+.uni-badge-text {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #0A1233 !important;
+  line-height: 1.45 !important;
+  white-space: nowrap !important;
+}
+/* ===== FIX: University Logo Overlay - Small Rounded Square Icon (bottom-left of card image) ===== */
+.uni-badge-logo-overlay {
+  position: absolute !important;
+  bottom: 10px !important;
+  left: 12px !important;
+  top: auto !important;
+  right: auto !important;
+  width: 56px !important;
+  height: 56px !important;
+  min-width: 56px !important;
+  min-height: 56px !important;
+  max-width: 56px !important;
+  max-height: 56px !important;
+  border-radius: 14px !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18) !important;
+  border: 1.5px solid rgba(226, 232, 240, 0.8) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 6px !important;
+  z-index: 3 !important;
+  box-sizing: border-box !important;
+}
+
+.uni-badge-logo-overlay img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+/* ===== Desktop Horizontal Padding — Left & Right Breathing Room ===== */
+@media (min-width: 1025px) {
+  /* Increase container padding for wider screens */
+  .container {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+  }
+
+  /* Sections not wrapped in .container */
+  .uni-main-layout {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+  }
+
+  .uni-6stats-bar {
+    margin-left: 48px !important;
+    margin-right: 48px !important;
+  }
+
+  .uni-consultation-banner {
+    margin-left: 48px !important;
+    margin-right: 48px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 64px !important;
+    padding-right: 64px !important;
+  }
+
+  .uni-main-layout {
+    padding-left: 64px !important;
+    padding-right: 64px !important;
+  }
+
+  .uni-6stats-bar {
+    margin-left: 64px !important;
+    margin-right: 64px !important;
+  }
+
+  .uni-consultation-banner {
+    margin-left: 64px !important;
+    margin-right: 64px !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -875,7 +999,7 @@ i.fa-solid.fa-star {
             <!-- Card 1: Oxford -->
             <div class="uni-card-item" data-name="University of Oxford" data-dest="United Kingdom" data-level="all" data-qs="1">
               <div class="uni-card-img-wrap">
-                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                <div class="uni-badge-logo-overlay" style="background: #fff;">
                   <img src="assets/oxford.png" alt="Oxford Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <img src="assets/img_photo-1541829070764-84a7d30dd3f3.jpg" alt="University of Oxford Campus" class="campus-photo">
@@ -898,7 +1022,7 @@ i.fa-solid.fa-star {
             <!-- Card 2: Cambridge -->
             <div class="uni-card-item" data-name="University of Cambridge" data-dest="United Kingdom" data-level="all" data-qs="2">
               <div class="uni-card-img-wrap">
-                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                <div class="uni-badge-logo-overlay" style="background: #fff;">
                   <img src="assets/Cambridge.png" alt="Cambridge Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <img src="assets/img_photo-1513635269975-59663e0ac1ad.jpg" alt="University of Cambridge Campus" class="campus-photo">
@@ -921,7 +1045,7 @@ i.fa-solid.fa-star {
             <!-- Card 3: MIT -->
             <div class="uni-card-item" data-name="Massachusetts Institute of Technology (MIT)" data-dest="United States" data-level="all" data-qs="1">
               <div class="uni-card-img-wrap">
-                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                <div class="uni-badge-logo-overlay" style="background: #fff;">
                   <img src="assets/mit.png" alt="MIT Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <img src="assets/img_photo-1509062522246-3755977927d7.jpg" alt="MIT Campus" class="campus-photo">
@@ -944,7 +1068,7 @@ i.fa-solid.fa-star {
             <!-- Card 4: Stanford -->
             <div class="uni-card-item" data-name="Stanford University" data-dest="United States" data-level="all" data-qs="6">
               <div class="uni-card-img-wrap">
-                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                <div class="uni-badge-logo-overlay" style="background: #fff;">
                   <img src="assets/Stanford.png" alt="Stanford Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <img src="assets/img_photo-1562774053-701939374585.jpg" alt="Stanford Campus" class="campus-photo">
@@ -967,7 +1091,7 @@ i.fa-solid.fa-star {
             <!-- Card 5: Melbourne -->
             <div class="uni-card-item" data-name="The University of Melbourne" data-dest="Australia" data-level="all" data-qs="13">
               <div class="uni-card-img-wrap">
-                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                <div class="uni-badge-logo-overlay" style="background: #fff;">
                   <img src="assets/Melbourne.png" alt="Melbourne Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <img src="assets/img_photo-1523240795612-9a054b0db644.jpg" alt="The University of Melbourne Campus" class="campus-photo">
@@ -990,7 +1114,7 @@ i.fa-solid.fa-star {
             <!-- Card 6: Toronto -->
             <div class="uni-card-item" data-name="University of Toronto" data-dest="Canada" data-level="all" data-qs="21">
               <div class="uni-card-img-wrap">
-                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                <div class="uni-badge-logo-overlay" style="background: #fff;">
                   <img src="assets/Toronto.png" alt="Toronto Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <img src="assets/img_photo-1564981797816-1043664bf78d.jpg" alt="University of Toronto Campus" class="campus-photo">
@@ -1013,7 +1137,7 @@ i.fa-solid.fa-star {
             <!-- Card 7: TUM Munich -->
             <div class="uni-card-item" data-name="Technical University of Munich" data-dest="Germany" data-level="all" data-qs="28">
               <div class="uni-card-img-wrap">
-                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                <div class="uni-badge-logo-overlay" style="background: #fff;">
                   <img src="assets/TUM.png" alt="TUM Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <img src="assets/img_photo-1592280771190-3e2e4d571952.jpg" alt="Technical University of Munich Campus" class="campus-photo">
@@ -1036,7 +1160,7 @@ i.fa-solid.fa-star {
             <!-- Card 8: Sydney -->
             <div class="uni-card-item" data-name="The University of Sydney" data-dest="Australia" data-level="all" data-qs="18">
               <div class="uni-card-img-wrap">
-                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                <div class="uni-badge-logo-overlay" style="background: #fff;">
                   <img src="assets/Sydney.png" alt="Sydney Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <img src="assets/img_photo-1544717305-2782549b5136.jpg" alt="The University of Sydney Campus" class="campus-photo">
@@ -1090,7 +1214,7 @@ i.fa-solid.fa-star {
               <path d="M4 24H28V26H4V24Z" stroke="#2563EB" stroke-width="2" stroke-linejoin="round"/>
             </svg>
           </div>
-          <strong>500+</strong>
+          <strong>30+</strong>
           <span>Partner Universities</span>
         </div>
 
@@ -1102,7 +1226,7 @@ i.fa-solid.fa-star {
               <path d="M6 16H26M8.5 10.5H23.5M8.5 21.5H23.5" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </div>
-          <strong>20+</strong>
+          <strong>10+</strong>
           <span>Study Destinations</span>
         </div>
 
@@ -1113,7 +1237,7 @@ i.fa-solid.fa-star {
               <path d="M20 13H24M20 17H24" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </div>
-          <strong>1000+</strong>
+          <strong>100+</strong>
           <span>Courses Available</span>
         </div>
 
@@ -1128,7 +1252,7 @@ i.fa-solid.fa-star {
               <path d="M27.5 23C27.5 20.5 25.5 19 23 19" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </div>
-          <strong>10,000+</strong>
+          <strong>2,000+</strong>
           <span>Students Guided</span>
         </div>
 
@@ -1139,7 +1263,7 @@ i.fa-solid.fa-star {
               <path d="M12 16L15 19L20 13" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <strong>95%+</strong>
+          <strong>100%</strong>
           <span>Visa Success Rate</span>
         </div>
 
@@ -1152,7 +1276,7 @@ i.fa-solid.fa-star {
               <path d="M16 17.5L16.8 19.2L18.6 19.4L17.3 20.7L17.6 22.5L16 21.6L14.4 22.5L14.7 20.7L13.4 19.4L15.2 19.2L16 17.5Z" fill="#2563EB"/>
             </svg>
           </div>
-          <strong>18+</strong>
+          <strong>19+</strong>
           <span>Years of Excellence</span>
         </div>
       </div>

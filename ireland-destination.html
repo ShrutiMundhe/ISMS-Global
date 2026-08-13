@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study in Ireland for Indian Students 2026 | Top Universities, Fees & Visa | ISMS Global</title>
-    <meta name="description" content="Complete guide to study in Ireland &mdash; best universities, course fees, scholarships, Student Visa requirements & free counselling from ISMS Global Education.">
-    <meta name="keywords" content="Study in Ireland, Study abroad Ireland, why study in Ireland, courses in Ireland for Indian students, part-time job in Ireland, cost of living in Ireland for Indian students">
+    <meta name="description" content="Complete guide to study in Ireland &mdash; best universities, course fees, scholarships, Student Visa requirements & free counselling from ISMS Global Education.">    <meta name="keywords" content="Study in Ireland, Study abroad Ireland, why study in Ireland, courses in Ireland for Indian students, part-time job in Ireland, cost of living in Ireland for Indian students">
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1962,9 +1960,9 @@ height: 100%;
 /* 10 Feature Cards Grid (2 Rows x 5 Columns) - Upward Overlap */
 .dtr-10cards-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    margin-top: 32px;
+    margin-top: -125px;
     margin-bottom: 30px;
     position: relative;
     z-index: 10;
@@ -2234,12 +2232,12 @@ height: 100%;
 }
 
 .dsh-panoramic-img {
-    width: 100% !important;
-    height: 180px !important;
-    display: block !important;
-    object-fit: cover !important;
-    object-position: bottom center !important;
-    opacity: 0.35 !important;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: bottom center;
+    opacity: 0.95;
 }
 
 /* Bottom Banner */
@@ -2686,11 +2684,11 @@ height: 100%;
     mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 1) 40%);
 }
 
-/* 6-Column Course Grid */
+/* 3-Column Course Grid (9 cards = 3 full-width rows) */
 .dpc-6cards-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
     margin-bottom: 30px;
 }
 
@@ -2698,13 +2696,15 @@ height: 100%;
     background: #FFFFFF;
     border: 1px solid rgba(226, 232, 240, 0.9);
     border-radius: 20px;
-    padding: 30px 16px 24px;
+    padding: 28px 20px 24px;
     text-align: center;
-    box-shadow: 0 10px 28px rgba(11, 34, 101, 0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 8px 24px rgba(11, 34, 101, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .dpc-card:hover {
@@ -2807,15 +2807,10 @@ height: 100%;
     transform: translateY(-2px);
 }
 
-@media (max-width: 1440px) {
-    .dpc-6cards-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
 @media (max-width: 1024px) {
     .dpc-6cards-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
     }
     .dpc-header-split {
         grid-template-columns: 1fr;
@@ -2826,9 +2821,17 @@ height: 100%;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .dpc-6cards-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dpc-6cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 }
 
@@ -3011,15 +3014,16 @@ height: 100%;
     position: relative;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 14px;
+    gap: 16px;
+    margin-top: 24px;
     margin-bottom: 40px;
 }
 
 .dcs-step-connector-line {
     position: absolute;
-    top: 36px;
-    left: 7%;
-    right: 7%;
+    top: 52px;
+    left: 5%;
+    right: 5%;
     height: 2px;
     border-top: 2px dashed #93C5FD;
     z-index: 1;
@@ -3028,12 +3032,12 @@ height: 100%;
 .dcs-step-card {
     position: relative;
     background: #FFFFFF;
-    border: 1px solid rgba(226, 232, 240, 0.9);
-    border-radius: 18px;
-    padding: 24px 12px 20px;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 26px 14px 22px;
     text-align: center;
     box-shadow: 0 8px 24px rgba(11, 34, 101, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3042,17 +3046,17 @@ height: 100%;
 
 .dcs-step-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 36px rgba(11, 34, 101, 0.12);
+    border-color: #2563EB;
+    box-shadow: 0 16px 36px rgba(37, 99, 235, 0.12);
 }
 
-.dcs-step-icon-wrap {
-    position: relative;
-    margin-bottom: 16px;
-}
-
+.dcs-card-icon,
 .dcs-step-icon {
+    position: relative;
     width: 60px;
     height: 60px;
+    min-width: 60px;
+    min-height: 60px;
     border-radius: 50%;
     background: #EFF6FF;
     border: 1px solid #BFDBFE;
@@ -3061,40 +3065,40 @@ height: 100%;
     align-items: center;
     justify-content: center;
     font-size: 24px;
+    margin: 4px auto 16px auto;
     box-shadow: 0 6px 16px rgba(37, 99, 235, 0.1);
+    z-index: 3;
 }
 
 .dcs-step-num {
     position: absolute;
-    top: 50%;
-    right: -12px;
-    transform: translateY(-50%);
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
     background: #1D4ED8;
     color: #FFFFFF;
     font-size: 11px;
     font-weight: 800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 3px 12px;
+    border-radius: 999px;
     border: 2px solid #FFFFFF;
-    box-shadow: 0 4px 8px rgba(29, 78, 216, 0.3);
+    box-shadow: 0 4px 10px rgba(29, 78, 216, 0.3);
+    z-index: 4;
+    white-space: nowrap;
 }
 
 .dcs-step-card h3 {
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: 800;
     color: #0A1940;
     margin-bottom: 8px;
-    line-height: 1.3;
+    line-height: 1.35;
 }
 
 .dcs-step-card p {
-    font-size: 11.5px;
+    font-size: 12px;
     color: #64748B;
-    line-height: 1.45;
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -3169,9 +3173,10 @@ height: 100%;
     color: #2563EB;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1400px) {
     .dcs-7steps-grid {
         grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
     }
     .dcs-step-connector-line { display: none; }
 }
@@ -3179,6 +3184,7 @@ height: 100%;
 @media (max-width: 1024px) {
     .dcs-7steps-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
     }
     .dcs-header-split {
         grid-template-columns: 1fr;
@@ -3189,9 +3195,17 @@ height: 100%;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .dcs-7steps-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dcs-7steps-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 }
 
@@ -10198,7 +10212,7 @@ select.dms-input {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 22px;
-    margin-top: 32px;
+    margin-top: -120px;
     position: relative;
     z-index: 10;
 }
@@ -10409,97 +10423,24 @@ select.dms-input {
 
 /* Flex alternative box for IELTS */
 .germany-alt-box {
-    background: linear-gradient(135deg, #F0F5FF 0%, #EEF2FF 100%);
-    border: 1px solid #C7D7FA;
-    border-left: 5px solid #0D47D8;
-    border-radius: 16px;
-    padding: 32px 36px;
-    margin-top: 28px;
-    box-shadow: 0 6px 28px rgba(13,71,216,0.07);
-    position: relative;
-    overflow: hidden;
-}
-.germany-alt-box::before {
-    content: '';
-    position: absolute;
-    top: -30px;
-    right: -30px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: rgba(13,71,216,0.05);
-    pointer-events: none;
+    background: linear-gradient(135deg, var(--light-blue) 0%, #E5EDFF 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 25px;
 }
 .germany-alt-box h4 {
-    color: #0A1233;
-    font-size: 18px;
-    font-weight: 800;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.germany-alt-box h4 i {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #0D47D8, #3B82F6);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
-}
-.germany-alt-box > p {
-    color: #475569;
-    font-size: 14.5px;
-    margin-bottom: 20px;
-    margin-left: 46px;
+    color: var(--navy);
+    margin-bottom: 12px;
 }
 .germany-alt-box ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    margin-left: 20px;
+    margin-top: 8px;
 }
 .germany-alt-box li {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    background: #fff;
-    border: 1px solid #E0EAFF;
-    border-radius: 12px;
-    padding: 14px 18px;
-    font-size: 14px;
-    color: #334155;
-    box-shadow: 0 2px 8px rgba(13,71,216,0.04);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-.germany-alt-box li:hover {
-    box-shadow: 0 6px 20px rgba(13,71,216,0.10);
-    transform: translateY(-1px);
-}
-.germany-alt-box li::before {
-    content: '✓';
-    flex-shrink: 0;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #0D47D8, #3B82F6);
-    color: #fff;
-    font-size: 13px;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1px;
-}
-.germany-alt-box li strong {
-    color: #0D47D8;
-    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--body-gray);
 }
 
 /* Responsive Grid layouts for student life section */
@@ -10532,7 +10473,7 @@ select.dms-input {
    CRITICAL OVERLAP RESPONSIVE FIXES (PREVENT CARDS GOING INTO TEXT FROM ABOVE)
    ========================================================================= */
 .dtr-10cards-grid {
-    margin-top:  32px !important;
+    margin-top: -50px !important;
 }
 
 @media (max-width: 1024px) {
@@ -10552,457 +10493,268 @@ select.dms-input {
         margin-top: 25px !important;
     }
 }
-    
-/* 4-COLUMN REASONS CARDS (MATCH INDEX PAGE DESIGN) */
-.reasons-4col-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 36px;
-}
 
-@media (max-width: 1200px) {
-    .reasons-4col-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 600px) {
-    .reasons-4col-grid { grid-template-columns: 1fr; }
-}
-
-.reasons-card-exact {
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    border-radius: 16px;
-    padding: 24px 20px;
-    position: relative;
-    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.reasons-card-exact:hover {
-    border-color: #2563EB;
-    box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
-    transform: translateY(-4px);
-}
-
-.reasons-card-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-    padding-right: 24px;
-}
-
-.reasons-card-icon {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: #EEF4FF;
-    color: #2563EB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-}
-
-.reasons-card-exact h3 {
-    font-size: 14.5px;
-    font-weight: 800;
-    color: #0F172A;
-    margin: 0;
-    line-height: 1.35;
-}
-
-.reasons-card-num {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #2563EB;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
-}
-
-.reasons-card-exact p {
-    font-size: 12.8px;
-    color: #64748B;
-    line-height: 1.55;
-    margin: 0;
-}
-
-
-.dtm-rating {
-    color: #FFB800 !important;
-    font-size: 16px !important;
-    margin-bottom: 14px !important;
+/* ==========================================================================
+   CENTERED TITLES, SUBTITLES, AND SUB-SUBTITLES
+   ========================================================================= */
+.text-center-header {
+    text-align: center !important;
+    max-width: 860px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     display: flex !important;
-    justify-content: center !important;
-    gap: 4px !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
-.dtm-rating i {
-    color: #FFB800 !important;
+.text-center-header .badge-pill {
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
+.text-center-header .dh-title-line {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
 
-/* WHY CHOOSE ISMS GLOBAL DTP SECTION COMPLETE CSS FIX */
+.text-center-header h2 {
+    text-align: center !important;
+}
+
+.text-center-header p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.text-center-sub {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 35px !important;
+    margin-bottom: 18px !important;
+}
+
+/* ==========================================================================
+   SEAMLESS SOFT-MERGED SECTION BACKGROUND GRADIENTS
+   ========================================================================= */
+.dubai-main-hero-section {
+    background: linear-gradient(180deg, #F0F6FF 0%, #E2EDFF 100%) !important;
+}
+
+.dubai-hero-section {
+    background: linear-gradient(180deg, #E2EDFF 0%, #F4F8FF 50%, #FFFFFF 100%) !important;
+}
+
+.dubai-top-reasons-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 50%, #EFF6FF 100%) !important;
+}
+
+.dubai-highlights-section {
+    background: linear-gradient(180deg, #EFF6FF 0%, #F8FAFC 50%, #FFFFFF 100%) !important;
+}
+
+.dubai-top-unis-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 50%, #EFF6FF 100%) !important;
+}
+
+.dubai-popular-courses-section {
+    background: linear-gradient(180deg, #EFF6FF 0%, #F8FAFC 50%, #FFFFFF 100%) !important;
+}
+
+#cost-of-studying {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 50%, #EFF6FF 100%) !important;
+    padding: 70px 0 80px !important;
+}
+
+.dubai-complete-support-section {
+    background: linear-gradient(180deg, #EFF6FF 0%, #F8FAFC 50%, #FFFFFF 100%) !important;
+}
+
+#scholarships {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 50%, #EFF6FF 100%) !important;
+    padding: 70px 0 80px !important;
+}
+
+.dubai-visa-section {
+    background: linear-gradient(180deg, #EFF6FF 0%, #F8FAFC 50%, #FFFFFF 100%) !important;
+}
+
+#admission-requirements {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 50%, #EFF6FF 100%) !important;
+    padding: 70px 0 80px !important;
+}
+
+.dubai-student-life-section {
+    background: linear-gradient(180deg, #EFF6FF 0%, #F8FAFC 50%, #FFFFFF 100%) !important;
+}
+
+.dubai-testimonials-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 50%, #EFF6FF 100%) !important;
+}
+
 .dtp-section {
-    position: relative;
-    padding: 70px 0;
-    background: #FFFFFF;
+    background: linear-gradient(180deg, #EFF6FF 0%, #F8FAFC 50%, #FFFFFF 100%) !important;
 }
 
-.dtp-top-grid {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 32px;
-    align-items: stretch;
+.dfc-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 50%, #EFF6FF 100%) !important;
 }
-
-.dtp-left-content {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 28px;
-    align-items: start;
-}
-
-.dtp-title {
-    font-family: 'Inter', sans-serif !important;
-    font-size: 36px !important;
-    font-weight: 800 !important;
-    line-height: 1.2 !important;
-    color: #0F172A !important;
-    margin-bottom: 12px !important;
-    letter-spacing: -0.01em !important;
-}
-
-.dtp-title-blue {
-    color: #2563EB !important;
-}
-
-.dtp-subtext {
-    font-size: 14px;
-    color: #64748B;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-.dtp-6cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
-
-.dtp-feat-card {
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    border-radius: 16px;
-    padding: 22px 16px;
-    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.dtp-feat-card:hover {
-    border-color: #2563EB;
-    box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
-    transform: translateY(-4px);
-}
-
-.dtp-feat-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: #EFF6FF;
-    color: #2563EB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    margin-bottom: 14px;
-    flex-shrink: 0;
-}
-
-.dtp-feat-card h4 {
-    font-size: 14.5px;
-    font-weight: 800;
-    color: #0F172A;
-    margin: 0 0 6px 0;
-    line-height: 1.35;
-}
-
-.dtp-feat-card p {
-    font-size: 12.5px;
-    color: #64748B;
-    line-height: 1.5;
-    margin: 0;
-}
-
-.dtp-right-blue-card {
-    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%);
-    border-radius: 20px;
-    padding: 32px 24px;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 16px 36px rgba(29, 78, 216, 0.22);
-    position: relative;
-}
-
-.dtp-blue-text-box h3 {
-    font-size: 22px;
-    font-weight: 800;
-    color: #FFFFFF;
-    margin-bottom: 10px;
-    line-height: 1.25;
-}
-
-.dtp-blue-text-box p {
-    font-size: 13.5px;
-    color: #BFDBFE;
-    line-height: 1.55;
-    margin-bottom: 22px;
-}
-
-.dtp-blue-btn {
-    background: #F59E0B;
-    color: #0A1940;
-    font-size: 14px;
-    font-weight: 800;
-    padding: 12px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.3);
-    transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.dtp-blue-btn:hover {
-    background: #D97706;
-    transform: translateY(-2px);
-    color: #FFFFFF;
-}
-
-.dtp-cta-note {
-    display: block;
-    font-size: 11px;
-    color: #93C5FD;
-    margin-top: 10px;
-    text-align: center;
-}
-
-@media (max-width: 1200px) {
-    .dtp-top-grid { grid-template-columns: 1fr; }
-    .dtp-left-content { grid-template-columns: 1fr; }
-    .dtp-6cards-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 600px) {
-    .dtp-6cards-grid { grid-template-columns: 1fr; }
-}
-
-
-/* UNIVERSAL BADGE PILL HORIZONTAL CENTERING */
-.badge-pill,
-[class*="pill-badge"],
-[class*="-badge"] {
-    display: flex !important;
-    width: fit-content !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-bottom: 16px !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-}
-
-/* TESTIMONIALS CENTERING & GOLDEN STARS */
-.dtm-4cards-grid,
-.dtm-grid,
-.testimonials-grid,
-.dtm-cards-row {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: stretch !important;
-    flex-wrap: wrap !important;
-    gap: 24px !important;
-    max-width: 920px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.dtm-card,
-.testimonial-card {
-    flex: 1 1 360px !important;
-    max-width: 420px !important;
-    min-width: 280px !important;
-}
-
-.dtm-rating,
-.testimonial-rating,
-.stars,
-.star-rating {
-    color: #FFB800 !important;
-}
-
-.dtm-rating i,
-.testimonial-rating i,
-.stars i,
-.star-rating i,
-.fa-star {
-    color: #FFB800 !important;
-}
-
-/* DTP SECTION LEFT ALIGNMENT FOR TWO-COLUMN HEADER */
-.dtp-header-box {
-    text-align: left !important;
-    align-items: flex-start !important;
-}
-
-.dtp-pill-badge,
-.dtp-header-box .dtp-pill-badge {
-    margin-left: 0 !important;
-    margin-right: auto !important;
-    justify-content: flex-start !important;
-    display: inline-flex !important;
-    align-self: flex-start !important;
-}
-
-.dtp-title,
-.dtp-header-box .dtp-title {
-    text-align: left !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-}
-
-.dtp-subtext,
-.dtp-header-box .dtp-subtext {
-    text-align: left !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-}
-
-/* ENFORCE GOLDEN STARS FOR ALL TESTIMONIAL RATINGS */
-.dtm-rating,
-.dtm-rating i,
-.testimonial-rating,
-.testimonial-rating i,
-.star-rating,
-.star-rating i,
-.stars,
-.stars i,
-i.fa-star,
-i.fa-solid.fa-star {
-    color: #FFB800 !important;
-}
-
-/* PREMIUM RIGHT BLUE CTA CARD STYLING FOR DTP SECTION */
-.dtp-right-blue-card,
-.dtp-right-card {
-    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
-    border-radius: 22px !important;
-    padding: 36px 30px !important;
-    color: #FFFFFF !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    box-shadow: 0 12px 36px rgba(13,71,216,0.22) !important;
-    position: relative !important;
-    overflow: hidden !important;
-    border: 1px solid rgba(255,255,255,0.15) !important;
-    min-height: 320px !important;
-}
-
-.dtp-blue-text-box,
-.dtp-right-card-content {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100% !important;
-    justify-content: space-between !important;
-    position: relative !important;
-    z-index: 5 !important;
-}
-
-.dtp-right-blue-card h3,
-.dtp-right-card h3 {
-    color: #FFFFFF !important;
-    font-size: 24px !important;
-    font-weight: 800 !important;
-    line-height: 1.25 !important;
-    margin-bottom: 14px !important;
-    letter-spacing: -0.01em !important;
-    text-align: left !important;
-}
-
-.dtp-right-blue-card p,
-.dtp-right-card p {
-    color: #DBEAFE !important;
-    font-size: 14px !important;
-    line-height: 1.6 !important;
-    margin-bottom: 24px !important;
-    text-align: left !important;
-}
-
-.dtp-blue-btn,
-.dtp-cta-btn {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
-    color: #0A1940 !important;
-    font-weight: 800 !important;
-    font-size: 14.5px !important;
-    padding: 14px 22px !important;
-    border-radius: 12px !important;
-    text-decoration: none !important;
-    transition: all 0.25s ease !important;
-    box-shadow: 0 6px 20px rgba(245,158,11,0.35) !important;
-    width: 100 !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-}
-
-.dtp-blue-btn:hover,
-.dtp-cta-btn:hover {
-    background: linear-gradient(135deg, #FFB800 0%, #F59E0B 100%) !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 10px 28px rgba(245,158,11,0.5) !important;
-    color: #0A1940 !important;
-}
-
-.dtp-cta-note,
-.dtp-guarantee {
-    display: block !important;
-    font-size: 12px !important;
-    color: #93C5FD !important;
-    margin-top: 14px !important;
-    text-align: center !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.02em !important;
-}
-</style>
+    </style>
 </head>
 <body>
 
   <!-- ===== HEADER ===== -->
-  <header class="site-header" id="siteHeader"></header>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="ISMS Global Education Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+
+        <!-- Destinations Mega Menu -->
+        <div class="nav-dropdown">
+          <a href="Study_Destination.html" class="nav-dropdown-toggle">
+            Study Destinations <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <div class="nav-dropdown-menu dest-mega-menu">
+            <a href="uk-destination.html" class="dest-drop-item">
+              <img src="assets/flag_w40_gb.png" alt="UK Flag" class="dest-drop-flag">
+              <div class="dest-drop-text">
+                <strong>United Kingdom</strong>
+                <span>Top-ranked universities</span>
+              </div>
+            </a>
+            <a href="ireland-destination.html" class="dest-drop-item active">
+              <img src="assets/flag_w40_ie.png" alt="Ireland Flag" class="dest-drop-flag">
+              <div class="dest-drop-text">
+                <strong>Ireland</strong>
+                <span>EU residency gateway</span>
+              </div>
+            </a>
+            <a href="australia-destination.html" class="dest-drop-item">
+              <img src="assets/flag_w40_au.png" alt="Australia Flag" class="dest-drop-flag">
+              <div class="dest-drop-text">
+                <strong>Australia</strong>
+                <span>World-class education</span>
+              </div>
+            </a>
+            <a href="index.html#destinations" class="dest-drop-item">
+              <img src="assets/flag_w40_us.png" alt="USA Flag" class="dest-drop-flag">
+              <div class="dest-drop-text">
+                <strong>USA</strong>
+                <span>Leading research institutions</span>
+              </div>
+            </a>
+            <a href="index.html#destinations" class="dest-drop-item">
+              <img src="assets/flag_w40_nz.png" alt="New Zealand Flag" class="dest-drop-flag">
+              <div class="dest-drop-text">
+                <strong>New Zealand</strong>
+                <span>Safe, scenic, welcoming</span>
+              </div>
+            </a>
+            <a href="dubai-destination.html" class="dest-drop-item">
+              <img src="assets/flag_w40_ae.png" alt="Dubai Flag" class="dest-drop-flag">
+              <div class="dest-drop-text">
+                <strong>Dubai</strong>
+                <span>Global business hub</span>
+              </div>
+            </a>
+            <a href="index.html#destinations" class="dest-drop-item">
+              <img src="assets/flag_w40_fr.png" alt="France Flag" class="dest-drop-flag">
+              <div class="dest-drop-text">
+                <strong>France</strong>
+                <span>Art, culture &amp; innovation</span>
+              </div>
+            </a>
+            <a href="germany-destination.html" class="dest-drop-item">
+              <img src="assets/flag_w40_de.png" alt="Germany Flag" class="dest-drop-flag">
+              <div class="dest-drop-text">
+                <strong>Germany</strong>
+                <span>Engineering excellence</span>
+              </div>
+            </a>
+            <a href="index.html#destinations" class="dest-drop-item">
+              <img src="assets/flag_w40_nl.png" alt="Netherlands Flag" class="dest-drop-flag">
+              <div class="dest-drop-text">
+                <strong>Netherlands</strong>
+                <span>English-taught programmes</span>
+              </div>
+            </a>
+            <a href="index.html#destinations" class="dest-drop-item">
+              <img src="assets/flag_w40_es.png" alt="Spain Flag" class="dest-drop-flag">
+              <div class="dest-drop-text">
+                <strong>Spain</strong>
+                <span>Vibrant student culture</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Universities Dropdown -->
+        <div class="nav-dropdown">
+          <a href="universities.html" class="nav-dropdown-toggle">
+            Universities <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <div class="nav-dropdown-menu uni-drop-menu">
+            <a href="universities.html" class="uni-drop-item">
+              <i class="fa-solid fa-globe uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Browse by Country</strong><span>Find universities by destination</span></div>
+            </a>
+            <a href="universities.html?filter=ranking" class="uni-drop-item">
+              <i class="fa-solid fa-ranking-star uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Browse by Ranking</strong><span>Top QS &amp; World ranked universities</span></div>
+            </a>
+            <a href="universities.html?filter=course" class="uni-drop-item">
+              <i class="fa-solid fa-book-open uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Browse by Course</strong><span>Find universities by your subject</span></div>
+            </a>
+            <a href="university_search.html" class="uni-drop-item">
+              <i class="fa-solid fa-award uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Top 25 Universities</strong><span>World's best institutions</span></div>
+            </a>
+          </div>
+        </div>
+
+        <a href="services.html">Services</a>
+        <a href="ielts.html">IELTS</a>
+
+        <!-- Resources Dropdown -->
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Resources <i class="fa-solid fa-chevron-down"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="Blog.html" class="uni-drop-item">
+              <i class="fa-regular fa-newspaper uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Blog</strong><span>Articles &amp; study abroad guides</span></div>
+            </a>
+            <a href="index.html#testimonials" class="uni-drop-item">
+              <i class="fa-solid fa-graduation-cap uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Success Stories</strong><span>Real student achievements</span></div>
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+919561776600" class="header-phone">
+          <i class="fa-solid fa-phone"></i>
+          <span><strong>Call Now</strong></span>
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm open-counselling-modal"
+          style="font-size:12px; padding: 0 14px; height: 36px;">
+          Get FREE Counselling
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
     <!-- 2A. MAIN HERO SECTION 1 -->
     <section class="dubai-main-hero-section">
@@ -11011,13 +10763,14 @@ i.fa-solid.fa-star {
                 
                 <!-- Left Content Column -->
                 <div class="dmh-left">
-                    <div class="dmh-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+                    <div class="dmh-pill-badge">
                         <img src="assets/flag_w40_ie.png" class="dmh-flag-icon" alt="Ireland Flag"> STUDY IN IRELAND
                     </div>
 
                     <h1 class="dmh-title">
-                        Study in<br>
-                        <span class="text-blue-accent">Ireland</span>
+                        Build Your<br>
+                        <span class="text-blue-accent">Global Career</span><br>
+                        in <span class="text-blue-accent">Ireland</span>
                     </h1>
 
                     <p class="dmh-sub-p1">
@@ -11025,7 +10778,7 @@ i.fa-solid.fa-star {
                     </p>
 
                     <p class="dmh-sub-p2">
-                        Enjoy a peaceful, small-town feel alongside a modern, world-class education system. It is also the only English-speaking country in the Eurozone, so you get a resident English learning environment along with an EU-recognized degree.
+                        Enjoy a peaceful small-town feel alongside a modern, world-class education system. It is also the only English-spoken country in the Eurozone, providing a resident English learning environment along with an EU-recognized degree.
                     </p>
 
                     <!-- 4 Feature Badges Grid (2x2) -->
@@ -11036,7 +10789,7 @@ i.fa-solid.fa-star {
                         </div>
                         <div class="dmh-feat-card">
                             <div class="dmh-feat-icon"><i class="fa-solid fa-euro-sign"></i></div>
-                            <span>Affordable Tuition</span>
+                            <span>Affordable Western Tuition</span>
                         </div>
                         <div class="dmh-feat-card">
                             <div class="dmh-feat-icon"><i class="fa-solid fa-flask"></i></div>
@@ -11141,16 +10894,14 @@ i.fa-solid.fa-star {
                 <path d="M0 120 C 400 30, 900 140, 1440 10 L 1440 120 L 0 120 Z" fill="#1D4ED8"/>
             </svg>
         </div>
-    </section>
-
-    <!-- 2B. Hero Section 2 -->
+    </section><!-- 2B. Hero Section 2 -->
     <section class="dubai-hero-section">
         <div class="container relative-z">
             <div class="dubai-hero-top-grid">
                 <!-- Left Column Content -->
                 <div class="dh-left-content">
-                    <div class="dh-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
-                        <i class="fa-solid fa-globe"></i> WHY STUDY IN IRELAND?
+                    <div class="dh-pill-badge">
+                        <i class="fa-solid fa-globe"></i> IRISH EDUCATION LANDSCAPE
                     </div>
                     <h1 class="dh-title">
                         A Global Destination for<br>
@@ -11159,11 +10910,11 @@ i.fa-solid.fa-star {
                     <div class="dh-title-line"></div>
                     
                     <p class="dh-paragraph">
-                        Enjoy the best of both worlds: a peaceful, small-town feel alongside a modern, world-class education system. As the only English-speaking country in the Eurozone, Ireland offers a resident English learning environment along with an EU-recognized degree.
+                        Ireland has emerged as one of the world's leading education hubs, home to top-ranked public universities offering globally recognized qualifications. With all 8 public universities ranking in the QS World Rankings, Ireland maintains an exceptionally high educational standard.
                     </p>
 
                     <p class="dh-paragraph">
-                        So, why study in Ireland over other countries? Irish universities are ranked in the top 1% of research institutes globally, and the country boasts close industry links, giving graduates direct access to major multinational employers.
+                        Enjoying close connections with industry, Irish universities coordinate directly with global tech and pharma companies headquartered in Dublin, providing students with direct internship avenues, practical project experience, and excellent post-study careers.
                     </p>
                 </div>
 
@@ -11197,100 +10948,161 @@ i.fa-solid.fa-star {
             </div>
 
             <!-- Bottom 5-Column Feature Cards Row -->
-            <div class="reasons-4col-grid">
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">1</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <h3>Quality Education, Everywhere</h3>
-        </div>
-        <p>The Irish government monitors quality through the National Framework of Qualifications (NFQ). All 8 public universities feature in the QS World Rankings.</p>
-    </div>
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">2</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-flask"></i></div>
-            <h3>Strong on Research & Innovation</h3>
-        </div>
-        <p>Irish universities sit among the top 1% of research institutes globally in natural science, social science, healthcare, and technology.</p>
-    </div>
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">3</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-clock"></i></div>
-            <h3>1-Year Master's Degrees</h3>
-        </div>
-        <p>Save both time and money compared to 2-year programs in other countries without compromising on degree qualification quality.</p>
-    </div>
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">4</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-briefcase"></i></div>
-            <h3>Land of Real Job Opportunities</h3>
-        </div>
-        <p>Ireland is home to over 1,000 top multinational companies, including Google, Microsoft, Meta, Pfizer, Apple, and Intel.</p>
-    </div>
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">5</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-id-card"></i></div>
-            <h3>2-Year Post-Study Work Permit</h3>
-        </div>
-        <p>The Third Level Graduate Scheme allows Master's & PhD graduates to stay and work full-time in Ireland for up to 2 years.</p>
-    </div>
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">6</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-earth-europe"></i></div>
-            <h3>Only English-Speaking Eurozone Nation</h3>
-        </div>
-        <p>Enjoy a native English-speaking environment while gaining an officially recognized European Union (EU) degree.</p>
-    </div>
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">7</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <h3>Safe, Peaceful & Welcoming Environment</h3>
-        </div>
-        <p>Ireland consistently ranks among the top 3 safest and most peaceful countries globally according to the Global Peace Index.</p>
-    </div>
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">8</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-icons"></i></div>
-            <h3>Rich Culture & Welcoming Vibe</h3>
-        </div>
-        <p>Known for warmth and hospitality, international students enjoy vibrant music, festivals, and rich cultural traditions.</p>
-    </div>
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">9</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-wallet"></i></div>
-            <h3>Affordable Cost Comparison</h3>
-        </div>
-        <p>Tuition and living expenses offer better value than the UK, US, or Australia, making it a highly cost-effective gateway to Europe.</p>
-    </div>
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">10</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-handshake"></i></div>
-            <h3>Close Industry Connections</h3>
-        </div>
-        <p>Courses are closely aligned with industry needs, providing practical experience, internships, and direct recruitment access.</p>
-    </div>
-    <div class="reasons-card-exact">
-        <span class="reasons-card-num">11</span>
-        <div class="reasons-card-header">
-            <div class="reasons-card-icon"><i class="fa-solid fa-headset"></i></div>
-            <h3>Dedicated Student Support System</h3>
-        </div>
-        <p>Universities run dedicated international offices, orientation programs, and advisory hubs to ensure smooth student transition.</p>
-    </div>
-</div>
-        </div>
-    </section>
+            <div class="dubai-hero-5cards-row">
+                <!-- Card 1 -->
+                <div class="dh-feature-card">
+                    <div class="dh-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Top Public Universities</h3>
+                    <div class="dh-card-line"></div>
+                    <p>All 8 public universities feature in the global top QS World University Rankings.</p>
+                </div>
 
-    <!-- 5. Ireland Study Highlights Section -->
+                <!-- Card 2 -->
+                <div class="dh-feature-card">
+                    <div class="dh-card-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h3>Industry Connected</h3>
+                    <div class="dh-card-line"></div>
+                    <p>Direct linkage with global employers for internships and cooperative project learning.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="dh-feature-card">
+                    <div class="dh-card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                    <h3>Eurozone Hub</h3>
+                    <div class="dh-card-line"></div>
+                    <p>The only English-speaking nation in the Eurozone, offering seamless integration.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="dh-feature-card">
+                    <div class="dh-card-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Extremely Safe</h3>
+                    <div class="dh-card-line"></div>
+                    <p>Consistently ranked in the top 2-3 most peaceful countries in the world.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="dh-feature-card">
+                    <div class="dh-card-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3>Vibrant Campuses</h3>
+                    <div class="dh-card-line"></div>
+                    <p>Modern campuses with a friendly student culture and active support networks.</p>
+                </div>
+            </div>
+        </div>
+    </section><!-- 4. Top Reasons to Study in Ireland -->
+    <section class="dubai-top-reasons-section">
+        <div class="container relative-z">
+            
+            <div class="dtr-header-split">
+                <!-- Left Header Content -->
+                <div class="dtr-header-left">
+                    <div class="dtr-pill-badge">
+                        <span class="dtr-num-circle">10</span> WHY STUDY IN IRELAND?
+                    </div>
+
+                    <h2 class="dtr-title">
+                        Top Reasons to Choose<br>
+                        Higher Education in <span class="text-blue-accent">Ireland</span>
+                    </h2>
+                    <div class="dtr-title-line"></div>
+
+                    <p class="dtr-subtext">
+                        Ireland provides an excellent combination of academic quality, safety, and strong industry linkages. Here are the top reasons why Indian students choose Ireland every year.
+                    </p>
+                </div>
+
+                <!-- Right Artwork Image -->
+                <div class="dtr-header-right">
+                    <img src="assets/Gemini_Generated_Image_8b481l8b481l8b48.png" alt="Why Study in Ireland" class="dtr-skyline-img" style="opacity: 0.95; object-fit: cover; border-radius: 12px;">
+                </div>
+            </div>
+
+            <!-- 10 Feature Cards Grid -->
+            <div class="dtr-10cards-grid">
+                <!-- Card 1 -->
+                <div class="dtr-card">
+                    <span class="dtr-card-num">1</span>
+                    <div class="dtr-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Quality Education Quality Everywhere</h3>
+                    <p>Irish government monitors quality through the National Framework of Qualifications (NFQ), ensuring consistently high standards.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="dtr-card">
+                    <span class="dtr-card-num">2</span>
+                    <div class="dtr-card-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Strong on Research &amp; Innovation</h3>
+                    <p>Irish universities sit among the top 1% of research institutes in the world in science, social science, and humanities.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="dtr-card">
+                    <span class="dtr-card-num">3</span>
+                    <div class="dtr-card-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h3>1-Year Master's Degrees</h3>
+                    <p>Save time and money compared to 2-year programs in other countries without compromising qualification quality.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="dtr-card">
+                    <span class="dtr-card-num">4</span>
+                    <div class="dtr-card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>Land of Real Job Opportunities</h3>
+                    <p>Home to 1,000+ multinationals (Google, Microsoft, Meta, Pfizer) and HQ of top ICT, pharma, and gaming companies.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="dtr-card">
+                    <span class="dtr-card-num">5</span>
+                    <div class="dtr-card-icon"><i class="fa-solid fa-passport"></i></div>
+                    <h3>Post-Study Work Visa (Stamp 1G)</h3>
+                    <p>Stay back in Ireland for up to 24 months to find a job and gain international work experience after graduation.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="dtr-card">
+                    <span class="dtr-card-num">6</span>
+                    <div class="dtr-card-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                    <h3>Work While You Learn</h3>
+                    <p>Work part-time (up to 20 hours/week in term, 40 hours/week in holidays) to help cover living costs.</p>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="dtr-card">
+                    <span class="dtr-card-num">7</span>
+                    <div class="dtr-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>One of Safest Countries Globally</h3>
+                    <p>Consistently ranked in the top 2-3 most peaceful countries on the Global Peace Index, ensuring a secure environment.</p>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="dtr-card">
+                    <span class="dtr-card-num">8</span>
+                    <div class="dtr-card-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Welcoming &amp; Friendly Culture</h3>
+                    <p>The Irish are warm, chatty, and welcoming, offering colorful campus events like St. Patrick's Day all year round.</p>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="dtr-card">
+                    <span class="dtr-card-num">9</span>
+                    <div class="dtr-card-icon"><i class="fa-solid fa-wallet"></i></div>
+                    <h3>Affordable Western Option</h3>
+                    <p>Tuition and living costs are highly competitive compared to the UK, USA, or Canada, making it very accessible.</p>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="dtr-card">
+                    <span class="dtr-card-num">10</span>
+                    <div class="dtr-card-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h3>Close Industry Connections</h3>
+                    <p>Education is closely linked with industry, providing practical project experience and internships as part of courses.</p>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- 5. Ireland Study Highlights Section -->
     <section class="dubai-highlights-section">
         <div class="dsh-flight-arc">
             <svg viewBox="0 0 300 120" fill="none">
@@ -11303,7 +11115,7 @@ i.fa-solid.fa-star {
             
             <!-- Section Header -->
             <div class="dsh-header text-center">
-                <div class="dsh-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+                <div class="dsh-pill-badge">
                     <i class="fa-regular fa-star"></i> IRELAND BY THE NUMBERS
                 </div>
 
@@ -11364,7 +11176,7 @@ i.fa-solid.fa-star {
 
         <!-- Bottom Panoramic Skyline Graphic Frame -->
         <div class="dsh-skyline-footer-wrap">
-            <img src="assets/ireland.png" alt="Ireland Panoramic Silhouette" class="dsh-panoramic-img" style="opacity: 0.35 !important; height: 180px !important; width: 100% !important; object-fit: cover !important;">
+            <img src="assets/ireland.png" alt="Ireland Panoramic Silhouette" class="dsh-panoramic-img" style="opacity: 0.35; height: 180px; width: 100%; object-fit: cover;">
             
             <div class="container relative-z">
                 <div class="dsh-bottom-banner">
@@ -11378,16 +11190,14 @@ i.fa-solid.fa-star {
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- 6. Top Universities in Ireland Section -->
+    </section><!-- 6. Top Universities in Ireland Section -->
     <section class="dubai-top-unis-section">
         <div class="container relative-z">
             
             <div class="dtu-header-split">
                 <!-- Left Content -->
                 <div class="dtu-header-left">
-                    <div class="dtu-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+                    <div class="dtu-pill-badge">
                         <i class="fa-solid fa-building-columns"></i> TOP UNIVERSITIES
                     </div>
 
@@ -11397,7 +11207,7 @@ i.fa-solid.fa-star {
                     <div class="dtu-title-line"></div>
 
                     <p class="dtu-subtext">
-                        Ireland has 8 public universities, and every single one features in the QS World University Rankings. Below are the top preferences for Indian students.
+                        Explore leading Irish universities, featuring world-renowned public research institutions and technological academies.
                     </p>
                 </div>
 
@@ -11415,7 +11225,7 @@ i.fa-solid.fa-star {
                 </div>
             </div>
 
-            <!-- 10 University Cards -->
+            <!-- 10 University Cards + 1 Wide CTA Banner Card Grid -->
             <div class="dtu-6cards-grid">
                 
                 <!-- Uni Card 1 -->
@@ -11428,7 +11238,6 @@ i.fa-solid.fa-star {
                     </div>
                     <h3>Trinity College Dublin</h3>
                     <div class="dtu-location"><i class="fa-solid fa-location-dot"></i> Dublin (QS #75)</div>
-                    <span class="uni-location" style="display:block; margin-top:5px; font-weight:600; font-size:11px; color:var(--primary-blue);">Law, CS, Nursing, Humanities</span>
                 </div>
 
                 <!-- Uni Card 2 -->
@@ -11441,7 +11250,6 @@ i.fa-solid.fa-star {
                     </div>
                     <h3>University College Dublin</h3>
                     <div class="dtu-location"><i class="fa-solid fa-location-dot"></i> Dublin (QS #100)</div>
-                    <span class="uni-location" style="display:block; margin-top:5px; font-weight:600; font-size:11px; color:var(--primary-blue);">Business Analytics, Smurfit School</span>
                 </div>
 
                 <!-- Uni Card 3 -->
@@ -11454,7 +11262,6 @@ i.fa-solid.fa-star {
                     </div>
                     <h3>University College Cork</h3>
                     <div class="dtu-location"><i class="fa-solid fa-location-dot"></i> Cork (QS #220)</div>
-                    <span class="uni-location" style="display:block; margin-top:5px; font-weight:600; font-size:11px; color:var(--primary-blue);">Food Science, Medicine, Sustainability</span>
                 </div>
 
                 <!-- Uni Card 4 -->
@@ -11467,7 +11274,6 @@ i.fa-solid.fa-star {
                     </div>
                     <h3>University of Galway</h3>
                     <div class="dtu-location"><i class="fa-solid fa-location-dot"></i> Galway (QS #275)</div>
-                    <span class="uni-location" style="display:block; margin-top:5px; font-weight:600; font-size:11px; color:var(--primary-blue);">Life Sciences, MedTech, Data Science</span>
                 </div>
 
                 <!-- Uni Card 5 -->
@@ -11480,7 +11286,6 @@ i.fa-solid.fa-star {
                     </div>
                     <h3>Dublin City University</h3>
                     <div class="dtu-location"><i class="fa-solid fa-location-dot"></i> Dublin (QS #408)</div>
-                    <span class="uni-location" style="display:block; margin-top:5px; font-weight:600; font-size:11px; color:var(--primary-blue);">Business, Engineering, Journalism</span>
                 </div>
 
                 <!-- Uni Card 6 -->
@@ -11493,7 +11298,6 @@ i.fa-solid.fa-star {
                     </div>
                     <h3>University of Limerick</h3>
                     <div class="dtu-location"><i class="fa-solid fa-location-dot"></i> Limerick (QS #388)</div>
-                    <span class="uni-location" style="display:block; margin-top:5px; font-weight:600; font-size:11px; color:var(--primary-blue);">Engineering, Co-op Placements</span>
                 </div>
 
                 <!-- Uni Card 7 -->
@@ -11506,7 +11310,6 @@ i.fa-solid.fa-star {
                     </div>
                     <h3>Maynooth University</h3>
                     <div class="dtu-location"><i class="fa-solid fa-location-dot"></i> Maynooth (QS #721-730)</div>
-                    <span class="uni-location" style="display:block; margin-top:5px; font-weight:600; font-size:11px; color:var(--primary-blue);">Geography, English, Education, Arts</span>
                 </div>
 
                 <!-- Uni Card 8 -->
@@ -11517,9 +11320,8 @@ i.fa-solid.fa-star {
                             <text x="50" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle">TUD</text>
                         </svg>
                     </div>
-                    <h3>TU Dublin</h3>
+                    <h3>Technological University Dublin</h3>
                     <div class="dtu-location"><i class="fa-solid fa-location-dot"></i> Dublin (5 campuses)</div>
-                    <span class="uni-location" style="display:block; margin-top:5px; font-weight:600; font-size:11px; color:var(--primary-blue);">STEM, Business, Built Env, Computing</span>
                 </div>
 
                 <!-- Uni Card 9 -->
@@ -11530,9 +11332,8 @@ i.fa-solid.fa-star {
                             <text x="50" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" text-anchor="middle">ATU</text>
                         </svg>
                     </div>
-                    <h3>Atlantic TU</h3>
+                    <h3>Atlantic Technological University</h3>
                     <div class="dtu-location"><i class="fa-solid fa-location-dot"></i> Letterkenny &amp; Sligo</div>
-                    <span class="uni-location" style="display:block; margin-top:5px; font-weight:600; font-size:11px; color:var(--primary-blue);">Engineering, Computing, Marine Sci</span>
                 </div>
 
                 <!-- Uni Card 10 -->
@@ -11543,9 +11344,8 @@ i.fa-solid.fa-star {
                             <text x="50" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle">SETU</text>
                         </svg>
                     </div>
-                    <h3>South-East TU</h3>
+                    <h3>South-East Technological University</h3>
                     <div class="dtu-location"><i class="fa-solid fa-location-dot"></i> Waterford &amp; Carlow</div>
-                    <span class="uni-location" style="display:block; margin-top:5px; font-weight:600; font-size:11px; color:var(--primary-blue);">Cybersecurity, Supply Chain, Applied AI</span>
                 </div>
 
                 <!-- Special 3-Column Wide CTA Card -->
@@ -11564,107 +11364,15 @@ i.fa-solid.fa-star {
 
             </div>
 
-            <!-- University Table Section -->
-            <div style="margin-top: 50px;">
-                <h3 style="margin-bottom:15px; color:var(--dark-navy);">Top Institutions Reference Table</h3>
-                <div class="germany-table-container">
-                    <table class="germany-table">
-                        <thead>
-                            <tr>
-                                <th>SR.NO</th>
-                                <th>Institution</th>
-                                <th>Type</th>
-                                <th>City / Campus</th>
-                                <th>Known For</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Trinity College Dublin (TCD)</strong></td>
-                                <td>Public University</td>
-                                <td>Dublin</td>
-                                <td>Law, Computer Science, Nursing, Humanities (QS #75)</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><strong>University College Dublin (UCD)</strong></td>
-                                <td>Public University</td>
-                                <td>Dublin</td>
-                                <td>Business Analytics, Smurfit Graduate Business School (QS #100)</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><strong>University College Cork (UCC)</strong></td>
-                                <td>Public University</td>
-                                <td>Cork</td>
-                                <td>Food Science, Medicine, Sustainability (QS #220)</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td><strong>University of Galway</strong></td>
-                                <td>Public University</td>
-                                <td>Galway</td>
-                                <td>Life Sciences, MedTech, Data Science (QS #275)</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td><strong>Dublin City University (DCU)</strong></td>
-                                <td>Public University</td>
-                                <td>Dublin</td>
-                                <td>Business, Engineering, Journalism, Sustainability (QS #408)</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td><strong>University of Limerick (UL)</strong></td>
-                                <td>Public University</td>
-                                <td>Limerick</td>
-                                <td>Engineering, Co-op work placements, 5-star QS employability rating (QS #388)</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td><strong>Maynooth University</strong></td>
-                                <td>Public University</td>
-                                <td>Maynooth, Co. Kildare</td>
-                                <td>Geography, English, Education, Arts &amp; Humanities (QS #721–730)</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td><strong>Technological University Dublin (TU Dublin)</strong></td>
-                                <td>Technological University</td>
-                                <td>Dublin (5 campuses)</td>
-                                <td>STEM, Business, Built Environment, Computing &amp; Data</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td><strong>Atlantic Technological University (ATU)</strong></td>
-                                <td>Technological University</td>
-                                <td>Letterkenny &amp; Sligo (+ Galway, Mayo)</td>
-                                <td>Engineering, Computing, Business, Marine Science</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td><strong>South-East Technological University (SETU)</strong></td>
-                                <td>Technological University</td>
-                                <td>Waterford &amp; Carlow</td>
-                                <td>Cybersecurity, Supply Chain Management, Applied AI</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
         </div>
-    </section>
-
-    <!-- 7. Popular Courses to Study in Ireland Section -->
+    </section><!-- 7. Popular Courses to Study in Ireland Section -->
     <section class="dubai-popular-courses-section">
         <div class="container relative-z">
             
             <div class="dpc-header-split">
                 <!-- Left Header Content -->
                 <div class="dpc-header-left">
-                    <div class="dpc-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+                    <div class="dpc-pill-badge">
                         <i class="fa-solid fa-graduation-cap"></i> POPULAR COURSES
                     </div>
 
@@ -11675,7 +11383,7 @@ i.fa-solid.fa-star {
                     <div class="dpc-title-line"></div>
 
                     <p class="dpc-subtext">
-                        Irish universities partner thoroughly with global industry demands, especially in technology, pharma, law, and business. Here is a detailed look at the most popular courses for Indian students, what they cover, and where they can take your career.
+                        Irish universities partner with global industry demands, especially in technology, pharma, law, and business.
                     </p>
                 </div>
 
@@ -11688,7 +11396,7 @@ i.fa-solid.fa-star {
                     </div>
 
                     <div class="dpc-arched-skyline-wrap">
-                        <img src="assets/courses_students_duo.png" alt="Popular Courses" class="dpc-skyline-img" style="opacity: 0.8; object-fit: cover;">
+                        <img src="assets/Scholarship_hero.png" alt="Popular Courses" class="dpc-skyline-img" style="opacity: 0.8; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -11700,49 +11408,49 @@ i.fa-solid.fa-star {
                 <div class="dpc-card">
                     <div class="dpc-card-icon"><i class="fa-solid fa-database"></i></div>
                     <h3>Data Science</h3>
-                    <p>There is a huge scope for Data Science to analyze large datasets and build predictive models, leading to roles like Data Analyst, Data Scientist, and Big Data Engineer.</p>
+                    <p>Huge scope to analyze datasets and build predictive models leading to roles like Data Scientist.</p>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="dpc-card">
                     <div class="dpc-card-icon"><i class="fa-solid fa-flask-vial"></i></div>
                     <h3>Pharmaceutical Sciences</h3>
-                    <p>Be a part of an industry that literally saves lives and land a seat at the table in one of Ireland's biggest economic sectors.</p>
+                    <p>Be part of an industry that saves lives in one of Ireland's largest economic sectors.</p>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="dpc-card">
                     <div class="dpc-card-icon"><i class="fa-solid fa-brain"></i></div>
                     <h3>Artificial Intelligence (AI)</h3>
-                    <p>Ride the biggest tech wave of our time, right from Europe's own AI and innovation hub.</p>
+                    <p>Ride the biggest tech wave of our time directly from Europe's own AI and innovation hub.</p>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="dpc-card">
                     <div class="dpc-card-icon"><i class="fa-solid fa-chart-pie"></i></div>
                     <h3>Business Analytics (BA)</h3>
-                    <p>Become the business expert who analyzes the potential profit, loss, and future directions of organizations.</p>
+                    <p>Become a business expert analyzing potential profit, loss, and future organizational growth.</p>
                 </div>
 
                 <!-- Card 5 -->
                 <div class="dpc-card">
                     <div class="dpc-card-icon"><i class="fa-solid fa-cloud"></i></div>
                     <h3>Cloud Computing</h3>
-                    <p>Master the tech that powers every major company on Earth and get paid like it too.</p>
+                    <p>Master the technology that powers every major company on Earth and secure top-tier roles.</p>
                 </div>
 
                 <!-- Card 6 -->
                 <div class="dpc-card">
                     <div class="dpc-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
                     <h3>Cybersecurity</h3>
-                    <p>Be the digital bodyguard the world desperately needs, with job security that only grows as threats do.</p>
+                    <p>Be the digital bodyguard the world needs, with job security that grows alongside threats.</p>
                 </div>
 
                 <!-- Card 7 -->
                 <div class="dpc-card">
                     <div class="dpc-card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
                     <h3>MSc Public Health</h3>
-                    <p>Make an impact that goes beyond a paycheck—build a career that shapes healthier communities worldwide.</p>
+                    <p>Make an impact beyond a paycheck; build a career that shapes healthier communities.</p>
                 </div>
 
                 <!-- Card 8 -->
@@ -11756,136 +11464,122 @@ i.fa-solid.fa-star {
                 <div class="dpc-card">
                     <div class="dpc-card-icon"><i class="fa-solid fa-globe"></i></div>
                     <h3>MSc International Business</h3>
-                    <p>Think global from day one; build the skills to lead and negotiate across borders and boardrooms.</p>
+                    <p>Think global from day one; build the skills to lead and negotiate across borders.</p>
                 </div>
 
             </div>
 
         </div>
-    </section>
+    </section><!-- 7.5 Cost of Studying & Living Section -->
+    <section class="section" id="cost-of-studying">
+        <div class="container relative-z">
+            <div class="text-center-header">
+                <div class="badge-pill">
+                    <i class="fa-solid fa-calculator"></i> BUDGET PLANNING
+                </div>
+                <h2>What is the Cost of studying in Ireland?</h2>
+                <div class="dh-title-line" style="margin-bottom: 20px;"></div>
+                <p style="margin-bottom: 25px;">
+                    The total cost to study in Ireland depends on the city, university, course, and program duration. Tuition is only part of the picture—the cost of living in Ireland for Indian students is what really figures your overall budget.
+                </p>
+            </div>
 
-    <!-- 7.5 Cost of Studying & Living Section -->
-    <section class="container section">
-        <div class="badge-pill" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
-            <i class="fa-solid fa-calculator"></i> BUDGET PLANNING
-        </div>
-        <h2>Cost of Studying &amp; Cost of Living in Ireland for Indian Students</h2>
-        <div class="dh-title-line" style="margin-bottom: 25px;"></div>
-        <p style="margin-bottom: 20px;">
-            The total cost to study in Ireland depends on the city, university, course, and program duration. Tuition is only part of the picture—the cost of living in Ireland for Indian students is what really determines your overall budget, so plan for both together.
-        </p>
+            <h3 class="text-center-sub">Tuition Fee Ranges</h3>
+            <div class="germany-table-container">
+                <table class="germany-table">
+                    <thead>
+                        <tr>
+                            <th>Program Level</th>
+                            <th>Tuition Fee (EUR/year)</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Undergraduate Programs</strong></td>
+                            <td>€7,500 – €20,000</td>
+                            <td>Tuition fees for non-EU/EEA students.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Postgraduate (master’s) Programs</strong></td>
+                            <td>€8,000 – €25,000</td>
+                            <td>Tuition fees for non-EU/EEA students.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <h3 class="mt-5 mb-3 text-center text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-graduation-cap text-blue"></i> Tuition Fee Ranges</h3>
+            <h3 class="text-center-sub">Average Monthly Living Costs in Ireland for Indian Students</h3>
+            <div class="germany-table-container">
+                <table class="germany-table">
+                    <thead>
+                        <tr>
+                            <th>Expense Category</th>
+                            <th>Estimated Cost (EUR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Accommodation</strong></td>
+                            <td>€550 – €1,050 / month</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transportation</strong></td>
+                            <td>€40 - €70 / month</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Food</strong></td>
+                            <td>€230 - €410 / month</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Utilities</strong></td>
+                            <td>€70 - €140 / month</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Miscellaneous (books, Study Materials, clothes, and entertainment)</strong></td>
+                            <td>€70 - €140 / month</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-center-sub">City-wise Estimated Monthly Cost of Living</h3>
         <div class="germany-table-container">
             <table class="germany-table">
                 <thead>
                     <tr>
-                        <th>Category</th>
-                        <th>Tuition Fees (EUR/year)</th>
-                        <th>Remarks</th>
+                        <th>City</th>
+                        <th>Estimated Cost (EUR/month)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>Undergraduate Programs</strong></td>
-                        <td>€7,500 – €20,000</td>
-                        <td>Tuition fees for non-EU/EEA students.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Postgraduate (master’s) Programs</strong></td>
-                        <td>€8,000 – €25,000</td>
-                        <td>Tuition fees for non-EU/EEA students.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h3 class="mt-5 mb-2 text-center text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-receipt text-blue"></i> Student Visa and Application Fees for Ireland</h3>
-        <p class="text-center" style="text-align: center; font-size: 14.5px; color: #64748B; max-width: 760px; margin: 0 auto 24px auto;">When applying for a student visa to Ireland, there are standard non-refundable processing fees:</p>
-        <div class="germany-table-container">
-            <table class="germany-table">
-                <thead>
-                    <tr>
-                        <th>VISA Type</th>
-                        <th>Fee (INR)</th>
-                        <th>Remarks</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Single-Entry Student Visa (SEV)</strong></td>
-                        <td>5,500 - 6,000 INR</td>
-                        <td>Applicable for one-time entry into Ireland.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Multiple-Entry Student Visa (MEV)</strong></td>
-                        <td>9,000 - 10,000 INR</td>
-                        <td>Allows multiple entries during the visa validity period. Fee bonds may be available for eligible applicants.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h3 class="mt-5 mb-2 text-center text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-house-user text-blue"></i> What is the Cost of Living in Ireland for Indian Students</h3>
-        <p class="text-center" style="text-align: center; font-size: 14.5px; color: #64748B; max-width: 780px; margin: 0 auto 24px auto;">Here is an estimated cost of living in Ireland for students, including rent, food, and transport. You can also apply for an education loan for Ireland to help manage these expenses.</p>
-        <div class="germany-table-container">
-            <table class="germany-table">
-                <thead>
-                    <tr>
-                        <th>Expense Category</th>
-                        <th>Cost (EUR)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Accommodation</strong></td>
-                        <td>€5,500 - €10,500 / year (or approx. €500 - €1,100 / month)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Transportation</strong></td>
-                        <td>€40 - €70 / month</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Food</strong></td>
-                        <td>€230 - €410 / month</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Utilities</strong></td>
-                        <td>€70 - €140 / month</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Miscellaneous (books and Study Materials, clothes, and entertainment)</strong></td>
-                        <td>€70 - €140 / month</td>
-                    </tr>
                     <tr>
                         <td><strong>Dublin</strong></td>
-                        <td>€1,350 - €2,250 / month</td>
+                        <td>â‚¬1,350 - â‚¬2,250 / month</td>
                     </tr>
                     <tr>
                         <td><strong>Cork</strong></td>
-                        <td>€1,000 - €1,650 / month</td>
+                        <td>â‚¬1,000 - â‚¬1,650 / month</td>
                     </tr>
                     <tr>
                         <td><strong>Galway</strong></td>
-                        <td>€1,000 - €1,550 / month</td>
+                        <td>â‚¬1,000 - â‚¬1,550 / month</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
         <p class="text-xs" style="color: var(--body-gray); margin-top: 15px;">
             <strong>Disclaimer:</strong> All EUR to INR conversions are based on currency rates. Exchange rates vary over time, so please check the latest rates before making any financial decisions.
         </p>
-    </section>
-
-    <!-- 8. Complete Support At Every Step Section -->
+        </div>
+    </section><!-- 8. Complete Support At Every Step Section -->
     <section class="dubai-complete-support-section">
         <div class="container relative-z">
             
             <div class="dcs-header-split">
                 <!-- Left Content -->
                 <div class="dcs-header-left">
-                    <div class="dcs-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+                    <div class="dcs-pill-badge">
                         <i class="fa-solid fa-graduation-cap"></i> END-TO-END SUPPORT
                     </div>
 
@@ -11975,65 +11669,73 @@ i.fa-solid.fa-star {
             </div>
 
         </div>
-    </section>
-
-    <!-- 9. Scholarships Section -->
-    <section class="container section">
-        <div class="badge-pill" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
-            <i class="fa-solid fa-award"></i> FINANCIAL AID
-        </div>
-        <h2>Scholarships for Indian Students in Ireland</h2>
-        <div class="dh-title-line" style="margin-bottom: 25px;"></div>
-        <p style="margin-bottom: 20px;">
-            How can I get a scholarship to study in Ireland? Below are the popular categories that help manage your study costs:
-        </p>
+    </section><!-- 9. Scholarships Section -->
+    <section class="section" id="scholarships">
+        <div class="container relative-z">
+            <div class="text-center-header">
+                <div class="badge-pill">
+                    <i class="fa-solid fa-award"></i> FINANCIAL AID
+                </div>
+                <h2>What Scholarships Are Available for Indian Students in Ireland?</h2>
+                <div class="dh-title-line" style="margin-bottom: 20px;"></div>
+                <p style="margin-bottom: 25px;">
+                    How can I get a scholarship to study in Ireland? Ireland offers excellent scholarship opportunities for international students:
+                </p>
+            </div>
 
         <div class="germany-table-container">
             <table class="germany-table">
                 <thead>
                     <tr>
                         <th>Scholarship Category</th>
-                        <th>Coverages</th>
+                        <th>Coverage</th>
+                        <th>Key Notes</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>UCD Global Excellence Scholarship</strong></td>
-                        <td>Covers 50% to 100% of your tuition fees.</td>
+                        <td>50% to 100% tuition fees</td>
+                        <td>Highly competitive merit-based scholarship for international applicants.</td>
                     </tr>
                     <tr>
                         <td><strong>International Student Scholarship (ISS)</strong></td>
-                        <td>All program applications are automatically considered for scholarship eligibility at the time an offer is made. There is no need to submit a separate application. Note that some programs are not eligible under this scheme.</td>
+                        <td>Varies by program</td>
+                        <td>All program applications are automatically considered at the time an offer is made. No separate application needed. Some programs are excluded.</td>
                     </tr>
                     <tr>
                         <td><strong>Government of Ireland International Education Scholarship (GOI-IES)</strong></td>
-                        <td>Covers a full tuition fee and grants a €10,000 living stipend for a 1-year master's course.</td>
+                        <td>Full tuition + â‚¬10,000 living stipend</td>
+                        <td>For a 1-year master's course. Highly prestigious national award.</td>
                     </tr>
                     <tr>
                         <td><strong>DCU Merit Scholarship</strong></td>
-                        <td>Covers 25% of your tuition fees.</td>
+                        <td>25% tuition fee coverage</td>
+                        <td>Merit-based waiver awarded automatically or via application to eligible Indian students.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </section>
-
-    <!-- 10. Ireland Student Visa Application Process -->
+        <blockquote style="border-left: 4px solid var(--primary); padding-left: 15px; margin: 20px 0; font-style: italic; color: var(--body-gray);">
+            "Irish scholarships recognize academic merit and significantly reduce the financial hurdle for Indian students studying in Ireland."
+        </blockquote>
+        </div>
+    </section><!-- 10. Ireland Student Visa Application Process -->
     <section class="dubai-visa-section">
         <div class="container" style="position:relative;">
             <div class="dvg-header-split">
                 <!-- Left: Title + subtext -->
                 <div class="dvg-header-left">
-                    <div class="dvg-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+                    <div class="dvg-pill-badge">
                         <i class="fa-regular fa-id-card"></i> VISA GUIDE
                     </div>
                     <h2 class="dvg-title">
                         Irish Student Visa<br>
-                        <span class="dvg-title-blue">Application &amp; Eligibility</span>
+                        <span class="dvg-title-blue">Application Process 2026</span>
                     </h2>
                     <div class="dvg-title-line"></div>
                     <p class="dvg-subtext">
-                        If Indian students are studying in Ireland for more than 90-100 days, they need to apply for the long stay "D" Visa.
+                        If studying in Ireland for more than 90-100 days, Indian students need to apply for the long stay "D" visa. Follow the official roadmap to secure your visa.
                     </p>
                 </div>
 
@@ -12045,7 +11747,7 @@ i.fa-solid.fa-star {
                     </div>
 
                     <div class="dvg-photo-frame">
-                        <img src="assets/university-hero.jpeg" alt="Visa Documents" class="dvg-bg-photo" style="opacity: 0.85; object-fit: cover;">
+                        <img src="assets/uk.png" alt="Visa Documents" class="dvg-bg-photo" style="opacity: 0.85; object-fit: cover;">
                         <div class="dvg-flight-arc">
                             <svg viewBox="0 0 210 85" fill="none">
                                 <path d="M 10 70 Q 90 5 200 20" stroke="#2563EB" stroke-width="2" stroke-dasharray="5 5" opacity="0.65"/>
@@ -12062,86 +11764,149 @@ i.fa-solid.fa-star {
         <!-- 8-Step Timeline Cards Grid -->
         <div class="dvg-process-section">
             <div class="container">
-                <h3 class="dvg-process-title">Visa Eligibility Roadmap</h3>
+                <h3 class="dvg-process-title">Step-by-Step Visa &amp; Admission Timeline</h3>
                 
                 <div class="germany-step-grid">
                     <!-- Step 1 -->
                     <div class="germany-step-card">
                         <div class="germany-step-num">01</div>
                         <div class="germany-step-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
-                        <h4>Offer Letter</h4>
-                        <p>Receive an offer letter from a course listed on the Interim List of Eligible Programs (ILEP).</p>
+                        <h4>Get Admission Offer</h4>
+                        <p>Receive your offer letter from an Irish university for a course listed on the Interim List of Eligible Programs (ILEP).</p>
                     </div>
 
                     <!-- Step 2 -->
                     <div class="germany-step-card">
                         <div class="germany-step-num">02</div>
-                        <div class="germany-step-icon"><i class="fa-solid fa-passport"></i></div>
-                        <h4>Academic Matches</h4>
-                        <p>Proof of academic qualifications matching university entry requirements.</p>
+                        <div class="germany-step-icon"><i class="fa-solid fa-wallet"></i></div>
+                        <h4>Pay Course Fees</h4>
+                        <p>Pay your tuition fee deposits and obtain your official fee receipt matching university entry requirements.</p>
                     </div>
 
                     <!-- Step 3 -->
                     <div class="germany-step-card">
                         <div class="germany-step-num">03</div>
-                        <div class="germany-step-icon"><i class="fa-solid fa-language"></i></div>
-                        <h4>English Test Score</h4>
-                        <p>Fulfill the English language score requirement (IELTS/TOEFL) as necessary for university entry.</p>
+                        <div class="germany-step-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h4>Secure Health Insurance</h4>
+                        <p>Purchase mandatory medical insurance policy valid in Ireland for the duration of your stay.</p>
                     </div>
 
                     <!-- Step 4 -->
                     <div class="germany-step-card">
                         <div class="germany-step-num">04</div>
                         <div class="germany-step-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                        <h4>Passport Validity</h4>
-                        <p>Ensure your valid passport has at least 6 months of validity remaining from your travel date.</p>
+                        <h4>Prepare Financial Proof</h4>
+                        <p>Gather bank statements (last 6 months) proving sufficient funds to support your tuition and living costs in Ireland.</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="germany-step-card">
+                        <div class="germany-step-num">05</div>
+                        <div class="germany-step-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h4>Online Visa Application</h4>
+                        <p>Complete your AVATS online visa application form and print the summary sheet for submission.</p>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="germany-step-card">
+                        <div class="germany-step-num">06</div>
+                        <div class="germany-step-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                        <h4>Book VFS Appointment</h4>
+                        <p>Schedule your VFS appointment to submit your physical application, passport, and biometrics details.</p>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="germany-step-card">
+                        <div class="germany-step-num">07</div>
+                        <div class="germany-step-icon"><i class="fa-solid fa-receipt"></i></div>
+                        <h4>Pay Visa Fees &amp; Submit</h4>
+                        <p>Pay VFS/Embassy visa processing fees at the appointment center. Standard visa decision takes 4-8 weeks.</p>
+                    </div>
+
+                    <!-- Step 8 -->
+                    <div class="germany-step-card">
+                        <div class="germany-step-num">08</div>
+                        <div class="germany-step-icon"><i class="fa-solid fa-plane-arrival"></i></div>
+                        <h4>Arrive &amp; Register (IRP)</h4>
+                        <p>Fly to Ireland, register with immigration, activate part-time work pathways, and obtain your Irish Residence Permit (IRP) card.</p>
                     </div>
                 </div>
 
             </div>
         </div>
-    </section>
 
-    <!-- 10.2 Requirements & Path Alternatives Section -->
-    <section class="container section">
-        <div class="badge-pill" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
-            <i class="fa-solid fa-list-check"></i> ADMISSION REQUIREMENTS
+        <!-- Visa Cost Details -->
+        <div class="container relative-z" style="padding-top: 2.5rem; padding-bottom: 1rem;">
+            <div class="text-center-header">
+                <h2>Ireland Student Visa &amp; Application Fees</h2>
+                <p style="margin-bottom: 20px;">Below is the summary of administrative fees required to process your Irish student visa.</p>
+            </div>
+            <div class="germany-table-container">
+                <table class="germany-table">
+                    <thead>
+                        <tr>
+                            <th>VISA Type</th>
+                            <th>Fee (INR)</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Single-Entry Student Visa (SEV)</strong></td>
+                            <td>5,500 - 6,000 INR</td>
+                            <td>Applicable for one-time entry into Ireland.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Multiple-Entry Student Visa (MEV)</strong></td>
+                            <td>9,000 - 10,000 INR</td>
+                            <td>Allows multiple entries during the visa validity period. Fee bonds may be available for eligible applicants.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs" style="color: var(--body-gray);">
+                * Note: Application fees are non-refundable. Make sure to have a valid passport with at least 6 months validity from your travel date.
+            </p>
         </div>
-        <h2>Eligibility Criteria &amp; Requirements</h2>
-        <div class="dh-title-line" style="margin-bottom: 25px;"></div>
+    </section><!-- 10.2 Requirements & Path Alternatives Section -->
+    <section class="section" id="admission-requirements">
+        <div class="container relative-z">
+            <div class="text-center-header">
+                <div class="badge-pill">
+                    <i class="fa-solid fa-list-check"></i> ADMISSION REQUIREMENTS
+                </div>
+                <h2>What Are the Eligibility Requirements to Study in Ireland?</h2>
+                <div class="dh-title-line" style="margin-bottom: 25px;"></div>
+            </div>
 
         <div class="germany-table-container">
             <table class="germany-table">
                 <thead>
                     <tr>
-                        <th>Requirement Type</th>
-                        <th>Eligibility Criteria</th>
+                        <th>Criteria</th>
+                        <th>Details</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>Undergraduate Academic Requirements</strong></td>
-                        <td>60% to 70% required in Class 10 and 12 grades.</td>
+                        <td>Generally, <strong>60% to 70%</strong> required in Class X and XII board grades. Accept up to 2-3 backlogs depending on university.</td>
                     </tr>
                     <tr>
                         <td><strong>Postgraduate Academic Requirements</strong></td>
-                        <td>60% to 75% required in a bachelor's degree.</td>
+                        <td>Generally, <strong>60% to 75%</strong> required in your Bachelor's degree. Accept up to 2-3 backlogs.</td>
                     </tr>
                     <tr>
-                        <td><strong>Backlogs</strong></td>
-                        <td>Most universities accept up to 2 to 3 backlogs.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>IELTS Score</strong></td>
+                        <td><strong>IELTS Requirements</strong></td>
                         <td><strong>Undergraduate:</strong> Minimum overall score of 6.0.<br><strong>Postgraduate:</strong> Minimum overall score of 6.5.</td>
                     </tr>
                     <tr>
-                        <td><strong>PTE Academic Score</strong></td>
-                        <td><strong>Diploma:</strong> 50-58.<br><strong>Bachelor's:</strong> 58-63.<br><strong>Master's:</strong> 63-65+.</td>
+                        <td><strong>PTE Academic Scores</strong></td>
+                        <td><strong>Diploma:</strong> 50 - 58.<br><strong>Bachelor's:</strong> 58 - 63.<br><strong>Master's:</strong> 63 - 65+.</td>
                     </tr>
                     <tr>
                         <td><strong>Work Experience</strong></td>
-                        <td>Work experience isn't always required for entry in certain roles, but having 1 to 3 years of experience gives you a big advantage when applying.</td>
+                        <td>Not always required for general courses. However, having 1 to 3 years of work experience gives you a huge advantage when applying for MBA programs.</td>
                     </tr>
                 </tbody>
             </table>
@@ -12149,99 +11914,84 @@ i.fa-solid.fa-star {
 
         <div class="germany-alt-box">
             <h4><i class="fa-solid fa-graduation-cap"></i> Study in Ireland Without IELTS &mdash; Alternative Pathways</h4>
-            <p>If you don't have IELTS, you can explore these alternative pathways:</p>
+            <p>Yes, studying in Ireland without IELTS is possible if you meet one of the following alternatives:</p>
             <ul>
-                <li><strong>High School English Scores:</strong> Many Irish universities waive IELTS if you achieved 70% or higher in English during your Class X and XII board exams (like CBSE or ISC).</li>
-                <li><strong>English as the Medium of Instruction (MOI):</strong> If you studied in an English medium school/college, submitting an MOI certificate to the admission board will be sufficient to prove your proficiency.</li>
-                <li><strong>Online Interview:</strong> In case you are unable to fulfill the requirements above, the university may arrange a Skype/online interview to test your proficiency.</li>
-                <li><strong>Pre-sessional English Course:</strong> Several universities in Ireland provide pre-sessional courses (6 to 12 weeks) for applicants with lower IELTS scores. You will receive your degrees after completion.</li>
-                <li><strong>Undergraduate Degree in English:</strong> IELTS is not necessary if English was your major specialization during your undergraduate studies.</li>
+                <li><strong>High School English Scores</strong>: Many Irish universities waive IELTS if you achieved 70% or higher in English in Class X and XII board exams (CBSE/ISC).</li>
+                <li><strong>English Medium of Instruction (MOI) Certificate</strong>: Submit a certificate proving your undergraduate degree was conducted entirely in English.</li>
+                <li><strong>Online Interview</strong>: If language certificates are missing, the university may arrange a Skype/online interview to evaluate your English proficiency.</li>
+                <li><strong>Pre-sessional English Course</strong>: Choose a 6 to 12 weeks pre-sessional English program if your IELTS score is slightly low.</li>
+                <li><strong>Undergraduate Degree in English</strong>: If English was your major specialization during your bachelor's degree, IELTS is waived.</li>
             </ul>
         </div>
 
         <!-- Visa Documents Checklist -->
         <div style="margin-top: 40px;">
-            <h3 class="mt-5 mb-2 text-center" style="text-align: center; font-size: 22px; font-weight: 800; color: #0F172A;"><i class="fa-solid fa-folder-open text-blue"></i> Documents Required for Admission in Ireland (Checklist)</h3>
-            <p class="text-center" style="text-align: center; font-size: 14.5px; color: #64748B; max-width: 760px; margin: 0 auto 24px auto;">Ensure you have all the following documents ready for admission and visa processing:</p>
-
-            <!-- Two-column: checklist left, image right -->
-            <div style="display: flex; align-items: center; gap: 48px; flex-wrap: wrap; margin-top: 12px;">
-              <!-- Checklist -->
-              <div style="flex: 1; min-width: 280px;">
-                <ul class="germany-checklist">
-                  <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Academic transcripts and certificates (10th, 12th, bachelor's/master's as applicable)</span></li>
-                  <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Updated Resume / CV</span></li>
-                  <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Statement of Purpose (SOP)</span></li>
-                  <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Letters of Recommendation (LORs)</span></li>
-                  <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>English proficiency test scorecard</span></li>
-                  <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Passport copy</span></li>
-                  <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Offer letter from the university</span></li>
-                  <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Proof of funds / bank statements (last 6 months)</span></li>
-                  <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Health / medical insurance confirmation</span></li>
-                </ul>
-              </div>
-              <!-- Ripon Building Image -->
-              <div style="flex: 0 0 420px; max-width: 420px; min-width: 260px;">
-                <img src="assets/Ripon Building.jpg" alt="Ripon Building, Ireland"
-                  style="width: 100%; height: 340px; object-fit: cover; border-radius: 18px; box-shadow: 0 12px 40px rgba(13,71,216,0.13); display: block;">
-                <p style="text-align: center; font-size: 13px; color: #64748B; margin-top: 10px; font-style: italic;">Ripon Building — iconic campus landmark</p>
-              </div>
-            </div>
+            <h3 class="text-center-sub">Required Documents Checklist for Admission in Ireland</h3>
+            <p style="margin-bottom: 15px;">Ensure you have all the files ready in checklist format for a smooth application process:</p>
+            
+            <ul class="germany-checklist">
+                <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Academic transcripts and certificates (10th, 12th, Bachelor's/Master's)</span></li>
+                <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Updated Resume / CV</span></li>
+                <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Statement of Purpose (SOP)</span></li>
+                <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Letters of Recommendation (LORs)</span></li>
+                <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>English proficiency test scorecard (IELTS/PTE)</span></li>
+                <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Passport copy (first and last pages)</span></li>
+                <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Offer letter from the university</span></li>
+                <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Proof of funds / bank statements</span></li>
+                <li class="germany-checklist-item"><i class="fa-solid fa-circle-check"></i><span>Health insurance confirmation</span></li>
+            </ul>
         </div>
 
         <!-- Visa Processing & Intakes Grid -->
         <div class="germany-step-grid" style="margin-top: 40px;">
             <div class="germany-step-card" style="grid-column: span 2;">
                 <div class="germany-step-icon" style="background-color: #E6FDF5; color: #10B981;"><i class="fa-solid fa-calendar-days"></i></div>
-                <h4>How Many Intakes in Ireland for International Students?</h4>
-                <p>Colleges and universities run two main intakes per year:</p>
+                <h4>What are the Intakes in Ireland for International Students?</h4>
                 <div class="germany-table-container" style="box-shadow:none; border:none; margin:10px 0 0;">
                     <table class="germany-table">
                         <thead>
                             <tr>
                                 <th>Intake</th>
-                                <th>Duration / Start</th>
+                                <th>Duration / Start Month</th>
+                                <th>Remarks</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><strong>Autumn Intake</strong></td>
                                 <td>September / October</td>
+                                <td>Main intake; offers maximum course options and scholarship access. Recommended.</td>
                             </tr>
                             <tr>
                                 <td><strong>Spring Intake</strong></td>
                                 <td>January / February</td>
+                                <td>Backup intake; ideal if you miss the September intake or need more prep time.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <p style="font-size:0.85rem; margin-top: 10px;">
-                    <strong>Which intake should you choose?</strong><br>
-                    Aim for the September intake, if possible, as it offers the most course options, the best scholarship access, and the largest peer group of international students.<br>
-                    The January intake is a strong backup. Always apply 6–9 months in advance.
-                </p>
+                <p style="font-size:0.85rem; margin-top: 10px;">* Note: Apply <strong>6-9 months</strong> in advance of your target intake, as standard courses and scholarship seats fill up very early.</p>
             </div>
 
             <div class="germany-step-card" style="grid-column: span 2;">
                 <div class="germany-step-icon" style="background-color: #FFF1F2; color: #F43F5E;"><i class="fa-solid fa-hourglass-half"></i></div>
-                <h4>Visa Processing &amp; Stay Rules</h4>
+                <h4>What is the Visa Processing Time for Ireland?</h4>
                 <ul class="germany-checklist" style="margin: 10px 0;">
-                    <li class="germany-checklist-item"><i class="fa-solid fa-circle-check" style="color: #F43F5E;"></i><span><strong>Long Stay 'D' Visa</strong>: Required for courses lasting more than 90-100 days.</span></li>
-                    <li class="germany-checklist-item"><i class="fa-solid fa-circle-check" style="color: #F43F5E;"></i><span><strong>Part-time Work</strong>: Fulfill your budget by working up to 20 hours/week during term.</span></li>
-                    <li class="germany-checklist-item"><i class="fa-solid fa-circle-check" style="color: #F43F5E;"></i><span><strong>Post-Study Scheme</strong>: Access Stamp 1G stay-back visa up to 24 months.</span></li>
+                    <li class="germany-checklist-item"><i class="fa-solid fa-circle-check" style="color: #F43F5E;"></i><span><strong>Standard window</strong>: 4-8 weeks</span></li>
+                    <li class="germany-checklist-item"><i class="fa-solid fa-circle-check" style="color: #F43F5E;"></i><span><strong>Peak season (June-September)</strong>: Can extend to 10 weeks</span></li>
+                    <li class="germany-checklist-item"><i class="fa-solid fa-circle-check" style="color: #F43F5E;"></i><span><strong>Visa Application Submission</strong>: Booked via VFS Global centers across India</span></li>
                 </ul>
             </div>
         </div>
-    </section>
-
-    <!-- 10.5 Student Life & Accommodation Section -->
+        </div>
+    </section><!-- 10.5 Student Life & Accommodation Section -->
     <section class="dubai-student-life-section">
         <div class="container" style="position:relative;">
             <div class="dsl-header-split">
                 <!-- Left -->
                 <div class="dsl-header-left">
-                    <div class="dsl-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
-                        <i class="fa-solid fa-users"></i> STUDENT LIFE &amp; HOUSING
+                    <div class="dsl-pill-badge">
+                        <i class="fa-solid fa-users"></i> STUDENT LIFE
                     </div>
                     <h2 class="dsl-title">
                         Life in Ireland<br>
@@ -12249,7 +11999,7 @@ i.fa-solid.fa-star {
                     </h2>
                     <div class="dsl-title-line"></div>
                     <p class="dsl-subtext">
-                        Living in Ireland offers a welcoming culture and friendly communities. Finding the right housing type is crucial to managing your student life and budget.
+                        Living in Ireland is an exciting adventure. Accommodation can range from on-campus university halls to off-campus shared housing, homestays, and private rentals.
                     </p>
                 </div>
 
@@ -12269,56 +12019,65 @@ i.fa-solid.fa-star {
                 <!-- On-Campus -->
                 <div class="dh-feature-card">
                     <div class="dh-card-icon"><i class="fa-solid fa-building-columns"></i></div>
-                    <h3>On-Campus Accommodation</h3>
+                    <h3>1. On-Campus Accommodation</h3>
                     <div class="dh-card-line"></div>
-                    <p>In high demand and can be pricey. It is usually a shared apartment (4–8 students), with your own private bedroom but shared kitchen, living room, and bathroom. Rent is paid per semester, plus a security deposit. Heating/electricity are often extra.</p>
+                    <p><strong>Cost: around â‚¬500 - â‚¬1,100 / month</strong></p>
+                    <p style="font-size:0.85rem; color:var(--body-gray); margin-top:5px;">
+                        In high demand and can be pricey. Shared apartments (4â€“8 students) with private bedrooms but shared kitchen/bathrooms. Rent is paid per semester, with a security deposit.
+                    </p>
                 </div>
 
-                <!-- Off-Campus -->
+                <!-- Off-Campus / Private -->
                 <div class="dh-feature-card">
                     <div class="dh-card-icon"><i class="fa-solid fa-people-roof"></i></div>
-                    <h3>Off-Campus &amp; Private Apartments</h3>
+                    <h3>2. Private Student Apartments</h3>
                     <div class="dh-card-line"></div>
-                    <p>A solid choice. Offers student-only buildings, close to campus, sometimes arranged by the college. The downside is that they usually cost more—luxury student apartments can go up to €10,000 for a 9-month contract.</p>
+                    <p><strong>Cost: around â‚¬400 - â‚¬1,100 / month</strong></p>
+                    <p style="font-size:0.85rem; color:var(--body-gray); margin-top:5px;">
+                        Often marketed as "luxury" housing with excellent student-only structures, close to campus, but generally higher in price (up to â‚¬10,000 for a 9-month contract).
+                    </p>
                 </div>
 
                 <!-- Homestay -->
                 <div class="dh-feature-card">
                     <div class="dh-card-icon"><i class="fa-solid fa-house-chimney-user"></i></div>
-                    <h3>Homestays &amp; Digs</h3>
+                    <h3>3. Homestay Accommodation</h3>
                     <div class="dh-card-line"></div>
-                    <p>Stay with an Irish family in your own room. Locally known as "digs" in Ireland. Breakfast and dinner are included, with lunch on your own, and utilities/laundry are covered at no extra cost.</p>
+                    <p><strong>Cost: â‚¬650 - â‚¬950 / month</strong></p>
+                    <p style="font-size:0.85rem; color:var(--body-gray); margin-top:5px;">
+                        Stay with an Irish family in your own room. Often includes breakfast/dinner, with utilities and some laundry included in the cost. Known locally as "digs".
+                    </p>
                 </div>
             </div>
 
             <div class="germany-alt-box" style="margin-top: 30px;">
-                <h4><i class="fa-solid fa-circle-info"></i> Accommodation Cost Estimates &amp; Details</h4>
-                <p>Private rented options (bedsit, flat/apartment, or house-sharing) are usually lowest, with room-sharing being the cheapest option since bills are split. Leases usually run 9–12 months.</p>
+                <h4><i class="fa-solid fa-circle-info"></i> Housing Tip &amp; Rent Costs Summary</h4>
+                <p><strong>Tip:</strong> Private rented flats, bedsits, and house-sharing are the cheapest options, especially when bills are split among housemates. Check university accommodation boards early.</p>
                 
                 <div class="germany-table-container" style="box-shadow:none; border:none; margin:15px 0 0;">
                     <table class="germany-table">
                         <thead>
                             <tr>
-                                <th>Accommodation Type</th>
-                                <th>Cost Range (EUR)</th>
+                                <th>Type of Accommodation</th>
+                                <th>Average Monthly Cost (EUR)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>University Accommodation</strong></td>
-                                <td>€500 - €1,100 per month</td>
+                                <td>University Accommodation</td>
+                                <td>â‚¬500 - â‚¬1,100 / month</td>
                             </tr>
                             <tr>
-                                <td><strong>Private Student Apartments</strong></td>
-                                <td>€400 - €1,100 per month</td>
+                                <td>Private Student Apartments</td>
+                                <td>â‚¬400 - â‚¬1,100 / month</td>
                             </tr>
                             <tr>
-                                <td><strong>Homestay Accommodation</strong></td>
-                                <td>€650 - €950 per month (or €6,500 - €9,500 per 9-month contract)</td>
+                                <td>Homestay Accommodation</td>
+                                <td>â‚¬650 - â‚¬950 / month</td>
                             </tr>
                             <tr>
-                                <td><strong>Student Hostels / Short-Term Stays</strong></td>
-                                <td>€25 - €55 per night or €145 - €250 per week</td>
+                                <td>Student Hostels (Short Term)</td>
+                                <td>â‚¬25 - â‚¬55 / night or â‚¬145 - â‚¬250 / week</td>
                             </tr>
                         </tbody>
                     </table>
@@ -12327,62 +12086,59 @@ i.fa-solid.fa-star {
 
             <div class="germany-alt-box" style="margin-top: 30px; background-color:#F0FDFA; border-color:#5EEAD4;">
                 <h4><i class="fa-solid fa-briefcase"></i> Part-Time Work Rules &amp; Student Cities</h4>
-                <p>Once in Ireland, students can work up to 20 hours per week during term time and 40 hours per week during official holidays. After graduation, eligible students can stay and work for up to two years under the Third Level Graduate Scheme (Stamp 1G).</p>
-                <p style="margin-top: 10px;"><strong>Top Student Cities:</strong></p>
-                <ul style="margin-top: 5px; margin-left: 20px;">
-                    <li><strong>Dublin:</strong> Capital city, educational core, and center for major career opportunities.</li>
-                    <li><strong>Cork:</strong> Famous for healthcare, business, and engineering courses.</li>
-                    <li><strong>Galway:</strong> A cultural and extremely student-friendly city.</li>
-                    <li><strong>Limerick:</strong> An affordable place to live and study.</li>
-                    <li><strong>Maynooth:</strong> Very popular for its welcoming environment for international students.</li>
+                <p>International students in Ireland have access to student job opportunities and vibrant local cities:</p>
+                <ul style="margin-top: 8px;">
+                    <li><strong>Part-time Rules</strong>: Work up to 20 hours per week during term time and 40 hours per week during official holidays.</li>
+                    <li><strong>Post-study Scheme</strong>: Stay and work for up to 2 years under the Third Level Graduate Scheme (Stamp 1G) after graduation.</li>
+                    <li><strong>Top Student Cities</strong>:
+                        <ul>
+                            <li><strong>Dublin</strong>: Capital city, massive tech/business hub, and educational core.</li>
+                            <li><strong>Cork</strong>: Famous for pharma, business, healthcare, and engineering.</li>
+                            <li><strong>Galway</strong>: Highly cultural and student-friendly coastal city.</li>
+                            <li><strong>Limerick</strong>: Very affordable place to live, study, and secure jobs.</li>
+                            <li><strong>Maynooth</strong>: Safe, welcoming environment with a classic university town feel.</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
-    </section>
-
-    <!-- 11. Real Stories / Testimonials Section -->
+    </section><!-- 11. Real Stories / Testimonials Section -->
     <section class="dubai-testimonials-section">
         <div class="container relative-z">
             
             <div class="dtm-header text-center">
-                <div class="dtm-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+                <div class="dtm-pill-badge">
                     <i class="fa-solid fa-quote-left"></i> TESTIMONIALS
                 </div>
                 <h2 class="dtm-title">
                     What Our Students Say About <span class="text-blue-accent">ISMS Global</span>
                 </h2>
-                <div class="text-center" style="max-width: 850px; margin: 0 auto 48px auto; text-align: center;" data-reveal>
-                <div style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #DBEAFE; background: #FFFFFF; color: #2563EB; border-radius: 999px; padding: 6px 22px; font-size: 13px; font-weight: 700; margin-bottom: 18px; box-shadow: 0 2px 10px rgba(37,99,235,0.06);">
-                    <i class="fa-solid fa-quote-left"></i> STUDENT TESTIMONIALS
-                </div>
-                <h2 style="font-size: 36px; font-weight: 800; color: #0F172A; line-height: 1.25; margin-bottom: 16px; letter-spacing: -0.01em;">
-                    What Our Students Say<br>
-                    <span style="color: #2563EB; display: inline-block; margin-top: 4px;">About Studying in Ireland</span>
-                </h2>
-                <p style="font-size: 15.5px; color: #64748B; max-width: 780px; margin: 0 auto; line-height: 1.65;">
-                    Hear from some of our successful students who achieved their dreams of studying in Ireland with ISMS Global.
+                <div class="dtm-title-line"></div>
+                <p class="dtm-subtext">
+                    Read the success stories of students who achieved their dreams of studying in Ireland with our support.
                 </p>
             </div>
 
+            <!-- 4 Testimonial Cards -->
             <div class="dtm-4cards-grid">
                 <!-- Card 1 -->
                 <div class="dtm-card">
-                    <div class="dtm-rating" style="color: #FFB800 !important; margin-bottom: 12px;"><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i></div>
+                    <div class="dtm-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <p class="dtm-quote-text">
-                        "The counseling team at ISMS Global made my transition to Ireland incredibly smooth. They helped me choose the right MSc program and prepared my complete student visa application pack with absolute transparency."
+                        "Shortlisting universities for Ireland was tricky since all public universities are top-ranked. ISMS Global guided me to Trinity College Dublin for my MSc. Their application and visa filing support was absolutely brilliant!"
                     </p>
                     <div class="dtm-user-box">
-                        <div class="dtm-avatar"><img src="assets/img_photo-1507003211169-0a1dd7228f2d.jpg" alt="Amit Sharma"></div>
+                        <div class="dtm-avatar"><img src="assets/img_photo-1507003211169-0a1dd7228f2d.jpg" alt="Student Profile"></div>
                         <div class="dtm-info">
                             <h4>Amit Sharma</h4>
-                            <span>MSc Computer Science, Trinity College Dublin</span>
+                            <span>MSc Student, Dublin</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="dtm-card">
-                    <div class="dtm-rating" style="color: #FFB800 !important; margin-bottom: 12px;"><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i></div>
+                    <div class="dtm-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <p class="dtm-quote-text">
                         "Applying for the Stamp 1G post-study visa pathways after graduation was simple because ISMS Global mapped out my entire journey. I opened my bank account, got my visa fast-tracked, and I'm now working in Dublin's tech hub!"
                     </p>
@@ -12397,7 +12153,7 @@ i.fa-solid.fa-star {
 
                 <!-- Card 3 -->
                 <div class="dtm-card">
-                    <div class="dtm-rating" style="color: #FFB800 !important; margin-bottom: 12px;"><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i></div>
+                    <div class="dtm-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <p class="dtm-quote-text">
                         "I wanted to study in Ireland without IELTS. ISMS Global helped me get an MOI waiver based on my Class XII English scores. I got accepted into UCD for my Data Science degree. The service was 100% transparent."
                     </p>
@@ -12412,7 +12168,7 @@ i.fa-solid.fa-star {
 
                 <!-- Card 4 -->
                 <div class="dtm-card">
-                    <div class="dtm-rating" style="color: #FFB800 !important; margin-bottom: 12px;"><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i><i class="fa-solid fa-star" style="color: #FFB800 !important;"></i></div>
+                    <div class="dtm-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <p class="dtm-quote-text">
                         "I was awarded the UCD Global Excellence Scholarship covering my tuition fees. The team at ISMS Global reviewed my scholarship essays and did multiple mock interviews. Simply outstanding support!"
                     </p>
@@ -12435,7 +12191,7 @@ i.fa-solid.fa-star {
                 <div class="dtp-left-content">
                     <div class="dtp-header-box">
                         <div>
-                            <div class="dtp-pill-badge" style="display: inline-flex !important; align-items: center !important; gap: 8px !important; margin-left: 0 !important; margin-right: auto !important;">
+                            <div class="dtp-pill-badge">
                                 <i class="fa-solid fa-shield-halved"></i> YOUR TRUSTED PARTNER
                             </div>
                             <h2 class="dtp-title">
@@ -12477,8 +12233,8 @@ i.fa-solid.fa-star {
                         <!-- Card 5 -->
                         <div class="dtp-feat-card">
                             <div class="dtp-feat-icon"><i class="fa-solid fa-id-card-clip"></i></div>
-                            <h4>Stamp 1G &amp; Pathway Help</h4>
-                            <p>Step-by-step assistance for Irish visa routes, entry pathway eligibility, and funds verification.</p>
+                            <h4>APS &amp; Blocked Account Help</h4>
+                            <p>Step-by-step assistance for German academic verification and funds deposit.</p>
                         </div>
                         <!-- Card 6 -->
                         <div class="dtp-feat-card">
@@ -12509,14 +12265,14 @@ i.fa-solid.fa-star {
     <section class="dfc-section" id="contact">
         <div class="container relative-z">
             <div class="dfc-hero-wrap" style="background: var(--navy) !important;">
-                <img src="assets/ireland.png" alt="Ireland Backdrop" class="dfc-skyline-bg" style="opacity: 0.15; filter: grayscale(100%);">
+                <img src="assets/germany.png" alt="Ireland Backdrop" class="dfc-skyline-bg" style="opacity: 0.15; filter: grayscale(100%);">
 
                 <div class="dfc-grid">
 
                     <!-- Left Column: Title, Subtext, 4 Features & Banner -->
                     <div class="dfc-left-col">
                         <div>
-                            <div class="dfc-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+                            <div class="dfc-pill-badge">
                                 <i class="fa-solid fa-graduation-cap"></i> YOUR FUTURE STARTS HERE
                             </div>
                             <h2 class="dfc-title" style="color:#FFFFFF;">
@@ -12534,7 +12290,7 @@ i.fa-solid.fa-star {
                                     <div class="dfc-feat-icon"><i class="fa-solid fa-user-gear"></i></div>
                                     <div class="dfc-feat-info">
                                         <h4 style="color:#FFFFFF;">Expert Guidance</h4>
-                                        <p style="color:rgba(255,255,255,0.75);">Get personalized advice from certified Irish education experts.</p>
+                                        <p style="color:rgba(255,255,255,0.75);">Get personalized advice from certified German education experts.</p>
                                     </div>
                                 </div>
 
@@ -12542,7 +12298,7 @@ i.fa-solid.fa-star {
                                     <div class="dfc-feat-icon"><i class="fa-solid fa-clipboard-check"></i></div>
                                     <div class="dfc-feat-info">
                                         <h4 style="color:#FFFFFF;">End-to-End Support</h4>
-                                        <p style="color:rgba(255,255,255,0.75);">From university shortlist and admission to visa approval &amp; beyond.</p>
+                                        <p style="color:rgba(255,255,255,0.75);">From university shortlist and APS to visa approval &amp; beyond.</p>
                                     </div>
                                 </div>
 
@@ -12550,7 +12306,7 @@ i.fa-solid.fa-star {
                                     <div class="dfc-feat-icon"><i class="fa-solid fa-shield-halved"></i></div>
                                     <div class="dfc-feat-info">
                                         <h4 style="color:#FFFFFF;">100% Transparent</h4>
-                                        <p style="color:rgba(255,255,255,0.75);">Honest information on tuition, pathways, and visa steps with no hidden charges.</p>
+                                        <p style="color:rgba(255,255,255,0.75);">Honest information on blocked accounts with no hidden charges.</p>
                                     </div>
                                 </div>
 
@@ -12619,7 +12375,7 @@ i.fa-solid.fa-star {
                                 <div class="dfc-field-group">
                                     <label>Mobile Number<span>*</span></label>
                                     <div class="dfc-phone-wrap">
-                                        <div class="dfc-phone-flag">🇮🇳 +91</div>
+                                        <div class="dfc-phone-flag">ðŸ‡®ðŸ‡³ +91</div>
                                         <input type="tel" class="dfc-input dfc-phone-input" placeholder="Enter your number" required>
                                     </div>
                                 </div>
@@ -12716,11 +12472,9 @@ i.fa-solid.fa-star {
 
     <!-- 11.8 Our Partners & Accreditations Section -->
     <section class="container section">
-        <div style="text-align: center; display: flex; justify-content: center; width: 100%; margin-bottom: 15px;">
-        <div class="badge-pill" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 8px !important; margin: 0 auto !important;">
+        <div class="dsh-pill-badge" style="display:block; margin:0 auto 15px; text-align:center; width:fit-content;">
             <i class="fa-solid fa-handshake"></i> ACCREDITATIONS &amp; MEMBER ASSOCIATIONS
         </div>
-    </div>
         <h2 class="text-center">Our Partners &amp; Accreditations</h2>
         <div class="dh-title-line" style="margin: 0 auto 35px;"></div>
 
@@ -12751,7 +12505,7 @@ i.fa-solid.fa-star {
     <!-- 11.9 Self Assessment Checklist -->
     <section class="container section bg-soft" style="border-radius: 24px; padding: 4.5rem 2.5rem; margin-bottom: 4.5rem;">
         <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-            <div class="badge-pill" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;"><i class="fa-solid fa-plane-departure"></i> SELF-ASSESSMENT CHECKLIST</div>
+            <div class="badge-pill"><i class="fa-solid fa-plane-departure"></i> SELF-ASSESSMENT CHECKLIST</div>
             <h2 style="margin-bottom: 15px;">Is Ireland the Right Destination for You?</h2>
             <p style="margin-bottom: 30px; color:var(--body-gray);">Tick the criteria that match your academic profile and see if Ireland is a strong match for your studies!</p>
 
@@ -12801,7 +12555,7 @@ i.fa-solid.fa-star {
         </div>
     </section><!-- 11.10 Frequently Asked Questions Section -->
     <section class="container section" style="padding-bottom: 5rem;">
-        <div class="dsh-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important; display:block; margin:0 auto 15px; text-align:center; width:fit-content;">
+        <div class="dsh-pill-badge" style="display:block; margin:0 auto 15px; text-align:center; width:fit-content;">
             <i class="fa-regular fa-comments"></i> FAQs
         </div>
         <h2 class="text-center">Frequently Asked Questions</h2>
@@ -12864,23 +12618,167 @@ i.fa-solid.fa-star {
             </div>
         </div>
     </section>  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer" id="siteFooter"></footer>
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-footer">
+          <img src="assets/logo.png" alt="ISMS Global Education Logo" class="brand-logo-img footer-logo-img">
+        </a>
+        <p>ISMS Global is your trusted partner for studying abroad. We provide end-to-end support for admissions, visas, scholarships and a successful international education journey.</p>
+        <ul class="footer-highlights">
+          <li><i class="fa-solid fa-earth-americas"></i>
+            <div><strong>Global Expertise</strong><span>Years of experience in international education and student success.</span></div>
+          </li>
+          <li><i class="fa-solid fa-user-group"></i>
+            <div><strong>Student First</strong><span>Personalized guidance and support at every step of your journey.</span></div>
+          </li>
+          <li><i class="fa-solid fa-shield-halved"></i>
+            <div><strong>Integrity &amp; Trust</strong><span>Transparent processes and honest advice you can rely on.</span></div>
+          </li>
+        </ul>
+      </div>
 
-  <!-- ===== FLOATING RIGHT SIDE SOCIAL MEDIA DOCK ===== -->
-  <div class="social-side-dock" id="socialSideDock">
-    <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn">
-      <span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span>
-    </a>
-    <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram">
-      <span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span>
-    </a>
-    <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook">
-      <span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span>
-    </a>
-    <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube">
-      <span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span>
-    </a>
-  </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="study-abroad-counselling.html">Study Abroad Counselling</a></li>
+          <li><a href="index.html#destinations">Study Destinations</a></li>
+          <li><a href="universities.html">Universities</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="Scholarship.html">Scholarships</a></li>
+          <li><a href="Blog.html">Blogs &amp; Resources</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Study Destinations</h5>
+        <ul>
+          <li><a href="index.html#destinations"><img src="assets/flag_w40_ca.png" class="flag-icon" alt="Canada Flag"> Canada</a></li>
+          <li><a href="index.html#destinations"><img src="assets/flag_w40_us.png" class="flag-icon" alt="USA Flag"> USA</a></li>
+          <li><a href="uk-destination.html"><img src="assets/flag_w40_gb.png" class="flag-icon" alt="UK Flag"> UK</a></li>
+          <li><a href="index.html#destinations"><img src="assets/flag_w40_au.png" class="flag-icon" alt="Australia Flag"> Australia</a></li>
+          <li><a href="germany-destination.html"><img src="assets/flag_w40_de.png" class="flag-icon" alt="Ireland Flag"> Ireland</a></li>
+          <li><a href="ireland-destination.html"><img src="assets/flag_w40_ie.png" class="flag-icon" alt="Ireland Flag"> Ireland</a></li>
+          <li><a href="index.html#destinations"><img src="assets/flag_w40_nz.png" class="flag-icon" alt="New Zealand Flag"> New Zealand</a></li>
+          <li><a href="index.html#destinations"><img src="assets/flag_w40_fr.png" class="flag-icon" alt="France Flag"> France</a></li>
+          <li><a href="dubai-destination.html"><img src="assets/flag_w40_ae.png" class="flag-icon" alt="Dubai Flag"> Dubai</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Popular Courses</h5>
+        <ul>
+          <li><a href="courses.html">Business &amp; Management</a></li>
+          <li><a href="courses.html">Engineering</a></li>
+          <li><a href="courses.html">Information Technology</a></li>
+          <li><a href="courses.html">Health &amp; Medicine</a></li>
+          <li><a href="courses.html">Data Science &amp; AI</a></li>
+          <li><a href="courses.html">Hospitality Management</a></li>
+          <li><a href="courses.html">Design &amp; Media</a></li>
+          <li><a href="courses.html">Law</a></li>
+          <li><a href="courses.html">Finance &amp; Accounting</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="services.html#step-01">University Selection</a></li>
+          <li><a href="services.html#step-02">Admission Guidance</a></li>
+          <li><a href="services.html#step-05">Visa Assistance</a></li>
+          <li><a href="services.html#step-04">Scholarships &amp; Loans</a></li>
+          <li><a href="services.html#step-03">Accommodation</a></li>
+          <li><a href="services.html#step-03">Pre-Departure Support</a></li>
+          <li><a href="study-abroad-counselling.html">Study Abroad Counselling</a></li>
+          <li><a href="services.html">Post Arrival Support</a></li>
+          <li><a href="study-abroad-counselling.html">Career Guidance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h5>Newsletter</h5>
+        <p>Stay updated with the latest study abroad news, scholarships, events and useful resources.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <label class="checkbox-row small">
+          <input type="checkbox"><span>I agree to receive emails from ISMS Global.</span>
+        </label>
+        <h6>Follow Us</h6>
+        <div class="social-row">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://wa.me/919561776600" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="need-help-card">
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <strong>Need Help? Talk to our experts</strong>
+            <span>+91 95617 76600</span>
+            <small>Mon &ndash; Sat | 9AM &ndash; 7PM IST</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-offices">
+      <div class="offices-col">
+        <h5>Our Offices</h5>
+        <div class="office"><i class="fa-solid fa-location-dot"></i>
+          <div><strong>India &ndash; Head Office</strong><span>ISMS Global Education Pvt. Ltd. Baner, Pune, Maharashtra 411045, India</span><small>info@ismsglobal.org | +91 95617 76600</small></div>
+        </div>
+        <div class="office"><i class="fa-solid fa-location-dot"></i>
+          <div><strong>Canada Office</strong><span>100 Consilium Place, Suite 200, Scarborough, ON M1H 3E3, Canada</span><small>canada@ismsglobal.org | +1 437 800 3888</small></div>
+        </div>
+        <div class="office"><i class="fa-solid fa-location-dot"></i>
+          <div><strong>UK Office</strong><span>85 Great Portland Street, London, W1W 7LT, United Kingdom</span><small>uk@ismsglobal.org | +44 20 4566 0470</small></div>
+        </div>
+      </div>
+      <div class="offices-col">
+        <h5>Accreditations &amp; Partnerships</h5>
+        <div class="accred-grid">
+          <div class="accred-badge"><i class="fa-solid fa-circle-nodes"></i>ICEF<small>Connect. Recruit. Grow.</small></div>
+          <div class="accred-badge"><i class="fa-regular fa-circle"></i>British Council<small>Certified Agent</small></div>
+          <div class="accred-badge"><i class="fa-solid fa-award"></i>QEAC Australia<small>Qualified Education Agent Counsellor</small></div>
+          <div class="accred-badge"><i class="fa-solid fa-award"></i>AAERI<small>Member</small></div>
+          <div class="accred-badge"><i class="fa-solid fa-compass"></i>PIER<small>Professional Int'l Education Resources</small></div>
+          <div class="accred-badge"><i class="fa-solid fa-globe"></i>WEBA<small>Education &amp; Branding Alliance</small></div>
+        </div>
+      </div>
+      <div class="offices-col">
+        <h5>Why Choose ISMS Global?</h5>
+        <div class="mini-stat-grid">
+          <div><strong>10,000+</strong><span>Students Guided</span></div>
+          <div><strong>500+</strong><span>Partner Universities</span></div>
+          <div><strong>15+</strong><span>Countries</span></div>
+          <div><strong>17+</strong><span>Years of Excellence</span></div>
+        </div>
+        <div class="google-badge">
+          <span>We are rated 4.9 out of 5</span>
+          <div>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <span>Based on 200+ Google Reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>&copy; <span id="year">2026</span> ISMS Global Education Pvt. Ltd. All Rights Reserved.</span>
+      <nav>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="privacy-policy.html#terms">Terms &amp; Conditions</a>
+        <a href="privacy-policy.html#refund">Refund Policy</a>
+        <a href="privacy-policy.html#cookies">Cookie Policy</a>
+        <a href="sitemap.html">Sitemap</a>
+      </nav>
+    </div>
+  </footer>
 
   <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
   <a href="https://wa.me/919561776600" class="whatsapp-fab" target="_blank" aria-label="Chat on WhatsApp">
@@ -13037,40 +12935,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. FAQ Accordion Behavior
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
-        question.addEventListener('click', (e) => {
-            e.preventDefault();
+        question.addEventListener('click', () => {
             const faqItem = question.closest('.faq-item');
-            if (!faqItem) return;
-            
             const answer = faqItem.querySelector('.faq-answer');
-            const toggleBtn = faqItem.querySelector('.dfe-q-toggle, .faq-toggle, i');
+            const toggleBtn = faqItem.querySelector('.dfe-q-toggle');
             const isActive = faqItem.classList.contains('active');
             
-            // Close all FAQs in this container
-            const container = faqItem.closest('.container, section, body') || document;
-            container.querySelectorAll('.faq-item').forEach(item => {
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
-                const ans = item.querySelector('.faq-answer');
-                if (ans) ans.style.display = 'none';
-                const tb = item.querySelector('.dfe-q-toggle, .faq-toggle');
+                item.querySelector('.faq-answer').style.display = 'none';
+                const tb = item.querySelector('.dfe-q-toggle');
                 if (tb) tb.innerHTML = '&plus;';
             });
 
-            // Toggle selected FAQ
-            if (!isActive && answer) {
+            // Open selected
+            if (!isActive) {
                 faqItem.classList.add('active');
                 answer.style.display = 'block';
-                if (toggleBtn) {
-                    if (toggleBtn.classList.contains('dfe-q-toggle') || toggleBtn.classList.contains('faq-toggle')) {
-                        toggleBtn.innerHTML = '&minus;';
-                    }
-                }
+                if (toggleBtn) toggleBtn.innerHTML = '&minus;';
             }
         });
     });
-    
-
-    
 
     // 7. Checklist State logic
     const checkboxes = document.querySelectorAll('.self-check-input');
@@ -13082,31 +12968,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (checkedCount >= 3) {
             assessmentResult.innerHTML = 
-                `<div class="status-box text-blue" style="background:var(--light-blue); padding:15px; border-radius:8px; display:flex; gap:10px; align-items:center;">
+                <div class="status-box text-blue" style="background:var(--light-blue); padding:15px; border-radius:8px; display:flex; gap:10px; align-items:center;">
                     <i class="fa-solid fa-circle-check" style="font-size:1.2rem; color:var(--primary);"></i>
                     <div>
                         <strong>Strong Match! (/5)</strong>
                         <p class="text-xs" style="margin:2px 0 0; color:var(--body-gray);">Ireland is a perfect fit for your academic profile and budget!</p>
                     </div>
-                </div>`;
+                </div>;
         } else if (checkedCount > 0) {
             assessmentResult.innerHTML = 
-                `<div class="status-box" style="background:#FFFBEB; padding:15px; border-radius:8px; display:flex; gap:10px; align-items:center;">
+                <div class="status-box" style="background:#FFFBEB; padding:15px; border-radius:8px; display:flex; gap:10px; align-items:center;">
                     <i class="fa-solid fa-circle-question" style="font-size:1.2rem; color:#D97706;"></i>
                     <div>
                         <strong>Good Match! (/5)</strong>
                         <p class="text-xs" style="margin:2px 0 0; color:var(--body-gray);">You meet some requirements. Talk to our counselors to plan your next steps.</p>
                     </div>
-                </div>`;
+                </div>;
         } else {
             assessmentResult.innerHTML = 
-                `<div class="status-box text-blue" style="background:var(--light-blue); padding:15px; border-radius:8px; display:flex; gap:10px; align-items:center;">
+                <div class="status-box text-blue" style="background:var(--light-blue); padding:15px; border-radius:8px; display:flex; gap:10px; align-items:center;">
                     <i class="fa-solid fa-circle-info" style="font-size:1.2rem; color:var(--primary);"></i>
                     <div>
                         <strong>Let's Evaluate Your Score</strong>
                         <p class="text-xs" style="margin:2px 0 0; color:var(--body-gray);">Tick the criteria above to check your match for Ireland!</p>
                     </div>
-                </div>`;
+                </div>;
         }
     }
 
@@ -13141,6 +13027,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
-<script src="main.js"></script>
 </body>
 </html>

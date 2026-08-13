@@ -8104,7 +8104,13 @@ body {
 
 .scholarship-scroll-wrapper {
 
-  width: 95% !important;
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  margin-left: auto !important;
+
+  margin-right: auto !important;
 
   overflow-x: auto !important;
 
@@ -11804,6 +11810,14 @@ body {
 
 .testimonial-layout {
 
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  margin-left: auto !important;
+
+  margin-right: auto !important;
+
   display: grid;
 
   grid-template-columns: 380px 1fr;
@@ -14490,6 +14504,48 @@ body {
 
 
 
+.faq-exact-section .container {
+
+  max-width: none !important;
+
+  width: calc(100% + 48px) !important;
+
+  margin-left: -24px !important;
+
+  margin-right: -24px !important;
+
+  padding-left: 24px !important;
+
+  padding-right: 24px !important;
+
+  box-sizing: border-box !important;
+
+}
+
+
+
+.faq-exact-grid {
+
+  width: 100% !important;
+
+  max-width: none !important;
+
+  margin-left: 0 !important;
+
+  margin-right: 0 !important;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 24px;
+
+  margin-bottom: 36px;
+
+  align-items: start;
+
+}
+
 .faq-bg-wrapper {
 
   position: absolute;
@@ -14506,27 +14562,7 @@ body {
 
 .faq-globe-bg {
 
-  position: absolute;
-
-  top: -20px;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 100%;
-
-  max-width: 1280px;
-
-  height: 480px;
-
-  object-fit: contain;
-
-  opacity: 0.45;
-
-  pointer-events: none;
-
-  mix-blend-mode: multiply;
+  display: none !important;
 
 }
 
@@ -14573,22 +14609,6 @@ body {
   transform-origin: center;
 
   animation: flyAlongStandardPath 17s linear infinite;
-
-}
-
-
-
-.faq-exact-grid {
-
-  display: grid;
-
-  grid-template-columns: 0.95fr 1.05fr;
-
-  gap: 28px;
-
-  margin-bottom: 36px;
-
-  align-items: start;
 
 }
 
@@ -15796,11 +15816,15 @@ body {
 
 .site-footer {
 
+  position: relative !important;
+
+  z-index: 10 !important;
+
   background: linear-gradient(135deg, #3a5b82 0%, #0a1120 50%, var(--navy) 100%) !important;
 
   color: rgba(255, 255, 255, 0.75);
 
-  padding-top: 64px;
+  padding-top: 85px !important;
 
   font-size: 13.5px;
 
@@ -16428,21 +16452,42 @@ body {
 
 
 
-.google-badge {
+.google-badge,
+body .google-badge,
+body .footer-offices .google-badge,
+body .offices-col .google-badge {
 
   background: rgba(255, 255, 255, 0.08) !important;
 
   border: 1px solid rgba(255, 255, 255, 0.14) !important;
 
-  border-radius: 12px;
+  border-radius: 12px !important;
 
-  padding: 12px 14px;
+  padding: 14px 18px !important;
 
-  text-align: center;
+  text-align: center !important;
 
-  font-size: 12px;
+  font-size: 13.5px !important;
 
   color: #FFFFFF !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  min-width: 100% !important;
+
+  box-sizing: border-box !important;
+
+  margin: 0 !important;
 
 }
 
@@ -16454,7 +16499,11 @@ body {
 
   font-size: 16px;
 
-  margin: 4px 0;
+  margin-top: 6px !important;
+
+  margin-bottom: 0 !important;
+
+  display: block !important;
 
 }
 
@@ -17128,29 +17177,33 @@ body {
 
 .journey-contact-bar {
 
-  background: #fff;
+  position: relative !important;
 
-  border-radius: 20px 20px 0 0;
+  z-index: 20 !important;
 
-  margin-top: 36px;
+  background: #fff !important;
 
-  padding: 16px 24px;
+  border-radius: 18px !important;
 
-  display: flex;
+  margin-top: 40px !important;
 
-  align-items: center;
+  margin-bottom: -50px !important;
 
-  justify-content: space-between;
+  padding: 18px 28px !important;
 
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+  display: flex !important;
 
-  border: 1px solid var(--border);
+  align-items: center !important;
 
-  border-bottom: none;
+  justify-content: space-between !important;
 
-  flex-wrap: nowrap;
+  box-shadow: 0 16px 40px rgba(11, 27, 77, 0.12) !important;
 
-  gap: 12px;
+  border: 1px solid #E2E8F0 !important;
+
+  flex-wrap: nowrap !important;
+
+  gap: 16px !important;
 
 }
 
@@ -18386,11 +18439,11 @@ i.fa-solid.fa-star {
 
     border: 1px solid rgba(226, 232, 240, 0.9) !important;
 
-    border-radius: 16px !important;
+    border-radius: 14px !important;
 
-    margin-bottom: 14px !important;
+    margin-bottom: 10px !important;
 
-    box-shadow: 0 4px 18px rgba(11, 34, 101, 0.04) !important;
+    box-shadow: 0 4px 14px rgba(11, 34, 101, 0.04) !important;
 
     transition: all 0.25s ease !important;
 
@@ -18404,7 +18457,7 @@ i.fa-solid.fa-star {
 
     border-color: #2563EB !important;
 
-    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.1) !important;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.1) !important;
 
     transform: translateY(-2px) !important;
 
@@ -18418,7 +18471,7 @@ i.fa-solid.fa-star {
 
     border-color: #2563EB !important;
 
-    box-shadow: 0 8px 28px rgba(37, 99, 235, 0.12) !important;
+    box-shadow: 0 6px 22px rgba(37, 99, 235, 0.12) !important;
 
     background: #FFFFFF !important;
 
@@ -18428,7 +18481,7 @@ i.fa-solid.fa-star {
 
 .faq-exact-section .faq-q {
 
-    width: 95% !important;
+    width: 100% !important;
 
     background: transparent !important;
 
@@ -18438,13 +18491,13 @@ i.fa-solid.fa-star {
 
     align-items: center !important;
 
-    gap: 16px !important;
+    gap: 14px !important;
 
-    padding: 20px 24px !important;
+    padding: 14px 18px !important;
 
     font-weight: 700 !important;
 
-    font-size: 16px !important;
+    font-size: 14.5px !important;
 
     color: #0A1940 !important;
 
@@ -18454,19 +18507,33 @@ i.fa-solid.fa-star {
 
     box-sizing: border-box !important;
 
+    white-space: nowrap !important;
+
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .faq-exact-section .faq-q {
+
+        white-space: normal !important;
+
+    }
+
 }
 
 
 
 .faq-exact-section .faq-icon-badge {
 
-    width: 34px !important;
+    width: 28px !important;
 
-    height: 34px !important;
+    height: 28px !important;
 
-    min-width: 34px !important;
+    min-width: 28px !important;
 
-    min-height: 34px !important;
+    min-height: 28px !important;
 
     border-radius: 50% !important;
 
@@ -18480,11 +18547,11 @@ i.fa-solid.fa-star {
 
     color: #FFFFFF !important;
 
-    font-size: 13px !important;
+    font-size: 11px !important;
 
     flex-shrink: 0 !important;
 
-    box-shadow: 0 3px 10px rgba(13, 71, 216, 0.28) !important;
+    box-shadow: 0 3px 8px rgba(13, 71, 216, 0.25) !important;
 
     transition: all 0.25s ease !important;
 
@@ -19111,4 +19178,61 @@ body .accred-badge {
   justify-content: flex-start !important;
   align-items: flex-start !important;
   text-align: left !important;
+}
+
+/* ─── FAQ SECTION — MATCH BLOG SECTION CONTAINER & MAX-WIDTH EXACTLY ─── */
+body .faq-exact-section .container,
+body #faq .container {
+  max-width: none !important;
+  width: calc(100% + 48px) !important;
+  margin-left: -24px !important;
+  margin-right: -24px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+body .faq-exact-grid,
+body #faq .faq-exact-grid {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 24px !important;
+}
+
+/* ─── GLOBAL JOURNEY CTA SECTION — MATCH FAQ & BLOG SECTION WIDTH EXACTLY ─── */
+.global-journey-section,
+body .global-journey-section {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.global-journey-section .container,
+body .global-journey-section .container,
+body #contact .container {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  max-width: none !important;
+  width: calc(100% + 48px) !important;
+  margin-left: -24px !important;
+  margin-right: -24px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.global-journey-box,
+body .global-journey-box {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }

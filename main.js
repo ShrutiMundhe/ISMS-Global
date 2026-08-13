@@ -280,7 +280,7 @@
               </div>
             </a>
             <!-- 2. Ireland -->
-            <a href="index.html#destinations" class="dest-drop-item">
+            <a href="ireland-destination.html" class="dest-drop-item">
               <img src="assets/flag_w40_ie.png" alt="Ireland Flag" class="dest-drop-flag">
               <div class="dest-drop-text">
                 <strong>Ireland</strong>
@@ -320,7 +320,7 @@
               </div>
             </a>
             <!-- 7. Spain -->
-            <a href="index.html#destinations" class="dest-drop-item">
+            <a href="spain-destination.html" class="dest-drop-item">
               <img src="assets/flag_w40_es.png" alt="Spain Flag" class="dest-drop-flag">
               <div class="dest-drop-text">
                 <strong>Spain</strong>
@@ -378,9 +378,9 @@
               <i class="fa-solid fa-book-open uni-drop-icon"></i>
               <div class="uni-drop-text"><strong>Browse by Course</strong><span>Find universities by your subject</span></div>
             </a>
-            <a href="universities.html?filter=top25" class="uni-drop-item">
+            <a href="university_search.html" class="uni-drop-item">
               <i class="fa-solid fa-award uni-drop-icon"></i>
-              <div class="uni-drop-text"><strong>Top 25 Universities</strong><span>World's best institutions</span></div>
+              <div class="uni-drop-text"><strong>Top 30 Universities</strong><span>World's best institutions</span></div>
             </a>
           </div>
         </div>
@@ -395,7 +395,7 @@
               <i class="fa-regular fa-newspaper uni-drop-icon"></i>
               <div class="uni-drop-text"><strong>Blog</strong><span>Articles &amp; study abroad guides</span></div>
             </a>
-            <a href="index.html#testimonials" class="uni-drop-item">
+            <a href="Students_Review.html" class="uni-drop-item">
               <i class="fa-solid fa-graduation-cap uni-drop-icon"></i>
               <div class="uni-drop-text"><strong>Success Stories</strong><span>Real student achievements</span></div>
             </a>
@@ -477,7 +477,7 @@
           <!-- 1. UK -->
           <li><a href="uk-destination.html"><img src="assets/flag_w40_gb.png" class="flag-icon" alt="UK Flag"> UK</a></li>
           <!-- 2. Ireland -->
-          <li><a href="index.html#destinations"><img src="assets/flag_w40_ie.png" class="flag-icon" alt="Ireland Flag"> Ireland</a></li>
+          <li><a href="ireland-destination.html"><img src="assets/flag_w40_ie.png" class="flag-icon" alt="Ireland Flag"> Ireland</a></li>
           <!-- 3. Dubai -->
           <li><a href="dubai-destination.html"><img src="assets/flag_w40_ae.png" class="flag-icon" alt="Dubai Flag"> Dubai</a></li>
           <!-- 4. France -->
@@ -487,7 +487,7 @@
           <!-- 6. Australia -->
           <li><a href="index.html#destinations"><img src="assets/flag_w40_au.png" class="flag-icon" alt="Australia Flag"> Australia</a></li>
           <!-- 7. Spain -->
-          <li><a href="index.html#destinations"><img src="assets/flag_w40_es.png" class="flag-icon" alt="Spain Flag"> Spain</a></li>
+          <li><a href="spain-destination.html"><img src="assets/flag_w40_es.png" class="flag-icon" alt="Spain Flag"> Spain</a></li>
           <!-- 8. Netherlands -->
           <li><a href="index.html#destinations"><img src="assets/flag_w40_nl.png" class="flag-icon" alt="Netherlands Flag"> Netherlands</a></li>
           <!-- 9. New Zealand -->
@@ -553,7 +553,10 @@
           <i class="fa-solid fa-headset"></i>
           <div>
             <strong>Need Help? Talk to our experts</strong>
-            <span>+91 70660 28888</span>
+            <span>+91 9579519386
+
+
+</span>
             <small>Mon – Sat | 9AM – 7PM IST</small>
           </div>
         </div>
@@ -571,6 +574,7 @@
             <small>info@ismsglobal.org | +91 70660 28888</small>
           </div>
         </div>
+        <!--
         <div class="office">
           <i class="fa-solid fa-location-dot"></i>
           <div>
@@ -587,6 +591,7 @@
             <small>canada@ismsglobal.org | +1 437 800 3888</small>
           </div>
         </div>
+        -->
       </div>
 
       <div class="offices-col">
@@ -604,15 +609,14 @@
       <div class="offices-col">
         <h5>Why Choose ISMS Global?</h5>
         <div class="mini-stat-grid">
-          <div><strong>10,000+</strong><span>Students Guided</span></div>
-          <div><strong>500+</strong><span>Partner Universities</span></div>
-          <div><strong>15+</strong><span>Countries</span></div>
-          <div><strong>17+</strong><span>Years of Excellence</span></div>
+          <div><strong>2,000+</strong><span>Students Guided</span></div>
+          <div><strong>30+</strong><span>Partner Universities</span></div>
+          <div><strong>10+</strong><span>Countries</span></div>
+          <div><strong>19+</strong><span>Years of Excellence</span></div>
         </div>
         <div class="google-badge">
           <span>We are rated 4.9 out of 5</span>
           <div>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <span>Based on 200+ Google Reviews</span>
         </div>
       </div>
     </div>
