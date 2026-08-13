@@ -1,0 +1,654 @@
+/* ============================================================
+   OUR SERVICES PAGE STYLES - ISMS GLOBAL
+   ============================================================ */
+
+:root {
+  --svc-primary: #0D47D8;
+  --svc-primary-hover: #0A39A6;
+  --svc-primary-light: #EEF4FF;
+  --svc-navy: #0A1233;
+  --svc-gold: #F59E0B;
+  --svc-gold-hover: #D97706;
+  --svc-green: #10B981;
+  --svc-green-hover: #059669;
+  --svc-border: #E2E8F0;
+  --svc-bg-light: #F8FAFC;
+  --svc-card-bg: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip !important;
+  background: #11172A !important;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--svc-bg-light);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--svc-navy);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-top: 72px !important; /* Reserve space for fixed navbar */
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  overflow-x: clip !important;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.site-footer, footer {
+  margin-top: auto !important;
+  margin-bottom: 0 !important;
+  background: #11172A !important;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==================== 1. HERO SECTION ==================== */
+.svc-hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #EBF1FA 0%, #F5F8FE 100%);
+  padding: 50px 0 50px 0;
+  border-bottom: 1px solid var(--svc-border);
+  overflow: hidden;
+  min-height: 460px;
+}
+
+.svc-hero-landmarks-bg {
+  display: none;
+}
+
+.svc-hero-inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 360px;
+}
+
+.svc-hero-content {
+  max-width: 620px;
+  z-index: 5;
+}
+
+.svc-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #64748B;
+  margin-bottom: 16px;
+}
+
+.svc-breadcrumb a {
+  color: #64748B;
+  text-decoration: none;
+}
+
+.svc-breadcrumb a:hover {
+  color: var(--svc-primary);
+}
+
+.svc-hero-title {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--svc-navy);
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.svc-hero-title span.blue-text {
+  color: var(--svc-primary);
+  display: block;
+}
+
+.svc-hero-sub {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #475569;
+  max-width: 540px;
+  margin-bottom: 28px;
+}
+
+/* Stat Pill Badges Row */
+.svc-hero-stats-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.svc-stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  padding: 9px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--svc-border);
+  box-shadow: 0 4px 14px rgba(10, 18, 51, 0.08);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--svc-navy);
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.svc-stat-pill i {
+  color: var(--svc-primary);
+  font-size: 15px;
+}
+
+/* Full-Height Background Image Wrapper with Soft Mask Blending */
+.svc-hero-image-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 62%;
+  max-width: 960px;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.svc-hero-student-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right bottom;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 30%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 30%);
+  filter: contrast(1.05) brightness(1.02);
+}
+
+/* ==================== 2. STEPPER PROCESS BAR ==================== */
+.svc-process-section,
+.svc-process-section .container {
+  padding-top: 20px;
+  overflow: visible !important;
+}
+
+.svc-process-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px auto;
+}
+
+.svc-process-header h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--svc-navy);
+  margin-bottom: 8px;
+}
+
+.svc-process-header p {
+  font-size: 15px;
+  color: #64748B;
+}
+
+/* Stepper Horizontal Row */
+.svc-stepper-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background: #FFFFFF !important;
+  border-radius: 16px !important;
+  padding: 12px 18px !important;
+  border: 1px solid var(--svc-border) !important;
+  box-shadow: 0 10px 30px rgba(10, 18, 51, 0.12) !important;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 72px !important;
+  z-index: 999 !important;
+  margin-bottom: 50px !important;
+}
+
+.svc-step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.svc-step-item span.num {
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  min-height: 26px !important;
+  max-width: 26px !important;
+  max-height: 26px !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  background: #E2E8F0 !important;
+  color: #475569 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+}
+
+.svc-step-item.active {
+  background-color: var(--svc-primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(13, 71, 216, 0.22);
+}
+
+.svc-step-item.active span.num {
+  background: #FFFFFF !important;
+  color: var(--svc-primary) !important;
+}
+
+.svc-step-item:hover:not(.active) {
+  background: #F1F5F9;
+  color: var(--svc-navy);
+}
+
+/* ==================== 3. DETAILED SERVICE STEP CARDS ==================== */
+.svc-steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-bottom: 60px;
+}
+
+.svc-step-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid var(--svc-border);
+  padding: 40px;
+  box-shadow: 0 8px 24px rgba(10, 18, 51, 0.04);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  scroll-margin-top: 140px;
+}
+
+/* Reverse layout for alternating steps */
+.svc-step-card.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.svc-step-card.reverse .svc-card-content {
+  order: 2;
+}
+
+.svc-step-card.reverse .svc-card-media {
+  order: 1;
+}
+
+/* Step Card Content */
+.svc-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.svc-step-num-badge {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 12px !important;
+  background: var(--svc-primary) !important;
+  color: #FFFFFF !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  margin-bottom: 18px !important;
+  box-shadow: 0 4px 12px rgba(13, 71, 216, 0.25) !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+
+.svc-step-num-badge.gold {
+  background: var(--svc-gold) !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.28) !important;
+}
+
+.svc-step-num-badge.green {
+  background: var(--svc-green) !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.28) !important;
+}
+
+.svc-card-content h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--svc-navy);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.svc-card-content p.desc {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* Checklists Grid */
+.svc-checklist-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.svc-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.svc-check-item i {
+  color: var(--svc-primary);
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.svc-step-card.gold-theme .svc-check-item i {
+  color: var(--svc-gold);
+}
+
+.svc-step-card.green-theme .svc-check-item i {
+  color: var(--svc-green);
+}
+
+/* Action Buttons */
+.btn-svc-action {
+  align-self: flex-start;
+  padding: 13px 28px;
+  border-radius: 12px;
+  background-color: var(--svc-primary);
+  color: #FFFFFF;
+  font-size: 14.5px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(13, 71, 216, 0.25);
+  text-decoration: none;
+}
+
+.btn-svc-action:hover {
+  background-color: var(--svc-primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-svc-action.gold {
+  background-color: var(--svc-gold);
+  color: #0A1233;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.28);
+}
+
+.btn-svc-action.gold:hover {
+  background-color: var(--svc-gold-hover);
+}
+
+.btn-svc-action.green {
+  background-color: var(--svc-green);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.28);
+}
+
+.btn-svc-action.green:hover {
+  background-color: var(--svc-green-hover);
+}
+
+/* Step Card Media Container with Floating Overlay Card */
+.svc-card-media {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 320px;
+  background-color: #E2E8F0;
+  box-shadow: 0 8px 20px rgba(10, 18, 51, 0.06);
+}
+
+.svc-card-media img.bg-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating White Overlay Card */
+.svc-floating-overlay-card {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 18px 22px;
+  box-shadow: 0 12px 28px rgba(10, 18, 51, 0.15);
+  border: 1px solid var(--svc-border);
+  max-width: 260px;
+  z-index: 2;
+}
+
+.svc-floating-overlay-card h4 {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--svc-navy);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.svc-overlay-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.svc-overlay-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.svc-overlay-item i {
+  color: var(--svc-primary);
+  font-size: 13px;
+}
+
+/* ==================== 4. CONSULTATION CTA BANNER ==================== */
+.svc-consultation-banner {
+  background: linear-gradient(135deg, #0A39A6 0%, #062775 100%);
+  border-radius: 20px;
+  margin: 20px 0 60px 0;
+  padding: 0 36px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.svc-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 160px;
+}
+
+.svc-cta-left-student {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.svc-cta-center {
+  flex: 1;
+  max-width: 580px;
+}
+
+.svc-cta-center h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.svc-cta-center p {
+  font-size: 14px;
+  color: #CBD5E1;
+  line-height: 1.5;
+}
+
+.svc-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.btn-cta-white {
+  padding: 12px 24px;
+  border-radius: 10px;
+  background-color: var(--svc-primary);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-cta-white:hover {
+  background-color: var(--svc-primary-hover);
+}
+
+.btn-cta-outline {
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cta-outline:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-cta-whatsapp {
+  padding: 12px 20px;
+  border-radius: 12px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-cta-whatsapp:hover {
+  background-color: #1EBE5D;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1180px) {
+  .svc-step-card, .svc-step-card.reverse {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .svc-step-card.reverse .svc-card-content {
+    order: 1;
+  }
+  .svc-step-card.reverse .svc-card-media {
+    order: 2;
+  }
+  .svc-stepper-bar {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .svc-banner-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 16px;
+  }
+  .svc-cta-left-student {
+    display: none;
+  }
+  .svc-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-cta-white, .btn-cta-outline, .btn-cta-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .svc-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .svc-hero-title {
+    font-size: 34px;
+  }
+  .svc-hero-stats-row {
+    justify-content: center;
+  }
+  .svc-step-card {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Reviews &amp; Success Stories | ISMS Global</title>
+  <meta name="description" content="Read authentic feedback, testimonials, and video success stories from students who achieved their dreams of studying abroad with ISMS Global.">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="services.css">
+
+  <style>
+    :root {
+      --primary: #0D47D8;
+      --action: #2563EB;
+      --navy: #11172A;
+      --body-gray: #667085;
+      --light-blue: #F4F8FF;
+      --border: #DCE5F3;
+      --white: #FFFFFF;
+      --header-bg: var(--light-blue);
+      --header-border: var(--border);
+      --nav-text: var(--navy);
+      --nav-hover-bg: #E5EDFF;
+      --nav-accent: var(--primary);
+      --dropdown-bg: var(--white);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #0F172A;
+      background-color: #FFFFFF;
+      padding-top: 72px !important;
+      line-height: 1.6;
+    }
+    
+    
+    
+    /* ── STUDENTS REVIEW PAGE STYLES ── */.sr-hero h1 {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .sr-hero p {
+      font-size: 16px;
+      color: var(--body-gray);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .sr-section {
+      padding: 60px 0;
+    }
+    .sr-section-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .sr-section-sub {
+      font-size: 15px;
+      color: var(--body-gray);
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+        .sr-testimonials-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 10px 0;
+    }
+    .sr-testimonials-grid {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      gap: 24px !important;
+      overflow-x: auto !important;
+      scroll-behavior: auto !important;
+      scrollbar-width: none; /* Firefox */
+      padding: 15px 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .sr-testimonials-grid::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Edge */
+    }
+    .sr-testimonial-card {
+      flex: 0 0 380px !important;
+      max-width: 380px !important;
+      width: 380px !important;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(17,23,42,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-sizing: border-box !important;
+    }
+    .sr-testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(17,23,42,0.08);
+    }
+.sr-quote-icon {
+      color: var(--primary);
+      font-size: 24px;
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+    .sr-testimonial-text {
+      font-size: 14.5px;
+      color: #334155;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .sr-card-divider {
+      height: 1px;
+      background: #F1F5F9;
+      margin-bottom: 16px;
+    }
+    .sr-author-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sr-author-details {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .sr-author-avatar {
+      width: 44px !important;
+      height: 44px !important;
+      aspect-ratio: 1 / 1 !important;
+      flex-shrink: 0 !important;
+      border-radius: 50% !important;
+      object-fit: cover !important;
+      display: block !important;
+      border: 1.5px solid var(--border) !important;
+    }
+    .sr-author-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .sr-rating-stars {
+      color: #F59E0B;
+      font-size: 11px;
+      display: flex;
+      gap: 2px;
+    }
+
+    .sr-reels-bg {
+      background: #F8FAFC;
+    }
+    .sr-reels-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+    .sr-reel-card {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      border-radius: 16px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1E3A8A 0%, #0D47D8 100%);
+      box-shadow: 0 10px 25px rgba(13,71,216,0.12);
+      display: block;
+      text-decoration: none;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    }
+    .sr-reel-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(13,71,216,0.22);
+    }
+    .sr-reel-bg-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.15;
+      background-image: radial-gradient(circle at 20% 20%, #fff 10%, transparent 40%),
+                        radial-gradient(circle at 80% 80%, #fff 15%, transparent 50%);
+      transition: transform 0.5s ease;
+    }
+    .sr-reel-card:hover .sr-reel-bg-pattern {
+      transform: scale(1.1);
+    }
+    .sr-reel-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(15,23,42,0) 40%, rgba(15,23,42,0.85) 90%);
+      z-index: 2;
+    }
+    .sr-reel-content {
+      position: absolute;
+      inset: 0;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 3;
+    }
+    .sr-reel-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sr-reel-platform {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(4px);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .sr-reel-instagram-icon {
+      color: #FFFFFF;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+    .sr-play-btn-wrap {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+    .sr-play-btn-wrap i {
+      font-size: 16px;
+      margin-left: 2px;
+    }
+    .sr-reel-card:hover .sr-play-btn-wrap {
+      transform: scale(1.15);
+      background-color: var(--primary);
+      color: #FFFFFF;
+    }
+    .sr-reel-footer {
+      width: 100%;
+      text-align: center;
+    }
+    .sr-reel-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .sr-reel-watch-text {
+      font-size: 9px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+  
+    /* ── REELS GRID 4-COLUMN & IFRAME COMPRESSION FIX ── */
+    .sr-reels-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 24px !important;
+      max-width: 1200px !important;
+      margin: 0 auto !important;
+    }
+    .sr-reel-card {
+      position: relative !important;
+      aspect-ratio: 9 / 16 !important;
+      border-radius: 16px !important;
+      overflow: hidden !important;
+      background: #000 !important;
+      box-shadow: 0 10px 25px rgba(13,71,216,0.12) !important;
+    }
+    .sr-reel-card iframe {
+      width: 100% !important;
+      height: 100% !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      border: none !important;
+      border-radius: 16px !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+    }
+  
+    /* ── CUSTOM REVIEWS PAGE GLOBES STYLING ── */
+    .sr-section .testimonials-title-globe-left {
+      width: 450px !important;
+      height: 450px !important;
+      top: 10px !important;
+      left: -100px !important;
+    }
+    .sr-section .testimonials-title-globe-right {
+      width: 450px !important;
+      height: 450px !important;
+      top: 10px !important;
+      right: -100px !important;
+    }
+  
+    /* ── FULL-BLEED GRADIENT TESTIMONIAL CARDS STYLING ── */
+    .sr-testimonial-card {
+      position: relative !important;
+      width: 380px !important;
+      height: 480px !important;
+      border-radius: 20px !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      box-shadow: 0 12px 40px rgba(10, 18, 51, 0.12) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-end !important;
+    }
+    .sr-card-bg-img {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      z-index: 1 !important;
+      transition: transform 0.5s ease !important;
+    }
+    .sr-testimonial-card:hover .sr-card-bg-img {
+      transform: scale(1.06) !important;
+    }
+    .sr-card-overlay {
+      position: absolute !important;
+      inset: 0 !important;
+      background: linear-gradient(to top, 
+        rgba(10, 18, 51, 1) 0%, 
+        rgba(10, 18, 51, 0.95) 35%, 
+        rgba(10, 18, 51, 0.8) 50%, 
+        rgba(10, 18, 51, 0) 60%
+      ) !important;
+      z-index: 2 !important;
+    }
+    .sr-testimonial-text {
+      flex-grow: 0 !important;
+      margin-top: auto !important;
+    }
+    .sr-card-content-wrap {
+      position: absolute !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      padding: 28px !important;
+      z-index: 3 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      justify-content: flex-end !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader"></header>
+
+  
+  <main>
+            <!-- ====== HERO SECTION ====== -->
+    <section class="svc-hero-section">
+      <!-- Full-Height Softly Blended Background Image -->
+      <div class="svc-hero-image-wrapper">
+        <img src="assets/Gemini_Generated_Image_bpfa0lbpfa0lbpfa.png" alt="Students Review" class="svc-hero-student-img">
+      </div>
+
+      <div class="container relative-z">
+        <div class="svc-hero-inner">
+          <div class="svc-hero-content">
+            <nav class="svc-breadcrumb">
+              <a href="index.html">Home</a> &gt;
+              <span style="color: var(--svc-navy); font-weight: 600;">Students Review</span>
+            </nav>
+
+            <h1 class="svc-hero-title">
+              Students Review
+              <span class="blue-text">What our students are saying</span>
+            </h1>
+
+            <p class="svc-hero-sub">
+              What our students are saying about their journey with ISMS Global Education. Read real testimonials and watch success videos from our global achievers.
+            </p>
+
+            <div class="svc-hero-stats-row">
+              <div class="svc-stat-pill"><i class="fa-solid fa-award"></i> 19+ Years Experience</div>
+              <div class="svc-stat-pill"><i class="fa-solid fa-building-columns"></i> 500+ University Partners</div>
+              <div class="svc-stat-pill"><i class="fa-solid fa-passport"></i> 100% Visa Success Rate</div>
+              <div class="svc-stat-pill"><i class="fa-solid fa-users"></i> 2,000+ Students Guided</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section class="sr-section" style="position: relative; overflow: hidden;">
+      <img src="assets/Globe.png" class="testimonials-title-globe-left" alt="Globe Left Backdrop">
+      <img src="assets/Globe.png" class="testimonials-title-globe-right" alt="Globe Right Backdrop">
+      <div class="container">
+        <h2 class="sr-section-title">Written Reviews</h2>
+        <p class="sr-section-sub">Read feedback from our students on university admissions, visa process, and guidance support.</p>
+        
+        <div class="sr-testimonials-wrapper">
+                  <div class="sr-testimonials-grid">
+          <!-- Card 1 Sujal -->
+          <div class="sr-testimonial-card">
+            <img src="assets/Sujal.jpeg" alt="Sujal" class="sr-card-bg-img">
+            <div class="sr-card-overlay"></div>
+            <div class="sr-card-content-wrap">
+              <div class="sr-quote-icon" style="color: #60A5FA; font-size: 20px; margin-bottom: 10px;"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="sr-testimonial-text" style="color: #FFFFFF; font-size: 13.5px; line-height: 1.5; margin-bottom: 15px;">"Thanks to ISMS Global Education for the smooth handling of my DMU Dubai process. Special thanks to Shalini Ma’am for her guidance and constant support."</p>
+              <div class="sr-card-divider" style="background: rgba(255,255,255,0.15); margin-bottom: 12px;"></div>
+              <div class="sr-author-info" style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                  <div class="sr-author-name" style="color: #FFFFFF; font-size: 14.5px; font-weight: 700;">Sujal</div>
+                  <div style="font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 500;">DMU Dubai Student</div>
+                </div>
+                <div class="sr-rating-stars" style="color: #F59E0B; font-size: 10px; display: flex; gap: 2px;">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 Tejas Rokhade -->
+          <div class="sr-testimonial-card">
+            <img src="assets/Tejas Rokhade.jpeg" alt="Tejas Rokhade" class="sr-card-bg-img">
+            <div class="sr-card-overlay"></div>
+            <div class="sr-card-content-wrap">
+              <div class="sr-quote-icon" style="color: #60A5FA; font-size: 20px; margin-bottom: 10px;"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="sr-testimonial-text" style="color: #FFFFFF; font-size: 13.5px; line-height: 1.5; margin-bottom: 15px;">"The process of going abroad felt overwhelming until I met Shalini Ma’am. Her excellent guidance and constant support helped me secure admission to a UK university, adding great value to my career."</p>
+              <div class="sr-card-divider" style="background: rgba(255,255,255,0.15); margin-bottom: 12px;"></div>
+              <div class="sr-author-info" style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                  <div class="sr-author-name" style="color: #FFFFFF; font-size: 14.5px; font-weight: 700;">Tejas Rokhade</div>
+                  <div style="font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 500;">UK University Student</div>
+                </div>
+                <div class="sr-rating-stars" style="color: #F59E0B; font-size: 10px; display: flex; gap: 2px;">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 Urvashi Ravindra Parche -->
+          <div class="sr-testimonial-card">
+            <img src="assets/Urvashi Parche.jpg.jpeg" alt="Urvashi Ravindra Parche" class="sr-card-bg-img">
+            <div class="sr-card-overlay"></div>
+            <div class="sr-card-content-wrap">
+              <div class="sr-quote-icon" style="color: #60A5FA; font-size: 20px; margin-bottom: 10px;"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="sr-testimonial-text" style="color: #FFFFFF; font-size: 13.5px; line-height: 1.5; margin-bottom: 15px;">"Grateful to Shalini Ma’am for her guidance during my MSc at Leeds Beckett University, which helped me build strong skills and achieve my role as a Band 7 Physiotherapist at the NHS."</p>
+              <div class="sr-card-divider" style="background: rgba(255,255,255,0.15); margin-bottom: 12px;"></div>
+              <div class="sr-author-info" style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                  <div class="sr-author-name" style="color: #FFFFFF; font-size: 14.5px; font-weight: 700;">Urvashi Ravindra Parche</div>
+                  <div style="font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 500;">Leeds Beckett Graduate</div>
+                </div>
+                <div class="sr-rating-stars" style="color: #F59E0B; font-size: 10px; display: flex; gap: 2px;">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 Azhaar Ahmed -->
+          <div class="sr-testimonial-card">
+            <img src="assets/Azhaar Ahmed.jpeg" alt="Azhaar Ahmed" class="sr-card-bg-img">
+            <div class="sr-card-overlay"></div>
+            <div class="sr-card-content-wrap">
+              <div class="sr-quote-icon" style="color: #60A5FA; font-size: 20px; margin-bottom: 10px;"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="sr-testimonial-text" style="color: #FFFFFF; font-size: 13.5px; line-height: 1.5; margin-bottom: 15px;">"Grateful to ISMS Global Education for guiding me from university selection to admission. Her constant support helped me study in Dubai and complete my internship."</p>
+              <div class="sr-card-divider" style="background: rgba(255,255,255,0.15); margin-bottom: 12px;"></div>
+              <div class="sr-author-info" style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                  <div class="sr-author-name" style="color: #FFFFFF; font-size: 14.5px; font-weight: 700;">Azhaar Ahmed</div>
+                  <div style="font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 500;">Dubai Student</div>
+                </div>
+                <div class="sr-rating-stars" style="color: #F59E0B; font-size: 10px; display: flex; gap: 2px;">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 Ebrahim Lakdawala -->
+          <div class="sr-testimonial-card">
+            <img src="assets/Ebrahim ladkawala.jpg.jpeg" alt="Ebrahim Lakdawala" class="sr-card-bg-img">
+            <div class="sr-card-overlay"></div>
+            <div class="sr-card-content-wrap">
+              <div class="sr-quote-icon" style="color: #60A5FA; font-size: 20px; margin-bottom: 10px;"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="sr-testimonial-text" style="color: #FFFFFF; font-size: 13.5px; line-height: 1.5; margin-bottom: 15px;">"Grateful to ISMS Global Education—the counselling team helped me make the right choices, cleared my doubts, saved time, and supported me in achieving my global goals."</p>
+              <div class="sr-card-divider" style="background: rgba(255,255,255,0.15); margin-bottom: 12px;"></div>
+              <div class="sr-author-info" style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                  <div class="sr-author-name" style="color: #FFFFFF; font-size: 14.5px; font-weight: 700;">Ebrahim Lakdawala</div>
+                  <div style="font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 500;">Global Studies Alumnus</div>
+                </div>
+                <div class="sr-rating-stars" style="color: #F59E0B; font-size: 10px; display: flex; gap: 2px;">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 Shivani Negi -->
+          <div class="sr-testimonial-card">
+            <img src="assets/Shivani negi.png" alt="Shivani Negi" class="sr-card-bg-img">
+            <div class="sr-card-overlay"></div>
+            <div class="sr-card-content-wrap">
+              <div class="sr-quote-icon" style="color: #60A5FA; font-size: 20px; margin-bottom: 10px;"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="sr-testimonial-text" style="color: #FFFFFF; font-size: 13.5px; line-height: 1.5; margin-bottom: 15px;">"I sincerely thank ISMS Global Education for their invaluable guidance in helping me secure admission for an MBA in Business Analytics in the UK. Their expert support and dedication made the entire process smooth and hassle-free."</p>
+              <div class="sr-card-divider" style="background: rgba(255,255,255,0.15); margin-bottom: 12px;"></div>
+              <div class="sr-author-info" style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                  <div class="sr-author-name" style="color: #FFFFFF; font-size: 14.5px; font-weight: 700;">Shivani Negi</div>
+                  <div style="font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 500;">UK MBA Student</div>
+                </div>
+                <div class="sr-rating-stars" style="color: #F59E0B; font-size: 10px; display: flex; gap: 2px;">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 Asutosh Patil -->
+          <div class="sr-testimonial-card">
+            <img src="assets/Asutosh Patil.png" alt="Asutosh Patil" class="sr-card-bg-img">
+            <div class="sr-card-overlay"></div>
+            <div class="sr-card-content-wrap">
+              <div class="sr-quote-icon" style="color: #60A5FA; font-size: 20px; margin-bottom: 10px;"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="sr-testimonial-text" style="color: #FFFFFF; font-size: 13.5px; line-height: 1.5; margin-bottom: 15px;">"ISMS Global Education guided me from university selection to visa processing with expert support. Thanks to their team, I secured admission to my dream UK University with a scholarship."</p>
+              <div class="sr-card-divider" style="background: rgba(255,255,255,0.15); margin-bottom: 12px;"></div>
+              <div class="sr-author-info" style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                  <div class="sr-author-name" style="color: #FFFFFF; font-size: 14.5px; font-weight: 700;">Asutosh Patil</div>
+                  <div style="font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 500;">UK University Student</div>
+                </div>
+                <div class="sr-rating-stars" style="color: #F59E0B; font-size: 10px; display: flex; gap: 2px;">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REELS (VIDEO SUCCESS STORIES) ===== -->
+    <section class="sr-section sr-reels-bg">
+      <div class="container">
+        <h2 class="sr-section-title">Success Stories</h2>
+        <p class="sr-section-sub">Watch our students share their visa success stories and experience with ISMS Global.</p>
+        
+                <div class="sr-reels-grid">
+          <!-- Reel 1 -->
+          <div class="sr-reel-card">
+            <iframe src="https://www.instagram.com/reel/DJ6lTwVzpOi/embed/"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; background: #000;">
+            </iframe>
+          </div>
+          <!-- Reel 2 -->
+          <div class="sr-reel-card">
+            <iframe src="https://www.instagram.com/reel/DJ1asIrTghv/embed/"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; background: #000;">
+            </iframe>
+          </div>
+          <!-- Reel 3 -->
+          <div class="sr-reel-card">
+            <iframe src="https://www.instagram.com/reel/DEM6wHzyVmB/embed/"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; background: #000;">
+            </iframe>
+          </div>
+          <!-- Reel 4 -->
+          <div class="sr-reel-card">
+            <iframe src="https://www.instagram.com/reel/DEFNm6lTgsj/embed/"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; background: #000;">
+            </iframe>
+          </div>
+          <!-- Reel 5 -->
+          <div class="sr-reel-card">
+            <iframe src="https://www.instagram.com/reel/DD9kMBEzBPJ/embed/"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; background: #000;">
+            </iframe>
+          </div>
+          <!-- Reel 6 -->
+          <div class="sr-reel-card">
+            <iframe src="https://www.instagram.com/reel/DDXC1UkNLAZ/embed/"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; background: #000;">
+            </iframe>
+          </div>
+          <!-- Reel 7 -->
+          <div class="sr-reel-card">
+            <iframe src="https://www.instagram.com/reel/DCRZEJ6tnA6/embed/"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; background: #000;">
+            </iframe>
+          </div>
+          <!-- Reel 8 -->
+          <div class="sr-reel-card">
+            <iframe src="https://www.instagram.com/reel/DB6Lejapda6/embed/"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; background: #000;">
+            </iframe>
+          </div>
+          <!-- Reel 9 -->
+          <div class="sr-reel-card">
+            <iframe src="https://www.instagram.com/reel/DAEDRb0Sspr/embed/"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; background: #000;">
+            </iframe>
+          </div>
+          <!-- Reel 10 -->
+          <div class="sr-reel-card">
+            <iframe src="https://www.instagram.com/reel/DDSCG6rzDdg/embed/"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    loading="lazy"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; background: #000;">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- ===== FLOATING RIGHT SIDE SOCIAL MEDIA DOCK ===== -->
+  <div class="social-side-dock" id="socialSideDock">
+    <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn">
+      <span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+    </a>
+    <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram">
+      <span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span>
+    </a>
+    <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook">
+      <span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span>
+    </a>
+    <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube">
+      <span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Testimonials Auto Scroll Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const grid = document.querySelector(".sr-testimonials-grid");
+      if (!grid) return;
+
+      // Duplicate cards to enable infinite seamless loop
+      const originalCards = Array.from(grid.children);
+      originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        grid.appendChild(clone);
+      });
+
+      let scrollSpeed = 0.8; // Speed in pixels per frame
+      let active = true;
+      let animationFrameId = null;
+
+      function step() {
+        if (active) {
+          grid.scrollLeft += scrollSpeed;
+          
+          // Reset to 0 when we have scrolled past the width of original content
+          // We calculate the width of half the total scrollable content
+          const maxScroll = (grid.scrollWidth / 2);
+          if (grid.scrollLeft >= maxScroll) {
+            grid.scrollLeft = 0;
+          }
+        }
+        animationFrameId = requestAnimationFrame(step);
+      }
+
+      // Start auto scroll
+      animationFrameId = requestAnimationFrame(step);
+
+      // Pause on hover
+      grid.addEventListener("mouseenter", () => {
+        active = false;
+      });
+
+      grid.addEventListener("mouseleave", () => {
+        active = true;
+      });
+
+      // Pause on touch (mobile friendly)
+      grid.addEventListener("touchstart", () => {
+        active = false;
+      }, { passive: true });
+
+      grid.addEventListener("touchend", () => {
+        // Delay resuming a bit to let the user finish swiping
+        setTimeout(() => { active = true; }, 1500);
+      }, { passive: true });
+    });
+  </script>
+
+<script src="main.js"></script>
+</body>
+</html>

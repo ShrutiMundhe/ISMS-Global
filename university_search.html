@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 30 Global Universities | ISMS Global Education</title>
+  <meta name="description" content="Explore the Top 30 Global Universities partnered with ISMS Global — ranked for academics, student life, sustainability, culture, and job opportunities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    :root {
+      --primary: #0D47D8;
+      --navy: #11172A;
+      --body-gray: #667085;
+      --light-blue: #F4F8FF;
+      --border: #DCE5F3;
+      --white: #FFFFFF;
+      --header-bg: #F4F8FF;
+      --header-border: #DCE5F3;
+      --nav-text: #11172A;
+      --nav-hover-bg: #E5EDFF;
+      --nav-accent: #0D47D8;
+      --dropdown-bg: #FFFFFF;
+      --gold-btn: #C79A3C;
+      --gold-btn-hover: #B5872E;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--navy);
+      background: #F8FAFC;
+      padding-top: 72px;
+      line-height: 1.6;
+    }
+    .site-header {
+      position: fixed !important; top: 0 !important; left: 0 !important;
+      right: 0 !important; width: 100% !important; z-index: 9999 !important;
+      background: var(--header-bg) !important;
+      border-bottom: 1px solid var(--header-border) !important;
+      box-shadow: 0 4px 20px rgba(17,23,42,0.08) !important;
+    }
+    .header-inner {
+      display: flex !important; align-items: center !important;
+      justify-content: space-between !important; height: 72px !important;
+      gap: 12px !important; max-width: 1720px !important; width: 95% !important;
+      margin: 0 auto !important; padding: 0 2.5rem !important;
+    }
+    .brand-logo-img { height: 48px !important; width: auto !important; max-width: 200px !important; object-fit: contain !important; display: block !important; }
+    .main-nav { display: flex !important; align-items: center !important; gap: 0 !important; flex: 1 !important; justify-content: center !important; font-family: 'Inter', Arial, sans-serif !important; }
+    .main-nav a { color: var(--nav-text) !important; font-size: 13.5px !important; font-weight: 600 !important; padding: 16px 11px !important; border-bottom: 3px solid transparent !important; transition: background .15s ease, border-color .15s ease !important; opacity: 1 !important; text-decoration: none !important; white-space: nowrap !important; display: flex !important; align-items: center !important; }
+    .main-nav a:hover, .main-nav a.active { background: var(--nav-hover-bg) !important; color: var(--nav-accent) !important; border-bottom: 3px solid var(--nav-accent) !important; }
+    .nav-dropdown { position: relative !important; }
+    .nav-dropdown-toggle { color: var(--nav-text) !important; font-size: 13.5px !important; font-weight: 600 !important; padding: 16px 11px !important; border-bottom: 3px solid transparent !important; transition: background .15s, border-color .15s !important; background: transparent !important; border-top: none !important; border-left: none !important; border-right: none !important; cursor: pointer !important; display: flex !important; align-items: center !important; gap: 5px !important; white-space: nowrap !important; font-family: 'Inter', Arial, sans-serif !important; }
+    .nav-dropdown-toggle i { color: var(--nav-accent) !important; font-size: 10px !important; }
+    .nav-dropdown:hover .nav-dropdown-toggle { background: var(--nav-hover-bg) !important; border-bottom: 3px solid var(--nav-accent) !important; color: var(--nav-accent) !important; }
+    .nav-dropdown-menu { position: absolute !important; top: 100% !important; left: 0 !important; background: var(--dropdown-bg) !important; border: 1px solid var(--header-border) !important; border-top: 3px solid var(--nav-accent) !important; box-shadow: 0 14px 30px rgba(13,71,216,0.08) !important; border-radius: 14px !important; padding: 8px !important; opacity: 0 !important; visibility: hidden !important; transform: translateY(6px) !important; transition: all 0.2s ease !important; min-width: 160px !important; }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(4px) !important; }
+    .nav-dropdown-menu a { color: var(--nav-text) !important; border-left: 3px solid transparent !important; border-bottom: none !important; border-top: none !important; padding: 10px 22px !important; font-size: 13.5px !important; font-weight: 500 !important; background: transparent !important; }
+    .nav-dropdown-menu a:hover { background: var(--header-bg) !important; border-left: 3px solid var(--nav-accent) !important; color: var(--nav-accent) !important; }
+    .dest-mega-menu { min-width: 680px !important; padding: 16px 20px !important; display: grid !important; grid-template-columns: repeat(3,1fr) !important; gap: 8px 12px !important; left: 50% !important; transform: translateX(-50%) translateY(8px) !important; border-radius: 18px !important; background: var(--dropdown-bg) !important; border-top: 3px solid var(--nav-accent) !important; }
+    .nav-dropdown:hover .dest-mega-menu { transform: translateX(-50%) translateY(4px) !important; opacity: 1 !important; visibility: visible !important; }
+    .dest-drop-item { display: flex !important; align-items: center !important; gap: 12px !important; padding: 10px 12px !important; border-radius: 12px !important; border-bottom: none !important; border-top: none !important; transition: background 0.15s !important; text-decoration: none !important; color: inherit !important; }
+    .dest-drop-item:hover { background: var(--header-bg) !important; border-left: 3px solid var(--nav-accent) !important; }
+    .dest-drop-flag { width: 26px !important; height: 18px !important; object-fit: cover !important; border-radius: 3px !important; flex-shrink: 0 !important; }
+    .dest-drop-text { display: flex !important; flex-direction: column !important; line-height: 1.25 !important; }
+    .dest-drop-text strong { font-size: 13.5px !important; font-weight: 700 !important; color: var(--nav-text) !important; }
+    .dest-drop-text span { font-size: 11px !important; color: #64748B !important; margin-top: 2px !important; }
+    .header-actions { display: flex !important; align-items: center !important; gap: 8px !important; flex-shrink: 0 !important; }
+    .header-phone { display: flex !important; align-items: center !important; gap: 10px !important; color: var(--nav-text) !important; text-decoration: none !important; font-size: 12.5px !important; }
+    .header-phone i { width: 36px !important; height: 36px !important; border-radius: 50% !important; background: var(--nav-hover-bg) !important; color: var(--nav-accent) !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+    .header-phone strong { color: var(--nav-text) !important; font-weight: 700 !important; font-size: 13.5px !important; }
+    .site-header .btn-primary { background: var(--gold-btn) !important; color: #fff !important; border: none !important; font-weight: 700 !important; border-radius: 8px !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+    .site-header .btn-primary:hover { background: var(--gold-btn-hover) !important; }
+    .nav-toggle { display: none !important; flex-direction: column !important; justify-content: center !important; gap: 5px !important; background: none !important; border: none !important; padding: 8px !important; cursor: pointer !important; }
+    .nav-toggle span { width: 24px !important; height: 2px !important; background: var(--nav-text) !important; border-radius: 2px !important; transition: 0.3s ease !important; display: block !important; }
+    .nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg) !important; }
+    .nav-toggle.active span:nth-child(2) { opacity: 0 !important; }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg) !important; }
+    @media (max-width: 1160px) {
+      .nav-toggle { display: flex !important; }
+      .main-nav { position: fixed !important; inset: 72px 0 0 0 !important; background: #fff !important; flex-direction: column !important; align-items: stretch !important; padding: 16px !important; gap: 2px !important; overflow-y: auto !important; transform: translateX(100%) !important; transition: transform 0.3s ease !important; box-shadow: -4px 0 20px rgba(0,0,0,0.12) !important; z-index: 9998 !important; justify-content: flex-start !important; }
+      .main-nav.open { transform: translateX(0) !important; }
+      .main-nav a, .nav-dropdown-toggle { padding: 14px 12px !important; border-bottom: 1px solid #F1F5F9 !important; width: 100% !important; font-size: 15px !important; border-top: none !important; border-left: none !important; border-right: none !important; justify-content: space-between !important; }
+      .dest-mega-menu { min-width: unset !important; width: 100% !important; grid-template-columns: 1fr 1fr !important; transform: none !important; left: 0 !important; position: static !important; box-shadow: none !important; border: 1px solid #F1F5F9 !important; border-top: none !important; margin-top: 4px !important; border-radius: 8px !important; }
+      .nav-dropdown-menu { position: static !important; opacity: 1 !important; visibility: visible !important; transform: none !important; display: none !important; box-shadow: none !important; border: 1px solid #F1F5F9 !important; border-top: none !important; border-radius: 8px !important; margin-top: 4px !important; }
+      .nav-dropdown.open > .nav-dropdown-menu { display: block !important; }
+      .nav-dropdown.open > .dest-mega-menu { display: grid !important; }
+    }
+    @media (max-width: 768px) { .header-inner { padding: 0 14px !important; height: 64px !important; } body { padding-top: 64px !important; } .main-nav { inset: 64px 0 0 0 !important; } .brand-logo-img { height: 38px !important; max-width: 140px !important; } .site-header .btn-primary { font-size: 11px !important; padding: 0 10px !important; height: 32px !important; white-space: nowrap !important; max-width: 130px !important; } }
+    @media (max-width: 480px) { .header-inner { padding: 0 12px !important; height: 60px !important; } body { padding-top: 60px !important; } .main-nav { inset: 60px 0 0 0 !important; } .brand-logo-img { height: 34px !important; max-width: 120px !important; } .site-header .btn-primary { display: none !important; } .dest-mega-menu { grid-template-columns: 1fr !important; } }
+
+    /* ── PAGE STYLES ── */
+    .us-hero {
+      position: relative;
+      background: linear-gradient(180deg, #EBF1FA 0%, #F5F8FE 100%);
+      padding: 80px 0 100px 0;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .us-hero-bg-img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right bottom;
+      z-index: 1;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 30%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 30%);
+    }
+
+    .us-hero-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      position: relative;
+      z-index: 3;
+      text-align: left;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .us-hero-content {
+      max-width: 680px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .us-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--body-gray);
+      margin-bottom: 16px;
+    }
+
+    .us-breadcrumb a {
+      color: var(--body-gray);
+      text-decoration: none;
+    }
+
+    .us-breadcrumb a:hover {
+      color: var(--primary);
+    }
+
+    .us-hero h1 {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+      text-align: left;
+    }
+
+    .us-hero h1 span {
+      color: var(--primary);
+    }
+
+    .us-hero p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--body-gray);
+      max-width: 580px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .us-hero-badge-floating {
+      position: absolute;
+      top: -35px;
+      right: 0px;
+      background: #FFFFFF;
+      padding: 10px 16px;
+      border-radius: 5px;
+      box-shadow: 0 12px 24px rgba(10, 18, 51, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 4;
+    }
+
+    .us-badge-icon {
+      width: 34px;
+      height: 34px;
+      background-color: #EEF4FF;
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .us-badge-text {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      text-align: left;
+    }
+
+    .us-hero-stats {
+      display: flex;
+      justify-content: flex-start;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .us-hero-stat {
+      text-align: left;
+      border-left: 3px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    .us-hero-stat strong {
+      display: block;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .us-hero-stat span {
+      font-size: 11px;
+      color: var(--body-gray);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-top: 4px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .us-hero-inner {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .us-hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+      }
+      .us-breadcrumb {
+        justify-content: center !important;
+        width: 100% !important;
+      }
+      .us-hero h1 {
+        text-align: center !important;
+        font-size: 26px !important;
+      }
+      .us-hero p {
+        text-align: center !important;
+        font-size: 14px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        color: #000000 !important;
+        font-weight: 500 !important;
+      }
+      .us-hero-badge-floating {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 20px auto 0 auto !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: fit-content !important;
+        z-index: 5 !important;
+      }
+      .us-hero-bg-img {
+        width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 100% !important;
+        opacity: 0.4 !important;
+        object-position: center top !important;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+      }
+      .us-hero-stats {
+        justify-content: center !important;
+        gap: 20px !important;
+      }
+      .us-hero-stat {
+        text-align: center !important;
+        border-left: none !important;
+        padding-left: 0 !important;
+      }
+      .us-hero-stat strong {
+        font-size: 22px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .us-hero {
+        padding: 32px 0 36px !important;
+      }
+      .us-hero h1 {
+        font-size: 22px !important;
+      }
+      .us-hero-stats {
+        gap: 16px !important;
+      }
+      .us-hero-stat strong {
+        font-size: 20px !important;
+      }
+    }
+
+    /* ── FILTER BAR ── */
+    .us-filter-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+      position: sticky;
+      top: 72px;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(13,71,216,0.06);
+    }
+    .us-filter-inner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .us-search-box {
+      flex: 1;
+      min-width: 200px;
+      max-width: 360px;
+      position: relative;
+    }
+    .us-search-box input {
+      width: 100%;
+      height: 42px;
+      padding: 0 14px 0 40px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-family: 'Inter', sans-serif;
+      color: var(--navy);
+      outline: none;
+      background: #F8FAFC;
+      transition: border-color 0.2s;
+    }
+    .us-search-box input:focus { border-color: var(--primary); background: #fff; }
+    .us-search-box i { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 14px; }
+    .us-filter-pills { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .us-filter-pill {
+      padding: 7px 16px;
+      border-radius: 999px;
+      border: 1.5px solid var(--border);
+      background: #fff;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--body-gray);
+      cursor: pointer;
+      transition: all 0.18s;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .us-filter-pill:hover, .us-filter-pill.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .us-count-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: var(--light-blue);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 2px 7px;
+      min-width: 22px;
+      margin: 0 0 0 4px !important;
+      height: fit-content !important;
+    }
+    .us-filter-pill:hover .us-count-badge,
+    .us-filter-pill.active .us-count-badge {
+      background: #FFFFFF !important;
+      color: var(--primary) !important;
+    }
+    /* ── MAIN CONTENT ── */
+    .us-main {
+      padding: 40px 0 64px;
+    }
+    .container { max-width: 1320px; width: 95%; margin: 0 auto; padding: 0 24px; }
+    /* ── COUNTRY SECTION HEADER ── */
+    .us-country-section { margin-bottom: 48px; }
+    .us-country-heading {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--border);
+    }
+    .us-country-flag {
+      width: 36px;
+      height: 26px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+    .us-country-heading h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 0;
+    }
+    .us-country-count {
+      margin-left: auto;
+      background: var(--light-blue);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid #BFDBFE;
+      white-space: nowrap;
+    }
+    /* ── UNIVERSITY CARD GRID ── */
+    .us-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    @media (max-width: 1100px) { .us-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px)  { .us-grid { grid-template-columns: 1fr; } }
+    /* ── UNIVERSITY CARD ── */
+    .us-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(13,71,216,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .us-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(13,71,216,0.12);
+      border-color: #BFDBFE;
+    }
+    .us-card-top {
+      padding: 22px 22px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      border-bottom: 1px solid #F1F5F9;
+    }
+    .us-logo-wrap {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #F8FAFC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .us-logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 6px;
+    }
+    .us-logo-placeholder {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary) 0%, #2563EB 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+      color: #fff;
+      flex-shrink: 0;
+      letter-spacing: -0.02em;
+    }
+    .us-card-meta { flex: 1; min-width: 0; }
+    .us-card-meta h3 {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .us-card-location {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12.5px;
+      color: var(--body-gray);
+      font-weight: 500;
+    }
+    .us-card-location i { color: var(--primary); font-size: 11px; }
+    .us-card-program-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #EFF6FF;
+      color: #1D4ED8;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-top: 7px;
+      border: 1px solid #BFDBFE;
+    }
+    .us-card-body { padding: 16px 22px 20px; flex: 1; display: flex; flex-direction: column; }
+    .us-card-desc {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .us-courses-label {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .us-courses-label i { color: var(--primary); }
+    .us-courses-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .us-course-tag {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .us-card-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 14px;
+      border-top: 1px solid #F1F5F9;
+    }
+    .us-btn-enquire {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .us-btn-enquire:hover { background: #0A39A6; transform: translateY(-1px); }
+    .us-rank-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--body-gray);
+    }
+    .us-rank-badge i { color: #F59E0B; }
+    /* ── SECTION DIVIDER ── */
+    .us-section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, var(--border) 20%, var(--border) 80%, transparent 100%);
+      margin: 48px 0;
+    }
+
+    @media (max-width: 768px) {
+      .us-filter-bar { top: 64px; }
+      .us-filter-inner { gap: 8px; }
+      .us-search-box { max-width: 100%; width: 100%; }
+      .us-country-heading h2 { font-size: 18px; }
+      .us-card-top { padding: 16px 16px 12px; gap: 12px; }
+      .us-card-body { padding: 12px 16px 16px; }
+    }
+    @media (max-width: 480px) {
+      .us-filter-pills { gap: 6px; }
+      .us-filter-pill { font-size: 11.5px; padding: 6px 12px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader"></header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="us-hero">
+    <img src="assets/university-hero.png" alt="" class="us-hero-bg-img">
+    <div class="container">
+      <div class="us-hero-inner">
+        <div class="us-hero-content">
+          <nav class="us-breadcrumb">
+            <a href="index.html">Home</a> &gt;
+            <span style="color: var(--navy); font-weight: 600;">Universities</span>
+          </nav>
+
+          <h1>Top 30 <span>Global Universities</span></h1>
+          <p>These are the universities which made it to the top 30 global universities list in terms of academics, student life, sustainability, culture, and job opportunities.</p>
+          
+          <div class="us-hero-stats">
+            <div class="us-hero-stat"><strong>30</strong><span>Elite Universities</span></div>
+            <div class="us-hero-stat"><strong>10+</strong><span>Countries</span></div>
+            <div class="us-hero-stats-divider" style="display:none;"></div>
+            <div class="us-hero-stat"><strong>500+</strong><span>Courses Available</span></div>
+            <div class="us-hero-stat"><strong>100%</strong><span>Free Counselling</span></div>
+          </div>
+        </div>
+
+        <div class="us-hero-badge-floating">
+          <div class="us-badge-icon">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="64" height="64" rx="16" fill="#EEF2FF"/>
+              <path d="M32 18L14 27L32 36L50 27L32 18Z" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 30.5V40.5C20 40.5 24 45 32 45C40 45 44 40.5 44 40.5V30.5" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M46 29V39" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="46" cy="40.5" r="1.5" fill="#2563EB"/>
+            </svg>
+          </div>
+          <div class="us-badge-text">
+            Empowering Dreams,<br>Building Futures
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FILTER BAR ===== -->
+  <div class="us-filter-bar">
+    <div class="container">
+      <div class="us-filter-inner">
+        <div class="us-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="uniSearch" placeholder="Search universities or courses…" oninput="filterCards()">
+        </div>
+        <div class="us-filter-pills">
+          <button class="us-filter-pill active" onclick="filterByCountry('all', this)"><i class="fa-solid fa-globe"></i> All <span class="us-count-badge">30</span></button>
+          <button class="us-filter-pill" onclick="filterByCountry('uk', this)"><img src="assets/flag_w40_gb.png" alt="" style="width:16px;height:11px;object-fit:cover;border-radius:2px;"> UK</button>
+          <button class="us-filter-pill" onclick="filterByCountry('france', this)"><img src="assets/flag_w40_fr.png" alt="" style="width:16px;height:11px;object-fit:cover;border-radius:2px;"> France</button>
+          <button class="us-filter-pill" onclick="filterByCountry('germany', this)"><img src="assets/flag_w40_de.png" alt="" style="width:16px;height:11px;object-fit:cover;border-radius:2px;"> Germany</button>
+          <button class="us-filter-pill" onclick="filterByCountry('australia', this)"><img src="assets/flag_w40_au.png" alt="" style="width:16px;height:11px;object-fit:cover;border-radius:2px;"> Australia</button>
+          <button class="us-filter-pill" onclick="filterByCountry('ireland', this)"><img src="assets/flag_w40_ie.png" alt="" style="width:16px;height:11px;object-fit:cover;border-radius:2px;"> Ireland</button>
+          <button class="us-filter-pill" onclick="filterByCountry('dubai', this)"><img src="assets/flag_w40_ae.png" alt="" style="width:16px;height:11px;object-fit:cover;border-radius:2px;"> Dubai</button>
+          <button class="us-filter-pill" onclick="filterByCountry('netherlands', this)"><img src="assets/flag_w40_nl.png" alt="" style="width:16px;height:11px;object-fit:cover;border-radius:2px;"> Netherlands</button>
+          <button class="us-filter-pill" onclick="filterByCountry('spain', this)"><img src="assets/flag_w40_es.png" alt="" style="width:16px;height:11px;object-fit:cover;border-radius:2px;"> Spain</button>
+          <button class="us-filter-pill" onclick="filterByCountry('newzealand', this)"><img src="assets/flag_w40_nz.png" alt="" style="width:16px;height:11px;object-fit:cover;border-radius:2px;"> New Zealand</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <section class="us-main">
+    <div class="container">
+
+      <!-- ===== UNITED KINGDOM ===== -->
+      <div class="us-country-section" data-country="uk">
+        <div class="us-country-heading">
+          <img src="assets/flag_w40_gb.png" alt="UK Flag" class="us-country-flag">
+          <h2>United Kingdom</h2>
+          <span class="us-country-count">4 Universities</span>
+        </div>
+        <div class="us-grid">
+          <!-- Leeds Beckett -->
+          <div class="us-card" data-country="uk" data-name="Leeds Beckett University">
+            <div class="us-card-top">
+              <div class="us-logo-wrap"><img src="assets/leeds_beckett_logo.jpg" alt="Leeds Beckett University"></div>
+              <div class="us-card-meta">
+                <h3>Leeds Beckett University</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Leeds, England, UK</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">One of the most prestigious modern universities in the UK, providing academic excellence, industrially relevant teaching, and student support services in the exciting city of Leeds.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">International Business</span><span class="us-course-tag">Digital Marketing</span><span class="us-course-tag">Project Management</span><span class="us-course-tag">Information Technology</span><span class="us-course-tag">Data Science</span><span class="us-course-tag">Artificial Intelligence</span><span class="us-course-tag">Cyber Security</span><span class="us-course-tag">Computer Science</span><span class="us-course-tag">Nursing</span><span class="us-course-tag">Physiotherapy</span><span class="us-course-tag">Public Health</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Cardiff Metropolitan -->
+          <div class="us-card" data-country="uk" data-name="Cardiff Metropolitan University">
+            <div class="us-card-top">
+              <div class="us-logo-wrap"><img src="assets/cardiff_met_logo.jpg" alt="Cardiff Metropolitan University"></div>
+              <div class="us-card-meta">
+                <h3>Cardiff Metropolitan University</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Wales, England, UK</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Offers professionally accredited degrees in art &amp; design, business, education, sport &amp; health sciences, technologies, and engineering with innovative research.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">International Business</span><span class="us-course-tag">Digital Marketing</span><span class="us-course-tag">Project Management</span><span class="us-course-tag">Logistics &amp; Supply Chain</span><span class="us-course-tag">IT</span><span class="us-course-tag">Computer Science</span><span class="us-course-tag">AI</span><span class="us-course-tag">Cyber Security</span><span class="us-course-tag">Data Science</span><span class="us-course-tag">Fashion Marketing</span><span class="us-course-tag">Sports Science</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Oxford Brookes -->
+          <div class="us-card" data-country="uk" data-name="Oxford Brookes University">
+            <div class="us-card-top">
+              <div class="us-logo-wrap"><img src="assets/oxford-logo.png" alt="Oxford Brookes University"></div>
+              <div class="us-card-meta">
+                <h3>Oxford Brookes University</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Headington, Oxford, England</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A public research university in Oxford, England. Received university status through the Further and Higher Education Act 1992.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">International Business</span><span class="us-course-tag">Digital Marketing</span><span class="us-course-tag">Project Management</span><span class="us-course-tag">AI</span><span class="us-course-tag">Cyber Security</span><span class="us-course-tag">Data Analytics</span><span class="us-course-tag">Computer Science</span><span class="us-course-tag">Public Health</span><span class="us-course-tag">Nursing</span><span class="us-course-tag">Motorsport Engineering</span><span class="us-course-tag">Architecture</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- University of Bristol -->
+          <div class="us-card" data-country="uk" data-name="University of Bristol">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">UB</div>
+              <div class="us-card-meta">
+                <h3>University of Bristol</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Bristol, England</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A public research university in Bristol, England. Received its royal charter in 1909, tracing its roots to University College, Bristol, established in 1876.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">Data Science</span><span class="us-course-tag">AI</span><span class="us-course-tag">Cyber Security</span><span class="us-course-tag">FinTech</span><span class="us-course-tag">Finance &amp; Investment</span><span class="us-course-tag">Robotics</span><span class="us-course-tag">Public Health</span><span class="us-course-tag">Aerospace Engineering</span><span class="us-course-tag">Civil Engineering</span><span class="us-course-tag">Economics</span><span class="us-course-tag">Law</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="us-section-divider"></div>
+
+      <!-- ===== FRANCE ===== -->
+      <div class="us-country-section" data-country="france">
+        <div class="us-country-heading">
+          <img src="assets/flag_w40_fr.png" alt="France Flag" class="us-country-flag">
+          <h2>France</h2>
+          <span class="us-country-count">4 Universities</span>
+        </div>
+        <div class="us-grid">
+          <div class="us-card" data-country="france" data-name="NEOMA Business School">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">NE</div>
+              <div class="us-card-meta">
+                <h3>NEOMA Business School</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Mont-Saint-Aignan, France</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Founded in 2013 following the merger of Reims Management School and Rouen Business School — a triple-accredited French business school.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">International Business</span><span class="us-course-tag">Business Analytics</span><span class="us-course-tag">AI</span><span class="us-course-tag">Data Intelligence</span><span class="us-course-tag">Digital Marketing</span><span class="us-course-tag">Finance</span><span class="us-course-tag">Luxury Marketing</span><span class="us-course-tag">Supply Chain Management</span><span class="us-course-tag">Entrepreneurship &amp; Innovation</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="france" data-name="Skema Business School">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">SK</div>
+              <div class="us-card-meta">
+                <h3>Skema Business School</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Lille, France</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A global school preparing business talents of the 21st century — responsible, mobile, multicultural, with abilities to manage information, data and knowledge.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">International Business</span><span class="us-course-tag">Digital Marketing</span><span class="us-course-tag">Business Analytics</span><span class="us-course-tag">Data Analytics</span><span class="us-course-tag">Finance</span><span class="us-course-tag">Project Management</span><span class="us-course-tag">Luxury Brand Management</span><span class="us-course-tag">Fashion Management</span><span class="us-course-tag">Entrepreneurship</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="france" data-name="ICN Business School">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">IC</div>
+              <div class="us-card-meta">
+                <h3>ICN Business School</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Berlin, Paris</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A Grande Échole of management with triple accreditation (AACSB, EQUIS and AMBA), associated with the University of Lorraine.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Bachelor in Management</span><span class="us-course-tag">Data AI &amp; Business Innovation</span><span class="us-course-tag">Luxury &amp; Design Management</span><span class="us-course-tag">Brand &amp; Marketing Management</span><span class="us-course-tag">Master in Management</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="france" data-name="KEDGE Business School">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">KE</div>
+              <div class="us-card-meta">
+                <h3>KEDGE Business School</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Paris, Bordeaux</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A triple-accredited French grande école founded in 2013 by the merger of Bordeaux Ecole de Management (1874) and EUROMED Management (1872).</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">International BBA</span><span class="us-course-tag">Banking &amp; Finance</span><span class="us-course-tag">Creativity &amp; Design Management</span><span class="us-course-tag">Data &amp; Design Management</span><span class="us-course-tag">Business Law</span><span class="us-course-tag">PhD</span><span class="us-course-tag">International Sport &amp; Event Management</span><span class="us-course-tag">Marketing</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="us-section-divider"></div>
+
+      <!-- ===== GERMANY ===== -->
+      <div class="us-country-section" data-country="germany">
+        <div class="us-country-heading">
+          <img src="assets/flag_w40_de.png" alt="Germany Flag" class="us-country-flag">
+          <h2>Germany</h2>
+          <span class="us-country-count">3 Universities</span>
+        </div>
+        <div class="us-grid">
+          <div class="us-card" data-country="germany" data-name="Berlin School of Business and Innovation">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">BS</div>
+              <div class="us-card-meta">
+                <h3>Berlin School of Business and Innovation (BSBI)</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Berlin and Hamburg, Germany</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A leading hub for entrepreneurship, innovation, and culture. The main campus in Neukölln places students in Berlin's most diverse creative district with a thriving start-up scene.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">BA Business Management</span><span class="us-course-tag">Computer Science</span><span class="us-course-tag">Media &amp; Communications</span><span class="us-course-tag">Psychology</span><span class="us-course-tag">Game Design</span><span class="us-course-tag">International Business</span><span class="us-course-tag">Tourism &amp; Hospitality</span><span class="us-course-tag">MBA Global</span><span class="us-course-tag">MA Fashion &amp; Luxury Management</span><span class="us-course-tag">AI Engineering Management</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="germany" data-name="SRH Berlin University of Applied Sciences">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">SR</div>
+              <div class="us-card-meta">
+                <h3>SRH Berlin University of Applied Sciences</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A private university in Berlin founded in 2002, part of SRH Holding. English-speaking academic programmes at Bachelor's and Master's level began in 2006.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Design, Film &amp; Design</span><span class="us-course-tag">Health &amp; Social Affairs</span><span class="us-course-tag">Informatics &amp; Data Science</span><span class="us-course-tag">Logistics</span><span class="us-course-tag">Psychology</span><span class="us-course-tag">Technology &amp; Sustainability</span><span class="us-course-tag">Tourism &amp; Hotel Economy</span><span class="us-course-tag">Law</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="germany" data-name="University of Europe for Applied Sciences">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">UE</div>
+              <div class="us-card-meta">
+                <h3>University of Europe for Applied Sciences</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Germany, Europe</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Government-accredited and award-winning, one of the world's leading universities with an international outlook. For over 25 years committed to quality education.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">MBA</span><span class="us-course-tag">Data Science</span><span class="us-course-tag">Smart Mobility</span><span class="us-course-tag">Software Engineering</span><span class="us-course-tag">Innovation Design Management</span><span class="us-course-tag">International Public Health</span><span class="us-course-tag">International Sport &amp; Event Management</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="us-section-divider"></div>
+
+      <!-- ===== AUSTRALIA ===== -->
+      <div class="us-country-section" data-country="australia">
+        <div class="us-country-heading">
+          <img src="assets/flag_w40_au.png" alt="Australia Flag" class="us-country-flag">
+          <h2>Australia</h2>
+          <span class="us-country-count">4 Universities</span>
+        </div>
+        <div class="us-grid">
+          <div class="us-card" data-country="australia" data-name="University of Technology Sydney">
+            <div class="us-card-top">
+              <div class="us-logo-wrap"><img src="assets/Sydney.png" alt="University of Technology Sydney"></div>
+              <div class="us-card-meta">
+                <h3>University of Technology Sydney</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Sydney, Australia</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A leading university in technology encompassing ICT and the research and development of brand-new technologies, tools and infrastructure for the 21st century.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">Business Analytics</span><span class="us-course-tag">Data Science</span><span class="us-course-tag">AI</span><span class="us-course-tag">Cyber Security</span><span class="us-course-tag">IT</span><span class="us-course-tag">Project Management</span><span class="us-course-tag">Public Health</span><span class="us-course-tag">Finance</span><span class="us-course-tag">Nursing</span><span class="us-course-tag">Software Engineering</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="australia" data-name="University of New South Wales">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">UN</div>
+              <div class="us-card-meta">
+                <h3>University of New South Wales, Sydney</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Sydney, Australia</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A public research university established in 1949. Consists of seven faculties offering bachelor's, master's, and doctoral degrees across all disciplines.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Architecture &amp; Planning</span><span class="us-course-tag">Business &amp; Commerce</span><span class="us-course-tag">Data &amp; Technology</span><span class="us-course-tag">Education</span><span class="us-course-tag">Engineering</span><span class="us-course-tag">Law &amp; Criminal Justice</span><span class="us-course-tag">Media &amp; Design</span><span class="us-course-tag">Medicine &amp; Health Science</span><span class="us-course-tag">Science &amp; Environment</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="australia" data-name="Deakin University">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">DU</div>
+              <div class="us-card-meta">
+                <h3>Deakin University</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Victoria, Australia</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Four campuses in Victoria with state-of-the-art facilities. Ranked Victoria's #1 university for course satisfaction for 13 years running. Inclusive, student-focused culture.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Artificial Intelligence</span><span class="us-course-tag">Arts &amp; Psychology</span><span class="us-course-tag">International Relations</span><span class="us-course-tag">Business</span><span class="us-course-tag">Sport Management</span><span class="us-course-tag">Biomedical Science</span><span class="us-course-tag">Doctor of Medicine</span><span class="us-course-tag">Criminology</span><span class="us-course-tag">Cyber Security</span><span class="us-course-tag">Nursing</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="australia" data-name="Queensland University of Technology">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">QU</div>
+              <div class="us-card-meta">
+                <h3>Queensland University of Technology</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Brisbane City, Australia</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Study at a top-ranked university in the heart of Brisbane — host of the 2032 Olympics. Over 100 real-world courses with strong industry connections and expert academics.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Architecture</span><span class="us-course-tag">Business</span><span class="us-course-tag">Communication</span><span class="us-course-tag">Design</span><span class="us-course-tag">Law</span><span class="us-course-tag">Engineering</span><span class="us-course-tag">Mathematics &amp; Data Science</span><span class="us-course-tag">Health</span><span class="us-course-tag">Project Management</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="us-section-divider"></div>
+
+      <!-- ===== IRELAND ===== -->
+      <div class="us-country-section" data-country="ireland">
+        <div class="us-country-heading">
+          <img src="assets/flag_w40_ie.png" alt="Ireland Flag" class="us-country-flag">
+          <h2>Ireland</h2>
+          <span class="us-country-count">3 Universities</span>
+        </div>
+        <div class="us-grid">
+          <div class="us-card" data-country="ireland" data-name="Trinity College Dublin">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">TC</div>
+              <div class="us-card-meta">
+                <h3>Trinity College Dublin</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Dublin, Ireland</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Ireland's leading university, inspiring the next generation of global citizens and global leaders with world-class research and teaching.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">International Management</span><span class="us-course-tag">Data Science</span><span class="us-course-tag">AI</span><span class="us-course-tag">Cyber Security</span><span class="us-course-tag">Finance</span><span class="us-course-tag">Digital Marketing</span><span class="us-course-tag">Public Health</span><span class="us-course-tag">Economics</span><span class="us-course-tag">Biomedical Sciences</span><span class="us-course-tag">Electronic &amp; Computer Engineering</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="ireland" data-name="University College Dublin">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">UC</div>
+              <div class="us-card-meta">
+                <h3>University College Dublin</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Belfield, Dublin, Ireland</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Ranked in the world's top 100 universities (QS). Currently ranked within the top 1% of higher education institutions worldwide since its foundation in 1854.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Agriculture &amp; Food</span><span class="us-course-tag">Engineering</span><span class="us-course-tag">Physiotherapy</span><span class="us-course-tag">Law &amp; Criminal Justice</span><span class="us-course-tag">Health &amp; Medicine</span><span class="us-course-tag">Sustainability</span><span class="us-course-tag">Radiography</span><span class="us-course-tag">Social Sciences</span><span class="us-course-tag">Sports &amp; Performances</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="ireland" data-name="University College Cork">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">CC</div>
+              <div class="us-card-meta">
+                <h3>University College Cork</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Cork, Ireland</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Founded in 1845, a world-class university with a rich tradition of teaching, research and scholarship. Approximately 26,000 students take its UG and PG programmes.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Accounting &amp; Finance</span><span class="us-course-tag">Actuarial Science</span><span class="us-course-tag">Biochemistry</span><span class="us-course-tag">Criminology</span><span class="us-course-tag">Dental Nursing</span><span class="us-course-tag">Education Studies</span><span class="us-course-tag">Finance &amp; Banking</span><span class="us-course-tag">General Nursing</span><span class="us-course-tag">Health &amp; Wellbeing</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="us-section-divider"></div>
+
+      <!-- ===== DUBAI ===== -->
+      <div class="us-country-section" data-country="dubai">
+        <div class="us-country-heading">
+          <img src="assets/flag_w40_ae.png" alt="Dubai Flag" class="us-country-flag">
+          <h2>Dubai, UAE</h2>
+          <span class="us-country-count">3 Universities</span>
+        </div>
+        <div class="us-grid">
+          <div class="us-card" data-country="dubai" data-name="Heriot Watt University Dubai">
+            <div class="us-card-top">
+              <div class="us-logo-wrap"><img src="assets/Heriot-Watt University Dubai.png" alt="Heriot Watt University Dubai"></div>
+              <div class="us-card-meta">
+                <h3>Heriot Watt University – Dubai</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Dubai International Academic City</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Established in 2005, it was the first campus of an overseas university to open in Dubai International Academic City, a satellite of Heriot-Watt University.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">International Business</span><span class="us-course-tag">Business Analytics</span><span class="us-course-tag">Data Science</span><span class="us-course-tag">AI</span><span class="us-course-tag">Cyber Security</span><span class="us-course-tag">Project Management</span><span class="us-course-tag">Finance &amp; Management</span><span class="us-course-tag">Renewable Energy Engineering</span><span class="us-course-tag">Actuarial Science</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="dubai" data-name="De Montfort University Dubai">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">DM</div>
+              <div class="us-card-meta">
+                <h3>De Montfort University, Dubai</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Dubai, UAE</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Founded in 1870, De Montfort University (DMU) Leicester has grown into a global institution with an ambitious research strategy and employability-focused curriculum.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Artificial Intelligence</span><span class="us-course-tag">Architecture</span><span class="us-course-tag">Data Analytics</span><span class="us-course-tag">Design &amp; Innovation</span><span class="us-course-tag">Engineering Management</span><span class="us-course-tag">Fashion Business</span><span class="us-course-tag">HR Management</span><span class="us-course-tag">Marketing Management</span><span class="us-course-tag">MBA</span><span class="us-course-tag">Mental Health</span><span class="us-course-tag">Project Management</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="dubai" data-name="University of Wollongong Dubai">
+            <div class="us-card-top">
+              <div class="us-logo-wrap"><img src="assets/University of Wollongong in Dubai.png" alt="University of Wollongong Dubai"></div>
+              <div class="us-card-meta">
+                <h3>University of Wollongong</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Dubai Knowledge Park, UAE</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">The first international Australian university in the UAE. Over 40 internationally accredited degrees from 10 industry sectors, taught by qualified PhD-holding lecturers.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Commerce</span><span class="us-course-tag">Computer Science</span><span class="us-course-tag">Engineering</span><span class="us-course-tag">Information Technology</span><span class="us-course-tag">Media &amp; Design</span><span class="us-course-tag">Social Science</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="us-section-divider"></div>
+
+      <!-- ===== NETHERLANDS ===== -->
+      <div class="us-country-section" data-country="netherlands">
+        <div class="us-country-heading">
+          <img src="assets/flag_w40_nl.png" alt="Netherlands Flag" class="us-country-flag">
+          <h2>Netherlands</h2>
+          <span class="us-country-count">3 Universities</span>
+        </div>
+        <div class="us-grid">
+          <div class="us-card" data-country="netherlands" data-name="University of Twente">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">UT</div>
+              <div class="us-card-meta">
+                <h3>University of Twente, Enschede</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Enschede, Netherlands</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">At the forefront of developing technologies for a healthier, smarter, and more sustainable world. Three world-class research institutes and around 400 high-tech labs.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">Business IT</span><span class="us-course-tag">Computer Science</span><span class="us-course-tag">Data Science</span><span class="us-course-tag">AI</span><span class="us-course-tag">Cyber Security</span><span class="us-course-tag">Industrial Engineering</span><span class="us-course-tag">Sustainable Energy</span><span class="us-course-tag">Robotics</span><span class="us-course-tag">Biomedical Engineering</span><span class="us-course-tag">Psychology</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="netherlands" data-name="Radboud University">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">RU</div>
+              <div class="us-card-meta">
+                <h3>Radboud University</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Nijmegen, Netherlands</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A public research university with seven faculties and more than 24,000 students, established in 1923 in Nijmegen, Netherlands.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Artificial Intelligence</span><span class="us-course-tag">Arts &amp; Culture Studies</span><span class="us-course-tag">Business Administration</span><span class="us-course-tag">Computing Science</span><span class="us-course-tag">International Business Administration</span><span class="us-course-tag">Law &amp; Management</span><span class="us-course-tag">Linguistics</span><span class="us-course-tag">Medicine</span><span class="us-course-tag">Psychology</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="netherlands" data-name="Wittenborg University of Applied Sciences">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">WU</div>
+              <div class="us-card-meta">
+                <h3>Wittenborg University of Applied Sciences</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Apeldoorn, Netherlands</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A vibrant, internationally focused Business School established in 1987. Known for high-quality education, strong management focus, and personalized learning.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Bachelor</span><span class="us-course-tag">Master (MSc)</span><span class="us-course-tag">MBA</span><span class="us-course-tag">Pre-Bachelor</span><span class="us-course-tag">Pre-Master</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="us-section-divider"></div>
+
+      <!-- ===== SPAIN ===== -->
+      <div class="us-country-section" data-country="spain">
+        <div class="us-country-heading">
+          <img src="assets/flag_w40_es.png" alt="Spain Flag" class="us-country-flag">
+          <h2>Spain</h2>
+          <span class="us-country-count">3 Universities</span>
+        </div>
+        <div class="us-grid">
+          <div class="us-card" data-country="spain" data-name="UCAM">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">UC</div>
+              <div class="us-card-meta">
+                <h3>UCAM International</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Murcia, Spain</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A private university in Murcia offering international Bachelor's, Master's, PhD programs. Best known for multicultural campus, diverse programmes, and strong employability prospects.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business &amp; Management</span><span class="us-course-tag">International Business</span><span class="us-course-tag">Data Science</span><span class="us-course-tag">AI</span><span class="us-course-tag">Cyber Security</span><span class="us-course-tag">Sports Management</span><span class="us-course-tag">Public Health</span><span class="us-course-tag">Computer Engineering</span><span class="us-course-tag">Psychology</span><span class="us-course-tag">Physiotherapy</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="spain" data-name="Universidad Europea">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">UE</div>
+              <div class="us-card-meta">
+                <h3>Universidad Europea</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Spain</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">An innovative international institution offering 300+ degrees in biomedical sciences, social sciences, design, and physical activity in both campus and online modalities.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Big Data Analytics</span><span class="us-course-tag">Applied AI</span><span class="us-course-tag">Business Analytics</span><span class="us-course-tag">MBA</span><span class="us-course-tag">Digital Marketing</span><span class="us-course-tag">Fashion Business Management</span><span class="us-course-tag">Project Management</span><span class="us-course-tag">Interior Design</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="spain" data-name="C3S Business School Barcelona">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">C3</div>
+              <div class="us-card-meta">
+                <h3>C3S Business School, Barcelona</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Top European excellence meets real-world impact. Earn a European degree + optional UK pathway and secure paid internships before graduation.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Business Analytics &amp; Digital Transformation</span><span class="us-course-tag">Business Management</span><span class="us-course-tag">Computing &amp; Information Systems</span><span class="us-course-tag">Business Tourism</span><span class="us-course-tag">Global MBA</span><span class="us-course-tag">Entrepreneurship</span><span class="us-course-tag">Project Management</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="us-section-divider"></div>
+
+      <!-- ===== NEW ZEALAND ===== -->
+      <div class="us-country-section" data-country="newzealand">
+        <div class="us-country-heading">
+          <img src="assets/flag_w40_nz.png" alt="New Zealand Flag" class="us-country-flag">
+          <h2>New Zealand</h2>
+          <span class="us-country-count">3 Universities</span>
+        </div>
+        <div class="us-grid">
+          <div class="us-card" data-country="newzealand" data-name="Auckland University of Technology">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">AU</div>
+              <div class="us-card-meta">
+                <h3>Auckland University of Technology</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Auckland, New Zealand</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">A public university in Auckland established on 1 January 2000, when the Auckland Institute of Technology was incorporated into the newly created university.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Art &amp; Design</span><span class="us-course-tag">Business</span><span class="us-course-tag">Communication Studies</span><span class="us-course-tag">Creative Technologies</span><span class="us-course-tag">Education</span><span class="us-course-tag">Engineering &amp; Computer Science</span><span class="us-course-tag">Health Sciences</span><span class="us-course-tag">Hospitality &amp; Tourism</span><span class="us-course-tag">Law</span><span class="us-course-tag">Sport &amp; Recreation</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="newzealand" data-name="University of Waikato">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">UW</div>
+              <div class="us-card-meta">
+                <h3>University of Waikato</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Auckland, New Zealand</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Started in 1964, one of the top universities in New Zealand and worldwide. A leader in Indigenous studies and committed to the UN Sustainable Development Goals.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">PhD &amp; Doctoral</span><span class="us-course-tag">Arts &amp; Social Sciences</span><span class="us-course-tag">Business</span><span class="us-course-tag">Education</span><span class="us-course-tag">Health</span><span class="us-course-tag">Law</span><span class="us-course-tag">Psychology</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="us-card" data-country="newzealand" data-name="Victoria University of Wellington">
+            <div class="us-card-top">
+              <div class="us-logo-placeholder">VU</div>
+              <div class="us-card-meta">
+                <h3>Victoria University of Wellington</h3>
+                <div class="us-card-location"><i class="fa-solid fa-location-dot"></i> Wellington, New Zealand</div>
+                <div class="us-card-program-badge"><i class="fa-solid fa-graduation-cap"></i> UG &amp; PG</div>
+              </div>
+            </div>
+            <div class="us-card-body">
+              <p class="us-card-desc">Consistently ranks among the world's best universities. Home to 17,000 students, including over 3,000 international students from more than 100 countries.</p>
+              <div class="us-courses-label"><i class="fa-solid fa-book-open"></i> Available Courses</div>
+              <div class="us-courses-grid">
+                <span class="us-course-tag">Biomedical Science</span><span class="us-course-tag">MBA</span><span class="us-course-tag">Actuarial Science</span><span class="us-course-tag">Applied Linguistics</span><span class="us-course-tag">Architecture</span><span class="us-course-tag">AI</span><span class="us-course-tag">Computer Science</span><span class="us-course-tag">Criminology</span><span class="us-course-tag">Data Science</span><span class="us-course-tag">Design</span><span class="us-course-tag">Construction</span>
+              </div>
+              <div class="us-card-footer">
+                <span class="us-rank-badge"><i class="fa-solid fa-star"></i> Top 30 Global</span>
+                <a href="contact.html" class="us-btn-enquire"><i class="fa-solid fa-paper-plane"></i> Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+  </section><!-- /.us-main -->
+
+  <!-- ===== CTA BANNER ===== -->
+  <section style="background: linear-gradient(135deg,#0A1233 0%,#0D47D8 100%); padding: 50px 0;">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:#fff;font-size:28px;font-weight:900;margin-bottom:12px;">Ready to Apply to a Top Global University?</h2>
+      <p style="color:#BFDBFE;font-size:15px;margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;">Our expert counsellors guide you through every step — from shortlisting to visa approval. All free of charge.</p>
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;background:#FCD34D;color:#0A1233;font-size:15px;font-weight:800;padding:14px 32px;border-radius:12px;text-decoration:none;transition:all 0.2s;box-shadow:0 8px 24px rgba(252,211,77,0.4);">
+        <i class="fa-solid fa-paper-plane"></i> Get Free Counselling
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="siteFooter"></footer>
+
+<!-- Floating Social Dock -->
+<div class="social-side-dock" id="socialSideDock">
+  <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn"><span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span></a>
+  <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram"><span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span></a>
+  <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook"><span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span></a>
+  <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube"><span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span></a>
+</div>
+
+<script src="main.js"></script>
+<script>
+  // Nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+      navToggle.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
+    });
+  }
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', e => {
+      if (window.innerWidth <= 1160) {
+        e.preventDefault();
+        toggle.closest('.nav-dropdown').classList.toggle('open');
+      }
+    });
+  });
+
+  // Search + filter logic
+  function filterCards() {
+    const q = document.getElementById('uniSearch').value.toLowerCase();
+    document.querySelectorAll('.us-card').forEach(card => {
+      const name = (card.dataset.name || '').toLowerCase();
+      const text = card.innerText.toLowerCase();
+      card.style.display = (name.includes(q) || text.includes(q)) ? '' : 'none';
+    });
+    updateSectionVisibility();
+  }
+
+  function filterByCountry(country, btn) {
+    document.querySelectorAll('.us-filter-pill').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.us-card').forEach(card => {
+      card.style.display = (country === 'all' || card.dataset.country === country) ? '' : 'none';
+    });
+    document.querySelectorAll('.us-country-section').forEach(sec => {
+      sec.style.display = (country === 'all' || sec.dataset.country === country) ? '' : 'none';
+    });
+    document.querySelectorAll('.us-section-divider').forEach(d => d.style.display = country === 'all' ? '' : 'none');
+    document.getElementById('uniSearch').value = '';
+  }
+
+  function updateSectionVisibility() {
+    document.querySelectorAll('.us-country-section').forEach(sec => {
+      const visibleCards = sec.querySelectorAll('.us-card:not([style*="display: none"])');
+      sec.style.display = visibleCards.length > 0 ? '' : 'none';
+    });
+  }
+
+  // Footer year
+  const yr = document.getElementById('year');
+  if (yr) yr.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

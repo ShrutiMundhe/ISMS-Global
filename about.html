@@ -1,0 +1,2850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | ISMS Global Education - Overseas Study Abroad Consultant</title>
+  <meta name="description"
+    content="ISMS Global Education has guided students toward internationally recognized postgraduate programs since 2009. Official partners with 500+ top universities.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="about.css">
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- ===== NAVBAR OVERRIDE: Exact match with index.html ===== -->
+  <style>
+    /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML */
+    :root {
+      --header-bg: #F4F8FF;
+      --header-border: #DCE5F3;
+      --nav-text: #11172A;
+      --nav-hover-bg: #E5EDFF;
+      --nav-accent: #0D47D8;
+      --dropdown-bg: #FFFFFF;
+      --gold-btn: #C79A3C;
+      --gold-btn-hover: #B5872E;
+    }
+
+    .site-header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 9999 !important;
+      background: var(--header-bg) !important;
+      border-bottom: 1px solid var(--header-border) !important;
+      box-shadow: 0 4px 20px rgba(17, 23, 42, 0.08) !important;
+      backdrop-filter: none !important;
+    }
+
+    body {
+      padding-top: 72px !important;
+    }
+
+    .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      height: 72px !important;
+      gap: 12px !important;
+      max-width: 1720px !important;
+      width: 95% !important;
+      margin: 0 auto !important;
+      padding: 0 2.5rem !important;
+    }
+
+    .brand-logo-img {
+      height: 48px !important;
+      width: auto !important;
+      max-width: 200px !important;
+      object-fit: contain !important;
+      display: block !important;
+    }
+
+    .main-nav {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0 !important;
+      flex: 1 !important;
+      justify-content: center !important;
+      font-family: 'Inter', Arial, sans-serif !important;
+    }
+
+    .main-nav a {
+      color: var(--nav-text) !important;
+      font-size: 13.5px !important;
+      font-weight: 600 !important;
+      padding: 16px 11px !important;
+      border-bottom: 3px solid transparent !important;
+      transition: background .15s ease, border-color .15s ease !important;
+      opacity: 1 !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      background: var(--nav-hover-bg) !important;
+      color: var(--nav-accent) !important;
+      border-bottom: 3px solid var(--nav-accent) !important;
+    }
+
+    .main-nav a.active::after {
+      display: none !important;
+    }
+
+    .nav-dropdown {
+      position: relative !important;
+    }
+
+    .nav-dropdown-toggle {
+      color: var(--nav-text) !important;
+      font-size: 13.5px !important;
+      font-weight: 600 !important;
+      padding: 16px 11px !important;
+      border-bottom: 3px solid transparent !important;
+      transition: background .15s ease, border-color .15s ease !important;
+      opacity: 1 !important;
+      background: transparent !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      white-space: nowrap !important;
+      font-family: 'Inter', Arial, sans-serif !important;
+    }
+
+    .nav-dropdown-toggle i {
+      color: var(--nav-accent) !important;
+      font-size: 10px !important;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-toggle {
+      background: var(--nav-hover-bg) !important;
+      border-bottom: 3px solid var(--nav-accent) !important;
+      color: var(--nav-accent) !important;
+    }
+
+    .nav-dropdown-menu {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      background: var(--dropdown-bg) !important;
+      border: 1px solid var(--header-border) !important;
+      border-top: 3px solid var(--nav-accent) !important;
+      box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+      border-radius: 14px !important;
+      padding: 8px !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(6px) !important;
+      transition: all 0.2s ease !important;
+      min-width: 160px !important;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(4px) !important;
+    }
+
+    .nav-dropdown-menu a {
+      color: var(--nav-text) !important;
+      border-left: 3px solid transparent !important;
+      border-bottom: none !important;
+      border-top: none !important;
+      padding: 10px 22px !important;
+      font-size: 13.5px !important;
+      font-weight: 500 !important;
+      background: transparent !important;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: var(--header-bg) !important;
+      border-left: 3px solid var(--nav-accent) !important;
+      color: var(--nav-accent) !important;
+    }
+
+    .dest-mega-menu {
+      min-width: 680px !important;
+      padding: 16px 20px !important;
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 8px 12px !important;
+      left: 50% !important;
+      transform: translateX(-50%) translateY(8px) !important;
+      border-radius: 18px !important;
+      background: var(--dropdown-bg) !important;
+      border-top: 3px solid var(--nav-accent) !important;
+    }
+
+    .nav-dropdown:hover .dest-mega-menu {
+      transform: translateX(-50%) translateY(4px) !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .dest-drop-item {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      padding: 10px 12px !important;
+      border-radius: 12px !important;
+      border-bottom: none !important;
+      border-top: none !important;
+      transition: background 0.15s ease !important;
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    .dest-drop-item:hover {
+      background: var(--header-bg) !important;
+      border-left: 3px solid var(--nav-accent) !important;
+    }
+
+    .dest-drop-flag {
+      width: 26px !important;
+      height: 18px !important;
+      object-fit: cover !important;
+      border-radius: 3px !important;
+      flex-shrink: 0 !important;
+    }
+
+    .dest-drop-text {
+      display: flex !important;
+      flex-direction: column !important;
+      line-height: 1.25 !important;
+    }
+
+    .dest-drop-text strong {
+      font-size: 13.5px !important;
+      font-weight: 700 !important;
+      color: var(--nav-text) !important;
+    }
+
+    .dest-drop-text span {
+      font-size: 11px !important;
+      color: #64748B !important;
+      margin-top: 2px !important;
+    }
+
+    .header-actions {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      flex-shrink: 0 !important;
+    }
+
+    .header-phone {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      color: var(--nav-text) !important;
+      text-decoration: none !important;
+      font-size: 12.5px !important;
+    }
+
+    .header-phone i {
+      width: 34px !important;
+      height: 34px !important;
+      border-radius: 50% !important;
+      background: var(--nav-hover-bg) !important;
+      color: var(--nav-accent) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+    }
+
+    .header-phone small {
+      color: #667085 !important;
+      display: block !important;
+    }
+
+    .header-phone strong {
+      color: var(--nav-text) !important;
+      font-weight: 700 !important;
+      font-size: 13px !important;
+      white-space: nowrap !important;
+    }
+
+    /* Hide phone text on tighter screens, keep icon */
+    @media (max-width: 1440px) {
+      .header-phone span {
+        display: none !important;
+      }
+
+      .header-phone {
+        gap: 0 !important;
+      }
+    }
+
+    /* Hide phone entirely on narrow desktop */
+    @media (max-width: 1280px) {
+      .header-phone {
+        display: none !important;
+      }
+    }
+
+    .site-header .btn-primary {
+      background: var(--gold-btn) !important;
+      color: #FFFFFF !important;
+      border: none !important;
+      font-weight: 700 !important;
+      box-shadow: none !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .site-header .btn-primary:hover {
+      background: var(--gold-btn-hover) !important;
+      color: #FFFFFF !important;
+      transform: none !important;
+    }
+
+    .nav-toggle {
+      display: none !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      gap: 5px !important;
+      background: none !important;
+      border: none !important;
+      padding: 8px !important;
+      cursor: pointer !important;
+    }
+
+    .nav-toggle span {
+      width: 24px !important;
+      height: 2px !important;
+      background: var(--nav-text) !important;
+      border-radius: 2px !important;
+      transition: 0.3s ease !important;
+      display: block !important;
+    }
+
+    @media (max-width: 1160px) {
+      .nav-toggle {
+        display: flex !important;
+      }
+
+      .main-nav {
+        position: fixed !important;
+        inset: 72px 0 0 0 !important;
+        background: #fff !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 24px !important;
+        gap: 4px !important;
+        overflow-y: auto !important;
+        transform: translateX(100%) !important;
+        transition: transform 0.3s ease !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+        z-index: 9998 !important;
+      }
+
+      .main-nav.open {
+        transform: translateX(0) !important;
+      }
+
+      .main-nav a,
+      .nav-dropdown-toggle {
+        padding: 14px 8px !important;
+        border-bottom: 1px solid #E2E8F0 !important;
+        width: 100% !important;
+        font-size: 15px !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+      }
+
+      .dest-mega-menu {
+        min-width: unset !important;
+        grid-template-columns: 1fr !important;
+        transform: none !important;
+        left: 0 !important;
+        position: static !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      .nav-dropdown-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: none !important;
+      }
+
+      .nav-dropdown.open .nav-dropdown-menu {
+        display: block !important;
+      }
+    }
+  
+/* UNIVERSAL BADGE PILL HORIZONTAL CENTERING */
+.badge-pill,
+[class*="pill-badge"],
+[class*="-badge"] {
+    display: flex !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* TESTIMONIALS CENTERING & GOLDEN STARS */
+.dtm-4cards-grid,
+.dtm-grid,
+.testimonials-grid,
+.dtm-cards-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.dtm-card,
+.testimonial-card {
+    flex: 1 1 360px !important;
+    max-width: 420px !important;
+    min-width: 280px !important;
+}
+
+.dtm-rating,
+.testimonial-rating,
+.stars,
+.star-rating {
+    color: #FFB800 !important;
+}
+
+.dtm-rating i,
+.testimonial-rating i,
+.stars i,
+.star-rating i,
+.fa-star {
+    color: #FFB800 !important;
+}
+
+/* DTP SECTION LEFT ALIGNMENT FOR TWO-COLUMN HEADER */
+.dtp-header-box {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+.dtp-pill-badge,
+.dtp-header-box .dtp-pill-badge {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    display: inline-flex !important;
+    align-self: flex-start !important;
+}
+
+.dtp-title,
+.dtp-header-box .dtp-title {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.dtp-subtext,
+.dtp-header-box .dtp-subtext {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* ENFORCE GOLDEN STARS FOR ALL TESTIMONIAL RATINGS */
+.dtm-rating,
+.dtm-rating i,
+.testimonial-rating,
+.testimonial-rating i,
+.star-rating,
+.star-rating i,
+.stars,
+.stars i,
+i.fa-star,
+i.fa-solid.fa-star {
+    color: #FFB800 !important;
+}
+
+/* PREMIUM RIGHT BLUE CTA CARD STYLING FOR DTP SECTION */
+.dtp-right-blue-card,
+.dtp-right-card {
+    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
+    border-radius: 22px !important;
+    padding: 36px 30px !important;
+    color: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 12px 36px rgba(13,71,216,0.22) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    min-height: 320px !important;
+}
+
+.dtp-blue-text-box,
+.dtp-right-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.dtp-right-blue-card h3,
+.dtp-right-card h3 {
+    color: #FFFFFF !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 14px !important;
+    letter-spacing: -0.01em !important;
+    text-align: left !important;
+}
+
+.dtp-right-blue-card p,
+.dtp-right-card p {
+    color: #DBEAFE !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+    text-align: left !important;
+}
+
+.dtp-blue-btn,
+.dtp-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+    color: #0A1940 !important;
+    font-weight: 800 !important;
+    font-size: 14.5px !important;
+    padding: 14px 22px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.35) !important;
+    width: 100 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+.dtp-blue-btn:hover,
+.dtp-cta-btn:hover {
+    background: linear-gradient(135deg, #FFB800 0%, #F59E0B 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(245,158,11,0.5) !important;
+    color: #0A1940 !important;
+}
+
+.dtp-cta-note,
+.dtp-guarantee {
+    display: block !important;
+    font-size: 12px !important;
+    color: #93C5FD !important;
+    margin-top: 14px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+}
+</style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+  <!-- 1. Navbar (sticky) -->
+  <!-- 1. Navbar (sticky - EXACT MATCH WITH INDEX.HTML) -->
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="siteHeader"></header>
+
+  <!-- 2. Hero Section (EXACT MATCH REFERENCE DESIGN) -->
+  <section class="about-hero-section" id="about">
+    <div class="container about-hero-grid">
+      <!-- Left Content Column -->
+      <div class="about-hero-content reveal">
+        <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+          <i class="fa-solid fa-globe"></i> ABOUT ISMS GLOBAL EDUCATION
+        </div>
+
+        <h1 class="about-hero-title">
+          Empowering Students<br>
+          to Build Global<br>
+          Careers <span class="highlight-blue-accent">Since 2009</span>
+        </h1>
+
+        <p class="about-hero-desc">
+          ISMS Global Education is a reliable overseas education consultant that has been operating for more than 17
+          years and holds a British Council Certification, assisting those students who wish to study a Post Graduate
+          Degree Abroad in achieving academic excellence on a global platform. Our expert consultants will guide you
+          through the whole admission process, helping you take the right decisions at each step. At ISMS Global
+          Education, we provide counseling services that are free of cost.
+        </p>
+        <p class="about-hero-desc">
+          We are a direct academic partner of leading universities across the UK, Ireland, Dubai, France, Australia,
+          Germany, Spain, the Netherlands, and New Zealand. We have successfully helped thousands of student's secure
+          admissions for post graduate degrees, with free counselling, complete transparency, and no hidden costs
+          throughout the entire process.
+        </p>
+
+        <!-- 5 Feature Badges in 2 Rows (Matching exact design) -->
+        <div class="about-badge-rows">
+          <div class="about-badge-row">
+            <span class="a-badge ab-blue"><i class="fa-solid fa-ribbon"></i> 19+ Glorious Years</span>
+            <span class="a-badge ab-green"><i class="fa-solid fa-user-group"></i> Free Counselling</span>
+            <span class="a-badge ab-gold"><i class="fa-solid fa-tag"></i> No Hidden Charges</span>
+          </div>
+          <div class="about-badge-row">
+            <span class="a-badge ab-cyan"><i class="fa-solid fa-handshake"></i> 10+ University Partners</span>
+            <span class="a-badge ab-purple"><i class="fa-solid fa-shield-halved"></i> 100% Visa Success Rate</span>
+          </div>
+        </div>
+
+        <!-- Hero Buttons -->
+        <div class="about-hero-actions">
+          <a href="#contact" class="btn-dark-navy-hero">
+            Book Free Counselling <span class="circle-arrow-white"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+          <a href="#destinations" class="btn-outline-navy-hero">
+            Explore Universities <span class="circle-arrow-navy"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual Column (Main Illustration + Plane + Cap + 4 Stacked Stat Cards) -->
+      <div class="about-hero-visual reveal">
+        <div class="about-visual-wrapper">
+          <!-- Floating Aeroplane & Graduation Cap Assets -->
+          <img src="assets/plane.png" alt="Flying Aeroplane" class="hero-float-plane">
+          <img src="assets/cap.png" alt="3D Graduation Cap" class="hero-float-cap">
+
+          <img src="assets/hero-illustration.png" alt="Student with suitcase and globe landmarks"
+            class="about-main-illustration">
+
+          <!-- Vertical Stacked 4 Stat Cards (Right side matching image) -->
+          <div class="about-stat-stack">
+            <div class="a-stat-card">
+              <div class="a-stat-icon s-icon-blue"><i class="fa-regular fa-calendar-check"></i></div>
+              <div>
+                <strong>19+</strong>
+                <span>Years of Excellence</span>
+              </div>
+            </div>
+
+            <div class="a-stat-card">
+              <div class="a-stat-icon s-icon-green"><i class="fa-solid fa-users"></i></div>
+              <div>
+                <strong>2000+</strong>
+                <span>Students Guided</span>
+              </div>
+            </div>
+
+            <div class="a-stat-card">
+              <div class="a-stat-icon s-icon-orange"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div>
+                <strong>500+</strong>
+                <span>Global Universities</span>
+              </div>
+            </div>
+
+            <div class="a-stat-card">
+              <div class="a-stat-icon s-icon-purple"><i class="fa-solid fa-shield-halved"></i></div>
+              <div>
+                <strong>100%</strong>
+                <span>Visa Success Rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Comprehensive Support at Every Step Section (EXACT MATCH REFERENCE DESIGN) -->
+  <section class="about-support-section" id="support">
+    <div class="container relative-z">
+      <!-- Decorative Books Image - right side -->
+      <img src="assets/Books.png" alt="Books decoration" class="supp-books-corner">
+
+      <!-- Section Header -->
+      <div class="about-support-header reveal">
+        <div class="supp-head-center">
+          <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+            <i class="fa-solid fa-briefcase"></i> WHAT WE DO
+          </div>
+          <div class="supp-title-row">
+            <img src="assets/Globe.png" alt="Globe" class="supp-globe-side supp-globe-left">
+            <h2 class="supp-title">Comprehensive Support at <span class="highlight-blue-underline">Every Step</span>
+            </h2>
+            <img src="assets/Globe.png" alt="Globe" class="supp-globe-side supp-globe-right">
+          </div>
+          <p class="supp-subtext">We aim to provide students with professional guidance, individualized counseling, and
+            comprehensive support to realize their study abroad ambitions. Whether it is determining the appropriate
+            university or obtaining a student visa, we are here to ensure that everything in the procedure is
+            straightforward and profitable.</p>
+        </div>
+      </div>
+
+      <!-- 4x3 Grid of 12 Numbered Cards -->
+      <div class="supp-cards-grid reveal">
+        <!-- Card 1 -->
+        <div class="supp-card sc-blue">
+          <div class="sc-icon-circle sc-ic-blue"><img src="assets/Screenshot 2026-08-04 142543.png"
+              alt="University Selection" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>1. University Selection</h3>
+            <p>We help you choose the right university and program based on your goals, profile and budget.</p>
+          </div>
+          <div class="sc-bar sc-b-blue"></div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="supp-card sc-green">
+          <div class="sc-icon-circle sc-ic-green"><img src="assets/Screenshot 2026-08-04 142630.png"
+              alt="Admission Assistance" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>2. Admission Assistance</h3>
+            <p>From application to offer letter, we guide you through the entire admission process.</p>
+          </div>
+          <div class="sc-bar sc-b-green"></div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="supp-card sc-purple">
+          <div class="sc-icon-circle sc-ic-purple"><img src="assets/Screenshot 2026-08-05 222948.png"
+              alt="Visa Guidance" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>3. Visa Guidance</h3>
+            <p>Expert visa counselling and documentation support to ensure a smooth visa process.</p>
+          </div>
+          <div class="sc-bar sc-b-purple"></div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="supp-card sc-orange">
+          <div class="sc-icon-circle sc-ic-orange"><img src="assets/Screenshot 2026-08-05 214015.png"
+              alt="Scholarships Support" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>4. Scholarships Support</h3>
+            <p>We identify and help you apply for scholarships and financial aid to reduce your costs.</p>
+          </div>
+          <div class="sc-bar sc-b-orange"></div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="supp-card sc-pink">
+          <div class="sc-icon-circle sc-ic-pink"><img src="assets/Screenshot 2026-08-04 151321.png"
+              alt="Accommodation Assistance" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>5. Accommodation Assistance</h3>
+            <p>We help you find safe, comfortable and affordable accommodation close to your university.</p>
+          </div>
+          <div class="sc-bar sc-b-pink"></div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="supp-card sc-teal">
+          <div class="sc-icon-circle sc-ic-teal"><img src="assets/Screenshot 2026-08-04 162626.png"
+              alt="Internship Support" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>6. Internship Support</h3>
+            <p>We connect you with internship opportunities for practical learning and global exposure.</p>
+          </div>
+          <div class="sc-bar sc-b-teal"></div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="supp-card sc-amber">
+          <div class="sc-icon-circle sc-ic-amber"><img src="assets/Screenshot 2026-08-05 222953.png"
+              alt="Pre-Departure Guidance" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>7. Pre-Departure Guidance</h3>
+            <p>We prepare you for your journey with pre-departure briefing, checklists and travel support.</p>
+          </div>
+          <div class="sc-bar sc-b-amber"></div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="supp-card sc-royalblue">
+          <div class="sc-icon-circle sc-ic-royalblue"><img src="assets/Screenshot 2026-08-04 162630.png"
+              alt="Post-Arrival Support" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>8. Post-Arrival Support</h3>
+            <p>We assist you after arrival with settling in, documentation and adapting to a new environment.</p>
+          </div>
+          <div class="sc-bar sc-b-royalblue"></div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="supp-card sc-lime">
+          <div class="sc-icon-circle sc-ic-lime"><img src="assets/Screenshot 2026-08-04 142534.png"
+              alt="IELTS Preparation" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>9. IELTS Preparation</h3>
+            <p>Top-rated IELTS training to help you achieve the score you need for your dream university.</p>
+          </div>
+          <div class="sc-bar sc-b-lime"></div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="supp-card sc-indigo">
+          <div class="sc-icon-circle sc-ic-indigo"><img src="assets/Screenshot 2026-08-04 142630.png"
+              alt="Documentation Support" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>10. Documentation Support</h3>
+            <p>We assist with all required documents to ensure accuracy, completeness and on-time submission.</p>
+          </div>
+          <div class="sc-bar sc-b-indigo"></div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="supp-card sc-red">
+          <div class="sc-icon-circle sc-ic-red"><img src="assets/Screenshot 2026-08-04 162646.png"
+              alt="Post Study Career Support" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>11. Post Study Career Support</h3>
+            <p>Career counselling, CV review, interview preparation and job search guidance after graduation.</p>
+          </div>
+          <div class="sc-bar sc-b-red"></div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="supp-card sc-lightblue">
+          <div class="sc-icon-circle sc-ic-lightblue"><img src="assets/ChatGPT Image Aug 5, 2026, 09_44_27 PM.png"
+              alt="End-to-End Support" class="sc-img-icon"></div>
+          <div class="sc-body">
+            <h3>12. End-to-End Support</h3>
+            <p>From your first counselling session to landing and beyond &ndash; we are with you at every step.</p>
+          </div>
+          <div class="sc-bar sc-b-lightblue"></div>
+        </div>
+      </div>
+
+      <!-- Bottom White Trust Features Bar -->
+      <div class="supp-trust-bar reveal">
+        <div class="st-item">
+          <div class="st-icon"><img src="assets/Screenshot 2026-08-04 151326.png" alt="Personalized Guidance"
+              class="st-img-icon"></div>
+          <div>
+            <strong>Personalized Guidance</strong>
+            <span>Tailored to your goals and profile</span>
+          </div>
+        </div>
+
+        <div class="st-divider"></div>
+
+        <div class="st-item">
+          <div class="st-icon"><img src="assets/Screenshot 2026-08-04 142635.png" alt="100% Transparency"
+              class="st-img-icon"></div>
+          <div>
+            <strong>100% Transparency</strong>
+            <span>Clear process, no hidden costs</span>
+          </div>
+        </div>
+
+        <div class="st-divider"></div>
+
+        <div class="st-item">
+          <div class="st-icon"><img src="assets/Screenshot 2026-08-04 142611.png" alt="Dedicated Support"
+              class="st-img-icon"></div>
+          <div>
+            <strong>Dedicated Support</strong>
+            <span>Experts with you, always</span>
+          </div>
+        </div>
+
+        <div class="st-divider"></div>
+
+        <div class="st-item">
+          <div class="st-icon"><img src="assets/Screenshot 2026-08-04 142552.png" alt="Global Opportunities"
+              class="st-img-icon"></div>
+          <div>
+            <strong>Global Opportunities</strong>
+            <span>Opening doors to your future</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4. Our Story Section (EXACT MATCH REFERENCE DESIGN) -->
+    <section class="about-story-section" id="story">
+      <div class="container relative-z">
+        <!-- Section Header -->
+        <div class="about-story-header reveal">
+          <!-- Leftmost Globe -->
+          <img src="assets/Globe.png" alt="Globe" class="story-globe-corner">
+
+          <div class="story-head-center">
+            <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+              <i class="fa-solid fa-book-open"></i> OUR STORY
+            </div>
+            <h2 class="story-title">A Journey of Trust , Growth <span class="text-blue-accent">Global Impact</span></h2>
+            <div class="story-title-underline"></div>
+            <p class="story-subtext">ISMS Global Education has helped over 2,000+ students achieve their dreams since
+              2009 with a 100% Visa Success Rate. We make the journey simple, transparent, and successful. We connect
+              students with top universities around the world, from university selection and admissions to visa
+              assistance and pre-departure services.</p>
+          </div>
+        </div>
+
+        <!-- Main 2-Column Split: Left Hero Illustration & Right Vertical Milestone Timeline -->
+        <div class="about-story-inner">
+          <!-- Left Column: Large Hero Illustration -->
+          <div class="story-left-column reveal">
+            <img src="assets/hero-illustration.png" alt="Student with suitcase and globe landmarks"
+              class="story-hero-img">
+          </div>
+
+          <!-- Right Column: 6 Milestone Timeline Rows -->
+          <div class="story-timeline-column reveal">
+            <div class="story-timeline-dashed-line"></div>
+
+            <!-- Row 1: 2009 -->
+            <div class="story-t-item">
+              <span class="st-year">2009</span>
+              <div class="st-node st-node-blue"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="st-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+              <div class="st-card">
+                <h3>The Beginning</h3>
+                <p>ISMS Global Education was founded with a vision to provide transparent and reliable study abroad
+                  guidance.</p>
+              </div>
+            </div>
+
+            <!-- Row 2: 2012 -->
+            <div class="story-t-item">
+              <span class="st-year">2012</span>
+              <div class="st-node st-node-green"><i class="fa-solid fa-handshake"></i></div>
+              <div class="st-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+              <div class="st-card">
+                <h3>Expanded to the UK</h3>
+                <p>Built strong partnerships with leading universities in the UK, opening doors for students to
+                  world-class education.</p>
+              </div>
+            </div>
+
+            <!-- Row 3: 2015 -->
+            <div class="story-t-item">
+              <span class="st-year">2015</span>
+              <div class="st-node st-node-orange"><i class="fa-solid fa-earth-europe"></i></div>
+              <div class="st-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+              <div class="st-card">
+                <h3>Growing Across Europe</h3>
+                <p>Expanded our network across Europe including Germany, France, Ireland, Spain and the Netherlands.</p>
+              </div>
+            </div>
+
+            <!-- Row 4: 2018 -->
+            <div class="story-t-item">
+              <span class="st-year">2018</span>
+              <div class="st-node st-node-purple"><i class="fa-solid fa-users"></i></div>
+              <div class="st-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+              <div class="st-card">
+                <h3>Global Footprint</h3>
+                <p>Added Australia, New Zealand, Dubai and other destinations to help students explore global
+                  opportunities.</p>
+              </div>
+            </div>
+
+            <!-- Row 5: 2021 -->
+            <div class="story-t-item">
+              <span class="st-year">2021</span>
+              <div class="st-node st-node-cyan"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="st-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+              <div class="st-card">
+                <h3>2,000+ Students Achieved Dreams</h3>
+                <p>Proudly guided over 2,000 students with a 100% visa success rate.</p>
+              </div>
+            </div>
+
+            <!-- Row 6: Today -->
+            <div class="story-t-item">
+              <span class="st-year">Today</span>
+              <div class="st-node st-node-navy"><i class="fa-solid fa-chess-king"></i></div>
+              <div class="st-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+              <div class="st-card">
+                <h3>A Global Education Partner</h3>
+                <p>Continuing our mission to empower more students and create a brighter global future together.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom White Stat Bar -->
+        <div class="story-stat-bar reveal">
+          <div class="s-stat-item">
+            <div class="s-stat-icon icon-b-blue"><img src="assets/Screenshot 2026-08-04 151316.png"
+                alt="Students Guided" class="s-stat-img"></div>
+            <div>
+              <strong>2000+</strong>
+              <span>Students Guided</span>
+            </div>
+          </div>
+
+          <div class="s-stat-divider"></div>
+
+          <div class="s-stat-item">
+            <div class="s-stat-icon icon-b-green"><img src="assets/Screenshot 2026-08-04 142543.png"
+                alt="Global Universities" class="s-stat-img"></div>
+            <div>
+              <strong>500+</strong>
+              <span>Global Universities</span>
+            </div>
+          </div>
+
+          <div class="s-stat-divider"></div>
+
+          <div class="s-stat-item">
+            <div class="s-stat-icon icon-b-orange"><img src="assets/Screenshot 2026-08-04 142552.png"
+                alt="Study Destinations" class="s-stat-img"></div>
+            <div>
+              <strong>10+</strong>
+              <span>Study Destinations</span>
+            </div>
+          </div>
+
+          <div class="s-stat-divider"></div>
+
+          <div class="s-stat-item">
+            <div class="s-stat-icon icon-b-purple"><img src="assets/Screenshot 2026-08-04 142557.png"
+                alt="Visa Success Rate" class="s-stat-img"></div>
+            <div>
+              <strong>100%</strong>
+              <span>Visa Success Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. "A Message from Our Director" Section (EXACT MATCH REFERENCE DESIGN) -->
+    <section class="about-director-section" id="director">
+      <div class="container relative-z">
+        <!-- Section Header with Left & Right Backdrop Artwork -->
+        <div class="about-director-header reveal">
+
+          <!-- Left Side Artwork: Big Ben, 3D Globe & Flying Plane -->
+          <div class="dir-left-artwork">
+            <img src="assets/Globe.png" alt="3D Earth Globe" class="dir-globe-img">
+
+          </div>
+
+          <div class="dir-head-center">
+            <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+              <i class="fa-solid fa-feather-pointed"></i> A LETTER FROM OUR DIRECTOR
+            </div>
+            <h2 class="dir-title">A Message from <span class="text-blue-accent">Our Director</span></h2>
+            <p class="dir-subtext">Guiding. Inspiring. Empowering Futures.</p>
+            <div class="dir-sub-line"></div>
+          </div>
+
+          <!-- Right Side Artwork: 3D Globe (mirroring left) -->
+          <div class="dir-right-artwork">
+            <img src="assets/Globe.png" alt="3D Earth Globe" class="dir-globe-right">
+          </div>
+
+        </div>
+
+        <!-- Main 2-Column Grid -->
+        <div class="about-director-grid">
+          <!-- Left Director Frame & Name Badge -->
+          <div class="dir-left-frame reveal">
+            <!-- Light Blue Fluid Blob behind photo -->
+            <div class="dir-fluid-blob"></div>
+            <div class="dir-circle-frame">
+              <img src="assets/director.png" alt="Ms. Shalini Banerjee - Founder & Director" class="dir-photo">
+            </div>
+
+            <!-- Graduation Cap resting on top left edge -->
+            <img src="assets/cap.png" alt="Graduation Cap" class="dir-grad-cap">
+
+            <!-- Flying Plane Arc -->
+            <div class="dir-plane-arc">
+              <svg viewBox="0 0 160 80" class="dir-plane-svg">
+                <path d="M 10 70 Q 80 10 150 50" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="4 4" fill="none"
+                  opacity="0.6" />
+              </svg>
+              <i class="fa-solid fa-plane dir-plane-icon"></i>
+            </div>
+
+            <!-- Coffee Mug on bottom left -->
+            <div class="dir-coffee-mug">
+              <div class="mug-body">
+                <i class="fa-solid fa-shield-halved mug-logo"></i>
+                <span>ISMS<br><small>GLOBAL</small></span>
+              </div>
+              <div class="mug-handle"></div>
+            </div>
+
+            <!-- Name Overlay Badge -->
+            <div class="dir-name-badge">
+              <div class="d-badge-logo"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="d-badge-info">
+                <strong>Ms. Shalini Banerjee</strong>
+                <div class="d-badge-role">Founder &amp; Director</div>
+                <div class="d-badge-company">ISMS Global Education</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Quote Card Box -->
+          <div class="dir-right-quote-card reveal">
+            <!-- Big Ben London Sketch Watermark at 0.5 opacity -->
+            <img src="assets/big-ben-sketch.png" alt="Big Ben London Sketch" class="dir-watermark-sketch">
+
+            <div class="quote-mark-top"><i class="fa-solid fa-quote-left"></i></div>
+
+            <div class="quote-content-paragraphs">
+              <p>In today’s world of globalization, where national and cultural boundaries are constantly blurring, it
+                is the responsibility of higher education institutions to develop students who are capable of navigating
+                the world beyond borders.</p>
+              <p>As the founder of ISMS Global Education, I feel that in this age of globalization, an academic journey
+                beyond your home country is an excellent networking opportunity with people from across the world.
+                Therefore, ISMS Global gives you an experience of lifetime by making it easier for students to get
+                much-needed international exposure and developing a platform for them to do so. We have direct
+                partnerships with many prestigious universities in the United Kingdom, and their qualifications are
+                globally recognized and accepted. This program helps young talents realize their dream of studying
+                abroad and gaining work experience in the U.K. on successful completion of their respective courses.</p>
+              <p>ISMS Global Education would like to extend a hearty welcome to all of you as new members of the family.
+                By choosing to study with us, you will be providing yourself with a strong foundation for a rewarding
+                future career and personal growth.</p>
+            </div>
+
+            <!-- Signature & Action Button -->
+            <div class="quote-card-footer">
+              <div class="dir-signature-block">
+                <div class="dir-sig-name">Shalini Banerjee</div>
+                <div class="dir-sig-title">Founder &amp; Director</div>
+                <div class="dir-sig-org">ISMS Global Education</div>
+              </div>
+
+              <a href="#contact" class="btn-dark-navy-sm">
+                Read Full Message <span class="circle-arrow-white-sm"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+
+            <div class="quote-mark-bottom"><i class="fa-solid fa-quote-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Bottom White Feature Bar (4 Columns) -->
+        <div class="dir-trust-bar reveal">
+          <div class="d-trust-item">
+            <div class="d-trust-icon"><img src="assets/Screenshot 2026-08-04 142552.png" alt="Global Vision"></div>
+            <div>
+              <strong>Global Vision</strong>
+              <span>Empowering students to think beyond borders.</span>
+            </div>
+          </div>
+
+          <div class="d-trust-divider"></div>
+
+          <div class="d-trust-item">
+            <div class="d-trust-icon"><img src="assets/Screenshot 2026-08-04 142611.png" alt="Trusted Guidance"></div>
+            <div>
+              <strong>Trusted Guidance</strong>
+              <span>19+ years of experience in overseas education.</span>
+            </div>
+          </div>
+
+          <div class="d-trust-divider"></div>
+
+          <div class="d-trust-item">
+            <div class="d-trust-icon"><img src="assets/Screenshot 2026-08-04 142534.png" alt="Student First"></div>
+            <div>
+              <strong>Student First</strong>
+              <span>Every decision we make keeps students' success first.</span>
+            </div>
+          </div>
+
+          <div class="d-trust-divider"></div>
+
+          <div class="d-trust-item">
+            <div class="d-trust-icon"><img src="assets/Screenshot 2026-08-04 142543.png" alt="Future Focused"></div>
+            <div>
+              <strong>Future Focused</strong>
+              <span>Building successful careers and a better tomorrow.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CTA Section (EXACT MATCH REFERENCE DESIGN) -->
+    <section class="about-cta-section" id="cta-global">
+      <div class="container relative-z">
+        <!-- Section Header with Right Backdrop Graduate Cutout Illustration -->
+        <div class="about-cta-header-wrap reveal">
+          <div class="about-cta-header-text">
+            <div class="cta-eyebrow-tag">YOUR DREAMS. OUR MISSION.</div>
+            <div class="cta-eyebrow-line"></div>
+
+            <h2 class="cta-hero-title">
+              Your Global Future<br>
+              Starts with <span class="text-blue-accent">ISMS Global.</span>
+            </h2>
+            <p class="cta-hero-subtext">From choosing the right course to landing at your dream university, we are with
+              you at every step of your journey.</p>
+
+            <!-- 4 Feature Badges Horizontal Row -->
+            <div class="cta-badges-row">
+              <div class="c-badge-item">
+                <div class="c-badge-icon"><img src="assets/Screenshot 2026-08-04 142547.png" alt="Expert Counselling">
+                </div>
+                <div>
+                  <strong>Expert Counselling</strong>
+                  <span>Personalized guidance from experts</span>
+                </div>
+              </div>
+
+              <div class="c-badge-item">
+                <div class="c-badge-icon"><img src="assets/Screenshot 2026-08-04 142603.png" alt="End-to-End Support">
+                </div>
+                <div>
+                  <strong>End-to-End Support</strong>
+                  <span>Complete assistance from application to arrival</span>
+                </div>
+              </div>
+
+              <div class="c-badge-item">
+                <div class="c-badge-icon"><img src="assets/Screenshot 2026-08-04 142543.png" alt="Global Opportunities">
+                </div>
+                <div>
+                  <strong>Global Opportunities</strong>
+                  <span>Access to top universities and better careers</span>
+                </div>
+              </div>
+
+              <div class="c-badge-item">
+                <div class="c-badge-icon"><img src="assets/Screenshot 2026-08-04 142557.png" alt="Your Success"></div>
+                <div>
+                  <strong>Your Success, Our Commitment</strong>
+                  <span>We don't just guide, we help you succeed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Graduate & World Landmarks Illustration -->
+          <div class="cta-graduate-visual">
+            <img src="assets/graduate.png" alt="Graduate looking toward world landmarks" class="cta-grad-img">
+          </div>
+        </div>
+
+        <!-- Center Dark Blue Action Box ("Take the First Step Today!") -->
+        <div class="cta-navy-action-container reveal">
+          <div class="navy-action-head">
+            <div class="star-accent"><i class="fa-solid fa-star"></i></div>
+            <div class="navy-head-rule-row">
+              <div class="navy-line"></div>
+              <h3>Take the First Step Today!</h3>
+              <div class="navy-line"></div>
+            </div>
+            <p>Let's turn your study abroad dreams into reality.</p>
+          </div>
+
+          <!-- 3 Interactive White Action Cards Grid -->
+          <div class="navy-cards-grid">
+            <!-- Card 1 -->
+            <div class="navy-action-card">
+              <div class="nac-icon-circle"><i class="fa-regular fa-calendar-days"></i></div>
+              <h4>Book a Free Consultation</h4>
+              <p>Speak with our experts and get personalized guidance.</p>
+              <a href="#contact" class="btn-navy-pill">
+                Book Now <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="navy-action-card">
+              <div class="nac-icon-circle"><i class="fa-solid fa-file-signature"></i></div>
+              <h4>Check Your Eligibility</h4>
+              <p>Find the best course and university options for you.</p>
+              <a href="#contact" class="btn-navy-pill">
+                Check Now <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="navy-action-card">
+              <div class="nac-icon-circle"><i class="fa-solid fa-paper-plane"></i></div>
+              <h4>Start Your Application</h4>
+              <p>We'll help you with a smooth and hassle-free process.</p>
+              <a href="#contact" class="btn-navy-pill">
+                Get Started <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom White 5-Column Stat Bar -->
+        <div class="cta-5stat-bar reveal">
+          <div class="c5-stat-item">
+            <div class="c5-icon"><i class="fa-solid fa-users"></i></div>
+            <div>
+              <strong>2000+</strong>
+              <div class="c5-label">Students Guided</div>
+              <span class="c5-sub">Towards global success</span>
+            </div>
+          </div>
+
+          <div class="c5-divider"></div>
+
+          <div class="c5-stat-item">
+            <div class="c5-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <strong>500+</strong>
+              <div class="c5-label">Partner Universities</div>
+              <span class="c5-sub">Worldwide</span>
+            </div>
+          </div>
+
+          <div class="c5-divider"></div>
+
+          <div class="c5-stat-item">
+            <div class="c5-icon"><i class="fa-solid fa-earth-americas"></i></div>
+            <div>
+              <strong>15+</strong>
+              <div class="c5-label">Countries</div>
+              <span class="c5-sub">We operate in</span>
+            </div>
+          </div>
+
+          <div class="c5-divider"></div>
+
+          <div class="c5-stat-item">
+            <div class="c5-icon"><i class="fa-solid fa-file-shield"></i></div>
+            <div>
+              <strong>100%</strong>
+              <div class="c5-label">Visa Success Rate</div>
+              <span class="c5-sub">With proven track record</span>
+            </div>
+          </div>
+
+          <div class="c5-divider"></div>
+
+          <div class="c5-stat-item">
+            <div class="c5-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <strong>100%</strong>
+              <div class="c5-label">Commitment</div>
+              <span class="c5-sub">To your dreams</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Dark Navy Tagline Bar -->
+        <div class="cta-bottom-tagline-bar reveal">
+          <i class="fa-regular fa-heart cta-heart-icon"></i>
+          <span>Your Dream. Our Guidance. Your Success.</span>
+          <span class="cta-pipe">|</span>
+          <span class="cta-gold-script">Together, We Go Global.</span>
+          <i class="fa-solid fa-plane cta-plane-icon"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Study in the World's Best Destinations Section (EXACT MATCH REFERENCE DESIGN) -->
+    <section class="about-destinations-section" id="destinations">
+      <!-- Left & Right Edge Images anchored to section boundaries -->
+      <img src="assets/image.png" alt="Study Abroad Left Illustration" class="dest-edge-left">
+      <img src="assets/Gemini_Generated_Image_d5cxibd5cxibd5cx.png" alt="Study Abroad Right Illustration"
+        class="dest-edge-right">
+
+      <div class="container relative-z">
+        <!-- Section Header -->
+        <div class="about-destinations-header reveal">
+          <div class="dest-head-center">
+            <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+              <i class="fa-solid fa-globe"></i> OUR STUDY DESTINATIONS
+            </div>
+            <h2 class="dest-title">Study in the <span class="text-blue-accent">World's Best Destinations</span></h2>
+            <div class="dest-title-underline"></div>
+            <p class="dest-subtext">We partner with top universities and institutions across leading countries to help
+              you access world-class education and global opportunities.</p>
+          </div>
+        </div>
+
+        <!-- 6 Destination Cards Grid -->
+        <div class="dest-cards-grid reveal">
+
+          <!-- Card 1: United Kingdom -->
+          <div class="dest-card-box">
+            <div class="dest-card-hero">
+              <img src="assets/uk.png" alt="United Kingdom Big Ben" class="dest-cover-img">
+              <img src="assets/flag_w80_gb.png" alt="UK Flag" class="dest-flag-overlay">
+            </div>
+            <div class="dest-card-body">
+              <h3>United Kingdom</h3>
+              <div class="dest-c-line"></div>
+              <p>World-renowned universities, diverse culture, and excellent career opportunities.</p>
+              <ul class="dest-checklist">
+                <li><i class="fa-solid fa-graduation-cap"></i> High Quality Education</li>
+                <li><i class="fa-solid fa-clock"></i> 2 Years Post-Study Work Visa</li>
+                <li><i class="fa-solid fa-earth-europe"></i> Gateway to Europe</li>
+              </ul>
+              <a href="#contact" class="btn-navy-sm-dest">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 2: Australia -->
+          <div class="dest-card-box">
+            <div class="dest-card-hero">
+              <img src="assets/australia.png" alt="Australia Sydney Harbour Bridge" class="dest-cover-img">
+              <img src="assets/flag_w80_au.png" alt="Australia Flag" class="dest-flag-overlay">
+            </div>
+            <div class="dest-card-body">
+              <h3>Australia</h3>
+              <div class="dest-c-line"></div>
+              <p>Top-ranked universities, vibrant lifestyle, and strong post-study work opportunities.</p>
+              <ul class="dest-checklist">
+                <li><i class="fa-solid fa-graduation-cap"></i> Globally Recognized Degrees</li>
+                <li><i class="fa-solid fa-briefcase"></i> Post-Study Work Options</li>
+                <li><i class="fa-solid fa-users"></i> Multicultural Environment</li>
+              </ul>
+              <a href="#contact" class="btn-navy-sm-dest">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 3: Canada -->
+          <div class="dest-card-box">
+            <div class="dest-card-hero">
+              <img src="assets/canada.png" alt="Canada Skyline" class="dest-cover-img">
+              <img src="assets/flag_w80_ca.png" alt="Canada Flag" class="dest-flag-overlay">
+            </div>
+            <div class="dest-card-body">
+              <h3>Canada</h3>
+              <div class="dest-c-line"></div>
+              <p>Quality education, safe environment, and clear pathway to permanent residency.</p>
+              <ul class="dest-checklist">
+                <li><i class="fa-solid fa-sack-dollar"></i> Affordable Education</li>
+                <li><i class="fa-solid fa-id-card"></i> PR Pathways</li>
+                <li><i class="fa-solid fa-heart"></i> Welcoming Society</li>
+              </ul>
+              <a href="#contact" class="btn-navy-sm-dest">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 4: Germany -->
+          <div class="dest-card-box">
+            <div class="dest-card-hero">
+              <img src="assets/germany.png" alt="Germany Brandenburg Gate" class="dest-cover-img">
+              <img src="assets/flag_w80_de.png" alt="Germany Flag" class="dest-flag-overlay">
+            </div>
+            <div class="dest-card-body">
+              <h3>Germany</h3>
+              <div class="dest-c-line"></div>
+              <p>Tuition-free education, research excellence, and strong industry connections.</p>
+              <ul class="dest-checklist">
+                <li><i class="fa-solid fa-award"></i> Low / No Tuition Fees</li>
+                <li><i class="fa-solid fa-calendar-days"></i> 18 Months Stay Back</li>
+                <li><i class="fa-solid fa-building"></i> Strong Job Market</li>
+              </ul>
+              <a href="#contact" class="btn-navy-sm-dest">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 5: Ireland -->
+          <div class="dest-card-box">
+            <div class="dest-card-hero">
+              <img src="assets/ireland.png" alt="Ireland Dublin Bridge" class="dest-cover-img">
+              <img src="assets/flag_w80_ie.png" alt="Ireland Flag" class="dest-flag-overlay">
+            </div>
+            <div class="dest-card-body">
+              <h3>Ireland</h3>
+              <div class="dest-c-line"></div>
+              <p>Top universities, global tech hub, and excellent career prospects.</p>
+              <ul class="dest-checklist">
+                <li><i class="fa-solid fa-graduation-cap"></i> 2 Years Stay Back</li>
+                <li><i class="fa-solid fa-laptop-code"></i> Global Tech Opportunities</li>
+                <li><i class="fa-solid fa-shield-heart"></i> Friendly &amp; Safe Country</li>
+              </ul>
+              <a href="#contact" class="btn-navy-sm-dest">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 6: Other Destinations -->
+          <div class="dest-card-box">
+            <div class="dest-card-hero">
+              <img src="assets/global.png" alt="Other Global Destinations" class="dest-cover-img">
+              <div class="dest-flag-overlay-icon"><i class="fa-solid fa-globe"></i></div>
+            </div>
+            <div class="dest-card-body">
+              <h3>Other Destinations</h3>
+              <div class="dest-c-line"></div>
+              <p>Explore quality education opportunities in New Zealand, USA, Singapore and more.</p>
+              <ul class="dest-checklist">
+                <li><i class="fa-solid fa-layer-group"></i> Wide Range of Options</li>
+                <li><i class="fa-solid fa-earth-americas"></i> Global Exposure</li>
+                <li><i class="fa-solid fa-sun"></i> Bright Future</li>
+              </ul>
+              <a href="#contact" class="btn-navy-sm-dest">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partnered with Top Universities Worldwide Card Box -->
+        <div class="about-partner-univ-box reveal">
+          <div class="partner-head-rule-row">
+            <div class="p-rule-line"></div>
+            <h3>Partnered with Top Universities Worldwide</h3>
+            <div class="p-rule-line"></div>
+          </div>
+
+          <!-- 7 University Logo Cards -->
+          <div class="partner-logos-row">
+            <div class="p-uni-card"><img src="assets/logo_oxford.jpg" alt="University of Oxford"></div>
+            <div class="p-uni-card"><img src="assets/toronto-logo.png" alt="University of Toronto"></div>
+            <div class="p-uni-card"><img src="assets/logo_melbourne.jpg" alt="The University of Melbourne"></div>
+            <div class="p-uni-card"><img src="assets/logo_mit.jpg" alt="Massachusetts Institute of Technology"></div>
+            <div class="p-uni-card"><img src="assets/logo_nus.jpg" alt="National University of Singapore"></div>
+            <div class="p-uni-card"><img src="assets/ucl_logo.jpg" alt="UCL"></div>
+            <div class="p-uni-card p-more-card"><i class="fa-solid fa-globe"></i>
+              <div><strong>&amp; Many More</strong><span>Global Universities</span></div>
+            </div>
+          </div>
+
+          <!-- Bottom Gold/Yellow Badge Pill -->
+          <div class="partner-yellow-badge-pill" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+            <i class="fa-solid fa-users"></i>
+            <span>500+ Partner Universities &amp; Institutions Across the Globe</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. "Why Students & Parents Choose ISMS Global" Section (EXACT MATCH REFERENCE DESIGN) -->
+    <section class="about-why-section" id="why-choose">
+      <!-- Left & Right Edge Images anchored to section boundaries -->
+      <img src="assets/Gemini_Generated_Image_4blhwc4blhwc4blh.png" alt="Why Choose Left Illustration"
+        class="why-edge-left">
+      <img src="assets/Gemini_Generated_Image_u7obbpu7obbpu7ob.png" alt="Why Choose Right Illustration"
+        class="why-edge-right">
+
+      <div class="container relative-z">
+        <div class="about-why-header reveal">
+          <div class="why-head-center">
+            <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+              <i class="fa-solid fa-shield-halved"></i> WHY CHOOSE ISMS GLOBAL
+            </div>
+            <h2 class="why-title">Why ISMS Global Education is the<br><span class="text-blue-accent">Top Rated Study
+                Abroad Consultancy?</span></h2>
+            <div class="why-title-underline"></div>
+            <p class="why-subtext">We go beyond promises to deliver transparent guidance, reliable support, and
+              life-changing global opportunities.</p>
+          </div>
+        </div>
+
+        <!-- 12 Feature Cards Grid -->
+        <div class="why-cards-grid reveal">
+          <!-- Card 1 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-users"></i></div>
+            <h4>2000+ Students Worldwide</h4>
+            <div class="wc-line"></div>
+            <p>Trusted by over 2,000 students achieving their dreams worldwide.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-briefcase"></i></div>
+            <h4>Post-Study Work Permit</h4>
+            <div class="wc-line"></div>
+            <p>Expert guidance on post-study work visa opportunities globally.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>100% Visa Success Rate</h4>
+            <div class="wc-line"></div>
+            <p>Proven 100% visa success track record with meticulous documentation.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-earth-americas"></i></div>
+            <h4>10+ Partnerships Countries</h4>
+            <div class="wc-line"></div>
+            <p>Direct academic ties across 10+ top global study destinations.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h4>Guidance for English Test</h4>
+            <div class="wc-line"></div>
+            <p>Top-rated preparation support for IELTS, PTE &amp; English requirements.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-sack-dollar"></i></div>
+            <h4>Scholarship + Financial Guidance</h4>
+            <div class="wc-line"></div>
+            <p>Assistance in securing institutional scholarships &amp; education loans.</p>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-building-columns"></i></div>
+            <h4>Tie-up with Multiple Universities</h4>
+            <div class="wc-line"></div>
+            <p>Direct partnerships with 500+ premier universities worldwide.</p>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-user-check"></i></div>
+            <h4>Visa Support with Expert Mentorship</h4>
+            <div class="wc-line"></div>
+            <p>End-to-end visa filing, documentation review, and mock interview practice.</p>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-plane-departure"></i></div>
+            <h4>Pre-Departure &amp; Post-Arrival</h4>
+            <div class="wc-line"></div>
+            <p>Briefings before takeoff and ongoing support after landing at your destination.</p>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-clock"></i></div>
+            <h4>Part-Time Job Assistance</h4>
+            <div class="wc-line"></div>
+            <p>Guidance on legal work hours and finding part-time jobs abroad.</p>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-house"></i></div>
+            <h4>Accommodation Assistance</h4>
+            <div class="wc-line"></div>
+            <p>Helping students find safe and affordable housing near campuses.</p>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="why-card-box">
+            <div class="wc-icon-circle"><i class="fa-solid fa-headset"></i></div>
+            <h4>End-to-End Application Support</h4>
+            <div class="wc-line"></div>
+            <p>Comprehensive 100% free counselling from start to finish.</p>
+          </div>
+        </div>
+
+        <!-- Bottom Dark Blue 5-Column Stat Bar -->
+        <div class="why-navy-stat-bar reveal">
+          <div class="wn-stat-item">
+            <div class="wn-icon"><i class="fa-solid fa-users"></i></div>
+            <div>
+              <strong>19+</strong>
+              <div class="wn-label">Years of Experience</div>
+              <span class="wn-sub">A legacy of trust and excellence.</span>
+            </div>
+          </div>
+
+          <div class="wn-divider"></div>
+
+          <div class="wn-stat-item">
+            <div class="wn-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <strong>2000+</strong>
+              <div class="wn-label">Students Guided</div>
+              <span class="wn-sub">Helping students achieve their global dreams.</span>
+            </div>
+          </div>
+
+          <div class="wn-divider"></div>
+
+          <div class="wn-stat-item">
+            <div class="wn-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div>
+              <strong>500+</strong>
+              <div class="wn-label">Partner Universities</div>
+              <span class="wn-sub">Top universities across the world.</span>
+            </div>
+          </div>
+
+          <div class="wn-divider"></div>
+
+          <div class="wn-stat-item">
+            <div class="wn-icon"><i class="fa-solid fa-earth-americas"></i></div>
+            <div>
+              <strong>15+</strong>
+              <div class="wn-label">Countries</div>
+              <span class="wn-sub">Global presence with local understanding.</span>
+            </div>
+          </div>
+
+          <div class="wn-divider"></div>
+
+          <div class="wn-stat-item">
+            <div class="wn-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <strong>100%</strong>
+              <div class="wn-label">Commitment</div>
+              <span class="wn-sub">Your success is our priority.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. "Experienced Leaders. Trusted Guidance." Section (EXACT MATCH REFERENCE DESIGN) -->
+    <section class="about-team-section" id="team">
+      <!-- Leftmost Artwork: 400x400 Globe.png + earth.png + 3D Graduation Cap -->
+      <div class="team-edge-left">
+        <img src="assets/Globe.png" alt="3D Globe Background" class="team-globe-bg-left">
+        <img src="assets/earth.png" alt="Earth Globe" class="team-globe-left">
+        <img src="assets/cap.png" alt="3D Graduation Cap" class="team-cap-left">
+      </div>
+
+      <!-- Rightmost Artwork: 400x400 Globe.png + Flight Path Arc + Flying Aeroplane over line -->
+      <div class="team-edge-right">
+        <img src="assets/Globe.png" alt="3D Globe Background" class="team-globe-right">
+
+        <img src="assets/plane.png" alt="Flying Aeroplane" class="team-plane-right">
+      </div>
+
+      <div class="container relative-z">
+        <div class="about-team-header reveal">
+          <div class="team-head-center">
+            <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+              <i class="fa-solid fa-users"></i> OUR TEAM
+            </div>
+            <h2 class="team-title">Leaders Who <span class="text-blue-accent">Truly Care</span></h2>
+            <div class="team-title-underline"></div>
+            <p class="team-subtext">Fuelled by high morals, values, and an earnestness of making a difference in the
+              lives of others, our team of leaders focuses on providing opportunities for success and excellence via
+              quality education.</p>
+          </div>
+        </div>
+
+        <!-- Team Member Cards Grid -->
+        <div class="team-cards-grid reveal">
+
+          <!-- Member 1: Ms. Shalini Banerjee -->
+          <div class="team-card-box">
+            <div class="tc-avatar-wrap">
+              <img src="assets/director.png" alt="Ms. Shalini Banerjee" class="tc-avatar-img">
+              <a href="https://linkedin.com" target="_blank" class="tc-linkedin-badge" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+            <h3>Ms. Shalini Banerjee</h3>
+            <div class="tc-role">Founder &amp; Director</div>
+            <div class="tc-line"></div>
+            <p class="tc-bio">A visionary leader in the field of education, Ms. Shalini Banerjee aims to empower
+              students with the power of quality education and global opportunities. With a dedication to achieving
+              academic excellence and nurturing her students, she has played a significant part in developing ISMS
+              Global Education into a reputable organization which offers guidance for overseas education.</p>
+            <div class="tc-exp-pill">
+              <i class="fa-regular fa-calendar-days"></i> Founder &amp; Visionary Leader
+            </div>
+          </div>
+
+          <!-- Member 2: Ms. Sangeeta Bhatia -->
+          <div class="team-card-box">
+            <div class="tc-avatar-wrap">
+              <img src="assets/img_photo-1573496359142-b8d87734a5a2.jpg" alt="Ms. Sangeeta Bhatia"
+                class="tc-avatar-img">
+              <a href="https://linkedin.com" target="_blank" class="tc-linkedin-badge" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+            <h3>Ms. Sangeeta Bhatia</h3>
+            <div class="tc-role">IELTS &amp; PTE Master Trainer</div>
+            <div class="tc-line"></div>
+            <p class="tc-bio">IELTS / PTE Trainer with 20+ years' standing. Empowers students with language mastery and
+              test preparation strategies to meet English requirements for top global universities.</p>
+            <div class="tc-exp-pill">
+              <i class="fa-regular fa-calendar-days"></i> 20+ Years Experience
+            </div>
+          </div>
+
+          <!-- Member 3: Ms. Ketakee Pandit -->
+          <div class="team-card-box">
+            <div class="tc-avatar-wrap">
+              <img src="assets/img_photo-1494790108377-be9c29b29330.jpg" alt="Ms. Ketakee Pandit" class="tc-avatar-img">
+              <a href="https://linkedin.com" target="_blank" class="tc-linkedin-badge" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+            <h3>Ms. Ketakee Pandit</h3>
+            <div class="tc-role">Senior Student Counsellor</div>
+            <div class="tc-line"></div>
+            <p class="tc-bio">15+ Years in student counselling. Motivates, mentors, and empowers students to make
+              well-informed decisions that ensure long-term professional success.</p>
+            <div class="tc-exp-pill">
+              <i class="fa-regular fa-calendar-days"></i> 15+ Years Experience
+            </div>
+          </div>
+
+          <!-- Member 4: Mr. Arjun Singh -->
+          <div class="team-card-box">
+            <div class="tc-avatar-wrap">
+              <img src="assets/img_photo-1500648767791-00dcc994a43e.jpg" alt="Mr. Arjun Singh" class="tc-avatar-img">
+              <a href="https://linkedin.com" target="_blank" class="tc-linkedin-badge" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+            <h3>Mr. Arjun Singh</h3>
+            <div class="tc-role">Head &ndash; Global Partnerships</div>
+            <div class="tc-line"></div>
+            <p class="tc-bio">Leads university partnerships across the globe, building strong collaborations to create
+              better opportunities for our students.</p>
+            <div class="tc-exp-pill">
+              <i class="fa-regular fa-calendar-days"></i> 13+ Years Experience
+            </div>
+          </div>
+
+          <!-- Member 5: Ms. Neha Verma -->
+          <div class="team-card-box">
+            <div class="tc-avatar-wrap">
+              <img src="assets/vid-girl.png" alt="Ms. Neha Verma" class="tc-avatar-img">
+              <a href="https://linkedin.com" target="_blank" class="tc-linkedin-badge" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+            <h3>Ms. Neha Verma</h3>
+            <div class="tc-role">Head &ndash; Visa &amp; Compliance</div>
+            <div class="tc-line"></div>
+            <p class="tc-bio">Visa and compliance specialist ensuring accurate documentation and high visa success for
+              students worldwide.</p>
+            <div class="tc-exp-pill">
+              <i class="fa-regular fa-calendar-days"></i> 9+ Years Experience
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom White 4-Column Stat Bar -->
+        <div class="team-white-stat-bar reveal">
+          <div class="tws-stat-item">
+            <div class="tws-icon"><i class="fa-solid fa-users"></i></div>
+            <div>
+              <strong>30+</strong>
+              <div class="tws-label">Team Members</div>
+              <span class="tws-sub">Dedicated professionals working for your success.</span>
+            </div>
+          </div>
+
+          <div class="tws-divider"></div>
+
+          <div class="tws-stat-item">
+            <div class="tws-icon"><i class="fa-solid fa-globe"></i></div>
+            <div>
+              <strong>15+</strong>
+              <div class="tws-label">Countries Connected</div>
+              <span class="tws-sub">Strong network of university partners worldwide.</span>
+            </div>
+          </div>
+
+          <div class="tws-divider"></div>
+
+          <div class="tws-stat-item">
+            <div class="tws-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <strong>2000+</strong>
+              <div class="tws-label">Students Guided</div>
+              <span class="tws-sub">Proud to have guided thousands towards global careers.</span>
+            </div>
+          </div>
+
+          <div class="tws-divider"></div>
+
+          <div class="tws-stat-item">
+            <div class="tws-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <strong>100%</strong>
+              <div class="tws-label">Committed to You</div>
+              <span class="tws-sub">Your dreams are our priority, always.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. "Our Vision & Mission" Section (EXACT MATCH REFERENCE DESIGN) -->
+    <section class="about-purpose-section" id="purpose">
+      <!-- Leftmost Artwork: 400x400 Globe.png (opacity 1) -->
+      <div class="purpose-edge-left">
+        <img src="assets/Globe.png" alt="3D Globe" class="purpose-globe-left">
+      </div>
+
+      <!-- Rightmost Artwork: 400x400 Globe.png (opacity 1) -->
+      <div class="purpose-edge-right">
+        <img src="assets/Globe.png" alt="3D Globe" class="purpose-globe-right">
+      </div>
+
+      <div class="container relative-z">
+        <!-- Section Header -->
+        <div class="about-purpose-header reveal">
+          <div class="purpose-head-center">
+            <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+              <i class="fa-solid fa-eye"></i> OUR PURPOSE
+            </div>
+            <h2 class="purpose-title">Our <span class="text-blue-accent">Vision &amp; Mission</span></h2>
+            <div class="purpose-title-underline"></div>
+            <p class="purpose-subtext">Driven by a purpose to empower students, we work every day to create global
+              opportunities and brighter futures.</p>
+          </div>
+        </div>
+
+        <!-- 2 Cards Grid: Vision & Mission (50-50 Split) -->
+        <div class="purpose-cards-grid reveal">
+
+          <!-- Left: Our Vision Card -->
+          <div class="purpose-card-box vision-card-blue">
+            <div class="pc-head">
+              <div class="pc-icon-blue"><i class="fa-solid fa-binoculars"></i></div>
+              <div>
+                <h3>Our Vision</h3>
+                <div class="pc-line-gold"></div>
+              </div>
+            </div>
+
+            <p class="pc-main-text">To be a trusted global education partner empowering students to accomplish academic
+              excellence and build successful international careers through quality guidance and world-class
+              opportunities.</p>
+
+            <!-- Right Globe & World Landmarks Illustration Overlay -->
+            <div class="vision-visual-wrap">
+              <img src="assets/hero-illustration.png" alt="Student looking at world landmarks and globe"
+                class="vision-hero-img">
+            </div>
+
+            <!-- Bottom 4 Feature Badges inside Vision Card -->
+            <div class="vision-features-row">
+              <div class="vf-badge-item">
+                <div class="vf-icon-sm"><img src="assets/Screenshot 2026-08-04 142552.png" alt="Global Excellence">
+                </div>
+                <div>
+                  <strong>Global Excellence</strong>
+                  <span>Striving for world-class standards.</span>
+                </div>
+              </div>
+              <div class="vf-badge-item">
+                <div class="vf-icon-sm"><img src="assets/Screenshot 2026-08-04 142543.png" alt="Student Success"></div>
+                <div>
+                  <strong>Student Success</strong>
+                  <span>Your goals are our mission.</span>
+                </div>
+              </div>
+              <div class="vf-badge-item">
+                <div class="vf-icon-sm"><img src="assets/Screenshot 2026-08-04 142611.png" alt="Trusted Partnership">
+                </div>
+                <div>
+                  <strong>Trusted Partnership</strong>
+                  <span>Building long-term relationships worldwide.</span>
+                </div>
+              </div>
+              <div class="vf-badge-item">
+                <div class="vf-icon-sm"><img src="assets/Screenshot 2026-08-04 142534.png"
+                    alt="Limitless Opportunities"></div>
+                <div>
+                  <strong>Limitless Opportunities</strong>
+                  <span>Opening doors to a global future.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Our Mission Card -->
+          <div class="purpose-card-box mission-card-green">
+            <div class="pc-head">
+              <div class="pc-icon-green"><i class="fa-solid fa-bullseye"></i></div>
+              <div>
+                <h3>Our Mission</h3>
+                <div class="pc-line-gold"></div>
+              </div>
+            </div>
+
+            <p class="pc-main-text">To provide transparent and student-oriented overseas education services by
+              delivering counselling, admission assistance, visa support, and career guidance, enabling students to
+              achieve their overseas education goals with confidence.</p>
+
+            <!-- Right 3D Staircase & Target Graphic -->
+            <div class="mission-visual-wrap">
+              <img src="assets/mission_staircase.jpg" alt="3D Staircase leading to global success bullseye target"
+                class="mission-staircase-img">
+
+              <!-- Floating Interactive Step Badges -->
+              <div class="stair-step step-1">
+                <i class="fa-solid fa-comments"></i> <span>Counselling</span>
+              </div>
+              <div class="stair-step step-2">
+                <i class="fa-solid fa-file-circle-check"></i> <span>Admission Assistance</span>
+              </div>
+              <div class="stair-step step-3">
+                <i class="fa-solid fa-briefcase"></i> <span>Career Guidance</span>
+              </div>
+              <div class="stair-step step-4">
+                <i class="fa-solid fa-graduation-cap"></i> <span>Global Success</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom White 4-Column Core Values Stat Bar -->
+        <div class="purpose-white-stat-bar reveal">
+          <div class="pws-stat-item">
+            <div class="pws-icon"><img src="assets/Screenshot 2026-08-04 142635.png" alt="Integrity"></div>
+            <div>
+              <strong>Integrity</strong>
+              <span class="pws-sub">We believe in honesty, transparency and doing what's right.</span>
+            </div>
+          </div>
+
+          <div class="pws-divider"></div>
+
+          <div class="pws-stat-item">
+            <div class="pws-icon"><img src="assets/Screenshot 2026-08-04 142611.png" alt="Commitment"></div>
+            <div>
+              <strong>Commitment</strong>
+              <span class="pws-sub">We are dedicated to every student's success, every step of the way.</span>
+            </div>
+          </div>
+
+          <div class="pws-divider"></div>
+
+          <div class="pws-stat-item">
+            <div class="pws-icon"><img src="assets/Screenshot 2026-08-04 142543.png" alt="Empowerment"></div>
+            <div>
+              <strong>Empowerment</strong>
+              <span class="pws-sub">We empower students with knowledge, confidence and global exposure.</span>
+            </div>
+          </div>
+
+          <div class="pws-divider"></div>
+
+          <div class="pws-stat-item">
+            <div class="pws-icon"><img src="assets/Screenshot 2026-08-04 142552.png" alt="Impact"></div>
+            <div>
+              <strong>Impact</strong>
+              <span class="pws-sub">We create meaningful opportunities that shape better futures.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. "Guiding Students. Building Global Futures." (Who We Are) Section (EXACT MATCH REFERENCE DESIGN) -->
+    <section class="about-whoweare-section" id="who-we-are">
+      <!-- Flying Plane in Top Right Sky Background -->
+      <div class="whoweare-plane-wrap">
+      </div>
+
+      <div class="container relative-z">
+        <div class="whoweare-grid-wrap reveal">
+
+          <!-- Left Column: 3D Visual Collage with Statue of Liberty Sketch Backdrop -->
+          <div class="whoweare-visual-col">
+            <div class="whoweare-img-box">
+              <!-- Backdrop Statue of Liberty Sketch -->
+
+              <img src="assets/Gemini_Generated_Image_i415i6i415i6i415.png"
+                alt="Two counselors reviewing study abroad materials at desk" class="whoweare-main-img">
+
+              <!-- 4 Floating Square Badge Icons matching Reference Image -->
+              <div class="wwa-float-sq fsb-cap"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="wwa-float-sq fsb-globe"><i class="fa-solid fa-globe"></i></div>
+              <div class="wwa-float-sq fsb-pass"><i class="fa-solid fa-id-card"></i></div>
+              <div class="wwa-float-sq fsb-univ"><i class="fa-solid fa-building-columns"></i></div>
+            </div>
+          </div>
+
+          <!-- Right Column: Content, 6 Cards & Bottom Stat Bar -->
+          <div class="whoweare-content-col">
+            <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+              <i class="fa-solid fa-users-gear"></i> WHO WE ARE
+            </div>
+            <h2 class="whoweare-title">Guiding Students.<br>Building <span class="text-blue-accent">Global
+                Futures.</span></h2>
+            <div class="whoweare-title-underline"></div>
+            <p class="whoweare-subtext">ISMS Global Education is a trusted overseas education consultant dedicated to
+              helping students achieve their dreams of studying abroad. With strong partnerships, expert guidance, and a
+              student-first approach, we make your journey smooth, transparent, and successful.</p>
+
+            <!-- 6 Feature Cards Grid (2 Columns x 3 Rows) -->
+            <div class="whoweare-cards-grid">
+
+              <!-- Card 1 -->
+              <div class="wwa-card-item">
+                <div class="wwa-icon-circle wwa-icon-blue"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                  <strong>British Council Certified</strong>
+                  <span>Accredited by the British Council for quality and ethical counselling standards.</span>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="wwa-card-item">
+                <div class="wwa-icon-circle wwa-icon-green"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                  <strong>Direct University Partnerships</strong>
+                  <span>Official academic partnerships with top universities across the globe.</span>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="wwa-card-item">
+                <div class="wwa-icon-circle wwa-icon-orange"><i class="fa-solid fa-user-tie"></i></div>
+                <div>
+                  <strong>Expert Counsellors</strong>
+                  <span>Experienced professionals providing personalized guidance at every step.</span>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="wwa-card-item">
+                <div class="wwa-icon-circle wwa-icon-purple"><i class="fa-solid fa-file-signature"></i></div>
+                <div>
+                  <strong>Free Counselling</strong>
+                  <span>We provide free counselling services with complete transparency.</span>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="wwa-card-item">
+                <div class="wwa-icon-circle wwa-icon-blue"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                <div>
+                  <strong>No Hidden Charges</strong>
+                  <span>Clear process, honest advice, and zero hidden costs guaranteed.</span>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="wwa-card-item">
+                <div class="wwa-icon-circle wwa-icon-teal"><i class="fa-solid fa-award"></i></div>
+                <div>
+                  <strong>100% Student Success Focus</strong>
+                  <span>Your goals are our priority. We are committed to your international success.</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Bottom White 4-Column Stat Bar -->
+            <div class="whoweare-stat-bar">
+              <div class="wws-stat-item">
+                <div class="wws-icon"><i class="fa-solid fa-users"></i></div>
+                <div>
+                  <strong>2000+</strong>
+                  <span>Students Guided</span>
+                </div>
+              </div>
+
+              <div class="wws-divider"></div>
+
+              <div class="wws-stat-item">
+                <div class="wws-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div>
+                  <strong>500+</strong>
+                  <span>Global Universities</span>
+                </div>
+              </div>
+
+              <div class="wws-divider"></div>
+
+              <div class="wws-stat-item">
+                <div class="wws-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                <div>
+                  <strong>10+</strong>
+                  <span>Study Destinations</span>
+                </div>
+              </div>
+
+              <div class="wws-divider"></div>
+
+              <div class="wws-stat-item">
+                <div class="wws-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                  <strong>100%</strong>
+                  <span>Visa Success Rate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. "19+ Years of Excellence" Stats Section (EXACT MATCH REFERENCE DESIGN) -->
+    <section class="about-excellence-section" id="excellence">
+      <!-- Leftmost Artwork: 400x400 Globe.png (opacity 1) -->
+      <div class="excel-edge-left">
+        <img src="assets/Globe.png" alt="3D Globe" class="excel-globe-left">
+      </div>
+
+      <!-- Rightmost Artwork: 400x400 Globe.png (opacity 1) -->
+      <div class="excel-edge-right">
+        <img src="assets/Globe.png" alt="3D Globe" class="excel-globe-right">
+      </div>
+
+      <div class="container relative-z">
+        <!-- Section Header -->
+        <div class="about-excellence-header reveal">
+          <div class="excel-head-center">
+            <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+              <i class="fa-solid fa-award"></i> OUR TRUST, YOUR SUCCESS
+            </div>
+            <h2 class="excel-title">19+ Years of Excellence,<br>Thousands of <span class="text-blue-accent">Dreams
+                Fulfilled</span></h2>
+            <div class="excel-title-underline"></div>
+            <p class="excel-subtext">With a legacy of trust and results, ISMS Global Education continues to empower
+              students to achieve their global education goals.</p>
+          </div>
+        </div>
+
+        <!-- 5 Distinct Stat Cards Grid -->
+        <div class="excel-cards-grid reveal">
+
+          <!-- Card 1: 19+ Years of Excellence -->
+          <div class="excel-card-box ec-blue">
+            <div class="ec-icon-circle ec-icon-blue">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="ec-big-num num-blue">19+</div>
+            <h4>Years<br>of Excellence</h4>
+            <div class="ec-line"></div>
+            <p>Over 17 years of trusted guidance in overseas education.</p>
+          </div>
+
+          <!-- Card 2: 2000+ Students Guided -->
+          <div class="excel-card-box ec-green">
+            <div class="ec-icon-circle ec-icon-green">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="ec-big-num num-green">2000+</div>
+            <h4>Students<br>Guided</h4>
+            <div class="ec-line"></div>
+            <p>We have successfully guided over 2,000 students worldwide.</p>
+          </div>
+
+          <!-- Card 3: 500+ Global Universities -->
+          <div class="excel-card-box ec-purple">
+            <div class="ec-icon-circle ec-icon-purple">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="ec-big-num num-purple">500+</div>
+            <h4>Global<br>Universities</h4>
+            <div class="ec-line"></div>
+            <p>Strong partnerships with 500+ top-ranked universities.</p>
+          </div>
+
+          <!-- Card 4: 10+ Study Destinations -->
+          <div class="excel-card-box ec-orange">
+            <div class="ec-icon-circle ec-icon-orange">
+              <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <div class="ec-big-num num-orange">10+</div>
+            <h4>Study<br>Destinations</h4>
+            <div class="ec-line"></div>
+            <p>Access to 10+ leading countries across the globe.</p>
+          </div>
+
+          <!-- Card 5: 100% Visa Success Rate -->
+          <div class="excel-card-box ec-blue">
+            <div class="ec-icon-circle ec-icon-blue">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="ec-big-num num-blue">100%</div>
+            <h4>Visa Success<br>Rate</h4>
+            <div class="ec-line"></div>
+            <p>Proud to maintain a 100% visa success track record.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 12.5. "Global Reach. Real Impact." Section (OUR GLOBAL IMPACT) -->
+    <section class="about-impact-section" id="global-impact">
+      <!-- Left & Right Edge Images anchored to section boundaries -->
+      <div class="impact-edge-left">
+        <img src="assets/Globe.png" alt="3D Globe Background" class="impact-globe-left">
+        <img src="assets/cap.png" alt="Graduation Cap & Books" class="impact-cap-left">
+      </div>
+
+      <div class="impact-edge-right">
+
+        <img src="assets/plane.png" alt="Flying Aeroplane" class="impact-plane-right">
+      </div>
+
+      <div class="container relative-z">
+        <!-- Section Header -->
+        <div class="about-impact-header reveal">
+          <div class="impact-head-center">
+            <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+              <i class="fa-solid fa-globe"></i> OUR GLOBAL IMPACT
+            </div>
+            <h2 class="impact-title">Global Reach. <span class="text-blue-accent">Real Impact.</span></h2>
+            <div class="impact-title-underline"></div>
+            <p class="impact-subtext">From guiding the first student to building global partnerships, our journey is
+              measured in lives transformed and dreams achieved.</p>
+          </div>
+        </div>
+
+        <!-- Top 6 Stat Cards Grid -->
+        <div class="impact-cards-grid reveal">
+          <!-- Card 1: 19+ Years of Excellence -->
+          <div class="impact-card-box">
+            <div class="ic-icon-circle"><i class="fa-solid fa-users-gear"></i></div>
+            <div class="ic-big-num">19+</div>
+            <div class="ic-label">Years of Excellence</div>
+            <p>Over 17 years of trusted experience in international education and student counselling.</p>
+            <div class="ic-line"></div>
+          </div>
+
+          <!-- Card 2: 2000+ Students Guided -->
+          <div class="impact-card-box">
+            <div class="ic-icon-circle"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="ic-big-num">2000+</div>
+            <div class="ic-label">Students Guided</div>
+            <p>Proud to have guided thousands of students towards global careers.</p>
+            <div class="ic-line"></div>
+          </div>
+
+          <!-- Card 3: 500+ Partner Universities -->
+          <div class="impact-card-box">
+            <div class="ic-icon-circle"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="ic-big-num">500+</div>
+            <div class="ic-label">Partner Universities</div>
+            <p>Strong partnerships with top universities and institutions worldwide.</p>
+            <div class="ic-line"></div>
+          </div>
+
+          <!-- Card 4: 15+ Countries -->
+          <div class="impact-card-box">
+            <div class="ic-icon-circle"><i class="fa-solid fa-globe"></i></div>
+            <div class="ic-big-num">15+</div>
+            <div class="ic-label">Countries</div>
+            <p>Global presence with students successfully placed across 15+ countries.</p>
+            <div class="ic-line"></div>
+          </div>
+
+          <!-- Card 5: 100% Commitment -->
+          <div class="impact-card-box">
+            <div class="ic-icon-circle"><i class="fa-solid fa-headset"></i></div>
+            <div class="ic-big-num">100%</div>
+            <div class="ic-label">Commitment</div>
+            <p>We are committed to your success at every step of your journey.</p>
+            <div class="ic-line"></div>
+          </div>
+
+          <!-- Card 6: 4.9/5 Student Satisfaction -->
+          <div class="impact-card-box">
+            <div class="ic-icon-circle"><i class="fa-solid fa-star"></i></div>
+            <div class="ic-big-num">4.9/5</div>
+            <div class="ic-label">Student Satisfaction</div>
+            <p>High satisfaction rate based on student feedback and success stories.</p>
+            <div class="ic-line"></div>
+          </div>
+        </div>
+
+        <!-- Middle World Map Global Presence Box -->
+        <div class="impact-map-container reveal">
+          <!-- ISMS Seal Center Emblem -->
+          <div class="isms-center-emblem">
+            <img src="assets/isms_global_seal.jpg" alt="ISMS Global Emblem" class="isms-seal-img">
+          </div>
+
+          <!-- Region Cards -->
+          <div class="map-region-card reg-na">
+            <div class="map-card-content">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>North America</strong>
+                <div class="reg-count">500+ Students</div>
+                <span>USA, Canada</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-region-card reg-eu">
+            <div class="map-card-content">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Europe</strong>
+                <div class="reg-count">800+ Students</div>
+                <span>UK, Germany, France, Netherlands, Ireland</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-region-card reg-af">
+            <div class="map-card-content">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Africa</strong>
+                <div class="reg-count">150+ Students</div>
+                <span>South Africa, Nigeria, Egypt, Ghana</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-region-card reg-as">
+            <div class="map-card-content">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Asia</strong>
+                <div class="reg-count">400+ Students</div>
+                <span>India, China, Malaysia, Singapore, UAE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-region-card reg-au">
+            <div class="map-card-content">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Australia &amp; New Zealand</strong>
+                <div class="reg-count">150+ Students</div>
+                <span>Australia, New Zealand</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom White 5-Column Feature Bar -->
+        <div class="impact-bottom-bar reveal">
+          <div class="ib-item">
+            <div class="ib-icon"><img src="assets/Prize.png" alt="Award Winning Service"></div>
+            <div>
+              <strong>Award Winning Service</strong>
+              <span>Recognized for excellence in international education consultancy.</span>
+            </div>
+          </div>
+
+          <div class="ib-item">
+            <div class="ib-icon"><img src="assets/Handshake.png" alt="Trusted Partnerships"></div>
+            <div>
+              <strong>Trusted Partnerships</strong>
+              <span>Long-term partnerships with leading universities across the globe.</span>
+            </div>
+          </div>
+
+          <div class="ib-item">
+            <div class="ib-icon"><img src="assets/Shield.png" alt="Ethical & Transparent"></div>
+            <div>
+              <strong>Ethical &amp; Transparent</strong>
+              <span>Committed to transparency, integrity and student-first approach.</span>
+            </div>
+          </div>
+
+          <div class="ib-item">
+            <div class="ib-icon"><img src="assets/Graduate_cap.png" alt="Diverse Team"></div>
+            <div>
+              <strong>Diverse Team</strong>
+              <span>Multicultural team of experts dedicated to your success worldwide.</span>
+            </div>
+          </div>
+
+          <div class="ib-item">
+            <div class="ib-icon"><img src="assets/Screenshot 2026-08-04 142552.png" alt="Proven Track Record"></div>
+            <div>
+              <strong>Proven Track Record</strong>
+              <span>A legacy of successful placements and happy students.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 13. "Get in Touch With ISMS Global" Section (EXACT MATCH REFERENCE DESIGN) -->
+    <section class="about-contact-section" id="contact">
+      <!-- Left & Right Edge Images anchored to section boundaries -->
+      <img src="assets/Gemini_Generated_Image_4blhwc4blhwc4blh.png" alt="Get in Touch Left Illustration"
+        class="contact-edge-left">
+      <img src="assets/Gemini_Generated_Image_u7obbpu7obbpu7ob.png" alt="Get in Touch Right Illustration"
+        class="contact-edge-right">
+
+      <div class="container relative-z">
+        <!-- Section Header -->
+        <div class="about-contact-header reveal">
+          <div class="contact-head-center">
+            <div class="about-pill-badge" style="display: flex !important; width: fit-content !important; margin-left: auto !important; margin-right: auto !important; justify-content: center !important;">
+              <i class="fa-solid fa-paper-plane"></i> LET'S CONNECT
+            </div>
+            <h2 class="contact-title">Get in Touch With <span class="text-blue-accent">ISMS Global</span></h2>
+            <div class="contact-title-underline"></div>
+            <p class="contact-subtext">We're here to answer your questions and guide you towards the right study abroad
+              opportunities.</p>
+          </div>
+        </div>
+
+        <!-- Top 5 Contact Cards Row -->
+        <div class="contact-top-row reveal">
+          <!-- Call Us -->
+          <div class="ct-card-box">
+            <div class="ct-icon-blue"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong>Give Us a Buzz / Call Us</strong>
+              <div class="ct-main-val">+91 73501 66699</div>
+              <span class="ct-sub-val">One call can bring you closer to your dream</span>
+            </div>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="ct-card-box">
+            <div class="ct-icon-green"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <strong>WhatsApp / Stay Updated</strong>
+              <div class="ct-main-val">+91 73501 66699</div>
+              <span class="ct-sub-val">Connect on WhatsApp, Insta &amp; LinkedIn</span>
+            </div>
+          </div>
+
+          <!-- Email Us -->
+          <div class="ct-card-box">
+            <div class="ct-icon-blue"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <strong>Email Us</strong>
+              <div class="ct-main-val">admission@ismslobal.in</div>
+              <span class="ct-sub-val">We reply promptly to your queries</span>
+            </div>
+          </div>
+
+          <!-- Visit Our Website -->
+          <div class="ct-card-box">
+            <div class="ct-icon-blue"><i class="fa-solid fa-globe"></i></div>
+            <div>
+              <strong>Find Us Here</strong>
+              <div class="ct-main-val"><a href="https://global.ismspune.in/" target="_blank">global.ismspune.in</a>
+              </div>
+              <span class="ct-sub-val">Office 201, Bavdhan, Pune</span>
+            </div>
+          </div>
+
+          <!-- Book an Appointment -->
+          <div class="ct-card-box ct-book-card">
+            <div class="ct-icon-blue"><i class="fa-regular fa-calendar-days"></i></div>
+            <div>
+              <strong>Book an Appointment</strong>
+              <span class="ct-sub-val mb-2">Schedule a one-on-one consultation with our expert counsellors.</span>
+              <a href="#contact-form-box" class="btn-navy-pill-sm">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center 2-Column Split: Form (Left) & Office Locations (Right) -->
+        <div class="contact-split-grid reveal">
+
+          <!-- Left: Send Us a Message Form Box -->
+          <div class="contact-navy-form-box" id="contact-form-box">
+            <div class="cnf-head">
+              <div class="cnf-icon"><i class="fa-solid fa-paper-plane"></i></div>
+              <h3>Send Us a Message</h3>
+            </div>
+            <p class="cnf-sub">Fill out the form and our team will get back to you shortly.</p>
+
+            <form id="isms-contact-form" class="cnf-form">
+              <div class="cnf-input-row">
+                <div class="cnf-group">
+                  <label>Full Name *</label>
+                  <input type="text" id="full_name" name="full_name" placeholder="Full Name *" required>
+                </div>
+                <div class="cnf-group">
+                  <label>Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="Email Address *" required>
+                </div>
+              </div>
+
+              <div class="cnf-input-row">
+                <div class="cnf-group">
+                  <label>Phone Number *</label>
+                  <div class="phone-wrap-inner">
+                    <select id="country_code">
+                      <option value="+91">🇮🇳 +91</option>
+                      <option value="+44">🇬🇧 +44</option>
+                      <option value="+1">🇨🇦 +1</option>
+                      <option value="+61">🇦🇺 +61</option>
+                    </select>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number *" required>
+                  </div>
+                </div>
+                <div class="cnf-group">
+                  <label>Country Interested In *</label>
+                  <select id="country_interested" required>
+                    <option value="" disabled selected>Select Country</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Other">Other Destination</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="cnf-group full-width">
+                <label>Your Query / Message *</label>
+                <textarea id="message" name="message" rows="3" placeholder="Type your message here..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn-gold-submit">
+                Send Message <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: Our Office Locations Box -->
+          <div class="contact-white-locations-box">
+            <div class="cwl-head">
+              <div class="cwl-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <h3>Our Office Locations</h3>
+            </div>
+
+            <!-- 3 Office Cards Grid -->
+            <div class="cwl-cards-grid">
+
+              <!-- Office 1: India -->
+              <div class="office-card-item">
+                <div class="office-hero-wrap">
+                  <img src="assets/building_india.jpg" alt="Pune Head Office" class="office-cover-img">
+                  <span class="office-tag-pill tag-blue">Head Office &ndash; India</span>
+                </div>
+                <div class="office-card-body">
+                  <h4>Pune, Maharashtra (Office 201)</h4>
+                  <p><i class="fa-solid fa-location-dot"></i> Runwal Platinum, NDA, Dr. Homi Bhabha Rd, Ram Nagar,
+                    Bavdhan, Pune, Maharashtra 411021</p>
+                  <div class="office-phone"><i class="fa-solid fa-phone"></i> +91 73501 66699 | admission@ismslobal.in
+                  </div>
+                </div>
+              </div>
+
+              <!-- Office 2: UK -->
+              <div class="office-card-item">
+                <div class="office-hero-wrap">
+                  <img src="assets/uk.png" alt="London UK Office" class="office-cover-img">
+                  <span class="office-tag-pill tag-navy">UK Office</span>
+                </div>
+                <div class="office-card-body">
+                  <h4>London, United Kingdom</h4>
+                  <p><i class="fa-solid fa-location-dot"></i> 124 City Road, London, EC1V 2NX, United Kingdom</p>
+                  <div class="office-phone"><i class="fa-solid fa-phone"></i> +44 20 4566 0470</div>
+                </div>
+              </div>
+
+              <!-- Office 3: Canada -->
+              <div class="office-card-item">
+                <div class="office-hero-wrap">
+                  <img src="assets/canada.png" alt="Toronto Canada Office" class="office-cover-img">
+                  <span class="office-tag-pill tag-blue">Canada Office</span>
+                </div>
+                <div class="office-card-body">
+                  <h4>Toronto, Ontario</h4>
+                  <p><i class="fa-solid fa-location-dot"></i> 20 Bay Street, Suite 1100, Toronto, ON M5J 2N8, Canada</p>
+                  <div class="office-phone"><i class="fa-solid fa-phone"></i> +1 437 800 3888</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom White Trust & Social Bar -->
+        <div class="contact-bottom-bar reveal">
+          <div class="cbb-stat-item">
+            <div class="cbb-icon"><i class="fa-solid fa-award"></i></div>
+            <div>
+              <strong>19+ Years</strong>
+              <span>of Excellence</span>
+              <small>Trusted by thousands of students worldwide.</small>
+            </div>
+          </div>
+
+          <div class="cbb-divider"></div>
+
+          <div class="cbb-stat-item">
+            <div class="cbb-icon"><i class="fa-solid fa-users"></i></div>
+            <div>
+              <strong>2000+</strong>
+              <span>Students Guided</span>
+              <small>Helping students achieve their global dreams.</small>
+            </div>
+          </div>
+
+          <div class="cbb-divider"></div>
+
+          <div class="cbb-stat-item">
+            <div class="cbb-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <strong>100%</strong>
+              <span>Transparency</span>
+              <small>Honest advice and clear communication.</small>
+            </div>
+          </div>
+
+          <div class="cbb-divider"></div>
+
+          <div class="cbb-stat-item">
+            <div class="cbb-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <strong>500+</strong>
+              <span>University Partners</span>
+              <small>Strong global network across 15+ countries.</small>
+            </div>
+          </div>
+
+          <div class="cbb-divider"></div>
+
+          <div class="cbb-stat-item">
+            <div class="cbb-icon"><i class="fa-solid fa-headset"></i></div>
+            <div>
+              <strong>End-to-End</strong>
+              <span>Support</span>
+              <small>From counselling to visa and post-arrival.</small>
+            </div>
+          </div>
+
+          <!-- Follow Us Navy Card -->
+          <div class="cbb-social-navy-box">
+            <span>Follow Us</span>
+            <div class="cbb-social-icons">
+              <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i
+                  class="fa-brands fa-youtube"></i></a>
+              <a href="https://wa.me/917066028888" target="_blank" aria-label="WhatsApp"><i
+                  class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. FOOTER (EXACT MATCH OF INDEX.HTML) -->
+    <footer class="site-footer" id="siteFooter"></footer>
+
+    <a href="https://wa.me/917066028888" class="whatsapp-fab" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- ===== FLOATING RIGHT SIDE SOCIAL MEDIA DOCK ===== -->
+    <div class="social-side-dock" id="socialSideDock">
+      <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn">
+        <span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+      </a>
+      <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram">
+        <span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span>
+      </a>
+      <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook">
+        <span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span>
+      </a>
+      <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube">
+        <span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span>
+      </a>
+    </div>
+
+    <!-- Toast Notification Success Box -->
+    <div class="toast-notification" id="toast-success">
+      <i data-lucide="check-circle-2" style="width: 24px; height: 24px;"></i>
+      <div>
+        <h4 style="font-weight: 700; margin-bottom: 2px;">Message Sent Successfully!</h4>
+        <p style="font-size: 0.8rem; opacity: 0.9; margin: 0;">Our expert counsellors will contact you shortly.</p>
+      </div>
+    </div>
+
+    <script src="about.js"></script>
+
+    <!-- ===== SCROLL TO TOP BUTTON ===== -->
+    <button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top"
+      onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <style>
+      .scroll-top-fab {
+        position: fixed;
+        bottom: 96px;
+        right: 24px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #0D47D8;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+        z-index: 9000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(12px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+      }
+
+      .scroll-top-fab.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .scroll-top-fab:hover {
+        background: #0A39A6;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+      }
+
+      .scroll-top-fab i {
+        pointer-events: none;
+      }
+    </style>
+
+    <script>
+      (function () {
+        var btn = document.getElementById('scrollTopBtn');
+        if (!btn) return;
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) {
+            btn.classList.add('visible');
+          } else {
+            btn.classList.remove('visible');
+          }
+        }, { passive: true });
+      })();
+    </script>
+    <script src="script.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>

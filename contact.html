@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Talk to Study Abroad Experts - ISMS Global</title>
+  <meta name="description" content="Contact ISMS Global Education. Speak with our expert counsellors for free study abroad guidance, university admissions, visa support, and offices across India.">
+  
+  <!-- Google Fonts -->
+  
+  
+  
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="responsive.css">
+  <!-- ===== NAVBAR OVERRIDE: Exact match with index.html ===== -->
+  <style>
+  /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML & ABOUT.HTML */
+  :root {
+    --header-bg: #F4F8FF;
+    --header-border: #DCE5F3;
+    --nav-text: #11172A;
+    --nav-hover-bg: #E5EDFF;
+    --nav-accent: #0D47D8;
+    --dropdown-bg: #FFFFFF;
+    --gold-btn: #C79A3C;
+    --gold-btn-hover: #B5872E;
+  }
+
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background: var(--header-bg) !important;
+    border-bottom: 1px solid var(--header-border) !important;
+    box-shadow: 0 4px 20px rgba(17,23,42,0.08) !important;
+    backdrop-filter: none !important;
+  }
+
+  body {
+    padding-top: 72px !important;
+  }
+
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 72px !important;
+    gap: 12px !important;
+    max-width: 1720px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 0 2.5rem !important;
+  }
+
+  .brand-logo-img {
+    height: 48px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+
+  .main-nav a {
+    color: var(--nav-text) !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    padding: 16px 11px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-nav a:hover, .main-nav a.active {
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+  }
+  .main-nav a.active::after {
+    display: none !important;
+  }
+
+  .nav-dropdown {
+    position: relative !important;
+  }
+  .nav-dropdown-toggle {
+    color: var(--nav-text) !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    padding: 16px 11px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+  .nav-dropdown-toggle i {
+    color: var(--nav-accent) !important;
+    font-size: 10px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-toggle {
+    background: var(--nav-hover-bg) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: var(--dropdown-bg) !important;
+    border: 1px solid var(--header-border) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+    box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(6px) !important;
+    transition: all 0.2s ease !important;
+    min-width: 160px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(4px) !important;
+  }
+  .nav-dropdown-menu a {
+    color: var(--nav-text) !important;
+    border-left: 3px solid transparent !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    padding: 10px 22px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    background: transparent !important;
+  }
+  .nav-dropdown-menu a:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .dest-mega-menu {
+    min-width: 680px !important;
+    padding: 16px 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(8px) !important;
+    border-radius: 18px !important;
+    background: var(--dropdown-bg) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+  }
+  .nav-dropdown:hover .dest-mega-menu {
+    transform: translateX(-50%) translateY(4px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .dest-drop-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    transition: background 0.15s ease !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .dest-drop-item:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+  }
+  .dest-drop-flag {
+    width: 26px !important;
+    height: 18px !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+    flex-shrink: 0 !important;
+  }
+  .dest-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.25 !important;
+  }
+  .dest-drop-text strong {
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: var(--nav-text) !important;
+  }
+  .dest-drop-text span {
+    font-size: 11px !important;
+    color: #64748B !important;
+    margin-top: 2px !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: var(--nav-text) !important;
+    text-decoration: none !important;
+    font-size: 12.5px !important;
+  }
+  .header-phone i {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .header-phone small {
+    color: #667085 !important;
+  }
+  .header-phone strong {
+    color: var(--nav-text) !important;
+    font-weight: 700 !important;
+    font-size: 13.5px !important;
+  }
+
+  .site-header .btn-primary {
+    background: var(--gold-btn) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .site-header .btn-primary:hover {
+    background: var(--gold-btn-hover) !important;
+    color: #FFFFFF !important;
+    transform: none !important;
+  }
+
+  .nav-toggle {
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+  }
+  .nav-toggle span {
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--nav-text) !important;
+    border-radius: 2px !important;
+    transition: 0.3s ease !important;
+    display: block !important;
+  }
+
+  @media (max-width: 1160px) {
+    .nav-toggle { display: flex !important; }
+    .main-nav {
+      position: fixed !important;
+      inset: 72px 0 0 0 !important;
+      background: #fff !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 24px !important;
+      gap: 4px !important;
+      overflow-y: auto !important;
+      transform: translateX(100%) !important;
+      transition: transform 0.3s ease !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+      z-index: 9998 !important;
+    }
+    .main-nav.open { transform: translateX(0) !important; }
+    .main-nav a, .nav-dropdown-toggle {
+      padding: 14px 8px !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      width: 100% !important;
+      font-size: 15px !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+    }
+    .dest-mega-menu {
+      min-width: unset !important;
+      grid-template-columns: 1fr !important;
+      transform: none !important;
+      left: 0 !important;
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .nav-dropdown-menu {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      display: none !important;
+    }
+    .nav-dropdown.open .nav-dropdown-menu { display: block !important; }
+
+    /* ── Header: small tablet & phone fixes ── */
+    @media (max-width: 768px) {
+      .header-inner {
+        padding: 0 14px !important;
+        height: 64px !important;
+      }
+      body { padding-top: 64px !important; }
+      .main-nav { inset: 64px 0 0 0 !important; }
+      .brand-logo-img { height: 38px !important; max-width: 140px !important; }
+      .site-header .btn-primary {
+        font-size: 11px !important;
+        padding: 0 10px !important;
+        height: 32px !important;
+        white-space: nowrap !important;
+        max-width: 130px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .header-inner { padding: 0 12px !important; height: 60px !important; }
+      body { padding-top: 60px !important; }
+      .main-nav { inset: 60px 0 0 0 !important; }
+      .brand-logo-img { height: 34px !important; max-width: 120px !important; }
+      .site-header .btn-primary { display: none !important; }
+      .dest-mega-menu { grid-template-columns: 1fr !important; }
+    }
+  }
+  
+/* UNIVERSAL BADGE PILL HORIZONTAL CENTERING */
+.badge-pill,
+[class*="pill-badge"],
+[class*="-badge"] {
+    display: flex !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* TESTIMONIALS CENTERING & GOLDEN STARS */
+.dtm-4cards-grid,
+.dtm-grid,
+.testimonials-grid,
+.dtm-cards-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.dtm-card,
+.testimonial-card {
+    flex: 1 1 360px !important;
+    max-width: 420px !important;
+    min-width: 280px !important;
+}
+
+.dtm-rating,
+.testimonial-rating,
+.stars,
+.star-rating {
+    color: #FFB800 !important;
+}
+
+.dtm-rating i,
+.testimonial-rating i,
+.stars i,
+.star-rating i,
+.fa-star {
+    color: #FFB800 !important;
+}
+
+/* DTP SECTION LEFT ALIGNMENT FOR TWO-COLUMN HEADER */
+.dtp-header-box {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+.dtp-pill-badge,
+.dtp-header-box .dtp-pill-badge {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    display: inline-flex !important;
+    align-self: flex-start !important;
+}
+
+.dtp-title,
+.dtp-header-box .dtp-title {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.dtp-subtext,
+.dtp-header-box .dtp-subtext {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* ENFORCE GOLDEN STARS FOR ALL TESTIMONIAL RATINGS */
+.dtm-rating,
+.dtm-rating i,
+.testimonial-rating,
+.testimonial-rating i,
+.star-rating,
+.star-rating i,
+.stars,
+.stars i,
+i.fa-star,
+i.fa-solid.fa-star {
+    color: #FFB800 !important;
+}
+
+/* PREMIUM RIGHT BLUE CTA CARD STYLING FOR DTP SECTION */
+.dtp-right-blue-card,
+.dtp-right-card {
+    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
+    border-radius: 22px !important;
+    padding: 36px 30px !important;
+    color: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 12px 36px rgba(13,71,216,0.22) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    min-height: 320px !important;
+}
+
+.dtp-blue-text-box,
+.dtp-right-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.dtp-right-blue-card h3,
+.dtp-right-card h3 {
+    color: #FFFFFF !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 14px !important;
+    letter-spacing: -0.01em !important;
+    text-align: left !important;
+}
+
+.dtp-right-blue-card p,
+.dtp-right-card p {
+    color: #DBEAFE !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+    text-align: left !important;
+}
+
+.dtp-blue-btn,
+.dtp-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+    color: #0A1940 !important;
+    font-weight: 800 !important;
+    font-size: 14.5px !important;
+    padding: 14px 22px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.35) !important;
+    width: 100 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+.dtp-blue-btn:hover,
+.dtp-cta-btn:hover {
+    background: linear-gradient(135deg, #FFB800 0%, #F59E0B 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(245,158,11,0.5) !important;
+    color: #0A1940 !important;
+}
+
+.dtp-cta-note,
+.dtp-guarantee {
+    display: block !important;
+    font-size: 12px !important;
+    color: #93C5FD !important;
+    margin-top: 14px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+}
+</style>
+</head>
+<body>
+
+  <!-- ==================== 1. SITE HEADER ==================== -->
+  <!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader"></header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section class="ct-hero-section">
+      <!-- Full-Height Softly Blended Background Image -->
+      <div class="ct-hero-landmarks-bg">
+        <img src="assets/Contact_hero.png" alt="Contact ISMS Global Education" class="ct-hero-bg-img">
+      </div>
+
+      <div class="container relative-z">
+        <div class="ct-hero-layout">
+          <div class="ct-hero-content">
+            <span class="ct-hero-eyebrow">CONTACT ISMS GLOBAL</span>
+            <h1 class="ct-hero-title">
+              Reach Out to Us /<br>
+              <span class="text-primary">Give Us a Buzz</span>
+            </h1>
+            <p class="ct-hero-sub">
+              One call can bring you closer to your study abroad dream. We're just a phone call away!
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Hero Highlights Cards Row -->
+        <div class="ct-hero-highlights-row">
+          <div class="ct-highlight-card">
+            <div class="ct-highlight-icon"><i class="fa-solid fa-headset"></i></div>
+            <div class="ct-highlight-text">
+              <strong>Expert Counselling</strong>
+              <span>One-to-one guidance from experienced counsellors</span>
+            </div>
+          </div>
+
+          <div class="ct-highlight-card">
+            <div class="ct-highlight-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="ct-highlight-text">
+              <strong>100% Free Services</strong>
+              <span>All our counselling and application support is completely free</span>
+            </div>
+          </div>
+
+          <div class="ct-highlight-card">
+            <div class="ct-highlight-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="ct-highlight-text">
+              <strong>Quick Response</strong>
+              <span>Fast replies and personalized assistance</span>
+            </div>
+          </div>
+
+          <div class="ct-highlight-card">
+            <div class="ct-highlight-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="ct-highlight-text">
+              <strong>100% Visa Success</strong>
+              <span>Proven track record across top destinations</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 3. CONTACT INFO CARDS ==================== -->
+    <section class="ct-info-cards-section">
+      <div class="container">
+        <div class="ct-info-cards-grid">
+          
+          <!-- Card 1: Head Office Pune -->
+          <div class="ct-info-card">
+            <div class="ct-info-icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+            <h3>Find Us Here (Pune)</h3>
+            <p>Runwal Platinum, NDA, Dr. Homi Bhabha Rd, Ram Nagar, Bavdhan, Pune, Maharashtra 411021 (Office 201)</p>
+            <a href="https://maps.google.com" target="_blank" class="ct-info-link">Get Directions &rarr;</a>
+          </div>
+
+          <!-- Card 2: Call Us -->
+          <div class="ct-info-card">
+            <div class="ct-info-icon-circle"><i class="fa-solid fa-phone"></i></div>
+            <h3>Give Us a Buzz</h3>
+            <p><strong>+91 73501 66699</strong></p>
+            <small>One call can bring you closer to your study abroad dream</small>
+          </div>
+
+          <!-- Card 3: Email Us -->
+          <div class="ct-info-card">
+            <div class="ct-info-icon-circle"><i class="fa-regular fa-envelope"></i></div>
+            <h3>Email Us</h3>
+            <p>admission@ismslobal.in</p>
+            <small>We reply promptly to your queries</small>
+          </div>
+
+          <!-- Card 4: WhatsApp -->
+          <div class="ct-info-card">
+            <div class="ct-info-icon-circle whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+            <h3>Stay Updated with Us</h3>
+            <p><strong>+91 73501 66699</strong></p>
+            <small>Connect on Facebook, Instagram, LinkedIn, or Email</small>
+            <a href="https://wa.me/917350166699" target="_blank" class="ct-info-link" style="color:var(--ct-whatsapp);">Chat Now &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. MAIN FORM & SIDEBAR SECTION ==================== -->
+    <section class="ct-form-section">
+      <div class="container">
+        <div class="ct-form-layout">
+
+          <!-- LEFT FORM CARD -->
+          <div class="ct-form-card" id="ctEnquiryFormCard">
+            <div class="ct-form-header">
+              <div class="ct-form-header-icon"><i class="fa-solid fa-paper-plane"></i></div>
+              <h2>Send Us a Message</h2>
+            </div>
+            <p class="ct-form-sub">Fill in your details and our expert will get in touch with you shortly.</p>
+
+            <form class="ct-form-grid" id="ctEnquiryForm">
+              <div class="ct-field-group">
+                <label for="ctFullName">Full Name*</label>
+                <div class="ct-input-wrap">
+                  <input type="text" id="ctFullName" placeholder="Enter your full name" required>
+                </div>
+              </div>
+
+              <div class="ct-field-group">
+                <label for="ctEmail">Email Address*</label>
+                <div class="ct-input-wrap">
+                  <input type="email" id="ctEmail" placeholder="Enter your email" required>
+                </div>
+              </div>
+
+              <div class="ct-field-group">
+                <label for="ctPhone">Phone Number*</label>
+                <div class="ct-input-wrap">
+                  <input type="tel" id="ctPhone" placeholder="Enter your phone number" required>
+                </div>
+              </div>
+
+              <div class="ct-field-group">
+                <label for="ctDest">Interested Destination*</label>
+                <div class="ct-input-wrap">
+                  <select id="ctDest" required>
+                    <option value="">Select Destination</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Dubai">Dubai / UAE</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="ct-field-group full-width">
+                <label for="ctQuery">Your Query / Message*</label>
+                <textarea id="ctQuery" placeholder="Tell us about your study abroad plans..." required></textarea>
+              </div>
+
+              <div class="ct-checkbox-row">
+                <input type="checkbox" id="ctTerms" required>
+                <label for="ctTerms">I agree to ISMS Global <a href="#" style="color:var(--ct-primary);">terms &amp; policy</a> and <a href="privacy-policy.html" style="color:var(--ct-primary);">privacy policy</a></label>
+              </div>
+
+              <button type="submit" class="btn-submit-enquiry">
+                Submit Enquiry <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- RIGHT SIDEBAR COLUMN -->
+          <aside class="ct-sidebar-column">
+            
+            <!-- Card 1: Why Contact ISMS Global? -->
+            <div class="ct-sidebar-card">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+                <div class="ct-form-header-icon" style="width:34px; height:34px; font-size:15px;"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 style="margin-bottom:0;">Why Contact ISMS Global?</h3>
+              </div>
+
+              <div class="ct-why-list">
+                <div class="ct-why-item"><i class="fa-solid fa-circle-check"></i> Free expert counselling for all study abroad queries</div>
+                <div class="ct-why-item"><i class="fa-solid fa-circle-check"></i> Personalized guidance as per your profile and goals</div>
+                <div class="ct-why-item"><i class="fa-solid fa-circle-check"></i> University &amp; course shortlisting</div>
+                <div class="ct-why-item"><i class="fa-solid fa-circle-check"></i> Scholarship and loan assistance</div>
+                <div class="ct-why-item"><i class="fa-solid fa-circle-check"></i> Visa application &amp; documentation support</div>
+                <div class="ct-why-item"><i class="fa-solid fa-circle-check"></i> Pre-departure &amp; post-arrival support</div>
+              </div>
+            </div>
+
+            <!-- Card 2: Talk to an Expert Now -->
+            <div class="ct-talk-expert-card">
+              <h3>Talk to an Expert Now</h3>
+              <p>Speak directly with our senior counsellor and get instant answers.</p>
+              <a href="tel:+919579519386" class="btn-ct-call">
+                <i class="fa-solid fa-phone"></i> Call Now
+              </a>
+              <img src="assets/Girl.png" alt="Counsellor Avatar" class="ct-counsellor-side-img">
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. OUR OFFICES SECTION ==================== -->
+    <section class="ct-offices-section">
+      <div class="container">
+        <span class="ct-offices-eyebrow">OUR OFFICES</span>
+        <h2>We Are Located Across Key Cities</h2>
+
+        <div class="ct-city-cards-grid">
+
+          <!-- City 1: Mumbai -->
+          <div class="ct-city-card">
+            <div class="ct-city-img-wrap">
+              <img src="assets/Gateway-to-India.jpg" alt="Mumbai Gateway of India">
+            </div>
+            <div class="ct-city-body">
+              <h3>Mumbai</h3>
+              <p>215, 2nd Floor, Andheri Kurla Road, Andheri East, Mumbai &ndash; 400069</p>
+              <small>+91 22 4970 8665</small>
+              <a href="https://maps.google.com" target="_blank" class="ct-city-link">Get Directions &rarr;</a>
+            </div>
+          </div>
+
+          <!-- City 2: Bengaluru -->
+          <div class="ct-city-card">
+            <div class="ct-city-img-wrap">
+              <img src="assets/Vidhana Shoudha.jpg" alt="Bengaluru Vidhana Soudha">
+            </div>
+            <div class="ct-city-body">
+              <h3>Bengaluru</h3>
+              <p>503, 5th Floor, 80 Feet Road, Koramangala, Bengaluru &ndash; 560095, Karnataka</p>
+              <small>+91 80 4162 2299</small>
+              <a href="https://maps.google.com" target="_blank" class="ct-city-link">Get Directions &rarr;</a>
+            </div>
+          </div>
+
+          <!-- City 3: New Delhi -->
+          <div class="ct-city-card">
+            <div class="ct-city-img-wrap">
+              <img src="assets/India gate.jpg" alt="New Delhi India Gate">
+            </div>
+            <div class="ct-city-body">
+              <h3>New Delhi</h3>
+              <p>101, 1st Floor, Lajpat Nagar 2, New Delhi &ndash; 110024</p>
+              <small>+91 11 4105 0111</small>
+              <a href="https://maps.google.com" target="_blank" class="ct-city-link">Get Directions &rarr;</a>
+            </div>
+          </div>
+
+          <!-- City 4: Hyderabad -->
+          <div class="ct-city-card">
+            <div class="ct-city-img-wrap">
+              <img src="assets/Charminar.jpg" alt="Hyderabad Charminar">
+            </div>
+            <div class="ct-city-body">
+              <h3>Hyderabad</h3>
+              <p>A-52, 2nd Floor, Punjagutta, Hyderabad &ndash; 500082, Telangana</p>
+              <small>+91 40 4855 7733</small>
+              <a href="https://maps.google.com" target="_blank" class="ct-city-link">Get Directions &rarr;</a>
+            </div>
+          </div>
+
+          <!-- City 5: Chennai -->
+          <div class="ct-city-card">
+            <div class="ct-city-img-wrap">
+              <img src="assets/Ripon Building.jpg" alt="Chennai Ripon Building">
+            </div>
+            <div class="ct-city-body">
+              <h3>Chennai</h3>
+              <p>No. 18, 2nd Floor, T. Nagar, Chennai &ndash; 600017, Tamil Nadu</p>
+              <small>+91 44 4217 8899</small>
+              <a href="https://maps.google.com" target="_blank" class="ct-city-link">Get Directions &rarr;</a>
+            </div>
+          </div>
+
+          <!-- City 6: Pune (Head Office) -->
+          <div class="ct-city-card">
+            <div class="ct-city-img-wrap">
+              <img src="assets/ISMS.png" alt="Pune Head Office" style="object-fit: contain; padding: 10px; background: #ffffff;">
+            </div>
+            <div class="ct-city-body">
+              <h3>Pune (Head Office)</h3>
+              <p>2nd Floor, Baner Road, Near Pune University Circle, Pune &ndash; 411045</p>
+              <small>+91 95 61 77 66 00</small>
+              <a href="https://maps.google.com" target="_blank" class="ct-city-link">Get Directions &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. GOOGLE MAP & FAQ SECTION ==================== -->
+    <section class="ct-map-faq-section">
+      <div class="container">
+        <div class="ct-map-faq-grid">
+          
+          <!-- LEFT GOOGLE MAP EMBED -->
+          <div class="ct-map-card">
+            <iframe class="ct-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2612345678!2d73.807!3d18.556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bec700000001%3A0x123456789abcdef!2sBaner%20Rd%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            
+            <div class="ct-map-overlay-box">
+              <strong>ISMS Global &ndash; Head Office</strong>
+              <span>2nd Floor, Baner Road, Near Pune University Circle, Pune &ndash; 411045</span>
+              <a href="https://maps.google.com" target="_blank">View larger map</a>
+            </div>
+          </div>
+
+          <!-- RIGHT FAQ ACCORDION -->
+          <div class="ct-faq-box">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="ct-faq-accordion">
+              <div class="ct-faq-item active">
+                <div class="ct-faq-question">
+                  <span>Is counselling really free at ISMS Global?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Yes! All our preliminary counselling, university shortlisting, and application support services are 100% free for students.
+                </div>
+              </div>
+
+              <div class="ct-faq-item">
+                <div class="ct-faq-question">
+                  <span>What information do I need to provide?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  You just need to share your academic marksheets, test scores (IELTS/TOEFL if available), and your preferred study destination and course choices.
+                </div>
+              </div>
+
+              <div class="ct-faq-item">
+                <div class="ct-faq-question">
+                  <span>How soon will I receive a response?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Our expert counsellors review every enquiry and respond within 24 hours on working days.
+                </div>
+              </div>
+
+              <div class="ct-faq-item">
+                <div class="ct-faq-question">
+                  <span>Can I connect through WhatsApp?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Absolutely! You can message us on WhatsApp at +91 95 61 77 66 00 for instant queries and guidance.
+                </div>
+              </div>
+
+              <div class="ct-faq-item">
+                <div class="ct-faq-question">
+                  <span>Do you help with visa applications?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Yes, we provide end-to-end visa application guidance, documentation check, mock interview practice, and post-visa support.
+                </div>
+              </div>
+            </div>
+
+            <a href="sitemap.html" style="font-size:13.5px; font-weight:700; color:var(--ct-primary); text-decoration:none;">View All FAQs &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. BOTTOM CTA BANNER ==================== -->
+    <div class="container">
+      <section class="ct-bottom-banner">
+        <div class="ct-banner-inner">
+          <img src="assets/dest-globe.png" alt="Graduation Cap & Globe" class="ct-cta-left-gfx">
+          
+          <div class="ct-cta-center">
+            <h2>Begin Your Study Abroad Journey Today!</h2>
+            <p>Book a free counselling session with our experts and take the first step towards your global education.</p>
+          </div>
+
+          <div class="ct-cta-actions">
+            <button type="button" class="btn-cta-blue" onclick="document.getElementById('ctFullName').focus();">
+              Book Free Counselling <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button type="button" class="btn-cta-outline-white">
+              <i class="fa-solid fa-headset"></i> Talk to an Expert
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ==================== 8. SITE FOOTER ==================== -->
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- ===== FLOATING RIGHT SIDE SOCIAL MEDIA DOCK ===== -->
+  <div class="social-side-dock" id="socialSideDock">
+    <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn">
+      <span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+    </a>
+    <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram">
+      <span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span>
+    </a>
+    <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook">
+      <span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span>
+    </a>
+    <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube">
+      <span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

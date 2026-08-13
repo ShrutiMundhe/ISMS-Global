@@ -1,0 +1,752 @@
+/* ============================================================
+   STUDY ABROAD COUNSELLING PAGE STYLES - ISMS GLOBAL
+   ============================================================ */
+
+:root {
+  --sac-primary: #0D47D8;
+  --sac-primary-hover: #0A39A6;
+  --sac-primary-light: #EEF4FF;
+  --sac-navy: #0A1233;
+  --sac-navy-card: #0A1C40;
+  --sac-text-muted: #64748B;
+  --sac-border: #E2E8F0;
+  --sac-gold: #F59E0B;
+  --sac-blue-tint: #F0F5FC;
+}
+
+body {
+  background-color: #F8FAFC;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--sac-navy);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==================== 1. HERO SECTION ==================== */
+.sac-hero-section {
+  background: linear-gradient(180deg, #EBF1FA 0%, #F5F8FE 100%);
+  padding: 36px 0 60px 0;
+  border-bottom: 1px solid var(--sac-border);
+  position: relative;
+}
+
+.sac-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 40px;
+  align-items: center;
+}
+
+.sac-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--sac-text-muted);
+  margin-bottom: 14px;
+}
+
+.sac-breadcrumb a {
+  color: var(--sac-text-muted);
+  text-decoration: none;
+}
+
+.sac-breadcrumb a:hover {
+  color: var(--sac-primary);
+}
+
+.sac-hero-title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--sac-navy);
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.sac-hero-sub {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--sac-text-muted);
+  margin-bottom: 24px;
+  max-width: 620px;
+}
+
+.sac-hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.btn-sac-primary {
+  padding: 13px 30px;
+  border-radius: 10px;
+  background-color: var(--sac-primary);
+  color: #FFFFFF;
+  font-size: 14.5px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(13, 71, 216, 0.28);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-sac-primary:hover {
+  background-color: var(--sac-primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-sac-outline {
+  padding: 12px 22px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--sac-primary);
+  color: var(--sac-primary);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sac-hero-check-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.sac-hero-check-row i {
+  color: var(--sac-primary);
+  margin-right: 4px;
+}
+
+/* Hero Right Column (Media + Floating Stat Badges) */
+.sac-hero-media-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sac-hero-img-box {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(10, 18, 51, 0.12);
+}
+
+.sac-hero-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sac-floating-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sac-stat-badge-card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--sac-border);
+  box-shadow: 0 4px 12px rgba(10, 18, 51, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sac-stat-badge-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--sac-primary-light);
+  color: var(--sac-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.sac-stat-badge-info strong {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--sac-navy);
+  display: block;
+}
+
+.sac-stat-badge-info span {
+  font-size: 11px;
+  color: var(--sac-text-muted);
+}
+
+/* ==================== 2. WHY STUDY ABROAD? ==================== */
+.sac-why-abroad-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.sac-section-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--sac-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.sac-section-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--sac-navy);
+  margin-bottom: 32px;
+}
+
+.sac-10features-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.sac-feature-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px 14px;
+  border: 1px solid var(--sac-border);
+  box-shadow: 0 2px 10px rgba(10, 18, 51, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.sac-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--sac-primary);
+}
+
+.sac-feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--sac-primary-light);
+  color: var(--sac-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+
+.sac-feature-card strong {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--sac-navy);
+  line-height: 1.3;
+}
+
+.sac-feature-card p {
+  font-size: 11.5px;
+  color: var(--sac-text-muted);
+  line-height: 1.4;
+}
+
+/* ==================== 3. WHY CHOOSE ISMS GLOBAL? ==================== */
+.sac-why-isms-section {
+  padding: 30px 0 50px 0;
+  text-align: center;
+}
+
+.sac-8stats-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+}
+
+.sac-stat-item-box {
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 16px 10px;
+  border: 1px solid var(--sac-border);
+  box-shadow: 0 2px 8px rgba(10, 18, 51, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.sac-stat-icon-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--sac-primary-light);
+  color: var(--sac-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.sac-stat-item-box strong {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--sac-navy);
+  line-height: 1.2;
+}
+
+.sac-stat-item-box span {
+  font-size: 11px;
+  color: var(--sac-text-muted);
+  line-height: 1.3;
+}
+
+/* ==================== 4. COUNSELLING PROCESS (8-STEP) ==================== */
+.sac-process-section {
+  padding: 40px 0 60px 0;
+  text-align: center;
+}
+
+.sac-8steps-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.sac-step-pill-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 18px 10px;
+  border: 1px solid var(--sac-border);
+  box-shadow: 0 4px 12px rgba(10, 18, 51, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.sac-step-number-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--sac-primary);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.sac-step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--sac-primary-light);
+  color: var(--sac-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sac-step-pill-card strong {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--sac-navy);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.sac-step-pill-card p {
+  font-size: 11px;
+  color: var(--sac-text-muted);
+  line-height: 1.35;
+}
+
+/* ==================== 5. POPULAR STUDY DESTINATIONS ==================== */
+.sac-destinations-section {
+  padding: 40px 0 60px 0;
+  text-align: center;
+}
+
+.sac-dests-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.sac-dest-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid var(--sac-border);
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(10, 18, 51, 0.04);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sac-dest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(13, 71, 216, 0.12);
+}
+
+.sac-dest-img-wrap {
+  height: 140px;
+  position: relative;
+}
+
+.sac-dest-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sac-dest-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.sac-flag-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--sac-navy);
+  margin-bottom: 6px;
+}
+
+.sac-dest-body p {
+  font-size: 12px;
+  color: var(--sac-text-muted);
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.sac-dest-link {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--sac-primary);
+  text-decoration: none;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==================== 6. COURSES & UNIVERSITIES GRID ==================== */
+.sac-courses-unis-section {
+  padding: 20px 0 60px 0;
+}
+
+.sac-courses-unis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.sac-box-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 24px 28px;
+  border: 1px solid var(--sac-border);
+  box-shadow: 0 4px 14px rgba(10, 18, 51, 0.03);
+}
+
+.sac-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 24px 0;
+}
+
+.sac-tag-pill {
+  background: var(--sac-primary-light);
+  color: var(--sac-primary);
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sac-uni-logos-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 18px 0 24px 0;
+}
+
+.sac-uni-logo-card {
+  background: #F8FAFC;
+  border-radius: 12px;
+  padding: 12px 8px;
+  border: 1px solid #E2E8F0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--sac-navy);
+}
+
+/* ==================== 7. FINANCIAL, BUDGET & WORK (3 COLUMNS) ==================== */
+.sac-financial-section {
+  padding: 20px 0 60px 0;
+}
+
+.sac-3col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.sac-col-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--sac-border);
+  box-shadow: 0 4px 14px rgba(10, 18, 51, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.sac-col-card h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--sac-navy);
+  margin-bottom: 14px;
+}
+
+.sac-budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.sac-budget-table th {
+  background: var(--sac-primary-light);
+  color: var(--sac-navy);
+  font-weight: 800;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.sac-budget-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  font-weight: 600;
+}
+
+/* ==================== 8. SUCCESS STORIES & FAQ ==================== */
+.sac-stories-faq-section {
+  padding: 20px 0 60px 0;
+}
+
+.sac-stories-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.sac-navy-stories-box {
+  background: var(--sac-navy-card);
+  border-radius: 20px;
+  padding: 28px;
+  color: #FFFFFF;
+  box-shadow: 0 12px 28px rgba(10, 18, 51, 0.2);
+}
+
+.sac-navy-stories-box h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.sac-mini-reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.sac-review-item-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sac-rev-author-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sac-rev-info p {
+  font-size: 12px;
+  color: #CBD5E1;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.sac-rev-info strong {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #FFFFFF;
+  display: block;
+}
+
+.sac-rev-info span {
+  font-size: 11px;
+  color: #94A3B8;
+}
+
+/* ==================== 9. CONSULTATION BANNER ==================== */
+.sac-consultation-banner {
+  background: linear-gradient(135deg, #0A39A6 0%, #062775 100%);
+  border-radius: 20px;
+  margin: 20px 0 60px 0;
+  padding: 0 36px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.sac-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 170px;
+}
+
+.sac-cta-left-student {
+  height: 200px;
+  margin-top: -30px;
+  margin-bottom: -1px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.sac-cta-center {
+  flex: 1;
+  max-width: 580px;
+}
+
+.sac-cta-center h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.sac-cta-center p {
+  font-size: 14px;
+  color: #CBD5E1;
+}
+
+.sac-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btn-cta-white-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  color: var(--sac-navy);
+  font-size: 13.5px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cta-outline-btn {
+  padding: 12px 18px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  font-size: 13.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-cta-gold-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: var(--sac-gold);
+  color: #0A1233;
+  font-size: 13.5px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .sac-hero-layout { grid-template-columns: 1fr; }
+  .sac-10features-grid { grid-template-columns: repeat(3, 1fr); }
+  .sac-8stats-row { grid-template-columns: repeat(4, 1fr); }
+  .sac-8steps-grid { grid-template-columns: repeat(4, 1fr); }
+  .sac-dests-grid { grid-template-columns: repeat(2, 1fr); }
+  .sac-courses-unis-grid, .sac-3col-grid, .sac-stories-faq-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .sac-hero-title { font-size: 32px; }
+  .sac-10features-grid { grid-template-columns: repeat(2, 1fr); }
+  .sac-8stats-row { grid-template-columns: repeat(2, 1fr); }
+  .sac-8steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .sac-dests-grid { grid-template-columns: 1fr; }
+  .sac-cta-actions { flex-direction: column; }
+}

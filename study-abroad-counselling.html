@@ -1,0 +1,2475 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Abroad Counselling | End-to-End Overseas Guidance - ISMS Global</title>
+  <meta name="description" content="Get 100% free study abroad counselling at ISMS Global. Personalized guidance for course selection, university admissions, scholarships, loans, visa processing, and pre-departure support.">
+  
+  <!-- Google Fonts -->
+  
+  
+  
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="study-abroad-counselling.css">
+  <!-- ===== NAVBAR OVERRIDE: Exact match with index.html ===== -->
+  <style>
+  /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML */
+  :root {
+    --header-bg: #F4F8FF;
+    --header-border: #DCE5F3;
+    --nav-text: #11172A;
+    --nav-hover-bg: #E5EDFF;
+    --nav-accent: #0D47D8;
+    --dropdown-bg: #FFFFFF;
+    --gold-btn: #C79A3C;
+    --gold-btn-hover: #B5872E;
+  }
+
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background: var(--header-bg) !important;
+    border-bottom: 1px solid var(--header-border) !important;
+    box-shadow: 0 4px 20px rgba(17,23,42,0.08) !important;
+    backdrop-filter: none !important;
+  }
+
+  body {
+    padding-top: 96px !important;
+  }
+
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 72px !important;
+    gap: 12px !important;
+    max-width: 1720px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 0 2.5rem !important;
+  }
+
+  .brand-logo-img {
+    height: 48px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+
+  .main-nav a {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-nav a:hover, .main-nav a.active {
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+  }
+  .main-nav a.active::after {
+    display: none !important;
+  }
+
+  .nav-dropdown {
+    position: relative !important;
+  }
+  .nav-dropdown-toggle {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+  .nav-dropdown-toggle i {
+    color: var(--nav-accent) !important;
+    font-size: 10px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-toggle {
+    background: var(--nav-hover-bg) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: var(--dropdown-bg) !important;
+    border: 1px solid var(--header-border) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+    box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(6px) !important;
+    transition: all 0.2s ease !important;
+    min-width: 160px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(4px) !important;
+  }
+  .nav-dropdown-menu a {
+    color: var(--nav-text) !important;
+    border-left: 3px solid transparent !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    padding: 10px 22px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    background: transparent !important;
+  }
+  .nav-dropdown-menu a:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .dest-mega-menu {
+    min-width: 680px !important;
+    padding: 16px 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(8px) !important;
+    border-radius: 18px !important;
+    background: var(--dropdown-bg) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+  }
+  .nav-dropdown:hover .dest-mega-menu {
+    transform: translateX(-50%) translateY(4px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .dest-drop-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    transition: background 0.15s ease !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .dest-drop-item:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+  }
+  .dest-drop-flag {
+    width: 26px !important;
+    height: 18px !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+    flex-shrink: 0 !important;
+  }
+  .dest-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.25 !important;
+  }
+  .dest-drop-text strong {
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: var(--nav-text) !important;
+  }
+  .dest-drop-text span {
+    font-size: 11px !important;
+    color: #64748B !important;
+    margin-top: 2px !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: var(--nav-text) !important;
+    text-decoration: none !important;
+    font-size: 12.5px !important;
+  }
+  .header-phone i {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .header-phone small {
+    color: #667085 !important;
+  }
+  .header-phone strong {
+    color: var(--nav-text) !important;
+    font-weight: 700 !important;
+    font-size: 13.5px !important;
+  }
+
+  .site-header .btn-primary {
+    background: var(--gold-btn) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .site-header .btn-primary:hover {
+    background: var(--gold-btn-hover) !important;
+    color: #FFFFFF !important;
+    transform: none !important;
+  }
+
+  .nav-toggle {
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+  }
+  .nav-toggle span {
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--nav-text) !important;
+    border-radius: 2px !important;
+    transition: 0.3s ease !important;
+    display: block !important;
+  }
+
+  @media (max-width: 1160px) {
+    .nav-toggle { display: flex !important; }
+    .main-nav {
+      position: fixed !important;
+      inset: 72px 0 0 0 !important;
+      background: #fff !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 24px !important;
+      gap: 4px !important;
+      overflow-y: auto !important;
+      transform: translateX(100%) !important;
+      transition: transform 0.3s ease !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+      z-index: 9998 !important;
+    }
+    .main-nav.open { transform: translateX(0) !important; }
+    .main-nav a, .nav-dropdown-toggle {
+      padding: 14px 8px !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      width: 100% !important;
+      font-size: 15px !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+    }
+    .dest-mega-menu {
+      min-width: unset !important;
+      grid-template-columns: 1fr !important;
+      transform: none !important;
+      left: 0 !important;
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .nav-dropdown-menu {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      display: none !important;
+    }
+    .nav-dropdown.open .nav-dropdown-menu { display: block !important; }
+  }
+  body { padding-top: 72px !important; }
+
+/* UNIVERSAL BADGE PILL HORIZONTAL CENTERING */
+.badge-pill,
+[class*="pill-badge"],
+[class*="-badge"] {
+    display: flex !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* TESTIMONIALS CENTERING & GOLDEN STARS */
+.dtm-4cards-grid,
+.dtm-grid,
+.testimonials-grid,
+.dtm-cards-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.dtm-card,
+.testimonial-card {
+    flex: 1 1 360px !important;
+    max-width: 420px !important;
+    min-width: 280px !important;
+}
+
+.dtm-rating,
+.testimonial-rating,
+.stars,
+.star-rating {
+    color: #FFB800 !important;
+}
+
+.dtm-rating i,
+.testimonial-rating i,
+.stars i,
+.star-rating i,
+.fa-star {
+    color: #FFB800 !important;
+}
+
+/* DTP SECTION LEFT ALIGNMENT FOR TWO-COLUMN HEADER */
+.dtp-header-box {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+.dtp-pill-badge,
+.dtp-header-box .dtp-pill-badge {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    display: inline-flex !important;
+    align-self: flex-start !important;
+}
+
+.dtp-title,
+.dtp-header-box .dtp-title {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.dtp-subtext,
+.dtp-header-box .dtp-subtext {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* ENFORCE GOLDEN STARS FOR ALL TESTIMONIAL RATINGS */
+.dtm-rating,
+.dtm-rating i,
+.testimonial-rating,
+.testimonial-rating i,
+.star-rating,
+.star-rating i,
+.stars,
+.stars i,
+i.fa-star,
+i.fa-solid.fa-star {
+    color: #FFB800 !important;
+}
+
+/* PREMIUM RIGHT BLUE CTA CARD STYLING FOR DTP SECTION */
+.dtp-right-blue-card,
+.dtp-right-card {
+    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
+    border-radius: 22px !important;
+    padding: 36px 30px !important;
+    color: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 12px 36px rgba(13,71,216,0.22) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    min-height: 320px !important;
+}
+
+.dtp-blue-text-box,
+.dtp-right-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.dtp-right-blue-card h3,
+.dtp-right-card h3 {
+    color: #FFFFFF !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 14px !important;
+    letter-spacing: -0.01em !important;
+    text-align: left !important;
+}
+
+.dtp-right-blue-card p,
+.dtp-right-card p {
+    color: #DBEAFE !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+    text-align: left !important;
+}
+
+.dtp-blue-btn,
+.dtp-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+    color: #0A1940 !important;
+    font-weight: 800 !important;
+    font-size: 14.5px !important;
+    padding: 14px 22px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.35) !important;
+    width: 100 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+.dtp-blue-btn:hover,
+.dtp-cta-btn:hover {
+    background: linear-gradient(135deg, #FFB800 0%, #F59E0B 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(245,158,11,0.5) !important;
+    color: #0A1940 !important;
+}
+
+.dtp-cta-note,
+.dtp-guarantee {
+    display: block !important;
+    font-size: 12px !important;
+    color: #93C5FD !important;
+    margin-top: 14px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+}
+</style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- ====== 1. SITE HEADER ====== -->
+  <!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader"></header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+
+    <!-- ====== 2. HERO SECTION ====== -->
+    <section class="sac-hero-section">
+      <div class="container">
+        <div class="sac-hero-layout">
+          
+          <!-- LEFT HERO CONTENT -->
+          <div class="sac-hero-content">
+            <nav class="sac-breadcrumb">
+              <a href="index.html">Home</a> &gt;
+              <div class="nav-dropdown">
+        <a href="services.html" class="nav-dropdown-toggle">Services <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown-menu service-drop-menu">
+          <a href="services.html#step-01" class="service-drop-item">
+            <i class="fa-solid fa-comments service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Free Counselling</strong><span>Expert 1-on-1 guidance</span></div>
+          </a>
+          <a href="services.html#step-02" class="service-drop-item">
+            <i class="fa-solid fa-file-signature service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Application Assistance</strong><span>End-to-end university filing</span></div>
+          </a>
+          <a href="services.html#step-03" class="service-drop-item">
+            <i class="fa-solid fa-hand-holding-dollar service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Scholarship Guidance</strong><span>Financial aid &amp; grants</span></div>
+          </a>
+          <a href="services.html#step-04" class="service-drop-item">
+            <i class="fa-solid fa-piggy-bank service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Education Loan Assistance</strong><span>Low interest student loans</span></div>
+          </a>
+          <a href="services.html#step-05" class="service-drop-item">
+            <i class="fa-solid fa-passport service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Visa &amp; Documentation</strong><span>High success visa filing</span></div>
+          </a>
+          <a href="services.html#step-06" class="service-drop-item">
+            <i class="fa-solid fa-plane-departure service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Pre-Departure Briefing</strong><span>Travel &amp; checklist guidance</span></div>
+          </a>
+          <a href="services.html#step-07" class="service-drop-item">
+            <i class="fa-solid fa-house-user service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Post-Arrival Support</strong><span>Housing &amp; local setup</span></div>
+          </a>
+          <div class="service-drop-divider"></div>
+          <a href="services.html" class="service-drop-viewall">View All Services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div> &gt;
+              <span style="color: var(--sac-navy); font-weight: 600;">Study Abroad Counselling</span>
+            </nav>
+
+            <h1 class="sac-hero-title">
+              Your Journey to<br>
+              <span style="color:var(--sac-primary);">Study Abroad</span><br>
+              Starts Here
+            </h1>
+
+            <p class="sac-hero-sub">
+              Personalized counselling to help you choose the right country, university, course, scholarship, and career path with complete support from application to visa approval.
+            </p>
+
+            <div class="sac-hero-ctas">
+              <a href="contact.html" class="btn-sac-primary">Book Free Counselling <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="index.html#destinations" class="btn-sac-outline"><i class="fa-solid fa-globe"></i> Explore Destinations</a>
+            </div>
+
+            <div class="sac-hero-check-row">
+              <span><i class="fa-solid fa-circle-check"></i> 100% Free Guidance</span>
+              <span><i class="fa-solid fa-circle-check"></i> Expert Counsellors</span>
+              <span><i class="fa-solid fa-circle-check"></i> End-to-End Support</span>
+            </div>
+          </div>
+
+          <!-- RIGHT HERO MEDIA & FLOATING STAT BADGES -->
+          <div class="sac-hero-media-wrapper">
+            <div class="sac-hero-img-box">
+              <img src="assets/img_photo-1522202176988-66273c2fd55f.jpg" alt="Student Counselling Session" class="counsellor-img">
+            </div>
+
+            <div class="sac-floating-stats-grid">
+              <div class="sac-stat-badge-card">
+                <div class="sac-stat-badge-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="sac-stat-badge-info">
+                  <strong>500+</strong>
+                  <span>Universities Worldwide</span>
+                </div>
+              </div>
+
+              <div class="sac-stat-badge-card">
+                <div class="sac-stat-badge-icon"><i class="fa-solid fa-award"></i></div>
+                <div class="sac-stat-badge-info">
+                  <strong>18+</strong>
+                  <span>Years of Experience</span>
+                </div>
+              </div>
+
+              <div class="sac-stat-badge-card">
+                <div class="sac-stat-badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="sac-stat-badge-info">
+                  <strong>95%+</strong>
+                  <span>Visa Success Rate</span>
+                </div>
+              </div>
+
+              <div class="sac-stat-badge-card">
+                <div class="sac-stat-badge-icon"><i class="fa-solid fa-gift"></i></div>
+                <div class="sac-stat-badge-info">
+                  <strong>Scholarship</strong>
+                  <span>Guidance &amp; Assistance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 3. WHY STUDY ABROAD? ====== -->
+    <section class="sac-why-abroad-section">
+      <div class="container">
+        <span class="sac-section-eyebrow">WHY STUDY ABROAD?</span>
+        <h2 class="sac-section-title">A World of Opportunities Awaits You</h2>
+
+        <div class="sac-10features-grid">
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <strong>Better Career Opportunities</strong>
+            <p>Access global job markets and build successful careers.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-globe"></i></div>
+            <strong>International Exposure</strong>
+            <p>Experience diverse cultures and global perspectives.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-award"></i></div>
+            <strong>Globally Recognized Degrees</strong>
+            <p>Get world-class education with global recognition.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <strong>High Quality Education</strong>
+            <p>Study at top-ranked universities with modern facilities.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-flask"></i></div>
+            <strong>Research Opportunities</strong>
+            <p>Work on cutting-edge research and innovative projects.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-people-roof"></i></div>
+            <strong>Cultural Experience</strong>
+            <p>Explore new cultures and expand your worldview.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+            <strong>Better Salary</strong>
+            <p>Earn higher salaries compared to local opportunities.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-id-card"></i></div>
+            <strong>PR Opportunities</strong>
+            <p>Pathway to permanent residency in many countries.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-comments"></i></div>
+            <strong>Language Skills</strong>
+            <p>Improve language proficiency and communication.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+            <strong>Personal Growth</strong>
+            <p>Build confidence, independence and life skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 4. WHY CHOOSE ISMS GLOBAL? ====== -->
+    <section class="sac-why-isms-section">
+      <div class="container">
+        <span class="sac-section-eyebrow">WHY CHOOSE ISMS GLOBAL?</span>
+
+        <div class="sac-8stats-row">
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-award"></i></div>
+            <strong>18+</strong>
+            <span>Years Experience</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-building-columns"></i></div>
+            <strong>500+</strong>
+            <span>University Partners</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-users"></i></div>
+            <strong>2,000+</strong>
+            <span>Students Guided</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-shield-halved"></i></div>
+            <strong>95%+</strong>
+            <span>Visa Success Rate</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-user-tie"></i></div>
+            <strong>Expert</strong>
+            <span>Counsellors</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-gift"></i></div>
+            <strong>FREE</strong>
+            <span>Consultation</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-star" style="color:#F59E0B;"></i></div>
+            <strong>4.5★</strong>
+            <span>Google Rating</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-globe"></i></div>
+            <strong>Global</strong>
+            <span>Presence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 5. COUNSELLING PROCESS (8-STEP) ====== -->
+    <section class="sac-process-section">
+      <div class="container">
+        <span class="sac-section-eyebrow">OUR COUNSELLING PROCESS</span>
+        <h2 class="sac-section-title">A Simple 8-Step Journey to Your Dream</h2>
+
+        <div class="sac-8steps-grid">
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">01</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-user-check"></i></div>
+            <strong>Free Career Assessment</strong>
+            <p>Understand your profile &amp; goals</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">02</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-globe"></i></div>
+            <strong>Destination Selection</strong>
+            <p>Choose the right country for you</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">03</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <strong>University Shortlisting</strong>
+            <p>Shortlist best-fit universities</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">04</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <strong>Course Selection</strong>
+            <p>Select the best course for career</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">05</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-paper-plane"></i></div>
+            <strong>Application Submission</strong>
+            <p>We submit your application</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">06</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <strong>Offer Letter</strong>
+            <p>Receive offer from university</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">07</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <strong>Visa Guidance</strong>
+            <p>Complete visa filing &amp; interview prep</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">08</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-plane-departure"></i></div>
+            <strong>Pre Departure Support</strong>
+            <p>Travel, accommodation &amp; post arrival support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 6. POPULAR STUDY DESTINATIONS ====== -->
+    <section class="sac-destinations-section">
+      <div class="container">
+        <span class="sac-section-eyebrow">POPULAR STUDY DESTINATIONS</span>
+        <h2 class="sac-section-title">Choose Your Dream Destination</h2>
+
+        <div class="sac-dests-grid">
+          
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_uk_big.png" alt="Study in UK"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_gb.png" alt="UK Flag" style="width:18px;"> Study in UK</div>
+              <p>Top universities, global exposure &amp; great careers</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_ireland_big.png" alt="Study in Ireland"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_ie.png" alt="Ireland Flag" style="width:18px;"> Study in Ireland</div>
+              <p>Quality education with post study work visa</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_australia_big.png" alt="Study in Australia"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_au.png" alt="Australia Flag" style="width:18px;"> Study in Australia</div>
+              <p>High quality of life and great opportunities</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_germany_big.png" alt="Study in Germany"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_de.png" alt="Germany Flag" style="width:18px;"> Study in Germany</div>
+              <p>Tuition free or low cost education in Germany</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_france_big.png" alt="Study in France"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_fr.png" alt="France Flag" style="width:18px;"> Study in France</div>
+              <p>World-class education at affordable cost</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_netherlands_big.png" alt="Study in Netherlands"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_nl.png" alt="Netherlands Flag" style="width:18px;"> Study in Netherlands</div>
+              <p>Innovation, research &amp; global career paths</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_dubai_big.png" alt="Study in Dubai"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_ae.png" alt="Dubai Flag" style="width:18px;"> Study in Dubai</div>
+              <p>Global hub with quality education &amp; safety</p>
+              <a href="dubai-destination.html" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_nz_big.png" alt="Study in New Zealand"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_nz.png" alt="New Zealand Flag" style="width:18px;"> Study in New Zealand</div>
+              <p>Work while studying &amp; settle opportunities</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 7. POPULAR COURSES & UNIVERSITIES GRID ====== -->
+    <section class="sac-courses-unis-section">
+      <div class="container">
+        <div class="sac-courses-unis-grid">
+
+          <!-- LEFT BOX: POPULAR COURSES -->
+          <div class="sac-box-card">
+            <span class="sac-section-eyebrow">POPULAR COURSES</span>
+            <h2 style="font-size:22px; font-weight:800; color:var(--sac-navy);">Explore Top Courses</h2>
+
+            <div class="sac-tags-wrap">
+              <span class="sac-tag-pill"><i class="fa-solid fa-briefcase"></i> MBA</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-database"></i> MSc Data Science</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-chart-line"></i> MSc Business Analytics</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-user-nurse"></i> MSc Nursing</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-laptop-code"></i> MSc Computer Science</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-shield-cat"></i> MSc Cyber Security</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-graduation-cap"></i> BBA</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-brain"></i> Psychology</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-sack-dollar"></i> Finance</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-scale-balanced"></i> Law</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-bullhorn"></i> Mass Comm</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-robot"></i> Artificial Intelligence</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-heart-pulse"></i> Public Health</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-futbol"></i> Sports Business Mgmt</span>
+            </div>
+
+            <a href="courses.html" class="btn-sac-primary" style="font-size:13.5px; padding:10px 20px;">View All Courses <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- RIGHT BOX: FEATURED UNIVERSITIES -->
+          <div class="sac-box-card">
+            <span class="sac-section-eyebrow">FEATURED UNIVERSITIES</span>
+            <h2 style="font-size:22px; font-weight:800; color:var(--sac-navy);">Top Global Universities</h2>
+
+            <div class="sac-uni-logos-row">
+              <div class="sac-uni-logo-card">
+                <i class="fa-solid fa-building-columns" style="font-size:24px; color:var(--sac-primary);"></i>
+                <span>Leeds Beckett University</span>
+                <img src="assets/flag_w40_gb.png" style="width:14px; margin-top:2px;" alt="UK">
+              </div>
+
+              <div class="sac-uni-logo-card">
+                <i class="fa-solid fa-landmark" style="font-size:24px; color:#10B981;"></i>
+                <span>Cardiff Metropolitan</span>
+                <img src="assets/flag_w40_gb.png" style="width:14px; margin-top:2px;" alt="UK">
+              </div>
+
+              <div class="sac-uni-logo-card">
+                <i class="fa-solid fa-award" style="font-size:24px; color:#0A1233;"></i>
+                <span>Queensland Univ. of Tech</span>
+                <img src="assets/flag_w40_au.png" style="width:14px; margin-top:2px;" alt="AU">
+              </div>
+
+              <div class="sac-uni-logo-card">
+                <i class="fa-solid fa-graduation-cap" style="font-size:24px; color:#C10D0D;"></i>
+                <span>Trinity College Dublin</span>
+                <img src="assets/flag_w40_ie.png" style="width:14px; margin-top:2px;" alt="IE">
+              </div>
+
+              <div class="sac-uni-logo-card">
+                <i class="fa-solid fa-globe" style="font-size:24px; color:#F59E0B;"></i>
+                <span>NEOMA Business School</span>
+                <img src="assets/flag_w40_fr.png" style="width:14px; margin-top:2px;" alt="FR">
+              </div>
+            </div>
+
+            <a href="universities.html" class="btn-sac-primary" style="font-size:13.5px; padding:10px 20px;">View All Universities <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 8. FINANCIAL, BUDGET & WORK (3 COLUMNS) ====== -->
+    <section class="sac-financial-section">
+      <div class="container">
+        <div class="sac-3col-grid">
+          
+          <!-- COL 1: FINANCIAL SUPPORT -->
+          <div class="sac-col-card">
+            <span class="sac-section-eyebrow">SCHOLARSHIPS &amp; EDUCATION LOANS</span>
+            <h3>Financial Support for Your Dreams</h3>
+
+            <div style="margin-bottom:14px;">
+              <strong style="font-size:13px; color:var(--sac-navy); display:block; margin-bottom:6px;">Scholarships</strong>
+              <div style="display:flex; flex-direction:column; gap:6px; font-size:12px; color:#475569;">
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Merit-Based Scholarships</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Government Scholarships</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> University Scholarships</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Sports Scholarships</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Research Grants</div>
+              </div>
+            </div>
+
+            <div style="margin-bottom:18px;">
+              <strong style="font-size:13px; color:var(--sac-navy); display:block; margin-bottom:6px;">Education Loans</strong>
+              <div style="display:flex; flex-direction:column; gap:6px; font-size:12px; color:#475569;">
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Our Partner Banks</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Easy EMI Options</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Quick Approval</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Low Interest Rates</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> No-Collateral Loans</div>
+              </div>
+            </div>
+
+            <a href="Scholarship.html" class="btn-sac-primary" style="margin-top:auto; font-size:13px; padding:10px 16px;">Explore Scholarships &rarr;</a>
+          </div>
+
+          <!-- COL 2: PLAN YOUR BUDGET -->
+          <div class="sac-col-card">
+            <span class="sac-section-eyebrow">COST OF STUDYING ABROAD</span>
+            <h3>Plan Your Budget</h3>
+
+            <table class="sac-budget-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Tuition Fee (Avg/Year)</th>
+                  <th>Living Cost (Avg/Year)</th>
+                  <th>Total Cost (Avg/Year)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>UK</strong></td>
+                  <td>£10 &ndash; 25K</td>
+                  <td>£8 &ndash; 12K</td>
+                  <td>£18 &ndash; 37K</td>
+                </tr>
+                <tr>
+                  <td><strong>Australia</strong></td>
+                  <td>A$20 &ndash; 45K</td>
+                  <td>A$10 &ndash; 12K</td>
+                  <td>A$30 &ndash; 57K</td>
+                </tr>
+                <tr>
+                  <td><strong>USA</strong></td>
+                  <td>$20 &ndash; 48K</td>
+                  <td>$10 &ndash; 15K</td>
+                  <td>$30 &ndash; 63K</td>
+                </tr>
+                <tr>
+                  <td><strong>Canada</strong></td>
+                  <td>C$12 &ndash; 25K</td>
+                  <td>C$7 &ndash; 10K</td>
+                  <td>C$19 &ndash; 35K</td>
+                </tr>
+                <tr>
+                  <td><strong>Germany</strong></td>
+                  <td>€0 &ndash; 5K</td>
+                  <td>€7 &ndash; 9K</td>
+                  <td>€7 &ndash; 14K</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <a href="contact.html" class="btn-sac-primary" style="margin-top:auto; font-size:13px; padding:10px 16px;">Download Budget Guide &rarr;</a>
+          </div>
+
+          <!-- COL 3: EARN WHILE YOU LEARN -->
+          <div class="sac-col-card" style="position:relative; overflow:hidden;">
+            <span class="sac-section-eyebrow">WORK WHILE YOU STUDY</span>
+            <h3>Earn While You Learn</h3>
+
+            <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:#334155; margin-bottom:18px;">
+              <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Up to 20 hours/week part-time work</div>
+              <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Earn £1,000&ndash;£1,500/month</div>
+              <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Gain international work experience</div>
+              <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Support your education and living expenses</div>
+              <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Post-study work visa opportunities</div>
+            </div>
+
+            <a href="contact.html" class="btn-sac-primary" style="margin-top:auto; font-size:13px; padding:10px 16px;">Share More &rarr;</a>
+            <img src="assets/Girl.png" alt="Student Carrying Books" style="width:110px; position:absolute; bottom:0; right:10px; pointer-events:none;">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 9. STUDENT SUCCESS STORIES & FAQ ====== -->
+    <section class="sac-stories-faq-section">
+      <div class="container">
+        <div class="sac-stories-faq-grid">
+          
+          <!-- LEFT BOX: STUDENT SUCCESS STORIES -->
+          <div class="sac-navy-stories-box">
+            <span class="sac-section-eyebrow" style="color:#60A5FA;">STUDENT SUCCESS STORIES</span>
+            <h2>Real Stories. Real Success.</h2>
+
+            <div class="sac-mini-reviews-list">
+              <div class="sac-review-item-card">
+                <img src="assets/Boy.png" alt="Rahul Sharma Avatar" class="sac-rev-author-img">
+                <div class="sac-rev-info">
+                  <p>"ISMS Global guided me from course selection to visa approval. I got my visa within 15 days!"</p>
+                  <strong>Rahul Sharma</strong>
+                  <span>Studying in UK ★★★★★</span>
+                </div>
+              </div>
+
+              <div class="sac-review-item-card">
+                <img src="assets/Girl.png" alt="Ananya Verma Avatar" class="sac-rev-author-img">
+                <div class="sac-rev-info">
+                  <p>"Received a 50% scholarship with the help of ISMS Global. Best decision for my career."</p>
+                  <strong>Ananya Verma</strong>
+                  <span>Studying in Australia ★★★★★</span>
+                </div>
+              </div>
+
+              <div class="sac-review-item-card">
+                <img src="assets/Boy.png" alt="Arjun Mehta Avatar" class="sac-rev-author-img">
+                <div class="sac-rev-info">
+                  <p>"Excellent counselling and visa support. Now I'm pursuing my dream degree."</p>
+                  <strong>Arjun Mehta</strong>
+                  <span>Studying in Canada ★★★★★</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn-sac-primary" style="font-size:13px; padding:10px 18px;">View More Success Stories &rarr;</a>
+          </div>
+
+          <!-- RIGHT BOX: FAQ ACCORDION -->
+          <div class="ct-faq-box">
+            <span class="sac-section-eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+            <h2>Got Questions? We Have Answers!</h2>
+
+            <div class="ct-faq-accordion">
+              <div class="ct-faq-item sac-faq-item active">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>How do I choose the right university?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Our counsellors evaluate your academic background, budget, career goals, and location preference to match you with top universities.
+                </div>
+              </div>
+
+              <div class="ct-faq-item sac-faq-item">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>Do you provide support after I reach abroad?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Yes, we offer complete post-arrival assistance including airport pickup guidance, accommodation support, and local orientation.
+                </div>
+              </div>
+
+              <div class="ct-faq-item sac-faq-item">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>What is the process to apply?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Book a free counselling session, submit your academic documents, receive university offer letters, and apply for your student visa with our guidance.
+                </div>
+              </div>
+
+              <div class="ct-faq-item sac-faq-item">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>Do you help with scholarships?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Yes! We identify all eligible university and government scholarships and assist you with application essays and deadlines.
+                </div>
+              </div>
+
+              <div class="ct-faq-item sac-faq-item">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>Do you provide visa assistance?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Yes, we maintain a 95%+ visa success rate with thorough document verification, financial planning, and mock interview sessions.
+                </div>
+              </div>
+
+              <div class="ct-faq-item sac-faq-item">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>Is counselling really free?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Yes! 100% free of charge with zero hidden fees.
+                </div>
+              </div>
+            </div>
+
+            <a href="sitemap.html" class="btn-sac-primary" style="font-size:13px; padding:10px 18px;">View All FAQs &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 10. CONSULTATION BANNER ====== -->
+    <div class="container">
+      <section class="sac-consultation-banner">
+        <div class="sac-banner-inner">
+          <img src="assets/Boy.png" alt="Smiling Student Counsellor" class="sac-cta-left-student">
+          
+          <div class="sac-cta-center">
+            <h2>Ready to Start Your Study Abroad Journey?</h2>
+            <p>Book a free 1-on-1 counselling session with our experts today.</p>
+          </div>
+
+          <div class="sac-cta-actions">
+            <a href="contact.html" class="btn-cta-white-btn">Book Free Appointment</a>
+            <a href="tel:+919579519386" class="btn-cta-outline-btn"><i class="fa-solid fa-headset"></i> Talk to Expert</a>
+            <a href="https://wa.me/919561776600" target="_blank" class="btn-cta-gold-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ====== 11. SITE FOOTER ====== -->
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- ===== FLOATING RIGHT SIDE SOCIAL MEDIA DOCK ===== -->
+  <div class="social-side-dock" id="socialSideDock">
+    <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn">
+      <span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+    </a>
+    <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram">
+      <span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span>
+    </a>
+    <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook">
+      <span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span>
+    </a>
+    <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube">
+      <span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+  <script src="study-abroad-counselling.js"></script>
+
+<!-- ===== SCROLL TO TOP BUTTON ===== -->
+<button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+.scroll-top-fab {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0D47D8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+.scroll-top-fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-fab:hover {
+  background: #0A39A6;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+}
+.scroll-top-fab i {
+  pointer-events: none;
+}
+</style>
+
+<script>
+(function() {
+  var btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+})();
+</script>
+<script src="main.js"></script>
+</body>
+</html><div class="nav-dropdown-menu">
+            <a href="Blog.html" class="uni-drop-item">
+              <i class="fa-regular fa-newspaper uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Blog</strong><span>Articles &amp; study abroad guides</span></div>
+            </a>
+            <a href="index.html#testimonials" class="uni-drop-item">
+              <i class="fa-solid fa-graduation-cap uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Success Stories</strong><span>Real student achievements</span></div>
+            </a>
+            <a href="index.html#events" class="uni-drop-item">
+              <i class="fa-solid fa-calendar-days uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Events &amp; Webinars</strong><span>Live sessions &amp; university fairs</span></div>
+            </a>
+            <a href="index.html#faq" class="uni-drop-item">
+              <i class="fa-solid fa-circle-question uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>FAQs</strong><span>Frequently asked questions</span></div>
+            </a>
+          </div>TYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Abroad Counselling | End-to-End Overseas Guidance - ISMS Global</title>
+  <meta name="description" content="Get 100% free study abroad counselling at ISMS Global. Personalized guidance for course selection, university admissions, scholarships, loans, visa processing, and pre-departure support.">
+  
+  <!-- Google Fonts -->
+  
+  
+  
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="study-abroad-counselling.css">
+  <!-- ===== NAVBAR OVERRIDE: Exact match with index.html ===== -->
+  <style>
+  /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML */
+  :root {
+    --header-bg: #F4F8FF;
+    --header-border: #DCE5F3;
+    --nav-text: #11172A;
+    --nav-hover-bg: #E5EDFF;
+    --nav-accent: #0D47D8;
+    --dropdown-bg: #FFFFFF;
+    --gold-btn: #C79A3C;
+    --gold-btn-hover: #B5872E;
+  }
+
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background: var(--header-bg) !important;
+    border-bottom: 1px solid var(--header-border) !important;
+    box-shadow: 0 4px 20px rgba(17,23,42,0.08) !important;
+    backdrop-filter: none !important;
+  }
+
+  body {
+    padding-top: 96px !important;
+  }
+
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 72px !important;
+    gap: 12px !important;
+    max-width: 1720px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 0 2.5rem !important;
+  }
+
+  .brand-logo-img {
+    height: 48px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+
+  .main-nav a {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-nav a:hover, .main-nav a.active {
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+  }
+  .main-nav a.active::after {
+    display: none !important;
+  }
+
+  .nav-dropdown {
+    position: relative !important;
+  }
+  .nav-dropdown-toggle {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+  .nav-dropdown-toggle i {
+    color: var(--nav-accent) !important;
+    font-size: 10px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-toggle {
+    background: var(--nav-hover-bg) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: var(--dropdown-bg) !important;
+    border: 1px solid var(--header-border) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+    box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(6px) !important;
+    transition: all 0.2s ease !important;
+    min-width: 160px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(4px) !important;
+  }
+  .nav-dropdown-menu a {
+    color: var(--nav-text) !important;
+    border-left: 3px solid transparent !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    padding: 10px 22px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    background: transparent !important;
+  }
+  .nav-dropdown-menu a:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .dest-mega-menu {
+    min-width: 680px !important;
+    padding: 16px 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(8px) !important;
+    border-radius: 18px !important;
+    background: var(--dropdown-bg) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+  }
+  .nav-dropdown:hover .dest-mega-menu {
+    transform: translateX(-50%) translateY(4px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .dest-drop-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    transition: background 0.15s ease !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .dest-drop-item:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+  }
+  .dest-drop-flag {
+    width: 26px !important;
+    height: 18px !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+    flex-shrink: 0 !important;
+  }
+  .dest-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.25 !important;
+  }
+  .dest-drop-text strong {
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: var(--nav-text) !important;
+  }
+  .dest-drop-text span {
+    font-size: 11px !important;
+    color: #64748B !important;
+    margin-top: 2px !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: var(--nav-text) !important;
+    text-decoration: none !important;
+    font-size: 12.5px !important;
+  }
+  .header-phone i {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .header-phone small {
+    color: #667085 !important;
+  }
+  .header-phone strong {
+    color: var(--nav-text) !important;
+    font-weight: 700 !important;
+    font-size: 13.5px !important;
+  }
+
+  .site-header .btn-primary {
+    background: var(--gold-btn) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .site-header .btn-primary:hover {
+    background: var(--gold-btn-hover) !important;
+    color: #FFFFFF !important;
+    transform: none !important;
+  }
+
+  .nav-toggle {
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+  }
+  .nav-toggle span {
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--nav-text) !important;
+    border-radius: 2px !important;
+    transition: 0.3s ease !important;
+    display: block !important;
+  }
+
+  @media (max-width: 1160px) {
+    .nav-toggle { display: flex !important; }
+    .main-nav {
+      position: fixed !important;
+      inset: 72px 0 0 0 !important;
+      background: #fff !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 24px !important;
+      gap: 4px !important;
+      overflow-y: auto !important;
+      transform: translateX(100%) !important;
+      transition: transform 0.3s ease !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+      z-index: 9998 !important;
+    }
+    .main-nav.open { transform: translateX(0) !important; }
+    .main-nav a, .nav-dropdown-toggle {
+      padding: 14px 8px !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      width: 100% !important;
+      font-size: 15px !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+    }
+    .dest-mega-menu {
+      min-width: unset !important;
+      grid-template-columns: 1fr !important;
+      transform: none !important;
+      left: 0 !important;
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .nav-dropdown-menu {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      display: none !important;
+    }
+    .nav-dropdown.open .nav-dropdown-menu { display: block !important; }
+  }
+  </style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- ====== 1. SITE HEADER ====== -->
+  <!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader"></header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+
+    <!-- ====== 2. HERO SECTION ====== -->
+    <section class="sac-hero-section">
+      <div class="container">
+        <div class="sac-hero-layout">
+          
+          <!-- LEFT HERO CONTENT -->
+          <div class="sac-hero-content">
+            <nav class="sac-breadcrumb">
+              <a href="index.html">Home</a> &gt;
+              <div class="nav-dropdown">
+        <a href="services.html" class="nav-dropdown-toggle">Services <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown-menu service-drop-menu">
+          <a href="services.html#step-01" class="service-drop-item">
+            <i class="fa-solid fa-comments service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Free Counselling</strong><span>Expert 1-on-1 guidance</span></div>
+          </a>
+          <a href="services.html#step-02" class="service-drop-item">
+            <i class="fa-solid fa-file-signature service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Application Assistance</strong><span>End-to-end university filing</span></div>
+          </a>
+          <a href="services.html#step-03" class="service-drop-item">
+            <i class="fa-solid fa-hand-holding-dollar service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Scholarship Guidance</strong><span>Financial aid &amp; grants</span></div>
+          </a>
+          <a href="services.html#step-04" class="service-drop-item">
+            <i class="fa-solid fa-piggy-bank service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Education Loan Assistance</strong><span>Low interest student loans</span></div>
+          </a>
+          <a href="services.html#step-05" class="service-drop-item">
+            <i class="fa-solid fa-passport service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Visa &amp; Documentation</strong><span>High success visa filing</span></div>
+          </a>
+          <a href="services.html#step-06" class="service-drop-item">
+            <i class="fa-solid fa-plane-departure service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Pre-Departure Briefing</strong><span>Travel &amp; checklist guidance</span></div>
+          </a>
+          <a href="services.html#step-07" class="service-drop-item">
+            <i class="fa-solid fa-house-user service-drop-icon"></i>
+            <div class="service-drop-text"><strong>Post-Arrival Support</strong><span>Housing &amp; local setup</span></div>
+          </a>
+          <div class="service-drop-divider"></div>
+          <a href="services.html" class="service-drop-viewall">View All Services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div> &gt;
+              <span style="color: var(--sac-navy); font-weight: 600;">Study Abroad Counselling</span>
+            </nav>
+
+            <h1 class="sac-hero-title">
+              Your Journey to<br>
+              <span style="color:var(--sac-primary);">Study Abroad</span><br>
+              Starts Here
+            </h1>
+
+            <p class="sac-hero-sub">
+              Personalized counselling to help you choose the right country, university, course, scholarship, and career path with complete support from application to visa approval.
+            </p>
+
+            <div class="sac-hero-ctas">
+              <a href="contact.html" class="btn-sac-primary">Book Free Counselling <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="index.html#destinations" class="btn-sac-outline"><i class="fa-solid fa-globe"></i> Explore Destinations</a>
+            </div>
+
+            <div class="sac-hero-check-row">
+              <span><i class="fa-solid fa-circle-check"></i> 100% Free Guidance</span>
+              <span><i class="fa-solid fa-circle-check"></i> Expert Counsellors</span>
+              <span><i class="fa-solid fa-circle-check"></i> End-to-End Support</span>
+            </div>
+          </div>
+
+          <!-- RIGHT HERO MEDIA & FLOATING STAT BADGES -->
+          <div class="sac-hero-media-wrapper">
+            <div class="sac-hero-img-box">
+              <img src="assets/img_photo-1522202176988-66273c2fd55f.jpg" alt="Student Counselling Session" class="counsellor-img">
+            </div>
+
+            <div class="sac-floating-stats-grid">
+              <div class="sac-stat-badge-card">
+                <div class="sac-stat-badge-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="sac-stat-badge-info">
+                  <strong>500+</strong>
+                  <span>Universities Worldwide</span>
+                </div>
+              </div>
+
+              <div class="sac-stat-badge-card">
+                <div class="sac-stat-badge-icon"><i class="fa-solid fa-award"></i></div>
+                <div class="sac-stat-badge-info">
+                  <strong>18+</strong>
+                  <span>Years of Experience</span>
+                </div>
+              </div>
+
+              <div class="sac-stat-badge-card">
+                <div class="sac-stat-badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="sac-stat-badge-info">
+                  <strong>95%+</strong>
+                  <span>Visa Success Rate</span>
+                </div>
+              </div>
+
+              <div class="sac-stat-badge-card">
+                <div class="sac-stat-badge-icon"><i class="fa-solid fa-gift"></i></div>
+                <div class="sac-stat-badge-info">
+                  <strong>Scholarship</strong>
+                  <span>Guidance &amp; Assistance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 3. WHY STUDY ABROAD? ====== -->
+    <section class="sac-why-abroad-section">
+      <div class="container">
+        <span class="sac-section-eyebrow">WHY STUDY ABROAD?</span>
+        <h2 class="sac-section-title">A World of Opportunities Awaits You</h2>
+
+        <div class="sac-10features-grid">
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <strong>Better Career Opportunities</strong>
+            <p>Access global job markets and build successful careers.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-globe"></i></div>
+            <strong>International Exposure</strong>
+            <p>Experience diverse cultures and global perspectives.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-award"></i></div>
+            <strong>Globally Recognized Degrees</strong>
+            <p>Get world-class education with global recognition.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <strong>High Quality Education</strong>
+            <p>Study at top-ranked universities with modern facilities.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-flask"></i></div>
+            <strong>Research Opportunities</strong>
+            <p>Work on cutting-edge research and innovative projects.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-people-roof"></i></div>
+            <strong>Cultural Experience</strong>
+            <p>Explore new cultures and expand your worldview.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+            <strong>Better Salary</strong>
+            <p>Earn higher salaries compared to local opportunities.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-id-card"></i></div>
+            <strong>PR Opportunities</strong>
+            <p>Pathway to permanent residency in many countries.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-comments"></i></div>
+            <strong>Language Skills</strong>
+            <p>Improve language proficiency and communication.</p>
+          </div>
+
+          <div class="sac-feature-card">
+            <div class="sac-feature-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+            <strong>Personal Growth</strong>
+            <p>Build confidence, independence and life skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 4. WHY CHOOSE ISMS GLOBAL? ====== -->
+    <section class="sac-why-isms-section">
+      <div class="container">
+        <span class="sac-section-eyebrow">WHY CHOOSE ISMS GLOBAL?</span>
+
+        <div class="sac-8stats-row">
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-award"></i></div>
+            <strong>18+</strong>
+            <span>Years Experience</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-building-columns"></i></div>
+            <strong>500+</strong>
+            <span>University Partners</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-users"></i></div>
+            <strong>2,000+</strong>
+            <span>Students Guided</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-shield-halved"></i></div>
+            <strong>95%+</strong>
+            <span>Visa Success Rate</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-user-tie"></i></div>
+            <strong>Expert</strong>
+            <span>Counsellors</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-gift"></i></div>
+            <strong>FREE</strong>
+            <span>Consultation</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-star" style="color:#F59E0B;"></i></div>
+            <strong>4.5★</strong>
+            <span>Google Rating</span>
+          </div>
+
+          <div class="sac-stat-item-box">
+            <div class="sac-stat-icon-sm"><i class="fa-solid fa-globe"></i></div>
+            <strong>Global</strong>
+            <span>Presence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 5. COUNSELLING PROCESS (8-STEP) ====== -->
+    <section class="sac-process-section">
+      <div class="container">
+        <span class="sac-section-eyebrow">OUR COUNSELLING PROCESS</span>
+        <h2 class="sac-section-title">A Simple 8-Step Journey to Your Dream</h2>
+
+        <div class="sac-8steps-grid">
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">01</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-user-check"></i></div>
+            <strong>Free Career Assessment</strong>
+            <p>Understand your profile &amp; goals</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">02</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-globe"></i></div>
+            <strong>Destination Selection</strong>
+            <p>Choose the right country for you</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">03</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <strong>University Shortlisting</strong>
+            <p>Shortlist best-fit universities</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">04</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <strong>Course Selection</strong>
+            <p>Select the best course for career</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">05</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-paper-plane"></i></div>
+            <strong>Application Submission</strong>
+            <p>We submit your application</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">06</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <strong>Offer Letter</strong>
+            <p>Receive offer from university</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">07</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <strong>Visa Guidance</strong>
+            <p>Complete visa filing &amp; interview prep</p>
+          </div>
+
+          <div class="sac-step-pill-card">
+            <div class="sac-step-number-badge">08</div>
+            <div class="sac-step-icon"><i class="fa-solid fa-plane-departure"></i></div>
+            <strong>Pre Departure Support</strong>
+            <p>Travel, accommodation &amp; post arrival support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 6. POPULAR STUDY DESTINATIONS ====== -->
+    <section class="sac-destinations-section">
+      <div class="container">
+        <span class="sac-section-eyebrow">POPULAR STUDY DESTINATIONS</span>
+        <h2 class="sac-section-title">Choose Your Dream Destination</h2>
+
+        <div class="sac-dests-grid">
+          
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_uk_big.png" alt="Study in UK"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_gb.png" alt="UK Flag" style="width:18px;"> Study in UK</div>
+              <p>Top universities, global exposure &amp; great careers</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_ireland_big.png" alt="Study in Ireland"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_ie.png" alt="Ireland Flag" style="width:18px;"> Study in Ireland</div>
+              <p>Quality education with post study work visa</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_australia_big.png" alt="Study in Australia"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_au.png" alt="Australia Flag" style="width:18px;"> Study in Australia</div>
+              <p>High quality of life and great opportunities</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_germany_big.png" alt="Study in Germany"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_de.png" alt="Germany Flag" style="width:18px;"> Study in Germany</div>
+              <p>Tuition free or low cost education in Germany</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_france_big.png" alt="Study in France"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_fr.png" alt="France Flag" style="width:18px;"> Study in France</div>
+              <p>World-class education at affordable cost</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_netherlands_big.png" alt="Study in Netherlands"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_nl.png" alt="Netherlands Flag" style="width:18px;"> Study in Netherlands</div>
+              <p>Innovation, research &amp; global career paths</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_dubai_big.png" alt="Study in Dubai"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_ae.png" alt="Dubai Flag" style="width:18px;"> Study in Dubai</div>
+              <p>Global hub with quality education &amp; safety</p>
+              <a href="dubai-destination.html" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="sac-dest-card">
+            <div class="sac-dest-img-wrap"><img src="assets/dest_nz_big.png" alt="Study in New Zealand"></div>
+            <div class="sac-dest-body">
+              <div class="sac-flag-row"><img src="assets/flag_w40_nz.png" alt="New Zealand Flag" style="width:18px;"> Study in New Zealand</div>
+              <p>Work while studying &amp; settle opportunities</p>
+              <a href="index.html#destinations" class="sac-dest-link">View Details &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 7. POPULAR COURSES & UNIVERSITIES GRID ====== -->
+    <section class="sac-courses-unis-section">
+      <div class="container">
+        <div class="sac-courses-unis-grid">
+
+          <!-- LEFT BOX: POPULAR COURSES -->
+          <div class="sac-box-card">
+            <span class="sac-section-eyebrow">POPULAR COURSES</span>
+            <h2 style="font-size:22px; font-weight:800; color:var(--sac-navy);">Explore Top Courses</h2>
+
+            <div class="sac-tags-wrap">
+              <span class="sac-tag-pill"><i class="fa-solid fa-briefcase"></i> MBA</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-database"></i> MSc Data Science</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-chart-line"></i> MSc Business Analytics</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-user-nurse"></i> MSc Nursing</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-laptop-code"></i> MSc Computer Science</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-shield-cat"></i> MSc Cyber Security</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-graduation-cap"></i> BBA</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-brain"></i> Psychology</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-sack-dollar"></i> Finance</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-scale-balanced"></i> Law</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-bullhorn"></i> Mass Comm</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-robot"></i> Artificial Intelligence</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-heart-pulse"></i> Public Health</span>
+              <span class="sac-tag-pill"><i class="fa-solid fa-futbol"></i> Sports Business Mgmt</span>
+            </div>
+
+            <a href="courses.html" class="btn-sac-primary" style="font-size:13.5px; padding:10px 20px;">View All Courses <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- RIGHT BOX: FEATURED UNIVERSITIES -->
+          <div class="sac-box-card">
+            <span class="sac-section-eyebrow">FEATURED UNIVERSITIES</span>
+            <h2 style="font-size:22px; font-weight:800; color:var(--sac-navy);">Top Global Universities</h2>
+
+            <div class="sac-uni-logos-row">
+              <div class="sac-uni-logo-card">
+                <i class="fa-solid fa-building-columns" style="font-size:24px; color:var(--sac-primary);"></i>
+                <span>Leeds Beckett University</span>
+                <img src="assets/flag_w40_gb.png" style="width:14px; margin-top:2px;" alt="UK">
+              </div>
+
+              <div class="sac-uni-logo-card">
+                <i class="fa-solid fa-landmark" style="font-size:24px; color:#10B981;"></i>
+                <span>Cardiff Metropolitan</span>
+                <img src="assets/flag_w40_gb.png" style="width:14px; margin-top:2px;" alt="UK">
+              </div>
+
+              <div class="sac-uni-logo-card">
+                <i class="fa-solid fa-award" style="font-size:24px; color:#0A1233;"></i>
+                <span>Queensland Univ. of Tech</span>
+                <img src="assets/flag_w40_au.png" style="width:14px; margin-top:2px;" alt="AU">
+              </div>
+
+              <div class="sac-uni-logo-card">
+                <i class="fa-solid fa-graduation-cap" style="font-size:24px; color:#C10D0D;"></i>
+                <span>Trinity College Dublin</span>
+                <img src="assets/flag_w40_ie.png" style="width:14px; margin-top:2px;" alt="IE">
+              </div>
+
+              <div class="sac-uni-logo-card">
+                <i class="fa-solid fa-globe" style="font-size:24px; color:#F59E0B;"></i>
+                <span>NEOMA Business School</span>
+                <img src="assets/flag_w40_fr.png" style="width:14px; margin-top:2px;" alt="FR">
+              </div>
+            </div>
+
+            <a href="universities.html" class="btn-sac-primary" style="font-size:13.5px; padding:10px 20px;">View All Universities <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 8. FINANCIAL, BUDGET & WORK (3 COLUMNS) ====== -->
+    <section class="sac-financial-section">
+      <div class="container">
+        <div class="sac-3col-grid">
+          
+          <!-- COL 1: FINANCIAL SUPPORT -->
+          <div class="sac-col-card">
+            <span class="sac-section-eyebrow">SCHOLARSHIPS &amp; EDUCATION LOANS</span>
+            <h3>Financial Support for Your Dreams</h3>
+
+            <div style="margin-bottom:14px;">
+              <strong style="font-size:13px; color:var(--sac-navy); display:block; margin-bottom:6px;">Scholarships</strong>
+              <div style="display:flex; flex-direction:column; gap:6px; font-size:12px; color:#475569;">
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Merit-Based Scholarships</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Government Scholarships</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> University Scholarships</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Sports Scholarships</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Research Grants</div>
+              </div>
+            </div>
+
+            <div style="margin-bottom:18px;">
+              <strong style="font-size:13px; color:var(--sac-navy); display:block; margin-bottom:6px;">Education Loans</strong>
+              <div style="display:flex; flex-direction:column; gap:6px; font-size:12px; color:#475569;">
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Our Partner Banks</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Easy EMI Options</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Quick Approval</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Low Interest Rates</div>
+                <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> No-Collateral Loans</div>
+              </div>
+            </div>
+
+            <a href="Scholarship.html" class="btn-sac-primary" style="margin-top:auto; font-size:13px; padding:10px 16px;">Explore Scholarships &rarr;</a>
+          </div>
+
+          <!-- COL 2: PLAN YOUR BUDGET -->
+          <div class="sac-col-card">
+            <span class="sac-section-eyebrow">COST OF STUDYING ABROAD</span>
+            <h3>Plan Your Budget</h3>
+
+            <table class="sac-budget-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Tuition Fee (Avg/Year)</th>
+                  <th>Living Cost (Avg/Year)</th>
+                  <th>Total Cost (Avg/Year)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>UK</strong></td>
+                  <td>£10 &ndash; 25K</td>
+                  <td>£8 &ndash; 12K</td>
+                  <td>£18 &ndash; 37K</td>
+                </tr>
+                <tr>
+                  <td><strong>Australia</strong></td>
+                  <td>A$20 &ndash; 45K</td>
+                  <td>A$10 &ndash; 12K</td>
+                  <td>A$30 &ndash; 57K</td>
+                </tr>
+                <tr>
+                  <td><strong>USA</strong></td>
+                  <td>$20 &ndash; 48K</td>
+                  <td>$10 &ndash; 15K</td>
+                  <td>$30 &ndash; 63K</td>
+                </tr>
+                <tr>
+                  <td><strong>Canada</strong></td>
+                  <td>C$12 &ndash; 25K</td>
+                  <td>C$7 &ndash; 10K</td>
+                  <td>C$19 &ndash; 35K</td>
+                </tr>
+                <tr>
+                  <td><strong>Germany</strong></td>
+                  <td>€0 &ndash; 5K</td>
+                  <td>€7 &ndash; 9K</td>
+                  <td>€7 &ndash; 14K</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <a href="contact.html" class="btn-sac-primary" style="margin-top:auto; font-size:13px; padding:10px 16px;">Download Budget Guide &rarr;</a>
+          </div>
+
+          <!-- COL 3: EARN WHILE YOU LEARN -->
+          <div class="sac-col-card" style="position:relative; overflow:hidden;">
+            <span class="sac-section-eyebrow">WORK WHILE YOU STUDY</span>
+            <h3>Earn While You Learn</h3>
+
+            <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:#334155; margin-bottom:18px;">
+              <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Up to 20 hours/week part-time work</div>
+              <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Earn £1,000&ndash;£1,500/month</div>
+              <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Gain international work experience</div>
+              <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Support your education and living expenses</div>
+              <div><i class="fa-solid fa-circle-check" style="color:var(--sac-primary);"></i> Post-study work visa opportunities</div>
+            </div>
+
+            <a href="contact.html" class="btn-sac-primary" style="margin-top:auto; font-size:13px; padding:10px 16px;">Share More &rarr;</a>
+            <img src="assets/Girl.png" alt="Student Carrying Books" style="width:110px; position:absolute; bottom:0; right:10px; pointer-events:none;">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 9. STUDENT SUCCESS STORIES & FAQ ====== -->
+    <section class="sac-stories-faq-section">
+      <div class="container">
+        <div class="sac-stories-faq-grid">
+          
+          <!-- LEFT BOX: STUDENT SUCCESS STORIES -->
+          <div class="sac-navy-stories-box">
+            <span class="sac-section-eyebrow" style="color:#60A5FA;">STUDENT SUCCESS STORIES</span>
+            <h2>Real Stories. Real Success.</h2>
+
+            <div class="sac-mini-reviews-list">
+              <div class="sac-review-item-card">
+                <img src="assets/Boy.png" alt="Rahul Sharma Avatar" class="sac-rev-author-img">
+                <div class="sac-rev-info">
+                  <p>"ISMS Global guided me from course selection to visa approval. I got my visa within 15 days!"</p>
+                  <strong>Rahul Sharma</strong>
+                  <span>Studying in UK ★★★★★</span>
+                </div>
+              </div>
+
+              <div class="sac-review-item-card">
+                <img src="assets/Girl.png" alt="Ananya Verma Avatar" class="sac-rev-author-img">
+                <div class="sac-rev-info">
+                  <p>"Received a 50% scholarship with the help of ISMS Global. Best decision for my career."</p>
+                  <strong>Ananya Verma</strong>
+                  <span>Studying in Australia ★★★★★</span>
+                </div>
+              </div>
+
+              <div class="sac-review-item-card">
+                <img src="assets/Boy.png" alt="Arjun Mehta Avatar" class="sac-rev-author-img">
+                <div class="sac-rev-info">
+                  <p>"Excellent counselling and visa support. Now I'm pursuing my dream degree."</p>
+                  <strong>Arjun Mehta</strong>
+                  <span>Studying in Canada ★★★★★</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn-sac-primary" style="font-size:13px; padding:10px 18px;">View More Success Stories &rarr;</a>
+          </div>
+
+          <!-- RIGHT BOX: FAQ ACCORDION -->
+          <div class="ct-faq-box">
+            <span class="sac-section-eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+            <h2>Got Questions? We Have Answers!</h2>
+
+            <div class="ct-faq-accordion">
+              <div class="ct-faq-item sac-faq-item active">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>How do I choose the right university?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Our counsellors evaluate your academic background, budget, career goals, and location preference to match you with top universities.
+                </div>
+              </div>
+
+              <div class="ct-faq-item sac-faq-item">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>Do you provide support after I reach abroad?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Yes, we offer complete post-arrival assistance including airport pickup guidance, accommodation support, and local orientation.
+                </div>
+              </div>
+
+              <div class="ct-faq-item sac-faq-item">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>What is the process to apply?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Book a free counselling session, submit your academic documents, receive university offer letters, and apply for your student visa with our guidance.
+                </div>
+              </div>
+
+              <div class="ct-faq-item sac-faq-item">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>Do you help with scholarships?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Yes! We identify all eligible university and government scholarships and assist you with application essays and deadlines.
+                </div>
+              </div>
+
+              <div class="ct-faq-item sac-faq-item">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>Do you provide visa assistance?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Yes, we maintain a 95%+ visa success rate with thorough document verification, financial planning, and mock interview sessions.
+                </div>
+              </div>
+
+              <div class="ct-faq-item sac-faq-item">
+                <div class="ct-faq-question sac-faq-question">
+                  <span>Is counselling really free?</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="ct-faq-answer">
+                  Yes! 100% free of charge with zero hidden fees.
+                </div>
+              </div>
+            </div>
+
+            <a href="sitemap.html" class="btn-sac-primary" style="font-size:13px; padding:10px 18px;">View All FAQs &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 10. CONSULTATION BANNER ====== -->
+    <div class="container">
+      <section class="sac-consultation-banner">
+        <div class="sac-banner-inner">
+          <img src="assets/Boy.png" alt="Smiling Student Counsellor" class="sac-cta-left-student">
+          
+          <div class="sac-cta-center">
+            <h2>Ready to Start Your Study Abroad Journey?</h2>
+            <p>Book a free 1-on-1 counselling session with our experts today.</p>
+          </div>
+
+          <div class="sac-cta-actions">
+            <a href="contact.html" class="btn-cta-white-btn">Book Free Appointment</a>
+            <a href="tel:+919579519386" class="btn-cta-outline-btn"><i class="fa-solid fa-headset"></i> Talk to Expert</a>
+            <a href="https://wa.me/919561776600" target="_blank" class="btn-cta-gold-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ====== 11. SITE FOOTER ====== -->
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+  <script src="study-abroad-counselling.js"></script>
+
+<!-- ===== SCROLL TO TOP BUTTON ===== -->
+<button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+.scroll-top-fab {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0D47D8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+.scroll-top-fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-fab:hover {
+  background: #0A39A6;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+}
+.scroll-top-fab i {
+  pointer-events: none;
+}
+</style>
+
+<script>
+(function() {
+  var btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
+

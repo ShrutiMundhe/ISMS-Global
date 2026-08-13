@@ -1,0 +1,884 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitemap | Complete Site Structure & Navigation - ISMS Global</title>
+  <meta name="description" content="Find everything on ISMS Global website. Use our comprehensive sitemap to quickly navigate to study destinations, courses, universities, scholarships, and services.">
+  
+  <!-- Google Fonts -->
+  
+  
+  
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="sitemap.css">
+  <!-- ===== NAVBAR OVERRIDE: Exact match with index.html ===== -->
+  <style>
+  /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML */
+  :root {
+    --header-bg: #F4F8FF;
+    --header-border: #DCE5F3;
+    --nav-text: #11172A;
+    --nav-hover-bg: #E5EDFF;
+    --nav-accent: #0D47D8;
+    --dropdown-bg: #FFFFFF;
+    --gold-btn: #C79A3C;
+    --gold-btn-hover: #B5872E;
+  }
+
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background: var(--header-bg) !important;
+    border-bottom: 1px solid var(--header-border) !important;
+    box-shadow: 0 4px 20px rgba(17,23,42,0.08) !important;
+    backdrop-filter: none !important;
+  }
+
+  body {
+    padding-top: 96px !important;
+  }
+
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 72px !important;
+    gap: 12px !important;
+    max-width: 1720px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 0 2.5rem !important;
+  }
+
+  .brand-logo-img {
+    height: 48px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+
+  .main-nav a {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-nav a:hover, .main-nav a.active {
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+  }
+  .main-nav a.active::after {
+    display: none !important;
+  }
+
+  .nav-dropdown {
+    position: relative !important;
+  }
+  .nav-dropdown-toggle {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+  .nav-dropdown-toggle i {
+    color: var(--nav-accent) !important;
+    font-size: 10px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-toggle {
+    background: var(--nav-hover-bg) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: var(--dropdown-bg) !important;
+    border: 1px solid var(--header-border) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+    box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(6px) !important;
+    transition: all 0.2s ease !important;
+    min-width: 160px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(4px) !important;
+  }
+  .nav-dropdown-menu a {
+    color: var(--nav-text) !important;
+    border-left: 3px solid transparent !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    padding: 10px 22px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    background: transparent !important;
+  }
+  .nav-dropdown-menu a:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .dest-mega-menu {
+    min-width: 680px !important;
+    padding: 16px 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(8px) !important;
+    border-radius: 18px !important;
+    background: var(--dropdown-bg) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+  }
+  .nav-dropdown:hover .dest-mega-menu {
+    transform: translateX(-50%) translateY(4px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .dest-drop-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    transition: background 0.15s ease !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .dest-drop-item:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+  }
+  .dest-drop-flag {
+    width: 26px !important;
+    height: 18px !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+    flex-shrink: 0 !important;
+  }
+  .dest-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.25 !important;
+  }
+  .dest-drop-text strong {
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: var(--nav-text) !important;
+  }
+  .dest-drop-text span {
+    font-size: 11px !important;
+    color: #64748B !important;
+    margin-top: 2px !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: var(--nav-text) !important;
+    text-decoration: none !important;
+    font-size: 12.5px !important;
+  }
+  .header-phone i {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .header-phone small {
+    color: #667085 !important;
+  }
+  .header-phone strong {
+    color: var(--nav-text) !important;
+    font-weight: 700 !important;
+    font-size: 13.5px !important;
+  }
+
+  .site-header .btn-primary {
+    background: var(--gold-btn) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .site-header .btn-primary:hover {
+    background: var(--gold-btn-hover) !important;
+    color: #FFFFFF !important;
+    transform: none !important;
+  }
+
+  .nav-toggle {
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+  }
+  .nav-toggle span {
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--nav-text) !important;
+    border-radius: 2px !important;
+    transition: 0.3s ease !important;
+    display: block !important;
+  }
+
+  @media (max-width: 1160px) {
+    .nav-toggle { display: flex !important; }
+    .main-nav {
+      position: fixed !important;
+      inset: 72px 0 0 0 !important;
+      background: #fff !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 24px !important;
+      gap: 4px !important;
+      overflow-y: auto !important;
+      transform: translateX(100%) !important;
+      transition: transform 0.3s ease !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+      z-index: 9998 !important;
+    }
+    .main-nav.open { transform: translateX(0) !important; }
+    .main-nav a, .nav-dropdown-toggle {
+      padding: 14px 8px !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      width: 100% !important;
+      font-size: 15px !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+    }
+    .dest-mega-menu {
+      min-width: unset !important;
+      grid-template-columns: 1fr !important;
+      transform: none !important;
+      left: 0 !important;
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .nav-dropdown-menu {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      display: none !important;
+    }
+    .nav-dropdown.open .nav-dropdown-menu { display: block !important; }
+  }
+  body { padding-top: 72px !important; }
+
+/* UNIVERSAL BADGE PILL HORIZONTAL CENTERING */
+.badge-pill,
+[class*="pill-badge"],
+[class*="-badge"] {
+    display: flex !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* TESTIMONIALS CENTERING & GOLDEN STARS */
+.dtm-4cards-grid,
+.dtm-grid,
+.testimonials-grid,
+.dtm-cards-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.dtm-card,
+.testimonial-card {
+    flex: 1 1 360px !important;
+    max-width: 420px !important;
+    min-width: 280px !important;
+}
+
+.dtm-rating,
+.testimonial-rating,
+.stars,
+.star-rating {
+    color: #FFB800 !important;
+}
+
+.dtm-rating i,
+.testimonial-rating i,
+.stars i,
+.star-rating i,
+.fa-star {
+    color: #FFB800 !important;
+}
+
+/* DTP SECTION LEFT ALIGNMENT FOR TWO-COLUMN HEADER */
+.dtp-header-box {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+.dtp-pill-badge,
+.dtp-header-box .dtp-pill-badge {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    display: inline-flex !important;
+    align-self: flex-start !important;
+}
+
+.dtp-title,
+.dtp-header-box .dtp-title {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.dtp-subtext,
+.dtp-header-box .dtp-subtext {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* ENFORCE GOLDEN STARS FOR ALL TESTIMONIAL RATINGS */
+.dtm-rating,
+.dtm-rating i,
+.testimonial-rating,
+.testimonial-rating i,
+.star-rating,
+.star-rating i,
+.stars,
+.stars i,
+i.fa-star,
+i.fa-solid.fa-star {
+    color: #FFB800 !important;
+}
+
+/* PREMIUM RIGHT BLUE CTA CARD STYLING FOR DTP SECTION */
+.dtp-right-blue-card,
+.dtp-right-card {
+    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
+    border-radius: 22px !important;
+    padding: 36px 30px !important;
+    color: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 12px 36px rgba(13,71,216,0.22) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    min-height: 320px !important;
+}
+
+.dtp-blue-text-box,
+.dtp-right-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.dtp-right-blue-card h3,
+.dtp-right-card h3 {
+    color: #FFFFFF !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 14px !important;
+    letter-spacing: -0.01em !important;
+    text-align: left !important;
+}
+
+.dtp-right-blue-card p,
+.dtp-right-card p {
+    color: #DBEAFE !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+    text-align: left !important;
+}
+
+.dtp-blue-btn,
+.dtp-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+    color: #0A1940 !important;
+    font-weight: 800 !important;
+    font-size: 14.5px !important;
+    padding: 14px 22px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.35) !important;
+    width: 100 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+.dtp-blue-btn:hover,
+.dtp-cta-btn:hover {
+    background: linear-gradient(135deg, #FFB800 0%, #F59E0B 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(245,158,11,0.5) !important;
+    color: #0A1940 !important;
+}
+
+.dtp-cta-note,
+.dtp-guarantee {
+    display: block !important;
+    font-size: 12px !important;
+    color: #93C5FD !important;
+    margin-top: 14px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+}
+</style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- ====== 1. SITE HEADER ====== -->
+  <!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader"></header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+
+    <!-- ====== 2. HERO BANNER ====== -->
+    <section class="sm-hero-section">
+      <div class="sm-hero-bg-texture"></div>
+
+      <div class="container">
+        <div class="sm-hero-layout">
+          
+          <div class="sm-hero-content">
+            <nav class="sm-breadcrumb">
+              <a href="index.html">Home</a> &gt;
+              <span style="color: #FFFFFF; font-weight: 600;">Sitemap</span>
+            </nav>
+
+            <h1 class="sm-hero-title">Sitemap</h1>
+            <p class="sm-hero-sub">
+              Find everything on ISMS Global website.<br>
+              Use the sitemap below to quickly navigate to any page you are looking for.
+            </p>
+          </div>
+
+          <div class="sm-hero-graphic-wrap">
+            <div class="sm-diagram-box">
+              <span class="sm-diagram-title">Website Architecture</span>
+              <div class="sm-diagram-tree">
+                <div class="sm-tree-node">ISMS Global</div>
+                <div class="sm-tree-row">
+                  <div class="sm-tree-node">Destinations</div>
+                  <div class="sm-tree-node">Courses</div>
+                </div>
+                <div class="sm-tree-row">
+                  <div class="sm-tree-node">Universities</div>
+                  <div class="sm-tree-node">Services</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm-graphic-icon-3d"><i class="fa-solid fa-globe"></i></div>
+            <div class="sm-graphic-icon-3d"><i class="fa-solid fa-compass"></i></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 3. FLOATING SEARCH CARD ====== -->
+    <div class="container">
+      <div class="sm-search-card-wrapper">
+        <div class="sm-search-card">
+          <div class="sm-search-left">
+            <div class="sm-airplane-circle"><i class="fa-solid fa-paper-plane"></i></div>
+            <div class="sm-search-text">
+              <strong>Looking for something specific?</strong>
+              <span>Try our search or browse by sections below.</span>
+            </div>
+          </div>
+
+          <div class="sm-search-input-box">
+            <input type="text" id="sitemapSearchInput" placeholder="Search pages...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== 4. MAIN 2-COLUMN SECTION ====== -->
+      <section class="sm-main-section">
+        <div class="sm-main-grid">
+
+          <!-- LEFT COLUMN: 7 CATEGORIES -->
+          <div class="sm-categories-list">
+
+            <!-- Category 1: Main Pages -->
+            <div class="sm-category-card">
+              <div class="sm-category-header">
+                <div class="sm-cat-icon"><i class="fa-solid fa-house"></i></div>
+                <h3>1. Main Pages</h3>
+              </div>
+              <div class="sm-links-grid">
+                <a href="index.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Home</a>
+                <a href="universities.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Universities</a>
+                <a href="index.html#blog" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Blog</a>
+                <a href="about.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> About Us</a>
+                <a href="courses.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Courses</a>
+                <a href="contact.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Contact Us</a>
+                <a href="services.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Services</a>
+                <a href="study-abroad-counselling.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study Abroad Counselling</a>
+                <a href="Scholarship.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Scholarships</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study Destinations</a>
+              </div>
+            </div>
+
+            <!-- Category 2: Study Destinations -->
+            <div class="sm-category-card">
+              <div class="sm-category-header">
+                <div class="sm-cat-icon"><i class="fa-solid fa-globe"></i></div>
+                <h3>2. Study Destinations</h3>
+              </div>
+              <div class="sm-links-grid">
+                <a href="dubai-destination.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in Dubai / UAE</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in USA</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in Spain</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in UK</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in Canada</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in Netherlands</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in Ireland</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in Germany</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in New Zealand</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in Australia</a>
+                <a href="index.html#destinations" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Study in France</a>
+              </div>
+            </div>
+
+            <!-- Category 3: Universities -->
+            <div class="sm-category-card">
+              <div class="sm-category-header">
+                <div class="sm-cat-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <h3>3. Universities</h3>
+              </div>
+              <div class="sm-links-grid">
+                <a href="universities.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> All Universities</a>
+                <a href="universities.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> University by Country</a>
+                <a href="universities.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> University Search</a>
+                <a href="universities.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Top Universities</a>
+                <a href="universities.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> University Ranking</a>
+                <a href="university-details.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> University Details</a>
+              </div>
+            </div>
+
+            <!-- Category 4: Courses -->
+            <div class="sm-category-card">
+              <div class="sm-category-header">
+                <div class="sm-cat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>4. Courses</h3>
+              </div>
+              <div class="sm-links-grid">
+                <a href="courses.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> All Courses</a>
+                <a href="courses.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Courses by Country</a>
+                <a href="courses.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Course Search</a>
+                <a href="courses.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Popular Courses</a>
+                <a href="courses.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Courses by Level</a>
+                <a href="course-details.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Course Details</a>
+              </div>
+            </div>
+
+            <!-- Category 5: Scholarships -->
+            <div class="sm-category-card">
+              <div class="sm-category-header">
+                <div class="sm-cat-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>5. Scholarships</h3>
+              </div>
+              <div class="sm-links-grid">
+                <a href="Scholarship.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> All Scholarships</a>
+                <a href="Scholarship.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Country Specific Scholarships</a>
+                <a href="Scholarship.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Merit Based Scholarships</a>
+                <a href="Scholarship.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> University Scholarships</a>
+                <a href="Scholarship.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Need Based Scholarships</a>
+                <a href="Scholarship.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Scholarship Details</a>
+              </div>
+            </div>
+
+            <!-- Category 6: Resources -->
+            <div class="sm-category-card">
+              <div class="sm-category-header">
+                <div class="sm-cat-icon"><i class="fa-regular fa-folder-open"></i></div>
+                <h3>6. Resources</h3>
+              </div>
+              <div class="sm-links-grid">
+                <a href="index.html#blog" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Blog</a>
+                <a href="index.html#blog" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Guides</a>
+                <a href="index.html#blog" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Student Stories</a>
+                <a href="index.html#blog" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Downloads</a>
+                <a href="index.html#blog" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> News &amp; Updates</a>
+                <a href="index.html#faq" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> FAQs (In pages)</a>
+              </div>
+            </div>
+
+            <!-- Category 7: Support -->
+            <div class="sm-category-card">
+              <div class="sm-category-header">
+                <div class="sm-cat-icon"><i class="fa-solid fa-headset"></i></div>
+                <h3>7. Support</h3>
+              </div>
+              <div class="sm-links-grid">
+                <a href="index.html#contact" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Contact Us</a>
+                <a href="services.html#step-05" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Visa Support</a>
+                <a href="index.html#contact" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Book Free Counselling</a>
+                <a href="services.html#step-03" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Pre Departure Support</a>
+                <a href="index.html#contact" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Talk to an Expert</a>
+                <a href="services.html" class="sm-link-item"><i class="fa-solid fa-chevron-right chevron"></i> Post Arrival Support</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDEBAR COLUMN -->
+          <aside class="sm-sidebar-column">
+
+            <!-- Widget 1: Quick Links -->
+            <div class="sidebar-widget-card">
+              <h3><i class="fa-solid fa-link"></i> Quick Links</h3>
+              <div class="quick-links-list">
+                <a href="index.html#contact" class="quick-link-row"><i class="fa-regular fa-circle-dot"></i> Book Free Counselling</a>
+                <a href="index.html#destinations" class="quick-link-row"><i class="fa-regular fa-circle-dot"></i> Study Destinations</a>
+                <a href="index.html#universities" class="quick-link-row"><i class="fa-regular fa-circle-dot"></i> Top Universities</a>
+                <a href="courses.html" class="quick-link-row"><i class="fa-regular fa-circle-dot"></i> Popular Courses</a>
+                <a href="Scholarship.html" class="quick-link-row"><i class="fa-regular fa-circle-dot"></i> Scholarships</a>
+                <a href="services.html#step-02" class="quick-link-row"><i class="fa-regular fa-circle-dot"></i> Admission Process</a>
+                <a href="services.html#step-05" class="quick-link-row"><i class="fa-regular fa-circle-dot"></i> Visa Support</a>
+              </div>
+            </div>
+
+            <!-- Widget 2: Start Your Study Abroad Journey -->
+            <div class="journey-sidebar-card">
+              <h4>Start Your Study Abroad Journey</h4>
+              <p>Get expert guidance from our counsellors and take the first step towards your global future.</p>
+              <a href="index.html#contact" class="btn-journey-counselling">
+                Book Free Counselling <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <img src="assets/Girl.png" alt="Counsellor Image" class="journey-counsellor-img">
+            </div>
+
+            <!-- Widget 3: Still Can't Find -->
+            <div class="still-cant-card">
+              <h4>Still can't find what you're looking for?</h4>
+              <p>Our team is here to help you.</p>
+              <a href="index.html#contact" class="btn-contact-outline">
+                <i class="fa-solid fa-headset"></i> Contact Us <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- Widget 4: Stay Connected -->
+            <div class="sidebar-widget-card">
+              <h3>Stay Connected</h3>
+              <p style="font-size:12.5px; color:#64748B; margin-bottom:12px;">Follow us for updates, tips and success stories.</p>
+              <div class="social-icons-row">
+                <a href="#" class="sm-social-btn fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="sm-social-btn ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="sm-social-btn li" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="sm-social-btn yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/919561776600" target="_blank" class="sm-social-btn wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </div>
+
+          </aside>
+
+        </div>
+
+        <!-- ====== 5. BOTTOM HELP BANNER ====== -->
+        <div class="sm-help-banner">
+          <div class="sm-help-left">
+            <div class="sm-dashed-plane-icon"><i class="fa-solid fa-paper-plane"></i></div>
+            <div class="sm-help-text">
+              <strong>Can't find what you are looking for?</strong>
+              <span>Let us help you! Our experts are just a call or message away.</span>
+            </div>
+          </div>
+
+          <div class="sm-help-actions">
+            <a href="index.html#contact" class="btn-sm-counselling">Book Free Counselling &rarr;</a>
+            <a href="index.html#contact" class="btn-sm-expert"><i class="fa-solid fa-headset"></i> Talk to an Expert</a>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ====== 6. SITE FOOTER ====== -->
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- ===== FLOATING RIGHT SIDE SOCIAL MEDIA DOCK ===== -->
+  <div class="social-side-dock" id="socialSideDock">
+    <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn">
+      <span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+    </a>
+    <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram">
+      <span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span>
+    </a>
+    <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook">
+      <span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span>
+    </a>
+    <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube">
+      <span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="sitemap.js"></script>
+
+<!-- ===== SCROLL TO TOP BUTTON ===== -->
+<button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+.scroll-top-fab {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0D47D8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+.scroll-top-fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-fab:hover {
+  background: #0A39A6;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+}
+.scroll-top-fab i {
+  pointer-events: none;
+}
+</style>
+
+<script>
+(function() {
+  var btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+})();
+</script>
+<script src="main.js"></script>
+</body>
+</html>
+

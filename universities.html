@@ -1,0 +1,1272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Global Universities | Find Your Ideal University - ISMS Global</title>
+  <meta name="description" content="Explore 500+ top-ranked universities across the world. Compare rankings, courses, admission requirements, and find the perfect fit with ISMS Global.">
+  
+  <!-- Google Fonts -->
+  
+  
+  
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="universities.css">
+  <link rel="stylesheet" href="responsive.css">
+  <!-- ===== NAVBAR OVERRIDE: Exact match with index.html ===== -->
+  <style>
+  /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML */
+  :root {
+    --header-bg: #F4F8FF;
+    --header-border: #DCE5F3;
+    --nav-text: #11172A;
+    --nav-hover-bg: #E5EDFF;
+    --nav-accent: #0D47D8;
+    --dropdown-bg: #FFFFFF;
+    --gold-btn: #C79A3C;
+    --gold-btn-hover: #B5872E;
+  }
+
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background: var(--header-bg) !important;
+    border-bottom: 1px solid var(--header-border) !important;
+    box-shadow: 0 4px 20px rgba(17,23,42,0.08) !important;
+    backdrop-filter: none !important;
+  }
+
+  body {
+    padding-top: 96px !important;
+  }
+
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 72px !important;
+    gap: 12px !important;
+    max-width: 1720px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 0 2.5rem !important;
+  }
+
+  .brand-logo-img {
+    height: 48px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+
+  .main-nav a {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-nav a:hover, .main-nav a.active {
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+  }
+  .main-nav a.active::after {
+    display: none !important;
+  }
+
+  .nav-dropdown {
+    position: relative !important;
+  }
+  .nav-dropdown-toggle {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+  .nav-dropdown-toggle i {
+    color: var(--nav-accent) !important;
+    font-size: 10px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-toggle {
+    background: var(--nav-hover-bg) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: var(--dropdown-bg) !important;
+    border: 1px solid var(--header-border) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+    box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(6px) !important;
+    transition: all 0.2s ease !important;
+    min-width: 160px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(4px) !important;
+  }
+  .nav-dropdown-menu a {
+    color: var(--nav-text) !important;
+    border-left: 3px solid transparent !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    padding: 10px 22px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    background: transparent !important;
+  }
+  .nav-dropdown-menu a:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .dest-mega-menu {
+    min-width: 680px !important;
+    padding: 16px 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(8px) !important;
+    border-radius: 18px !important;
+    background: var(--dropdown-bg) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+  }
+  .nav-dropdown:hover .dest-mega-menu {
+    transform: translateX(-50%) translateY(4px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .dest-drop-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    transition: background 0.15s ease !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .dest-drop-item:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+  }
+  .dest-drop-flag {
+    width: 26px !important;
+    height: 18px !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+    flex-shrink: 0 !important;
+  }
+  .dest-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.25 !important;
+  }
+  .dest-drop-text strong {
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: var(--nav-text) !important;
+  }
+  .dest-drop-text span {
+    font-size: 11px !important;
+    color: #64748B !important;
+    margin-top: 2px !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: var(--nav-text) !important;
+    text-decoration: none !important;
+    font-size: 12.5px !important;
+  }
+  .header-phone i {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .header-phone small {
+    color: #667085 !important;
+  }
+  .header-phone strong {
+    color: var(--nav-text) !important;
+    font-weight: 700 !important;
+    font-size: 13.5px !important;
+  }
+
+  .site-header .btn-primary {
+    background: var(--gold-btn) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .site-header .btn-primary:hover {
+    background: var(--gold-btn-hover) !important;
+    color: #FFFFFF !important;
+    transform: none !important;
+  }
+
+  .nav-toggle {
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+  }
+  .nav-toggle span {
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--nav-text) !important;
+    border-radius: 2px !important;
+    transition: 0.3s ease !important;
+    display: block !important;
+  }
+
+  body { padding-top: 72px; }
+
+  @media (max-width: 1160px) {
+    .nav-toggle { display: flex !important; }
+    .main-nav {
+      position: fixed !important;
+      inset: 72px 0 0 0 !important;
+      background: #fff !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 16px !important;
+      gap: 2px !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      transform: translateX(100%) !important;
+      transition: transform 0.3s ease !important;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.12) !important;
+      z-index: 9998 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .main-nav.open { transform: translateX(0) !important; }
+    .main-nav a, .nav-dropdown-toggle {
+      padding: 14px 12px !important;
+      border-bottom: 1px solid #F1F5F9 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      font-size: 15px !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      justify-content: space-between !important;
+    }
+    /* Destinations mega menu — full width, no translateX overflow */
+    .dest-mega-menu {
+      min-width: unset !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      grid-template-columns: 1fr 1fr !important;
+      transform: none !important;
+      left: 0 !important;
+      right: 0 !important;
+      position: static !important;
+      box-shadow: none !important;
+      border: 1px solid #F1F5F9 !important;
+      border-top: none !important;
+      margin-top: 4px !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+    }
+    /* All dropdown menus — static, full width, no overflow */
+    .nav-dropdown-menu {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      display: none !important;
+      box-shadow: none !important;
+      border: 1px solid #F1F5F9 !important;
+      border-top: none !important;
+      border-radius: 8px !important;
+      margin-top: 4px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      min-width: unset !important;
+      overflow: hidden !important;
+    }
+    .nav-dropdown-menu a {
+      white-space: normal !important;
+      word-break: break-word !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .nav-dropdown.open > .nav-dropdown-menu { display: block !important; }
+    .nav-dropdown.open > .dest-mega-menu { display: grid !important; }
+    /* nav-dropdown itself must not overflow */
+    .nav-dropdown {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-inner {
+      padding: 0 14px !important;
+      height: 64px !important;
+    }
+    body { padding-top: 64px !important; }
+    .main-nav { inset: 64px 0 0 0 !important; }
+    .brand-logo-img { height: 38px !important; max-width: 140px !important; }
+    .site-header .btn-primary {
+      font-size: 11px !important;
+      padding: 0 10px !important;
+      height: 32px !important;
+      white-space: nowrap !important;
+      max-width: 130px !important;
+    }
+    .dest-mega-menu {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-inner { padding: 0 12px !important; height: 60px !important; }
+    body { padding-top: 60px !important; }
+    .main-nav { inset: 60px 0 0 0 !important; }
+    .brand-logo-img { height: 34px !important; max-width: 120px !important; }
+    .site-header .btn-primary { display: none !important; }
+    .dest-mega-menu { grid-template-columns: 1fr !important; }
+  }
+
+/* UNIVERSAL BADGE PILL HORIZONTAL CENTERING */
+.badge-pill,
+[class*="pill-badge"],
+[class*="-badge"] {
+    display: flex !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* TESTIMONIALS CENTERING & GOLDEN STARS */
+.dtm-4cards-grid,
+.dtm-grid,
+.testimonials-grid,
+.dtm-cards-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.dtm-card,
+.testimonial-card {
+    flex: 1 1 360px !important;
+    max-width: 420px !important;
+    min-width: 280px !important;
+}
+
+.dtm-rating,
+.testimonial-rating,
+.stars,
+.star-rating {
+    color: #FFB800 !important;
+}
+
+.dtm-rating i,
+.testimonial-rating i,
+.stars i,
+.star-rating i,
+.fa-star {
+    color: #FFB800 !important;
+}
+
+/* DTP SECTION LEFT ALIGNMENT FOR TWO-COLUMN HEADER */
+.dtp-header-box {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+.dtp-pill-badge,
+.dtp-header-box .dtp-pill-badge {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    display: inline-flex !important;
+    align-self: flex-start !important;
+}
+
+.dtp-title,
+.dtp-header-box .dtp-title {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.dtp-subtext,
+.dtp-header-box .dtp-subtext {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* ENFORCE GOLDEN STARS FOR ALL TESTIMONIAL RATINGS */
+.dtm-rating,
+.dtm-rating i,
+.testimonial-rating,
+.testimonial-rating i,
+.star-rating,
+.star-rating i,
+.stars,
+.stars i,
+i.fa-star,
+i.fa-solid.fa-star {
+    color: #FFB800 !important;
+}
+
+/* PREMIUM RIGHT BLUE CTA CARD STYLING FOR DTP SECTION */
+.dtp-right-blue-card,
+.dtp-right-card {
+    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
+    border-radius: 22px !important;
+    padding: 36px 30px !important;
+    color: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 12px 36px rgba(13,71,216,0.22) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    min-height: 320px !important;
+}
+
+.dtp-blue-text-box,
+.dtp-right-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.dtp-right-blue-card h3,
+.dtp-right-card h3 {
+    color: #FFFFFF !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 14px !important;
+    letter-spacing: -0.01em !important;
+    text-align: left !important;
+}
+
+.dtp-right-blue-card p,
+.dtp-right-card p {
+    color: #DBEAFE !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+    text-align: left !important;
+}
+
+.dtp-blue-btn,
+.dtp-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+    color: #0A1940 !important;
+    font-weight: 800 !important;
+    font-size: 14.5px !important;
+    padding: 14px 22px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.35) !important;
+    width: 100 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+.dtp-blue-btn:hover,
+.dtp-cta-btn:hover {
+    background: linear-gradient(135deg, #FFB800 0%, #F59E0B 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(245,158,11,0.5) !important;
+    color: #0A1940 !important;
+}
+
+.dtp-cta-note,
+.dtp-guarantee {
+    display: block !important;
+    font-size: 12px !important;
+    color: #93C5FD !important;
+    margin-top: 14px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+}
+</style>
+</head>
+<body>
+
+  <!-- ====== 1. SITE HEADER ====== -->
+  <!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader"></header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+
+    <!-- ====== 2. HERO SECTION ====== -->
+    <section class="uni-hero-section">
+      <img src="assets/university-hero.png" alt="" class="uni-hero-bg-img">
+      <div class="container">
+        <div class="uni-hero-inner">
+          <div class="uni-hero-content">
+            <nav class="uni-breadcrumb">
+              <a href="index.html">Home</a> &gt;
+              <span style="color: var(--uni-navy); font-weight: 600;">Universities</span>
+            </nav>
+
+
+            <h1 class="uni-hero-title">
+              Find the Right University<br>
+              <span style="color: var(--uni-primary);">for Your Future</span>
+            </h1>
+            <p class="uni-hero-sub">
+              Explore 500+ top ranked universities across the world.<br>
+              Find the perfect fit for your academic and career goals.
+            </p>
+          </div>
+
+          <div class="uni-hero-badge-floating">
+            <div class="uni-badge-icon">
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soft Background Container -->
+  <rect width="64" height="64" rx="16" fill="#EEF2FF"/>
+  
+  <!-- Graduation Cap Icon -->
+  <path d="M32 18L14 27L32 36L50 27L32 18Z" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 30.5V40.5C20 40.5 24 45 32 45C40 45 44 40.5 44 40.5V30.5" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M46 29V39" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="46" cy="40.5" r="1.5" fill="#2563EB"/>
+</svg>            </div>
+            <div class="uni-badge-text">
+              Empowering Dreams,<br>Building Futures
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 3. FLOATING SEARCH & FILTER CARD ====== -->
+    <div class="container">
+      <div class="uni-search-wrapper">
+        <div class="uni-search-card">
+          <div class="uni-search-form-grid">
+            <div class="uni-form-group">
+              <label for="uniSearchInput">Search University</label>
+              <div class="uni-input-box">
+                <input type="text" id="uniSearchInput" placeholder="Search by university name...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+
+            <div class="uni-form-group">
+              <label for="uniDestSelect">Study Destination</label>
+              <div class="uni-select-wrapper">
+                <select id="uniDestSelect">
+                  <option value="all">Select Country</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="United States">United States</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Germany">Germany</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+
+            <div class="uni-form-group">
+              <label for="uniLevelSelect">Course Level</label>
+              <div class="uni-select-wrapper">
+                <select id="uniLevelSelect">
+                  <option value="all">All Levels</option>
+                  <option value="Undergraduate">Undergraduate</option>
+                  <option value="Postgraduate">Postgraduate</option>
+                  <option value="Diploma">Diploma</option>
+                  <option value="PhD">PhD</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+
+            <button type="button" class="btn-uni-search" id="btnUniSearch">
+              <i class="fa-solid fa-magnifying-glass"></i> Search Universities
+            </button>
+          </div>
+        </div>
+
+        <!-- Stats Highlights Row -->
+        <div class="uni-stats-highlights-row-simple" style="display: flex; justify-content: space-between; padding: 16px 20px; margin-bottom: 24px; color: var(--uni-navy); font-weight: 700; font-size: 14px; align-items: center;">
+          <div class="uni-stat-simple-item" style="display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-building-columns" style="color: var(--uni-primary); font-size: 16px;"></i> 500+ Universities
+          </div>
+          <div class="uni-stat-simple-item" style="display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-map-location-dot" style="color: var(--uni-primary); font-size: 16px;"></i> 20+ Countries
+          </div>
+          <div class="uni-stat-simple-item" style="display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-book-open" style="color: var(--uni-primary); font-size: 16px;"></i> 1000+ Courses
+          </div>
+          <div class="uni-stat-simple-item" style="display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-user-tie" style="color: var(--uni-primary); font-size: 16px;"></i> Expert Guidance
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- ====== 4. MAIN LAYOUT (SIDEBAR + GRID) ====== -->
+      <div class="uni-main-layout">
+
+        <!-- LEFT SIDEBAR FILTER PANEL -->
+        <aside class="uni-filter-sidebar">
+          <div class="uni-filter-header">
+            <h3>Filter Universities</h3>
+            <button type="button" class="btn-uni-clear" id="btnUniClear">Clear All</button>
+          </div>
+
+          <!-- Filter Group 1: Study Destination -->
+          <div class="uni-filter-section">
+            <div class="uni-filter-title">
+              <span>Study Destination</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="uni-checkbox-list">
+              <label class="uni-checkbox-row">
+                <input type="checkbox" checked> <span>All Countries</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>United Kingdom</span> <span class="count">(120)</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Australia</span> <span class="count">(85)</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Canada</span> <span class="count">(70)</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>United States</span> <span class="count">(95)</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Germany</span> <span class="count">(40)</span>
+              </label>
+              <a href="#" style="font-size:12.5px; font-weight:600; color:var(--uni-primary); text-decoration:none; margin-top:4px;">+ Show More</a>
+            </div>
+          </div>
+
+          <!-- Filter Group 2: Course Level -->
+          <div class="uni-filter-section">
+            <div class="uni-filter-title">
+              <span>Course Level</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="uni-checkbox-list">
+              <label class="uni-checkbox-row">
+                <input type="checkbox" checked> <span>All Levels</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Undergraduate</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Postgraduate</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Diploma</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>PhD</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group 3: Popular Courses -->
+          <div class="uni-filter-section">
+            <div class="uni-filter-title">
+              <span>Popular Courses</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="uni-checkbox-list">
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Business &amp; Management</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Engineering</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Computer Science</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Data Science</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Health &amp; Medicine</span>
+              </label>
+              <a href="#" style="font-size:12.5px; font-weight:600; color:var(--uni-primary); text-decoration:none; margin-top:4px;">+ Show More</a>
+            </div>
+          </div>
+
+          <!-- Filter Group 4: University Type -->
+          <div class="uni-filter-section">
+            <div class="uni-filter-title">
+              <span>University Type</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="uni-checkbox-list">
+              <label class="uni-checkbox-row">
+                <input type="checkbox" checked> <span>All Types</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Public</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Private</span>
+              </label>
+              <label class="uni-checkbox-row">
+                <input type="checkbox"> <span>Research Institute</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group 5: QS World Ranking -->
+          <div class="uni-filter-section">
+            <div class="uni-filter-title">
+              <span>QS World University Ranking</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="uni-range-slider-wrap">
+              <input type="range" id="qsRangeInput" min="1" max="500" value="500">
+              <div class="uni-range-labels">
+                <span>Top 1</span>
+                <span>Max Rank: <strong id="qsRangeValue" style="color:var(--uni-primary);">500</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="btn-apply-uni-filter">
+            <i class="fa-solid fa-sliders"></i> Apply Filter +
+          </button>
+        </aside>
+
+        <!-- RIGHT UNIVERSITY CARDS CONTENT -->
+        <div class="uni-right-content">
+          
+          <!-- Top Results & View Bar -->
+          <div class="uni-top-bar">
+            <div class="uni-results-count" id="uniResultsCountText">
+              Showing 1-12 of 528 Universities
+            </div>
+
+            <div class="uni-controls-right">
+              <div style="display:flex; align-items:center; gap:8px; font-size:13.5px; color:#64748B;">
+                <label for="uniSortSelect">Sort by:</label>
+                <select id="uniSortSelect" class="uni-sort-select">
+                  <option value="popularity">Popularity</option>
+                  <option value="rank">QS Ranking</option>
+                  <option value="name">University Name</option>
+                </select>
+              </div>
+
+              <div style="display:flex; gap:6px;">
+                <button type="button" class="btn-view-toggle active" id="btnUniGridView" aria-label="Grid View" style="width:36px; height:36px; border-radius:8px; border:1px solid #CBD5E1; background:var(--uni-primary); color:#FFF; cursor:pointer;"><i class="fa-solid fa-table-cells-large"></i></button>
+                <button type="button" class="btn-view-toggle" id="btnUniListView" aria-label="List View" style="width:36px; height:36px; border-radius:8px; border:1px solid #CBD5E1; background:#FFF; color:#64748B; cursor:pointer;"><i class="fa-solid fa-list"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 UNIVERSITY CARDS GRID -->
+          <div class="uni-cards-grid" id="uniCardsContainer">
+
+            <!-- Card 1: Oxford -->
+            <div class="uni-card-item" data-name="University of Oxford" data-dest="United Kingdom" data-level="all" data-qs="1">
+              <div class="uni-card-img-wrap">
+                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                  <img src="assets/oxford.png" alt="Oxford Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <img src="assets/img_photo-1541829070764-84a7d30dd3f3.jpg" alt="University of Oxford Campus" class="campus-photo">
+              </div>
+              <div class="uni-card-body">
+                <div class="uni-flag-row">
+                  <img src="assets/flag_w40_gb.png" alt="UK Flag" style="width:16px; border-radius:2px;"> United Kingdom
+                </div>
+                <h3 class="uni-card-title">University of Oxford</h3>
+                <div class="uni-qs-rank-chip">#1 QS World University Ranking 2025</div>
+                <div class="uni-location-text">Oxford, United Kingdom</div>
+                <div class="uni-courses-count">400+ Courses</div>
+                <div class="uni-card-actions">
+                  <a href="university-details.html" class="btn-uni-details">View Details</a>
+                  <button type="button" class="btn-uni-bookmark" aria-label="Bookmark University">Shortlist <i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Cambridge -->
+            <div class="uni-card-item" data-name="University of Cambridge" data-dest="United Kingdom" data-level="all" data-qs="2">
+              <div class="uni-card-img-wrap">
+                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                  <img src="assets/Cambridge.png" alt="Cambridge Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <img src="assets/img_photo-1513635269975-59663e0ac1ad.jpg" alt="University of Cambridge Campus" class="campus-photo">
+              </div>
+              <div class="uni-card-body">
+                <div class="uni-flag-row">
+                  <img src="assets/flag_w40_gb.png" alt="UK Flag" style="width:16px; border-radius:2px;"> United Kingdom
+                </div>
+                <h3 class="uni-card-title">University of Cambridge</h3>
+                <div class="uni-qs-rank-chip">#2 QS World University Ranking 2025</div>
+                <div class="uni-location-text">Cambridge, United Kingdom</div>
+                <div class="uni-courses-count">350+ Courses</div>
+                <div class="uni-card-actions">
+                  <a href="university-details.html" class="btn-uni-details">View Details</a>
+                  <button type="button" class="btn-uni-bookmark" aria-label="Bookmark University">Shortlist <i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: MIT -->
+            <div class="uni-card-item" data-name="Massachusetts Institute of Technology (MIT)" data-dest="United States" data-level="all" data-qs="1">
+              <div class="uni-card-img-wrap">
+                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                  <img src="assets/mit.png" alt="MIT Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <img src="assets/img_photo-1509062522246-3755977927d7.jpg" alt="MIT Campus" class="campus-photo">
+              </div>
+              <div class="uni-card-body">
+                <div class="uni-flag-row">
+                  <img src="assets/flag_w40_us.png" alt="USA Flag" style="width:16px; border-radius:2px;"> United States
+                </div>
+                <h3 class="uni-card-title">Massachusetts Institute of Technology (MIT)</h3>
+                <div class="uni-qs-rank-chip">#1 QS World University Ranking 2025</div>
+                <div class="uni-location-text">Cambridge, Massachusetts, USA</div>
+                <div class="uni-courses-count">200+ Courses</div>
+                <div class="uni-card-actions">
+                  <a href="university-details.html" class="btn-uni-details">View Details</a>
+                  <button type="button" class="btn-uni-bookmark" aria-label="Bookmark University">Shortlist <i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Stanford -->
+            <div class="uni-card-item" data-name="Stanford University" data-dest="United States" data-level="all" data-qs="6">
+              <div class="uni-card-img-wrap">
+                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                  <img src="assets/Stanford.png" alt="Stanford Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <img src="assets/img_photo-1562774053-701939374585.jpg" alt="Stanford Campus" class="campus-photo">
+              </div>
+              <div class="uni-card-body">
+                <div class="uni-flag-row">
+                  <img src="assets/flag_w40_us.png" alt="USA Flag" style="width:16px; border-radius:2px;"> United States
+                </div>
+                <h3 class="uni-card-title">Stanford University</h3>
+                <div class="uni-qs-rank-chip">#6 QS World University Ranking 2025</div>
+                <div class="uni-location-text">Stanford, California, USA</div>
+                <div class="uni-courses-count">220+ Courses</div>
+                <div class="uni-card-actions">
+                  <a href="university-details.html" class="btn-uni-details">View Details</a>
+                  <button type="button" class="btn-uni-bookmark" aria-label="Bookmark University">Shortlist <i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Melbourne -->
+            <div class="uni-card-item" data-name="The University of Melbourne" data-dest="Australia" data-level="all" data-qs="13">
+              <div class="uni-card-img-wrap">
+                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                  <img src="assets/Melbourne.png" alt="Melbourne Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <img src="assets/img_photo-1523240795612-9a054b0db644.jpg" alt="The University of Melbourne Campus" class="campus-photo">
+              </div>
+              <div class="uni-card-body">
+                <div class="uni-flag-row">
+                  <img src="assets/flag_w40_au.png" alt="Australia Flag" style="width:16px; border-radius:2px;"> Australia
+                </div>
+                <h3 class="uni-card-title">The University of Melbourne</h3>
+                <div class="uni-qs-rank-chip">#13 QS World University Ranking 2025</div>
+                <div class="uni-location-text">Melbourne, Australia</div>
+                <div class="uni-courses-count">450+ Courses</div>
+                <div class="uni-card-actions">
+                  <a href="university-details.html" class="btn-uni-details">View Details</a>
+                  <button type="button" class="btn-uni-bookmark" aria-label="Bookmark University">Shortlist <i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Toronto -->
+            <div class="uni-card-item" data-name="University of Toronto" data-dest="Canada" data-level="all" data-qs="21">
+              <div class="uni-card-img-wrap">
+                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                  <img src="assets/Toronto.png" alt="Toronto Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <img src="assets/img_photo-1564981797816-1043664bf78d.jpg" alt="University of Toronto Campus" class="campus-photo">
+              </div>
+              <div class="uni-card-body">
+                <div class="uni-flag-row">
+                  <img src="assets/flag_w40_ca.png" alt="Canada Flag" style="width:16px; border-radius:2px;"> Canada
+                </div>
+                <h3 class="uni-card-title">University of Toronto</h3>
+                <div class="uni-qs-rank-chip">#21 QS World University Ranking 2025</div>
+                <div class="uni-location-text">Toronto, Ontario, Canada</div>
+                <div class="uni-courses-count">700+ Courses</div>
+                <div class="uni-card-actions">
+                  <a href="university-details.html" class="btn-uni-details">View Details</a>
+                  <button type="button" class="btn-uni-bookmark" aria-label="Bookmark University">Shortlist <i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7: TUM Munich -->
+            <div class="uni-card-item" data-name="Technical University of Munich" data-dest="Germany" data-level="all" data-qs="28">
+              <div class="uni-card-img-wrap">
+                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                  <img src="assets/TUM.png" alt="TUM Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <img src="assets/img_photo-1592280771190-3e2e4d571952.jpg" alt="Technical University of Munich Campus" class="campus-photo">
+              </div>
+              <div class="uni-card-body">
+                <div class="uni-flag-row">
+                  <img src="assets/flag_w40_de.png" alt="Germany Flag" style="width:16px; border-radius:2px;"> Germany
+                </div>
+                <h3 class="uni-card-title">Technical University of Munich</h3>
+                <div class="uni-qs-rank-chip">#28 QS World University Ranking 2025</div>
+                <div class="uni-location-text">Munich, Germany</div>
+                <div class="uni-courses-count">300+ Courses</div>
+                <div class="uni-card-actions">
+                  <a href="university-details.html" class="btn-uni-details">View Details</a>
+                  <button type="button" class="btn-uni-bookmark" aria-label="Bookmark University">Shortlist <i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8: Sydney -->
+            <div class="uni-card-item" data-name="The University of Sydney" data-dest="Australia" data-level="all" data-qs="18">
+              <div class="uni-card-img-wrap">
+                <div class="uni-badge-logo-overlay" style="padding: 0; overflow: hidden; background: #fff;">
+                  <img src="assets/Sydney.png" alt="Sydney Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <img src="assets/img_photo-1544717305-2782549b5136.jpg" alt="The University of Sydney Campus" class="campus-photo">
+              </div>
+              <div class="uni-card-body">
+                <div class="uni-flag-row">
+                  <img src="assets/flag_w40_au.png" alt="Australia Flag" style="width:16px; border-radius:2px;"> Australia
+                </div>
+                <h3 class="uni-card-title">The University of Sydney</h3>
+                <div class="uni-qs-rank-chip">#18 QS World University Ranking 2025</div>
+                <div class="uni-location-text">Sydney, Australia</div>
+                <div class="uni-courses-count">400+ Courses</div>
+                <div class="uni-card-actions">
+                  <a href="university-details.html" class="btn-uni-details">View Details</a>
+                  <button type="button" class="btn-uni-bookmark" aria-label="Bookmark University">Shortlist <i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ====== 5. GLOBAL UNIVERSITY PARTNERS ====== -->
+          <section class="uni-partners-section">
+            <h2>Our Global University Partners</h2>
+
+            <div class="uni-partners-row">
+              <div class="partner-logo-card"><img src="assets/oxford-logo.png" alt="University of Oxford Logo"></div>
+              <div class="partner-logo-card"><img src="assets/mcgill-logo.png" alt="McGill University Logo" onerror="this.src='assets/logo.png'"></div>
+              <div class="partner-logo-card"><img src="assets/melborne-logo.png" alt="University of Melbourne Logo"></div>
+              <div class="partner-logo-card"><img src="assets/nus-logo.png" alt="NUS Singapore Logo"></div>
+              <div class="partner-logo-card"><img src="assets/toronto-logo.png" alt="University of Toronto Logo" onerror="this.src='assets/logo.png'"></div>
+              <div class="partner-logo-card"><img src="assets/eth-logo.png" alt="ETH Zürich Logo" onerror="this.src='assets/logo.png'"></div>
+            </div>
+
+            <div style="text-align: center;">
+              <button type="button" class="btn-view-partners">View All Partners <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+      <!-- ====== 6. 6 STATS HIGHLIGHTS BAR ====== -->
+      <div class="uni-6stats-bar">
+        <div class="uni-6stat-item">
+          <div class="uni-6stat-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 14L16 6L28 14V16H4V14Z" stroke="#2563EB" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M7 16V24M13 16V24M19 16V24M25 16V24" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 24H28V26H4V24Z" stroke="#2563EB" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <strong>500+</strong>
+          <span>Partner Universities</span>
+        </div>
+
+        <div class="uni-6stat-item">
+          <div class="uni-6stat-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="10" stroke="#2563EB" stroke-width="2"/>
+              <ellipse cx="16" cy="16" rx="5" ry="10" stroke="#2563EB" stroke-width="2"/>
+              <path d="M6 16H26M8.5 10.5H23.5M8.5 21.5H23.5" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <strong>20+</strong>
+          <span>Study Destinations</span>
+        </div>
+
+        <div class="uni-6stat-item">
+          <div class="uni-6stat-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 9C13.5 7.5 9.5 7.5 5 9V24C9.5 22.5 13.5 22.5 16 24M16 9C18.5 7.5 22.5 7.5 27 9V24C22.5 22.5 18.5 22.5 16 24M16 9V24" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 13H24M20 17H24" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <strong>1000+</strong>
+          <span>Courses Available</span>
+        </div>
+
+        <div class="uni-6stat-item">
+          <div class="uni-6stat-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="11" r="3.5" stroke="#2563EB" stroke-width="2"/>
+              <path d="M10 23C10 19.5 12.5 17.5 16 17.5C19.5 17.5 22 19.5 22 23" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="9" cy="13" r="2.5" stroke="#2563EB" stroke-width="2"/>
+              <path d="M4.5 23C4.5 20.5 6.5 19 9 19" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="23" cy="13" r="2.5" stroke="#2563EB" stroke-width="2"/>
+              <path d="M27.5 23C27.5 20.5 25.5 19 23 19" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <strong>10,000+</strong>
+          <span>Students Guided</span>
+        </div>
+
+        <div class="uni-6stat-item">
+          <div class="uni-6stat-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 5L25 9V15C25 21 21 25.5 16 27C11 25.5 7 21 7 15V9L16 5Z" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 16L15 19L20 13" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <strong>95%+</strong>
+          <span>Visa Success Rate</span>
+        </div>
+
+        <div class="uni-6stat-item">
+          <div class="uni-6stat-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 6L16 14L20 6" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 6V14" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="16" cy="20" r="6" stroke="#2563EB" stroke-width="2"/>
+              <path d="M16 17.5L16.8 19.2L18.6 19.4L17.3 20.7L17.6 22.5L16 21.6L14.4 22.5L14.7 20.7L13.4 19.4L15.2 19.2L16 17.5Z" fill="#2563EB"/>
+            </svg>
+          </div>
+          <strong>18+</strong>
+          <span>Years of Excellence</span>
+        </div>
+      </div>
+
+      <!-- ====== 7. CONSULTATION BANNER ====== -->
+      <section class="uni-consultation-banner">
+        <div class="uni-banner-inner">
+          <img src="assets/boy1.png" alt="Smiling Student Counsellor" class="uni-cta-left-student">
+          
+          <div class="uni-banner-plane-wrap" style="position: absolute; right: 20px; top: 12px; width: 280px; height: 100px; pointer-events: none; z-index: 1;">
+            <svg width="280" height="100" viewBox="0 0 280 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 10 50 C 40 75 90 85 140 70 C 180 55 195 20 175 18 C 155 16 150 45 170 55 C 190 65 230 40 262 12" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round" fill="none" opacity="0.95"/>
+              <g transform="translate(254, 0) rotate(35)">
+                <path d="M22 2L2 11L10 14L13 22L16 16L22 17L22 2Z" fill="#FFFFFF"/>
+              </g>
+            </svg>
+          </div>
+          
+          <div class="uni-cta-center">
+            <h2>Need Help Choosing the Right University?</h2>
+            <p>Our expert counsellors will help you find the best university based on your profile, goals and budget.</p>
+          </div>
+
+          <div class="uni-cta-actions">
+            <button type="button" class="btn-cta-white">Book Free Counselling</button>
+            <button type="button" class="btn-cta-white">
+              <i class="fa-solid fa-headset" style="color: #2563EB;"></i> Talk to an Expert
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ====== 8. SITE FOOTER ====== -->
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- ===== FLOATING RIGHT SIDE SOCIAL MEDIA DOCK ===== -->
+  <div class="social-side-dock" id="socialSideDock">
+    <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn">
+      <span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+    </a>
+    <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram">
+      <span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span>
+    </a>
+    <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook">
+      <span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span>
+    </a>
+    <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube">
+      <span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="universities.js"></script>
+
+<!-- ===== SCROLL TO TOP BUTTON ===== -->
+<button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+.scroll-top-fab {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0D47D8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+.scroll-top-fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-fab:hover {
+  background: #0A39A6;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+}
+.scroll-top-fab i {
+  pointer-events: none;
+}
+</style>
+
+<script>
+(function() {
+  var btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+})();
+</script>
+<script src="main.js"></script>
+</body>
+</html>

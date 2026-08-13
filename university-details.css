@@ -1,0 +1,833 @@
+/* ============================================================
+   UNIVERSITY DETAILS PAGE STYLES - ISMS GLOBAL
+   ============================================================ */
+
+:root {
+  --ud-primary: #0D47D8;
+  --ud-primary-hover: #0A39A6;
+  --ud-primary-light: #EEF4FF;
+  --ud-navy: #0A1233;
+  --ud-navy-card: #0A1C40;
+  --ud-text-muted: #64748B;
+  --ud-border: #E2E8F0;
+  --ud-gold: #F59E0B;
+  --ud-gold-hover: #D97706;
+  --ud-blue-tint: #F0F5FC;
+}
+
+body {
+  background-color: #F8FAFC;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--ud-navy);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==================== 1. HERO SECTION ==================== */
+.ud-hero-section {
+  background: linear-gradient(180deg, #EBF1FA 0%, #F5F8FE 100%);
+  padding: 32px 0 50px 0;
+  border-bottom: 1px solid var(--ud-border);
+  position: relative;
+}
+
+.ud-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 40px;
+  align-items: center;
+}
+
+.ud-hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.ud-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ud-text-muted);
+  margin-bottom: 14px;
+}
+
+.ud-breadcrumb a {
+  color: var(--ud-text-muted);
+  text-decoration: none;
+}
+
+.ud-breadcrumb a:hover {
+  color: var(--ud-primary);
+}
+
+.ud-badge-rank1 {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background-color: #FEF3C7;
+  color: #92400E;
+  font-size: 12.5px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.ud-hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--ud-navy);
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.ud-hero-location {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ud-primary);
+  margin-bottom: 12px;
+}
+
+.ud-hero-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ud-text-muted);
+  margin-bottom: 24px;
+  max-width: 660px;
+}
+
+/* Meta Chips Row */
+.ud-meta-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.ud-meta-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--ud-border);
+  box-shadow: 0 2px 6px rgba(10, 18, 51, 0.03);
+}
+
+.ud-chip-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--ud-primary-light);
+  color: var(--ud-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.ud-chip-info label {
+  font-size: 10.5px;
+  color: #64748B;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+}
+
+.ud-chip-info strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ud-navy);
+}
+
+/* Hero Actions */
+.ud-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-ud-apply {
+  padding: 13px 32px;
+  border-radius: 10px;
+  background-color: var(--ud-primary);
+  color: #FFFFFF;
+  font-size: 14.5px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(13, 71, 216, 0.28);
+  transition: all 0.2s ease;
+}
+
+.btn-ud-apply:hover {
+  background-color: var(--ud-primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-ud-brochure {
+  padding: 12px 24px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--ud-primary);
+  color: var(--ud-primary);
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-ud-shortlist {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+/* Hero Right Media Box */
+.ud-hero-media-box {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(10, 18, 51, 0.12);
+  height: 310px;
+}
+
+.ud-hero-campus-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ud-logo-overlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 15px;
+  color: var(--ud-primary);
+  z-index: 2;
+}
+
+.ud-qs-overlay-card {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 12px 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  text-align: center;
+  z-index: 2;
+}
+
+.ud-qs-overlay-card span.top {
+  font-size: 11px;
+  color: #64748B;
+  font-weight: 700;
+  display: block;
+}
+
+.ud-qs-overlay-card strong {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--ud-primary);
+  line-height: 1;
+  display: block;
+  margin: 2px 0;
+}
+
+.ud-qs-overlay-card span.bottom {
+  font-size: 11.5px;
+  color: #475569;
+  font-weight: 700;
+  display: block;
+}
+
+/* ==================== 2. STICKY SUB-NAV TABS ==================== */
+.ud-sticky-subnav {
+  position: sticky;
+  top: 75px;
+  z-index: 90;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(10, 18, 51, 0.04);
+}
+
+.ud-subnav-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.ud-subnav-item {
+  padding: 15px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.ud-subnav-item:hover, .ud-subnav-item.active {
+  color: var(--ud-primary);
+  border-bottom-color: var(--ud-primary);
+  font-weight: 700;
+}
+
+/* ==================== 3. MAIN CONTENT LAYOUT ==================== */
+.ud-main-section {
+  padding: 36px 0 60px 0;
+}
+
+.ud-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  align-items: start;
+}
+
+.ud-left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.ud-section-box {
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid var(--ud-border);
+  padding: 24px 28px;
+  box-shadow: 0 4px 14px rgba(10, 18, 51, 0.03);
+  scroll-margin-top: 140px;
+}
+
+.ud-section-box h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ud-navy);
+  margin-bottom: 12px;
+}
+
+.ud-section-box p.about-desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.ud-bullets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ud-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13.5px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.ud-bullet-item i {
+  color: var(--ud-primary);
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+/* SECTION B: POPULAR COURSES */
+.ud-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.ud-course-mini-card {
+  background: #F8FAFC;
+  border-radius: 14px;
+  padding: 16px 12px;
+  border: 1px solid #E2E8F0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ud-course-mini-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ud-primary);
+}
+
+.ud-course-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--ud-primary-light);
+  color: var(--ud-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.ud-course-mini-card strong {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--ud-navy);
+}
+
+.ud-course-mini-card span.meta {
+  font-size: 11.5px;
+  color: #64748B;
+}
+
+.ud-course-mini-card span.rank {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ud-primary);
+  background: var(--ud-primary-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ud-course-mini-card a.link {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ud-primary);
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+/* SECTION C: ADMISSION REQUIREMENTS */
+.ud-admission-split {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: center;
+}
+
+.ud-req-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ud-req-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.ud-req-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--ud-primary-light);
+  color: var(--ud-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.ud-req-info strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ud-navy);
+  margin-bottom: 2px;
+}
+
+.ud-req-info p {
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.ud-admission-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* SECTION D: CAMPUS LIFE */
+.ud-campus-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.ud-campus-card {
+  background: #F8FAFC;
+  border-radius: 14px;
+  padding: 16px 12px;
+  border: 1px solid #E2E8F0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.ud-campus-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--ud-primary-light);
+  color: var(--ud-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.ud-campus-card strong {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ud-navy);
+}
+
+.ud-campus-card p {
+  font-size: 11px;
+  color: #64748B;
+  line-height: 1.35;
+}
+
+/* SECTION E: TESTIMONIALS */
+.ud-testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ud-testimonial-item {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--ud-border);
+  box-shadow: 0 4px 12px rgba(10, 18, 51, 0.03);
+}
+
+.ud-testimonial-quote {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.ud-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ud-author-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ud-author-info strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--ud-navy);
+}
+
+.ud-author-info span {
+  font-size: 11.5px;
+  color: #64748B;
+}
+
+.stars-rating {
+  color: #F59E0B;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+/* ==================== 4. RIGHT SIDEBAR WIDGETS ==================== */
+.ud-sidebar-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-widget-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--ud-border);
+  box-shadow: 0 4px 12px rgba(10, 18, 51, 0.03);
+}
+
+.sidebar-widget-card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ud-navy);
+  margin-bottom: 14px;
+}
+
+/* At a Glance Rows */
+.glance-rows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.glance-row-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.5px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.glance-row-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.glance-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.glance-label i {
+  color: var(--ud-primary);
+  font-size: 13px;
+}
+
+.glance-val {
+  font-weight: 700;
+  color: var(--ud-navy);
+}
+
+.glance-val a {
+  color: var(--ud-primary);
+  text-decoration: none;
+}
+
+/* Form Card (Sidebar Widget) */
+.ud-sidebar-form-card {
+  background: var(--ud-navy-card);
+  border-radius: 18px;
+  padding: 22px;
+  color: #FFFFFF;
+  box-shadow: 0 12px 28px rgba(10, 18, 51, 0.2);
+}
+
+.ud-sidebar-form-card h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.ud-sidebar-form-card p {
+  font-size: 12px;
+  color: #94A3B8;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.ud-mini-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ud-mini-form input, .ud-mini-form select {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #1E3A75;
+  background: #0F2754;
+  color: #FFFFFF;
+  font-size: 13px;
+  outline: none;
+}
+
+.btn-ud-form-submit {
+  height: 42px;
+  border-radius: 8px;
+  background-color: var(--ud-gold);
+  color: #0A1233;
+  font-size: 14px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+/* PDF Download Card */
+.pdf-download-widget {
+  background: var(--ud-blue-tint);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #D0E1FD;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-download-pdf {
+  width: 100%;
+  height: 42px;
+  border-radius: 8px;
+  background-color: var(--ud-primary);
+  color: #FFFFFF;
+  font-size: 13.5px;
+  font-weight: 700;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+/* ==================== 5. CONSULTATION BANNER ==================== */
+.ud-consultation-banner {
+  background: linear-gradient(135deg, #0A39A6 0%, #062775 100%);
+  border-radius: 20px;
+  margin: 20px 0 50px 0;
+  padding: 0 36px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.ud-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 170px;
+}
+
+.ud-cta-left-student {
+  height: 200px;
+  margin-top: -30px;
+  margin-bottom: -1px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.ud-cta-center {
+  flex: 1;
+  max-width: 580px;
+}
+
+.ud-cta-center h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.ud-cta-center p {
+  font-size: 14px;
+  color: #CBD5E1;
+  line-height: 1.5;
+}
+
+.ud-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.btn-cta-white {
+  padding: 12px 22px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  color: var(--ud-navy);
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cta-outline {
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .ud-hero-layout {
+    grid-template-columns: 1fr;
+  }
+  .ud-main-grid {
+    grid-template-columns: 1fr;
+  }
+  .ud-courses-grid, .ud-campus-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ud-admission-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ud-hero-title {
+    font-size: 30px;
+  }
+  .ud-courses-grid, .ud-campus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ud-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}

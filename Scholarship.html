@@ -1,0 +1,2901 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarships - ISMS Global | Find &amp; Fund Your Global Education</title>
+  <meta name="description" content="Explore 500+ scholarships from top universities, governments and organizations worldwide. Find merit-based, need-based and government-funded scholarships with ISMS Global." />
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    i, .fa-solid, .fa-regular, .fa-brands, [class^="fa-"], [class*=" fa-"] {
+      font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #F8FAFC;
+      color: #1E293B;
+      line-height: 1.6;
+      font-size: 14px;
+      padding-top: 76px !important;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    button { cursor: pointer; border: none; background: transparent; }
+
+    :root {
+      --navy: #0A1233;
+      --blue: #0D47D8;
+      --blue-hover: #0A39A6;
+      --blue-light: #EEF4FF;
+      --green: #059669;
+      --purple: #7C3AED;
+      --gold: #D97706;
+      --page-bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-muted: #64748B;
+      --text-dark: #0A1233;
+      --border: #E2E8F0;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --shadow-sm: 0 4px 12px rgba(11,34,101,0.03);
+      --shadow-md: 0 8px 24px rgba(11,34,101,0.06);
+      --shadow-lg: 0 16px 36px rgba(13,71,216,0.1);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .svc-hero-section {
+      padding: 50px 0 50px 0;
+      background: linear-gradient(180deg, #F0F5FF 0%, #E6EEFA 50%, #F8FAFC 100%);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid #E2E8F0;
+      min-height: 460px;
+    }
+    .svc-hero-landmarks-bg {
+      display: none;
+    }
+
+    .svc-hero-inner {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 360px;
+    }
+    .svc-hero-content {
+      max-width: 620px;
+      z-index: 5;
+    }
+
+    .svc-breadcrumb {
+      font-size: 13px;
+      color: #64748B;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .svc-breadcrumb a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .svc-breadcrumb a:hover { text-decoration: underline; }
+
+    .svc-hero-title {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.18;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .svc-hero-title .blue-text {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--blue);
+      margin-top: 6px;
+    }
+
+    .svc-hero-sub {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      max-width: 560px;
+    }
+
+    .svc-hero-stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .svc-stat-pill {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      padding: 7px 16px;
+      border-radius: 50px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .svc-stat-pill i { color: var(--blue); }
+
+    /* Full-Height Background Image Wrapper with Soft Mask Blending */
+    .svc-hero-image-wrapper {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 62%;
+      max-width: 960px;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .svc-hero-student-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      mix-blend-mode: multiply;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 15%, #000 35%, #000 90%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 15%, #000 35%, #000 90%, transparent 100%);
+      filter: contrast(1.05) brightness(1.02);
+    }
+
+    /* SEARCH BAR */
+    .search-wrap {
+      max-width: 1720px;
+      width: 95%;
+      margin: -28px auto 0;
+      padding: 0 2.5rem;
+      position: relative;
+      z-index: 10;
+    }
+    .search-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 20px 28px;
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      width: 100%;
+      flex-wrap: wrap;
+      border: 1px solid #CBD5E1;
+    }
+    .search-field { flex: 2.2; min-width: 220px; }
+    .search-field label, .search-dropdown label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+      letter-spacing: .2px;
+    }
+    .search-input-wrap { position: relative; }
+    .search-input-wrap input {
+      width: 100%;
+      padding: 10px 14px 10px 38px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      color: #374151;
+      outline: none;
+      transition: border-color .2s;
+      background: #FFFFFF;
+    }
+    .search-input-wrap input:focus { border-color: var(--blue); }
+    .search-input-wrap input::placeholder { color: #9CA3AF; }
+    .search-input-wrap .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9CA3AF;
+      font-size: 13px;
+    }
+    .search-dropdown { flex: 1; min-width: 150px; }
+    .search-dropdown select {
+      width: 100%;
+      padding: 10px 32px 10px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      color: #374151;
+      outline: none;
+      background: #FFFFFF;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+    }
+    .search-dropdown select:focus { border-color: var(--blue); }
+    .btn-search {
+      background: var(--blue);
+      color: #FFFFFF;
+      padding: 10px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background .2s, transform .15s;
+      white-space: nowrap;
+      align-self: flex-end;
+      height: 42px;
+    }
+    .btn-search:hover { background: var(--blue-hover); transform: translateY(-1px); }
+
+    /* FEATURES STRIP */
+    .features-strip {
+      max-width: 1320px;
+      margin: 40px auto 0;
+      padding: 0 24px;
+    }
+    .features-inner {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .feature-item { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 170px; }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .feature-icon.blue { background: #EFF6FF; color: var(--blue); }
+    .feature-icon.green { background: #F0FDF4; color: var(--green); }
+    .feature-icon.orange { background: #FFF7ED; color: #EA580C; }
+    .feature-icon.purple { background: #F5F3FF; color: var(--purple); }
+    .feature-icon.gold { background: #FEFCE8; color: #CA8A04; }
+    .feature-title { font-size: 13.5px; font-weight: 700; color: var(--navy); line-height: 1.25; }
+    .feature-sub { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
+    .feature-divider { width: 1px; height: 40px; background: var(--border); flex-shrink: 0; }
+
+    /* MAIN LAYOUT */
+    .main-layout {
+      max-width: 1320px;
+      margin: 36px auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 270px;
+      flex-shrink: 0;
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      padding: 22px;
+      position: sticky;
+      top: 96px;
+    }
+    .sidebar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+    .sidebar-header h3 { font-size: 15px; font-weight: 800; color: var(--navy); }
+    .sidebar-clear { font-size: 12px; color: var(--blue); font-weight: 600; cursor: pointer; }
+    .sidebar-clear:hover { text-decoration: underline; }
+    .filter-group { border-top: 1px solid var(--border); padding: 14px 0; }
+    .filter-group-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; margin-bottom: 10px; }
+    .filter-group-header h4 { font-size: 13px; font-weight: 700; color: var(--navy); }
+    .filter-group-header i { font-size: 11px; color: #9CA3AF; transition: transform .3s; }
+    .filter-group-header.collapsed i { transform: rotate(-90deg); }
+    .filter-group-body { display: flex; flex-direction: column; gap: 8px; }
+    .filter-group-body.hidden { display: none; }
+    .filter-option { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+    .filter-option input[type=checkbox] { width: 15px; height: 15px; accent-color: var(--blue); cursor: pointer; flex-shrink: 0; }
+    .filter-option-label { font-size: 12.5px; color: #374151; flex: 1; }
+    .filter-option-count { font-size: 11px; color: var(--text-muted); }
+    .show-more-btn { font-size: 12px; color: var(--blue); font-weight: 600; cursor: pointer; margin-top: 4px; padding: 0; }
+    .show-more-btn:hover { text-decoration: underline; }
+    .extra-filters { flex-direction: column; gap: 8px; margin-top: 6px; }
+    .btn-apply {
+      width: 100%;
+      background: var(--blue);
+      color: #FFFFFF;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background .2s;
+    }
+    .btn-apply:hover { background: var(--blue-hover); }
+
+    /* CONTENT AREA */
+    .content-area { flex: 1; min-width: 0; }
+    .content-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+    .content-count { font-size: 14px; font-weight: 700; color: var(--navy); }
+    .content-count span { color: var(--text-muted); font-weight: 400; }
+    .content-sort { display: flex; align-items: center; gap: 10px; }
+    .sort-label { font-size: 13px; color: var(--text-muted); }
+    .sort-select {
+      padding: 7px 28px 7px 10px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      color: #374151;
+      background: #FFFFFF;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%236b7280' d='M5 7L0.5 2.5h9z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      cursor: pointer;
+      outline: none;
+    }
+    .view-toggle { display: flex; gap: 4px; }
+    .view-btn {
+      width: 34px;
+      height: 34px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9CA3AF;
+      transition: all .2s;
+      cursor: pointer;
+    }
+    .view-btn.active { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
+
+    /* SCHOLARSHIP CARDS GRID */
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .cards-grid.list-view { grid-template-columns: 1fr; }
+    
+    .sch-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .sch-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: #BFDBFE; }
+    
+    .card-img-wrap { position: relative; height: 160px; flex-shrink: 0; overflow: hidden; background: #F1F5F9; }
+    .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .sch-card:hover .card-img-wrap img { transform: scale(1.05); }
+    
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 4px 10px;
+      border-radius: 50px;
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+    .badge-blue { background: var(--blue); }
+    .badge-green { background: var(--green); }
+    .badge-purple { background: var(--purple); }
+
+    .card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .card-title { font-size: 14.5px; font-weight: 800; color: var(--navy); line-height: 1.3; }
+    .card-provider { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+    .card-amount { font-size: 14px; font-weight: 800; color: var(--blue); }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .card-tag { padding: 3px 9px; border-radius: 50px; font-size: 11px; font-weight: 600; background: #F1F5F9; color: #475569; display: inline-flex; align-items: center; gap: 3px; }
+    .card-deadline { font-size: 11.5px; color: var(--text-muted); margin-top: auto; padding-top: 4px; }
+    .card-deadline strong { color: #1E293B; }
+    
+    .card-footer { padding: 12px 16px; border-top: 1px solid var(--border); display: flex; gap: 8px; align-items: center; background: #FAFCFF; }
+    .btn-details {
+      flex: 1;
+      padding: 9px 0;
+      border: 1.5px solid var(--blue);
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--blue);
+      background: transparent;
+      transition: all .2s ease;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-details:hover { background: var(--blue); color: #FFFFFF; }
+    .btn-bookmark {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: #FFFFFF;
+      color: #9CA3AF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      transition: all .2s ease;
+    }
+    .btn-bookmark:hover, .btn-bookmark.bookmarked { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+
+    /* PAGINATION */
+    .pagination { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 36px; }
+    .page-btn {
+      width: 38px;
+      height: 38px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: #FFFFFF;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+    }
+    .page-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .page-btn.active { background: var(--blue); border-color: var(--blue); color: #FFFFFF; }
+
+    /* WHY + CTA SIDE BY SIDE */
+    .why-cta-wrap { max-width: 1720px; width: 95%; margin: 48px auto; padding: 0 2.5rem; display: flex; gap: 28px; align-items: stretch; }
+    .why-section {
+      flex: 1.6;
+      background: linear-gradient(180deg, #F4F8FF 0%, #EFF5FF 100%);
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 8px 24px rgba(11, 34, 101, 0.04);
+      border: 1px solid #DCE7FE;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .why-section h2 { font-size: 24px; font-weight: 800; color: var(--navy); text-align: center; margin-bottom: 30px; letter-spacing: -0.01em; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .why-item { text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .why-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      box-shadow: 0 6px 16px rgba(11, 34, 101, 0.06);
+      border: 1px solid #E2E8F0;
+    }
+    .why-icon img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .why-item h4 { font-size: 14px; font-weight: 800; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
+    .why-item p { font-size: 12px; color: #475569; line-height: 1.5; }
+    
+    .cta-banner {
+      flex: 1;
+      min-width: 320px;
+      background: linear-gradient(135deg, #0A1233 0%, #001247 100%);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px 0 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      position: relative;
+      overflow: visible;
+    }
+    .cta-content { flex: 1; position: relative; z-index: 1; padding-bottom: 28px; }
+    .cta-content h3 { font-size: 20px; font-weight: 800; color: #FFFFFF; line-height: 1.3; margin-bottom: 8px; }
+    .cta-content p { font-size: 12.5px; color: rgba(255,255,255,.8); line-height: 1.5; margin-bottom: 18px; }
+    .btn-expert {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: var(--navy);
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      transition: background .2s, transform .15s;
+    }
+    .btn-expert:hover { background: #EEF4FF; transform: translateY(-1px); }
+    .cta-image {
+      width: 200px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 3;
+      height: 240px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-top: -60px;
+    }
+    .cta-student-img {
+      width: 100%;
+      height: 125%;
+      max-height: 300px;
+      object-fit: contain;
+      object-position: bottom center;
+      filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.35));
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 1100px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-cta-wrap { flex-direction: column; }
+    }
+    @media(max-width: 900px) {
+      .svc-hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .svc-hero-sub { margin-left: auto; margin-right: auto; }
+      .svc-hero-stats-row { justify-content: center; }
+      .main-layout { flex-direction: column; }
+      .sidebar { width: 100%; position: static; }
+    }
+    @media(max-width: 640px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      .search-card { flex-direction: column; }
+      .search-field, .search-dropdown { min-width: 100%; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .cta-banner { flex-direction: column; text-align: center; }
+    }
+  
+/* UNIVERSAL BADGE PILL HORIZONTAL CENTERING */
+.badge-pill,
+[class*="pill-badge"],
+[class*="-badge"] {
+    display: flex !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* TESTIMONIALS CENTERING & GOLDEN STARS */
+.dtm-4cards-grid,
+.dtm-grid,
+.testimonials-grid,
+.dtm-cards-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.dtm-card,
+.testimonial-card {
+    flex: 1 1 360px !important;
+    max-width: 420px !important;
+    min-width: 280px !important;
+}
+
+.dtm-rating,
+.testimonial-rating,
+.stars,
+.star-rating {
+    color: #FFB800 !important;
+}
+
+.dtm-rating i,
+.testimonial-rating i,
+.stars i,
+.star-rating i,
+.fa-star {
+    color: #FFB800 !important;
+}
+
+/* DTP SECTION LEFT ALIGNMENT FOR TWO-COLUMN HEADER */
+.dtp-header-box {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+.dtp-pill-badge,
+.dtp-header-box .dtp-pill-badge {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    display: inline-flex !important;
+    align-self: flex-start !important;
+}
+
+.dtp-title,
+.dtp-header-box .dtp-title {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.dtp-subtext,
+.dtp-header-box .dtp-subtext {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* ENFORCE GOLDEN STARS FOR ALL TESTIMONIAL RATINGS */
+.dtm-rating,
+.dtm-rating i,
+.testimonial-rating,
+.testimonial-rating i,
+.star-rating,
+.star-rating i,
+.stars,
+.stars i,
+i.fa-star,
+i.fa-solid.fa-star {
+    color: #FFB800 !important;
+}
+
+/* PREMIUM RIGHT BLUE CTA CARD STYLING FOR DTP SECTION */
+.dtp-right-blue-card,
+.dtp-right-card {
+    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
+    border-radius: 22px !important;
+    padding: 36px 30px !important;
+    color: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 12px 36px rgba(13,71,216,0.22) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    min-height: 320px !important;
+}
+
+.dtp-blue-text-box,
+.dtp-right-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.dtp-right-blue-card h3,
+.dtp-right-card h3 {
+    color: #FFFFFF !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 14px !important;
+    letter-spacing: -0.01em !important;
+    text-align: left !important;
+}
+
+.dtp-right-blue-card p,
+.dtp-right-card p {
+    color: #DBEAFE !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+    text-align: left !important;
+}
+
+.dtp-blue-btn,
+.dtp-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+    color: #0A1940 !important;
+    font-weight: 800 !important;
+    font-size: 14.5px !important;
+    padding: 14px 22px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.35) !important;
+    width: 100 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+.dtp-blue-btn:hover,
+.dtp-cta-btn:hover {
+    background: linear-gradient(135deg, #FFB800 0%, #F59E0B 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(245,158,11,0.5) !important;
+    color: #0A1940 !important;
+}
+
+.dtp-cta-note,
+.dtp-guarantee {
+    display: block !important;
+    font-size: 12px !important;
+    color: #93C5FD !important;
+    margin-top: 14px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+}
+</style>
+
+  <style>
+  /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML & ABOUT.HTML */
+  :root {
+    --header-bg: #F4F8FF;
+    --header-border: #DCE5F3;
+    --nav-text: #11172A;
+    --nav-hover-bg: #E5EDFF;
+    --nav-accent: #0D47D8;
+    --dropdown-bg: #FFFFFF;
+    --gold-btn: #C79A3C;
+    --gold-btn-hover: #B5872E;
+  }
+
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background: var(--header-bg) !important;
+    border-bottom: 1px solid var(--header-border) !important;
+    box-shadow: 0 4px 20px rgba(17,23,42,0.08) !important;
+    backdrop-filter: none !important;
+  }
+
+  body {
+    padding-top: 72px !important;
+  }
+
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 72px !important;
+    gap: 12px !important;
+    max-width: 1720px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 0 2.5rem !important;
+  }
+
+  .brand-logo-img {
+    height: 48px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+
+  .main-nav a {
+    color: var(--nav-text) !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    padding: 16px 11px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-nav a:hover, .main-nav a.active {
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+  }
+  .main-nav a.active::after {
+    display: none !important;
+  }
+
+  .nav-dropdown {
+    position: relative !important;
+  }
+  .nav-dropdown-toggle {
+    color: var(--nav-text) !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    padding: 16px 11px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+  .nav-dropdown-toggle i {
+    color: var(--nav-accent) !important;
+    font-size: 10px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-toggle {
+    background: var(--nav-hover-bg) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: var(--dropdown-bg) !important;
+    border: 1px solid var(--header-border) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+    box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(6px) !important;
+    transition: all 0.2s ease !important;
+    min-width: 160px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(4px) !important;
+  }
+  .nav-dropdown-menu a {
+    color: var(--nav-text) !important;
+    border-left: 3px solid transparent !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    padding: 10px 22px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    background: transparent !important;
+  }
+  .nav-dropdown-menu a:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .dest-mega-menu {
+    min-width: 680px !important;
+    padding: 16px 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(8px) !important;
+    border-radius: 18px !important;
+    background: var(--dropdown-bg) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+  }
+  .nav-dropdown:hover .dest-mega-menu {
+    transform: translateX(-50%) translateY(4px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .dest-drop-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    transition: background 0.15s ease !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .dest-drop-item:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+  }
+  .dest-drop-flag {
+    width: 26px !important;
+    height: 18px !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+    flex-shrink: 0 !important;
+  }
+  .dest-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.25 !important;
+  }
+  .dest-drop-text strong {
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: var(--nav-text) !important;
+  }
+  .dest-drop-text span {
+    font-size: 11px !important;
+    color: #64748B !important;
+    margin-top: 2px !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: var(--nav-text) !important;
+    text-decoration: none !important;
+    font-size: 12.5px !important;
+  }
+  .header-phone i {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 50% !important;
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone small {
+    color: #667085 !important;
+    display: block !important;
+  }
+  .header-phone strong {
+    color: var(--nav-text) !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+  }
+  /* Hide phone text on tighter screens, keep icon */
+  @media (max-width: 1440px) {
+    .header-phone span { display: none !important; }
+    .header-phone { gap: 0 !important; }
+  }
+  /* Hide phone entirely on narrow desktop */
+  @media (max-width: 1280px) {
+    .header-phone { display: none !important; }
+  }
+
+  .site-header .btn-primary {
+    background: var(--gold-btn) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .site-header .btn-primary:hover {
+    background: var(--gold-btn-hover) !important;
+    color: #FFFFFF !important;
+    transform: none !important;
+  }
+
+  .nav-toggle {
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+  }
+  .nav-toggle span {
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--nav-text) !important;
+    border-radius: 2px !important;
+    transition: 0.3s ease !important;
+    display: block !important;
+  }
+
+  @media (max-width: 1160px) {
+    .nav-toggle { display: flex !important; }
+    .main-nav {
+      position: fixed !important;
+      inset: 72px 0 0 0 !important;
+      background: #fff !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 24px !important;
+      gap: 4px !important;
+      overflow-y: auto !important;
+      transform: translateX(100%) !important;
+      transition: transform 0.3s ease !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+      z-index: 9998 !important;
+    }
+    .main-nav.open { transform: translateX(0) !important; }
+    .main-nav a, .nav-dropdown-toggle {
+      padding: 14px 8px !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      width: 100% !important;
+      font-size: 15px !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+    }
+    .dest-mega-menu {
+      min-width: unset !important;
+      grid-template-columns: 1fr !important;
+      transform: none !important;
+      left: 0 !important;
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .nav-dropdown-menu {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      display: none !important;
+    }
+    .nav-dropdown.open .nav-dropdown-menu { display: block !important; }
+  }
+  </style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader"></header>
+
+<!-- HERO SECTION -->
+<section class="svc-hero-section">
+  <!-- Full-Height Softly Blended Background Image -->
+  <div class="svc-hero-image-wrapper">
+    <img src="assets/Scholarship_hero.png" alt="Scholarship Guidance &amp; Funding" class="svc-hero-student-img">
+  </div>
+
+  <div class="container relative-z">
+    <div class="svc-hero-inner">
+      <div class="svc-hero-content">
+        <nav class="svc-breadcrumb">
+          <a href="index.html">Home</a> &gt;
+          <span style="color: var(--navy); font-weight: 600;">Scholarships</span>
+        </nav>
+
+        <h1 class="svc-hero-title">
+          Find the Right Scholarship
+          <span class="blue-text">Fund Your Global Education</span>
+        </h1>
+
+        <p class="svc-hero-sub">
+          Explore 500+ scholarships from top universities, governments and organizations worldwide with ISMS Global.
+        </p>
+
+        <div class="svc-hero-stats-row">
+          <div class="svc-stat-pill"><i class="fa-solid fa-graduation-cap"></i> 500+ Scholarships</div>
+          <div class="svc-stat-pill"><i class="fa-solid fa-building-columns"></i> 20+ Countries</div>
+          <div class="svc-stat-pill"><i class="fa-solid fa-passport"></i> Merit &amp; Need Based</div>
+          <div class="svc-stat-pill"><i class="fa-solid fa-users"></i> 1,000+ Students Benefited</div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH BAR -->
+<div class="search-wrap">
+  <div class="search-card">
+    <div class="search-field">
+      <label for="search-input">Search Scholarship</label>
+      <div class="search-input-wrap">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search by scholarship name, university..." />
+      </div>
+    </div>
+    <div class="search-dropdown">
+      <label for="dest-select">Study Destination</label>
+      <select id="dest-select">
+        <option>All Countries</option><option>United Kingdom</option><option>Australia</option>
+        <option>Canada</option><option>United States</option><option>Germany</option><option>Singapore</option>
+      </select>
+    </div>
+    <div class="search-dropdown">
+      <label for="level-select">Course Level</label>
+      <select id="level-select">
+        <option>All Levels</option><option>Undergraduate</option><option>Postgraduate</option>
+        <option>PhD</option><option>Diploma</option>
+      </select>
+    </div>
+    <div class="search-dropdown">
+      <label for="field-select">Field of Study</label>
+      <select id="field-select">
+        <option>All Fields</option><option>Business &amp; Management</option><option>Engineering</option>
+        <option>Computer Science</option><option>Medicine &amp; Health</option><option>Law</option>
+      </select>
+    </div>
+    <button class="btn-search" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;Search Scholarships</button>
+  </div>
+</div>
+
+
+
+<!-- MAIN LAYOUT -->
+<div class="main-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h3>Filter Scholarships</h3>
+      <button class="sidebar-clear" id="clear-all-btn">Clear All</button>
+    </div>
+
+    <!-- Study Destination -->
+    <div class="filter-group">
+      <div class="filter-group-header" data-group="destination">
+        <h4>Study Destination</h4><i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="filter-group-body" id="body-destination">
+        <label class="filter-option"><input type="checkbox" checked data-filter="destination" value="all" /><span class="filter-option-label">All Countries</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="destination" value="uk" /><span class="filter-option-label">United Kingdom</span><span class="filter-option-count">(120)</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="destination" value="au" /><span class="filter-option-label">Australia</span><span class="filter-option-count">(85)</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="destination" value="ca" /><span class="filter-option-label">Canada</span><span class="filter-option-count">(70)</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="destination" value="us" /><span class="filter-option-label">United States</span><span class="filter-option-count">(95)</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="destination" value="de" /><span class="filter-option-label">Germany</span><span class="filter-option-count">(40)</span></label>
+        <button class="show-more-btn" data-target="dest-extra">+ Show More</button>
+        <div id="dest-extra" class="extra-filters" style="display:none;">
+          <label class="filter-option"><input type="checkbox" data-filter="destination" value="sg" /><span class="filter-option-label">Singapore</span><span class="filter-option-count">(30)</span></label>
+          <label class="filter-option"><input type="checkbox" data-filter="destination" value="ie" /><span class="filter-option-label">Ireland</span><span class="filter-option-count">(25)</span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course Level -->
+    <div class="filter-group">
+      <div class="filter-group-header" data-group="level">
+        <h4>Course Level</h4><i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="filter-group-body" id="body-level">
+        <label class="filter-option"><input type="checkbox" checked data-filter="level" value="all" /><span class="filter-option-label">All Levels</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="level" value="ug" /><span class="filter-option-label">Undergraduate</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="level" value="pg" /><span class="filter-option-label">Postgraduate</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="level" value="diploma" /><span class="filter-option-label">Diploma</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="level" value="phd" /><span class="filter-option-label">PhD</span></label>
+      </div>
+    </div>
+
+    <!-- Field of Study -->
+    <div class="filter-group">
+      <div class="filter-group-header" data-group="field">
+        <h4>Field of Study</h4><i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="filter-group-body" id="body-field">
+        <label class="filter-option"><input type="checkbox" checked data-filter="field" value="all" /><span class="filter-option-label">All Fields</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="field" value="business" /><span class="filter-option-label">Business &amp; Management</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="field" value="eng" /><span class="filter-option-label">Engineering</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="field" value="cs" /><span class="filter-option-label">Computer Science</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="field" value="medicine" /><span class="filter-option-label">Medicine &amp; Health</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="field" value="law" /><span class="filter-option-label">Law</span></label>
+        <button class="show-more-btn" data-target="field-extra">+ Show More</button>
+        <div id="field-extra" class="extra-filters" style="display:none;">
+          <label class="filter-option"><input type="checkbox" data-filter="field" value="arts" /><span class="filter-option-label">Arts &amp; Humanities</span></label>
+          <label class="filter-option"><input type="checkbox" data-filter="field" value="sciences" /><span class="filter-option-label">Natural Sciences</span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scholarship Type -->
+    <div class="filter-group">
+      <div class="filter-group-header" data-group="type">
+        <h4>Scholarship Type</h4><i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="filter-group-body" id="body-type">
+        <label class="filter-option"><input type="checkbox" checked data-filter="type" value="all" /><span class="filter-option-label">All Types</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="type" value="merit" /><span class="filter-option-label">Merit-based</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="type" value="need" /><span class="filter-option-label">Need-based</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="type" value="govt" /><span class="filter-option-label">Government Funded</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="type" value="uni" /><span class="filter-option-label">University Specific</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="type" value="private" /><span class="filter-option-label">Private/External</span></label>
+      </div>
+    </div>
+
+    <button class="btn-apply" id="apply-filters-btn"><i class="fa-solid fa-sliders"></i>&nbsp;Apply Filters</button>
+  </aside>
+
+  <!-- CONTENT AREA -->
+  <div class="content-area">
+    <div class="content-toolbar">
+      <div class="content-count" id="result-count">Showing 1-12 of <strong>568</strong> <span>Scholarships</span></div>
+      <div class="content-sort">
+        <span class="sort-label">Sort by:</span>
+        <select class="sort-select" id="sort-select">
+          <option>Latest</option><option>Deadline (Earliest)</option>
+          <option>Amount (High to Low)</option><option>Most Popular</option>
+        </select>
+        <div class="view-toggle">
+          <button class="view-btn active" id="grid-view-btn" title="Grid View" aria-label="Grid View"><i class="fa-solid fa-grip"></i></button>
+          <button class="view-btn" id="list-view-btn" title="List View" aria-label="List View"><i class="fa-solid fa-list"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards-grid" id="cards-grid">
+      <!-- CARD 1 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/uk-big-ben.jpg" alt="Clarendon Scholarship Oxford" loading="lazy"/><span class="badge badge-blue">Featured</span></div>
+        <div class="card-body">
+          <div class="card-title">Clarendon Scholarship</div>
+          <div class="card-provider">University of Oxford</div>
+          <div class="card-amount">Up to &#163;15,000</div>
+          <div class="card-tags"><span class="card-tag">Postgraduate</span><span class="card-tag">&#127468;&#127463; UK</span></div>
+          <div class="card-deadline">Deadline: <strong>15 Jan 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1523240795612-9a054b0db644.jpg" alt="Australia Awards Scholarship" loading="lazy"/><span class="badge badge-green">Popular</span></div>
+        <div class="card-body">
+          <div class="card-title">Australia Awards Scholarship</div>
+          <div class="card-provider">Australian Government</div>
+          <div class="card-amount">Full Tuition + Living</div>
+          <div class="card-tags"><span class="card-tag">Undergraduate</span><span class="card-tag">Postgraduate</span><span class="card-tag">&#127462;&#127482; Australia</span></div>
+          <div class="card-deadline">Deadline: <strong>30 Apr 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1517841905240-472988babdf9.jpg" alt="Lester B Pearson Scholarship" loading="lazy"/><span class="badge badge-purple">New</span></div>
+        <div class="card-body">
+          <div class="card-title">Lester B. Pearson Scholarship</div>
+          <div class="card-provider">University of Toronto</div>
+          <div class="card-amount">Up to CAD 100,000</div>
+          <div class="card-tags"><span class="card-tag">Undergraduate</span><span class="card-tag">&#127464;&#127462; Canada</span></div>
+          <div class="card-deadline">Deadline: <strong>07 Dec 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/germany.png" alt="DAAD Excellence Scholarship" loading="lazy"/><span class="badge badge-purple">Merit Based</span></div>
+        <div class="card-body">
+          <div class="card-title">DAAD Excellence Scholarship</div>
+          <div class="card-provider">German Academic Exchange Service</div>
+          <div class="card-amount">Up to &#8364;2,000</div>
+          <div class="card-tags"><span class="card-tag">Postgraduate</span><span class="card-tag">PhD</span><span class="card-tag">&#127465;&#127466; Germany</span></div>
+          <div class="card-deadline">Deadline: <strong>31 Aug 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1541829070764-84a7d30dd3f3.jpg" alt="Fulbright Foreign Student Program" loading="lazy"/><span class="badge badge-blue">Government Funded</span></div>
+        <div class="card-body">
+          <div class="card-title">Fulbright Foreign Student Program</div>
+          <div class="card-provider">US Department of State</div>
+          <div class="card-amount">Full Funding</div>
+          <div class="card-tags"><span class="card-tag">Postgraduate</span><span class="card-tag">PhD</span><span class="card-tag">&#127482;&#127480; USA</span></div>
+          <div class="card-deadline">Deadline: <strong>15 Oct 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1513635269975-59663e0ac1ad.jpg" alt="Chevening Scholarship UK" loading="lazy"/><span class="badge badge-purple">Merit Based</span></div>
+        <div class="card-body">
+          <div class="card-title">Chevening Scholarship</div>
+          <div class="card-provider">UK Government</div>
+          <div class="card-amount">Full Funding</div>
+          <div class="card-tags"><span class="card-tag">Postgraduate</span><span class="card-tag">&#127468;&#127463; UK</span></div>
+          <div class="card-deadline">Deadline: <strong>05 Nov 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1523580494863-6f3031224c94.jpg" alt="Shaw Trust Scholarship" loading="lazy"/><span class="badge badge-blue">Need Based</span></div>
+        <div class="card-body">
+          <div class="card-title">Shaw Trust Scholarship</div>
+          <div class="card-provider">Shaw Trust</div>
+          <div class="card-amount">Up to &#163;6,000</div>
+          <div class="card-tags"><span class="card-tag">Undergraduate</span><span class="card-tag">Postgraduate</span><span class="card-tag">&#127468;&#127463; UK</span></div>
+          <div class="card-deadline">Deadline: <strong>31 Mar 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1522202176988-66273c2fd55f.jpg" alt="Monash International Merit Scholarship" loading="lazy"/><span class="badge badge-purple">University Specific</span></div>
+        <div class="card-body">
+          <div class="card-title">Monash International Merit Scholarship</div>
+          <div class="card-provider">Monash University</div>
+          <div class="card-amount">Up to 100% Tuition Fee</div>
+          <div class="card-tags"><span class="card-tag">Undergraduate</span><span class="card-tag">Postgraduate</span><span class="card-tag">&#127462;&#127482; Australia</span></div>
+          <div class="card-deadline">Deadline: <strong>31 Dec 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1524178232363-1fb2b075b655.jpg" alt="Vanier Canada Graduate Scholarships" loading="lazy"/><span class="badge badge-green">Popular</span></div>
+        <div class="card-body">
+          <div class="card-title">Vanier Canada Graduate Scholarships</div>
+          <div class="card-provider">Government of Canada</div>
+          <div class="card-amount">CAD 50,000 per year</div>
+          <div class="card-tags"><span class="card-tag">PhD</span><span class="card-tag">&#127464;&#127462; Canada</span></div>
+          <div class="card-deadline">Deadline: <strong>02 Nov 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <span class="page-dots">...</span>
+      <button class="page-btn">48</button>
+      <button class="page-btn" aria-label="Next Page"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- WHY + CTA SIDE BY SIDE -->
+<div class="why-cta-wrap">
+  <div class="why-section">
+    <h2>Why Apply for Scholarships with ISMS Global?</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon"><img src="assets/Screenshot 2026-08-04 142552.png" alt="500+ Verified Options"></div>
+        <h4>500+ Verified Options</h4>
+        <p>Pre-screened &amp; updated database for top global destinations.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><img src="assets/Screenshot 2026-08-04 142534.png" alt="High Success Rate"></div>
+        <h4>High Success Rate</h4>
+        <p>Proven guidance to help you craft winning applications.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><img src="assets/Screenshot 2026-08-04 142611.png" alt="Direct Uni Tie-ups"></div>
+        <h4>Direct Uni Tie-ups</h4>
+        <p>Exclusive university-specific waiver &amp; merit opportunities.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><img src="assets/Screenshot 2026-08-04 142543.png" alt="End-to-End Assistance"></div>
+        <h4>End-to-End Assistance</h4>
+        <p>From SOP review to final document submission support.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <div class="cta-content">
+      <h3>Not Sure Which Scholarship Suits You Best?</h3>
+      <p>Book a free 1-on-1 session with our expert counsellors to evaluate your profile and find eligible scholarships.</p>
+      <a href="index.html#contact" class="btn-expert"><i class="fa-solid fa-calendar-check"></i> Book Free Session</a>
+    </div>
+    <div class="cta-image">
+      <img src="assets/boy1.png" alt="Student Counsellor" class="cta-student-img" />
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- ===== FLOATING RIGHT SIDE SOCIAL MEDIA DOCK ===== -->
+  <div class="social-side-dock" id="socialSideDock">
+    <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn">
+      <span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+    </a>
+    <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram">
+      <span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span>
+    </a>
+    <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook">
+      <span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span>
+    </a>
+    <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube">
+      <span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span>
+    </a>
+  </div>
+
+<!-- WhatsApp Floating Action Button -->
+<a href="https://wa.me/919561776600" class="whatsapp-fab" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+.scroll-top-fab {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0D47D8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+.scroll-top-fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-fab:hover {
+  background: #0A39A6;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+}
+.scroll-top-fab i {
+  pointer-events: none;
+}
+</style>
+
+<script>
+(function() {
+  var btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+})();
+</script>
+
+<script src="script.js"></script>
+<script src="main.js"></script>
+</body>
+</html<div class="nav-dropdown-menu">
+            <a href="Blog.html" class="uni-drop-item">
+              <i class="fa-regular fa-newspaper uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Blog</strong><span>Articles &amp; study abroad guides</span></div>
+            </a>
+            <a href="index.html#testimonials" class="uni-drop-item">
+              <i class="fa-solid fa-graduation-cap uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Success Stories</strong><span>Real student achievements</span></div>
+            </a>
+            <a href="index.html#events" class="uni-drop-item">
+              <i class="fa-solid fa-calendar-days uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Events &amp; Webinars</strong><span>Live sessions &amp; university fairs</span></div>
+            </a>
+            <a href="index.html#faq" class="uni-drop-item">
+              <i class="fa-solid fa-circle-question uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>FAQs</strong><span>Frequently asked questions</span></div>
+            </a>
+          </div>TYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarships - ISMS Global | Find &amp; Fund Your Global Education</title>
+  <meta name="description" content="Explore 500+ scholarships from top universities, governments and organizations worldwide. Find merit-based, need-based and government-funded scholarships with ISMS Global." />
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    i, .fa-solid, .fa-regular, .fa-brands, [class^="fa-"], [class*=" fa-"] {
+      font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #F8FAFC;
+      color: #1E293B;
+      line-height: 1.6;
+      font-size: 14px;
+      padding-top: 76px !important;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    button { cursor: pointer; border: none; background: transparent; }
+
+    :root {
+      --navy: #0A1233;
+      --blue: #0D47D8;
+      --blue-hover: #0A39A6;
+      --blue-light: #EEF4FF;
+      --green: #059669;
+      --purple: #7C3AED;
+      --gold: #D97706;
+      --page-bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-muted: #64748B;
+      --text-dark: #0A1233;
+      --border: #E2E8F0;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --shadow-sm: 0 4px 12px rgba(11,34,101,0.03);
+      --shadow-md: 0 8px 24px rgba(11,34,101,0.06);
+      --shadow-lg: 0 16px 36px rgba(13,71,216,0.1);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .svc-hero-section {
+      padding: 50px 0 50px 0;
+      background: linear-gradient(180deg, #F0F5FF 0%, #E6EEFA 50%, #F8FAFC 100%);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid #E2E8F0;
+      min-height: 460px;
+    }
+    .svc-hero-landmarks-bg {
+      display: none;
+    }
+
+    .svc-hero-inner {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 360px;
+    }
+    .svc-hero-content {
+      max-width: 620px;
+      z-index: 5;
+    }
+
+    .svc-breadcrumb {
+      font-size: 13px;
+      color: #64748B;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .svc-breadcrumb a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .svc-breadcrumb a:hover { text-decoration: underline; }
+
+    .svc-hero-title {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.18;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .svc-hero-title .blue-text {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--blue);
+      margin-top: 6px;
+    }
+
+    .svc-hero-sub {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      max-width: 560px;
+    }
+
+    .svc-hero-stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .svc-stat-pill {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      padding: 7px 16px;
+      border-radius: 50px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .svc-stat-pill i { color: var(--blue); }
+
+    /* Full-Height Background Image Wrapper with Soft Mask Blending */
+    .svc-hero-image-wrapper {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 62%;
+      max-width: 960px;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .svc-hero-student-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      mix-blend-mode: multiply;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 15%, #000 35%, #000 90%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 15%, #000 35%, #000 90%, transparent 100%);
+      filter: contrast(1.05) brightness(1.02);
+    }
+
+    /* SEARCH BAR */
+    .search-wrap {
+      max-width: 1720px;
+      width: 95%;
+      margin: -28px auto 0;
+      padding: 0 2.5rem;
+      position: relative;
+      z-index: 10;
+    }
+    .search-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 20px 28px;
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      width: 100%;
+      flex-wrap: wrap;
+      border: 1px solid #CBD5E1;
+    }
+    .search-field { flex: 2.2; min-width: 220px; }
+    .search-field label, .search-dropdown label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+      letter-spacing: .2px;
+    }
+    .search-input-wrap { position: relative; }
+    .search-input-wrap input {
+      width: 100%;
+      padding: 10px 14px 10px 38px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      color: #374151;
+      outline: none;
+      transition: border-color .2s;
+      background: #FFFFFF;
+    }
+    .search-input-wrap input:focus { border-color: var(--blue); }
+    .search-input-wrap input::placeholder { color: #9CA3AF; }
+    .search-input-wrap .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9CA3AF;
+      font-size: 13px;
+    }
+    .search-dropdown { flex: 1; min-width: 150px; }
+    .search-dropdown select {
+      width: 100%;
+      padding: 10px 32px 10px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      color: #374151;
+      outline: none;
+      background: #FFFFFF;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+    }
+    .search-dropdown select:focus { border-color: var(--blue); }
+    .btn-search {
+      background: var(--blue);
+      color: #FFFFFF;
+      padding: 10px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background .2s, transform .15s;
+      white-space: nowrap;
+      align-self: flex-end;
+      height: 42px;
+    }
+    .btn-search:hover { background: var(--blue-hover); transform: translateY(-1px); }
+
+    /* FEATURES STRIP */
+    .features-strip {
+      max-width: 1320px;
+      margin: 40px auto 0;
+      padding: 0 24px;
+    }
+    .features-inner {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .feature-item { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 170px; }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .feature-icon.blue { background: #EFF6FF; color: var(--blue); }
+    .feature-icon.green { background: #F0FDF4; color: var(--green); }
+    .feature-icon.orange { background: #FFF7ED; color: #EA580C; }
+    .feature-icon.purple { background: #F5F3FF; color: var(--purple); }
+    .feature-icon.gold { background: #FEFCE8; color: #CA8A04; }
+    .feature-title { font-size: 13.5px; font-weight: 700; color: var(--navy); line-height: 1.25; }
+    .feature-sub { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
+    .feature-divider { width: 1px; height: 40px; background: var(--border); flex-shrink: 0; }
+
+    /* MAIN LAYOUT */
+    .main-layout {
+      max-width: 1320px;
+      margin: 36px auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 270px;
+      flex-shrink: 0;
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      padding: 22px;
+      position: sticky;
+      top: 96px;
+    }
+    .sidebar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+    .sidebar-header h3 { font-size: 15px; font-weight: 800; color: var(--navy); }
+    .sidebar-clear { font-size: 12px; color: var(--blue); font-weight: 600; cursor: pointer; }
+    .sidebar-clear:hover { text-decoration: underline; }
+    .filter-group { border-top: 1px solid var(--border); padding: 14px 0; }
+    .filter-group-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; margin-bottom: 10px; }
+    .filter-group-header h4 { font-size: 13px; font-weight: 700; color: var(--navy); }
+    .filter-group-header i { font-size: 11px; color: #9CA3AF; transition: transform .3s; }
+    .filter-group-header.collapsed i { transform: rotate(-90deg); }
+    .filter-group-body { display: flex; flex-direction: column; gap: 8px; }
+    .filter-group-body.hidden { display: none; }
+    .filter-option { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+    .filter-option input[type=checkbox] { width: 15px; height: 15px; accent-color: var(--blue); cursor: pointer; flex-shrink: 0; }
+    .filter-option-label { font-size: 12.5px; color: #374151; flex: 1; }
+    .filter-option-count { font-size: 11px; color: var(--text-muted); }
+    .show-more-btn { font-size: 12px; color: var(--blue); font-weight: 600; cursor: pointer; margin-top: 4px; padding: 0; }
+    .show-more-btn:hover { text-decoration: underline; }
+    .extra-filters { flex-direction: column; gap: 8px; margin-top: 6px; }
+    .btn-apply {
+      width: 100%;
+      background: var(--blue);
+      color: #FFFFFF;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background .2s;
+    }
+    .btn-apply:hover { background: var(--blue-hover); }
+
+    /* CONTENT AREA */
+    .content-area { flex: 1; min-width: 0; }
+    .content-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+    .content-count { font-size: 14px; font-weight: 700; color: var(--navy); }
+    .content-count span { color: var(--text-muted); font-weight: 400; }
+    .content-sort { display: flex; align-items: center; gap: 10px; }
+    .sort-label { font-size: 13px; color: var(--text-muted); }
+    .sort-select {
+      padding: 7px 28px 7px 10px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      color: #374151;
+      background: #FFFFFF;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%236b7280' d='M5 7L0.5 2.5h9z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      cursor: pointer;
+      outline: none;
+    }
+    .view-toggle { display: flex; gap: 4px; }
+    .view-btn {
+      width: 34px;
+      height: 34px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9CA3AF;
+      transition: all .2s;
+      cursor: pointer;
+    }
+    .view-btn.active { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
+
+    /* SCHOLARSHIP CARDS GRID */
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .cards-grid.list-view { grid-template-columns: 1fr; }
+    
+    .sch-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .sch-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: #BFDBFE; }
+    
+    .card-img-wrap { position: relative; height: 160px; flex-shrink: 0; overflow: hidden; background: #F1F5F9; }
+    .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .sch-card:hover .card-img-wrap img { transform: scale(1.05); }
+    
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 4px 10px;
+      border-radius: 50px;
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+    .badge-blue { background: var(--blue); }
+    .badge-green { background: var(--green); }
+    .badge-purple { background: var(--purple); }
+
+    .card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .card-title { font-size: 14.5px; font-weight: 800; color: var(--navy); line-height: 1.3; }
+    .card-provider { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+    .card-amount { font-size: 14px; font-weight: 800; color: var(--blue); }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .card-tag { padding: 3px 9px; border-radius: 50px; font-size: 11px; font-weight: 600; background: #F1F5F9; color: #475569; display: inline-flex; align-items: center; gap: 3px; }
+    .card-deadline { font-size: 11.5px; color: var(--text-muted); margin-top: auto; padding-top: 4px; }
+    .card-deadline strong { color: #1E293B; }
+    
+    .card-footer { padding: 12px 16px; border-top: 1px solid var(--border); display: flex; gap: 8px; align-items: center; background: #FAFCFF; }
+    .btn-details {
+      flex: 1;
+      padding: 9px 0;
+      border: 1.5px solid var(--blue);
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--blue);
+      background: transparent;
+      transition: all .2s ease;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-details:hover { background: var(--blue); color: #FFFFFF; }
+    .btn-bookmark {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: #FFFFFF;
+      color: #9CA3AF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      transition: all .2s ease;
+    }
+    .btn-bookmark:hover, .btn-bookmark.bookmarked { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+
+    /* PAGINATION */
+    .pagination { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 36px; }
+    .page-btn {
+      width: 38px;
+      height: 38px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: #FFFFFF;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+    }
+    .page-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .page-btn.active { background: var(--blue); border-color: var(--blue); color: #FFFFFF; }
+
+    /* WHY + CTA SIDE BY SIDE */
+    .why-cta-wrap { max-width: 1720px; width: 95%; margin: 48px auto; padding: 0 2.5rem; display: flex; gap: 28px; align-items: stretch; }
+    .why-section {
+      flex: 1.6;
+      background: linear-gradient(180deg, #F4F8FF 0%, #EFF5FF 100%);
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 8px 24px rgba(11, 34, 101, 0.04);
+      border: 1px solid #DCE7FE;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .why-section h2 { font-size: 24px; font-weight: 800; color: var(--navy); text-align: center; margin-bottom: 30px; letter-spacing: -0.01em; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .why-item { text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .why-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      box-shadow: 0 6px 16px rgba(11, 34, 101, 0.06);
+      border: 1px solid #E2E8F0;
+    }
+    .why-icon img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .why-item h4 { font-size: 14px; font-weight: 800; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
+    .why-item p { font-size: 12px; color: #475569; line-height: 1.5; }
+    
+    .cta-banner {
+      flex: 1;
+      min-width: 320px;
+      background: linear-gradient(135deg, #0A1233 0%, #001247 100%);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px 0 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      position: relative;
+      overflow: visible;
+    }
+    .cta-content { flex: 1; position: relative; z-index: 1; padding-bottom: 28px; }
+    .cta-content h3 { font-size: 20px; font-weight: 800; color: #FFFFFF; line-height: 1.3; margin-bottom: 8px; }
+    .cta-content p { font-size: 12.5px; color: rgba(255,255,255,.8); line-height: 1.5; margin-bottom: 18px; }
+    .btn-expert {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: var(--navy);
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      transition: background .2s, transform .15s;
+    }
+    .btn-expert:hover { background: #EEF4FF; transform: translateY(-1px); }
+    .cta-image {
+      width: 200px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 3;
+      height: 240px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-top: -60px;
+    }
+    .cta-student-img {
+      width: 100%;
+      height: 125%;
+      max-height: 300px;
+      object-fit: contain;
+      object-position: bottom center;
+      filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.35));
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 1100px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-cta-wrap { flex-direction: column; }
+    }
+    @media(max-width: 900px) {
+      .svc-hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .svc-hero-sub { margin-left: auto; margin-right: auto; }
+      .svc-hero-stats-row { justify-content: center; }
+      .main-layout { flex-direction: column; }
+      .sidebar { width: 100%; position: static; }
+    }
+    @media(max-width: 640px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      .search-card { flex-direction: column; }
+      .search-field, .search-dropdown { min-width: 100%; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .cta-banner { flex-direction: column; text-align: center; }
+    }
+  </style>
+
+  <style>
+  /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML & ABOUT.HTML */
+  :root {
+    --header-bg: #F4F8FF;
+    --header-border: #DCE5F3;
+    --nav-text: #11172A;
+    --nav-hover-bg: #E5EDFF;
+    --nav-accent: #0D47D8;
+    --dropdown-bg: #FFFFFF;
+    --gold-btn: #C79A3C;
+    --gold-btn-hover: #B5872E;
+  }
+
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background: var(--header-bg) !important;
+    border-bottom: 1px solid var(--header-border) !important;
+    box-shadow: 0 4px 20px rgba(17,23,42,0.08) !important;
+    backdrop-filter: none !important;
+  }
+
+  body {
+    padding-top: 72px !important;
+  }
+
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 72px !important;
+    gap: 12px !important;
+    max-width: 1720px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 0 2.5rem !important;
+  }
+
+  .brand-logo-img {
+    height: 48px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+
+  .main-nav a {
+    color: var(--nav-text) !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    padding: 16px 11px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-nav a:hover, .main-nav a.active {
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+  }
+  .main-nav a.active::after {
+    display: none !important;
+  }
+
+  .nav-dropdown {
+    position: relative !important;
+  }
+  .nav-dropdown-toggle {
+    color: var(--nav-text) !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    padding: 16px 11px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+  .nav-dropdown-toggle i {
+    color: var(--nav-accent) !important;
+    font-size: 10px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-toggle {
+    background: var(--nav-hover-bg) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: var(--dropdown-bg) !important;
+    border: 1px solid var(--header-border) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+    box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(6px) !important;
+    transition: all 0.2s ease !important;
+    min-width: 160px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(4px) !important;
+  }
+  .nav-dropdown-menu a {
+    color: var(--nav-text) !important;
+    border-left: 3px solid transparent !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    padding: 10px 22px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    background: transparent !important;
+  }
+  .nav-dropdown-menu a:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .dest-mega-menu {
+    min-width: 680px !important;
+    padding: 16px 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(8px) !important;
+    border-radius: 18px !important;
+    background: var(--dropdown-bg) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+  }
+  .nav-dropdown:hover .dest-mega-menu {
+    transform: translateX(-50%) translateY(4px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .dest-drop-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    transition: background 0.15s ease !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .dest-drop-item:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+  }
+  .dest-drop-flag {
+    width: 26px !important;
+    height: 18px !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+    flex-shrink: 0 !important;
+  }
+  .dest-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.25 !important;
+  }
+  .dest-drop-text strong {
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: var(--nav-text) !important;
+  }
+  .dest-drop-text span {
+    font-size: 11px !important;
+    color: #64748B !important;
+    margin-top: 2px !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: var(--nav-text) !important;
+    text-decoration: none !important;
+    font-size: 12.5px !important;
+  }
+  .header-phone i {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 50% !important;
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone small {
+    color: #667085 !important;
+    display: block !important;
+  }
+  .header-phone strong {
+    color: var(--nav-text) !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+  }
+  /* Hide phone text on tighter screens, keep icon */
+  @media (max-width: 1440px) {
+    .header-phone span { display: none !important; }
+    .header-phone { gap: 0 !important; }
+  }
+  /* Hide phone entirely on narrow desktop */
+  @media (max-width: 1280px) {
+    .header-phone { display: none !important; }
+  }
+
+  .site-header .btn-primary {
+    background: var(--gold-btn) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .site-header .btn-primary:hover {
+    background: var(--gold-btn-hover) !important;
+    color: #FFFFFF !important;
+    transform: none !important;
+  }
+
+  .nav-toggle {
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+  }
+  .nav-toggle span {
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--nav-text) !important;
+    border-radius: 2px !important;
+    transition: 0.3s ease !important;
+    display: block !important;
+  }
+
+  @media (max-width: 1160px) {
+    .nav-toggle { display: flex !important; }
+    .main-nav {
+      position: fixed !important;
+      inset: 72px 0 0 0 !important;
+      background: #fff !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 24px !important;
+      gap: 4px !important;
+      overflow-y: auto !important;
+      transform: translateX(100%) !important;
+      transition: transform 0.3s ease !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+      z-index: 9998 !important;
+    }
+    .main-nav.open { transform: translateX(0) !important; }
+    .main-nav a, .nav-dropdown-toggle {
+      padding: 14px 8px !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      width: 100% !important;
+      font-size: 15px !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+    }
+    .dest-mega-menu {
+      min-width: unset !important;
+      grid-template-columns: 1fr !important;
+      transform: none !important;
+      left: 0 !important;
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .nav-dropdown-menu {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      display: none !important;
+    }
+    .nav-dropdown.open .nav-dropdown-menu { display: block !important; }
+  }
+  </style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader"></header>
+
+<!-- HERO SECTION -->
+<section class="svc-hero-section">
+  <!-- Full-Height Softly Blended Background Image -->
+  <div class="svc-hero-image-wrapper">
+    <img src="assets/Scholarship_hero.png" alt="Scholarship Guidance &amp; Funding" class="svc-hero-student-img">
+  </div>
+
+  <div class="container relative-z">
+    <div class="svc-hero-inner">
+      <div class="svc-hero-content">
+        <nav class="svc-breadcrumb">
+          <a href="index.html">Home</a> &gt;
+          <span style="color: var(--navy); font-weight: 600;">Scholarships</span>
+        </nav>
+
+        <h1 class="svc-hero-title">
+          Find the Right Scholarship
+          <span class="blue-text">Fund Your Global Education</span>
+        </h1>
+
+        <p class="svc-hero-sub">
+          Explore 500+ scholarships from top universities, governments and organizations worldwide with ISMS Global.
+        </p>
+
+        <div class="svc-hero-stats-row">
+          <div class="svc-stat-pill"><i class="fa-solid fa-graduation-cap"></i> 500+ Scholarships</div>
+          <div class="svc-stat-pill"><i class="fa-solid fa-building-columns"></i> 20+ Countries</div>
+          <div class="svc-stat-pill"><i class="fa-solid fa-passport"></i> Merit &amp; Need Based</div>
+          <div class="svc-stat-pill"><i class="fa-solid fa-users"></i> 1,000+ Students Benefited</div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH BAR -->
+<div class="search-wrap">
+  <div class="search-card">
+    <div class="search-field">
+      <label for="search-input">Search Scholarship</label>
+      <div class="search-input-wrap">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search by scholarship name, university..." />
+      </div>
+    </div>
+    <div class="search-dropdown">
+      <label for="dest-select">Study Destination</label>
+      <select id="dest-select">
+        <option>All Countries</option><option>United Kingdom</option><option>Australia</option>
+        <option>Canada</option><option>United States</option><option>Germany</option><option>Singapore</option>
+      </select>
+    </div>
+    <div class="search-dropdown">
+      <label for="level-select">Course Level</label>
+      <select id="level-select">
+        <option>All Levels</option><option>Undergraduate</option><option>Postgraduate</option>
+        <option>PhD</option><option>Diploma</option>
+      </select>
+    </div>
+    <div class="search-dropdown">
+      <label for="field-select">Field of Study</label>
+      <select id="field-select">
+        <option>All Fields</option><option>Business &amp; Management</option><option>Engineering</option>
+        <option>Computer Science</option><option>Medicine &amp; Health</option><option>Law</option>
+      </select>
+    </div>
+    <button class="btn-search" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;Search Scholarships</button>
+  </div>
+</div>
+
+
+
+<!-- MAIN LAYOUT -->
+<div class="main-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h3>Filter Scholarships</h3>
+      <button class="sidebar-clear" id="clear-all-btn">Clear All</button>
+    </div>
+
+    <!-- Study Destination -->
+    <div class="filter-group">
+      <div class="filter-group-header" data-group="destination">
+        <h4>Study Destination</h4><i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="filter-group-body" id="body-destination">
+        <label class="filter-option"><input type="checkbox" checked data-filter="destination" value="all" /><span class="filter-option-label">All Countries</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="destination" value="uk" /><span class="filter-option-label">United Kingdom</span><span class="filter-option-count">(120)</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="destination" value="au" /><span class="filter-option-label">Australia</span><span class="filter-option-count">(85)</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="destination" value="ca" /><span class="filter-option-label">Canada</span><span class="filter-option-count">(70)</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="destination" value="us" /><span class="filter-option-label">United States</span><span class="filter-option-count">(95)</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="destination" value="de" /><span class="filter-option-label">Germany</span><span class="filter-option-count">(40)</span></label>
+        <button class="show-more-btn" data-target="dest-extra">+ Show More</button>
+        <div id="dest-extra" class="extra-filters" style="display:none;">
+          <label class="filter-option"><input type="checkbox" data-filter="destination" value="sg" /><span class="filter-option-label">Singapore</span><span class="filter-option-count">(30)</span></label>
+          <label class="filter-option"><input type="checkbox" data-filter="destination" value="ie" /><span class="filter-option-label">Ireland</span><span class="filter-option-count">(25)</span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course Level -->
+    <div class="filter-group">
+      <div class="filter-group-header" data-group="level">
+        <h4>Course Level</h4><i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="filter-group-body" id="body-level">
+        <label class="filter-option"><input type="checkbox" checked data-filter="level" value="all" /><span class="filter-option-label">All Levels</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="level" value="ug" /><span class="filter-option-label">Undergraduate</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="level" value="pg" /><span class="filter-option-label">Postgraduate</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="level" value="diploma" /><span class="filter-option-label">Diploma</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="level" value="phd" /><span class="filter-option-label">PhD</span></label>
+      </div>
+    </div>
+
+    <!-- Field of Study -->
+    <div class="filter-group">
+      <div class="filter-group-header" data-group="field">
+        <h4>Field of Study</h4><i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="filter-group-body" id="body-field">
+        <label class="filter-option"><input type="checkbox" checked data-filter="field" value="all" /><span class="filter-option-label">All Fields</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="field" value="business" /><span class="filter-option-label">Business &amp; Management</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="field" value="eng" /><span class="filter-option-label">Engineering</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="field" value="cs" /><span class="filter-option-label">Computer Science</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="field" value="medicine" /><span class="filter-option-label">Medicine &amp; Health</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="field" value="law" /><span class="filter-option-label">Law</span></label>
+        <button class="show-more-btn" data-target="field-extra">+ Show More</button>
+        <div id="field-extra" class="extra-filters" style="display:none;">
+          <label class="filter-option"><input type="checkbox" data-filter="field" value="arts" /><span class="filter-option-label">Arts &amp; Humanities</span></label>
+          <label class="filter-option"><input type="checkbox" data-filter="field" value="sciences" /><span class="filter-option-label">Natural Sciences</span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scholarship Type -->
+    <div class="filter-group">
+      <div class="filter-group-header" data-group="type">
+        <h4>Scholarship Type</h4><i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="filter-group-body" id="body-type">
+        <label class="filter-option"><input type="checkbox" checked data-filter="type" value="all" /><span class="filter-option-label">All Types</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="type" value="merit" /><span class="filter-option-label">Merit-based</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="type" value="need" /><span class="filter-option-label">Need-based</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="type" value="govt" /><span class="filter-option-label">Government Funded</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="type" value="uni" /><span class="filter-option-label">University Specific</span></label>
+        <label class="filter-option"><input type="checkbox" data-filter="type" value="private" /><span class="filter-option-label">Private/External</span></label>
+      </div>
+    </div>
+
+    <button class="btn-apply" id="apply-filters-btn"><i class="fa-solid fa-sliders"></i>&nbsp;Apply Filters</button>
+  </aside>
+
+  <!-- CONTENT AREA -->
+  <div class="content-area">
+    <div class="content-toolbar">
+      <div class="content-count" id="result-count">Showing 1-12 of <strong>568</strong> <span>Scholarships</span></div>
+      <div class="content-sort">
+        <span class="sort-label">Sort by:</span>
+        <select class="sort-select" id="sort-select">
+          <option>Latest</option><option>Deadline (Earliest)</option>
+          <option>Amount (High to Low)</option><option>Most Popular</option>
+        </select>
+        <div class="view-toggle">
+          <button class="view-btn active" id="grid-view-btn" title="Grid View" aria-label="Grid View"><i class="fa-solid fa-grip"></i></button>
+          <button class="view-btn" id="list-view-btn" title="List View" aria-label="List View"><i class="fa-solid fa-list"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards-grid" id="cards-grid">
+      <!-- CARD 1 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/uk-big-ben.jpg" alt="Clarendon Scholarship Oxford" loading="lazy"/><span class="badge badge-blue">Featured</span></div>
+        <div class="card-body">
+          <div class="card-title">Clarendon Scholarship</div>
+          <div class="card-provider">University of Oxford</div>
+          <div class="card-amount">Up to &#163;15,000</div>
+          <div class="card-tags"><span class="card-tag">Postgraduate</span><span class="card-tag">&#127468;&#127463; UK</span></div>
+          <div class="card-deadline">Deadline: <strong>15 Jan 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1523240795612-9a054b0db644.jpg" alt="Australia Awards Scholarship" loading="lazy"/><span class="badge badge-green">Popular</span></div>
+        <div class="card-body">
+          <div class="card-title">Australia Awards Scholarship</div>
+          <div class="card-provider">Australian Government</div>
+          <div class="card-amount">Full Tuition + Living</div>
+          <div class="card-tags"><span class="card-tag">Undergraduate</span><span class="card-tag">Postgraduate</span><span class="card-tag">&#127462;&#127482; Australia</span></div>
+          <div class="card-deadline">Deadline: <strong>30 Apr 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1517841905240-472988babdf9.jpg" alt="Lester B Pearson Scholarship" loading="lazy"/><span class="badge badge-purple">New</span></div>
+        <div class="card-body">
+          <div class="card-title">Lester B. Pearson Scholarship</div>
+          <div class="card-provider">University of Toronto</div>
+          <div class="card-amount">Up to CAD 100,000</div>
+          <div class="card-tags"><span class="card-tag">Undergraduate</span><span class="card-tag">&#127464;&#127462; Canada</span></div>
+          <div class="card-deadline">Deadline: <strong>07 Dec 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/germany.png" alt="DAAD Excellence Scholarship" loading="lazy"/><span class="badge badge-purple">Merit Based</span></div>
+        <div class="card-body">
+          <div class="card-title">DAAD Excellence Scholarship</div>
+          <div class="card-provider">German Academic Exchange Service</div>
+          <div class="card-amount">Up to &#8364;2,000</div>
+          <div class="card-tags"><span class="card-tag">Postgraduate</span><span class="card-tag">PhD</span><span class="card-tag">&#127465;&#127466; Germany</span></div>
+          <div class="card-deadline">Deadline: <strong>31 Aug 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1541829070764-84a7d30dd3f3.jpg" alt="Fulbright Foreign Student Program" loading="lazy"/><span class="badge badge-blue">Government Funded</span></div>
+        <div class="card-body">
+          <div class="card-title">Fulbright Foreign Student Program</div>
+          <div class="card-provider">US Department of State</div>
+          <div class="card-amount">Full Funding</div>
+          <div class="card-tags"><span class="card-tag">Postgraduate</span><span class="card-tag">PhD</span><span class="card-tag">&#127482;&#127480; USA</span></div>
+          <div class="card-deadline">Deadline: <strong>15 Oct 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1513635269975-59663e0ac1ad.jpg" alt="Chevening Scholarship UK" loading="lazy"/><span class="badge badge-purple">Merit Based</span></div>
+        <div class="card-body">
+          <div class="card-title">Chevening Scholarship</div>
+          <div class="card-provider">UK Government</div>
+          <div class="card-amount">Full Funding</div>
+          <div class="card-tags"><span class="card-tag">Postgraduate</span><span class="card-tag">&#127468;&#127463; UK</span></div>
+          <div class="card-deadline">Deadline: <strong>05 Nov 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1523580494863-6f3031224c94.jpg" alt="Shaw Trust Scholarship" loading="lazy"/><span class="badge badge-blue">Need Based</span></div>
+        <div class="card-body">
+          <div class="card-title">Shaw Trust Scholarship</div>
+          <div class="card-provider">Shaw Trust</div>
+          <div class="card-amount">Up to &#163;6,000</div>
+          <div class="card-tags"><span class="card-tag">Undergraduate</span><span class="card-tag">Postgraduate</span><span class="card-tag">&#127468;&#127463; UK</span></div>
+          <div class="card-deadline">Deadline: <strong>31 Mar 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1522202176988-66273c2fd55f.jpg" alt="Monash International Merit Scholarship" loading="lazy"/><span class="badge badge-purple">University Specific</span></div>
+        <div class="card-body">
+          <div class="card-title">Monash International Merit Scholarship</div>
+          <div class="card-provider">Monash University</div>
+          <div class="card-amount">Up to 100% Tuition Fee</div>
+          <div class="card-tags"><span class="card-tag">Undergraduate</span><span class="card-tag">Postgraduate</span><span class="card-tag">&#127462;&#127482; Australia</span></div>
+          <div class="card-deadline">Deadline: <strong>31 Dec 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="sch-card">
+        <div class="card-img-wrap"><img src="assets/img_photo-1524178232363-1fb2b075b655.jpg" alt="Vanier Canada Graduate Scholarships" loading="lazy"/><span class="badge badge-green">Popular</span></div>
+        <div class="card-body">
+          <div class="card-title">Vanier Canada Graduate Scholarships</div>
+          <div class="card-provider">Government of Canada</div>
+          <div class="card-amount">CAD 50,000 per year</div>
+          <div class="card-tags"><span class="card-tag">PhD</span><span class="card-tag">&#127464;&#127462; Canada</span></div>
+          <div class="card-deadline">Deadline: <strong>02 Nov 2026</strong></div>
+        </div>
+        <div class="card-footer"><a href="Scholarship_details.html" class="btn-details">View Details</a><button class="btn-bookmark"><i class="fa-regular fa-bookmark"></i></button></div>
+      </div>
+
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <span class="page-dots">...</span>
+      <button class="page-btn">48</button>
+      <button class="page-btn" aria-label="Next Page"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- WHY + CTA SIDE BY SIDE -->
+<div class="why-cta-wrap">
+  <div class="why-section">
+    <h2>Why Apply for Scholarships with ISMS Global?</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon"><img src="assets/Screenshot 2026-08-04 142552.png" alt="500+ Verified Options"></div>
+        <h4>500+ Verified Options</h4>
+        <p>Pre-screened &amp; updated database for top global destinations.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><img src="assets/Screenshot 2026-08-04 142534.png" alt="High Success Rate"></div>
+        <h4>High Success Rate</h4>
+        <p>Proven guidance to help you craft winning applications.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><img src="assets/Screenshot 2026-08-04 142611.png" alt="Direct Uni Tie-ups"></div>
+        <h4>Direct Uni Tie-ups</h4>
+        <p>Exclusive university-specific waiver &amp; merit opportunities.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><img src="assets/Screenshot 2026-08-04 142543.png" alt="End-to-End Assistance"></div>
+        <h4>End-to-End Assistance</h4>
+        <p>From SOP review to final document submission support.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <div class="cta-content">
+      <h3>Not Sure Which Scholarship Suits You Best?</h3>
+      <p>Book a free 1-on-1 session with our expert counsellors to evaluate your profile and find eligible scholarships.</p>
+      <a href="index.html#contact" class="btn-expert"><i class="fa-solid fa-calendar-check"></i> Book Free Session</a>
+    </div>
+    <div class="cta-image">
+      <img src="assets/boy1.png" alt="Student Counsellor" class="cta-student-img" />
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="siteFooter"></footer>
+
+<!-- WhatsApp Floating Action Button -->
+<a href="https://wa.me/919561776600" class="whatsapp-fab" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+.scroll-top-fab {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0D47D8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+.scroll-top-fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-fab:hover {
+  background: #0A39A6;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+}
+.scroll-top-fab i {
+  pointer-events: none;
+}
+</style>
+
+<script>
+(function() {
+  var btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+})();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

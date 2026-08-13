@@ -1,0 +1,1929 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University of Oxford | University Details - ISMS Global</title>
+  <meta name="description" content="Explore University of Oxford. Learn about QS World Ranking #1, popular courses, admission requirements, tuition fees, scholarships, and campus life with ISMS Global.">
+  
+  <!-- Google Fonts -->
+  
+  
+  
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="university-details.css">
+  <!-- ===== NAVBAR OVERRIDE: Exact match with index.html ===== -->
+  <style>
+  /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML */
+  :root {
+    --header-bg: #F4F8FF;
+    --header-border: #DCE5F3;
+    --nav-text: #11172A;
+    --nav-hover-bg: #E5EDFF;
+    --nav-accent: #0D47D8;
+    --dropdown-bg: #FFFFFF;
+    --gold-btn: #C79A3C;
+    --gold-btn-hover: #B5872E;
+  }
+
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background: var(--header-bg) !important;
+    border-bottom: 1px solid var(--header-border) !important;
+    box-shadow: 0 4px 20px rgba(17,23,42,0.08) !important;
+    backdrop-filter: none !important;
+  }
+
+  body {
+    padding-top: 96px !important;
+  }
+
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 72px !important;
+    gap: 12px !important;
+    max-width: 1720px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 0 2.5rem !important;
+  }
+
+  .brand-logo-img {
+    height: 48px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+
+  .main-nav a {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-nav a:hover, .main-nav a.active {
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+  }
+  .main-nav a.active::after {
+    display: none !important;
+  }
+
+  .nav-dropdown {
+    position: relative !important;
+  }
+  .nav-dropdown-toggle {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+  .nav-dropdown-toggle i {
+    color: var(--nav-accent) !important;
+    font-size: 10px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-toggle {
+    background: var(--nav-hover-bg) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: var(--dropdown-bg) !important;
+    border: 1px solid var(--header-border) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+    box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(6px) !important;
+    transition: all 0.2s ease !important;
+    min-width: 160px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(4px) !important;
+  }
+  .nav-dropdown-menu a {
+    color: var(--nav-text) !important;
+    border-left: 3px solid transparent !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    padding: 10px 22px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    background: transparent !important;
+  }
+  .nav-dropdown-menu a:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .dest-mega-menu {
+    min-width: 680px !important;
+    padding: 16px 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(8px) !important;
+    border-radius: 18px !important;
+    background: var(--dropdown-bg) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+  }
+  .nav-dropdown:hover .dest-mega-menu {
+    transform: translateX(-50%) translateY(4px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .dest-drop-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    transition: background 0.15s ease !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .dest-drop-item:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+  }
+  .dest-drop-flag {
+    width: 26px !important;
+    height: 18px !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+    flex-shrink: 0 !important;
+  }
+  .dest-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.25 !important;
+  }
+  .dest-drop-text strong {
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: var(--nav-text) !important;
+  }
+  .dest-drop-text span {
+    font-size: 11px !important;
+    color: #64748B !important;
+    margin-top: 2px !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: var(--nav-text) !important;
+    text-decoration: none !important;
+    font-size: 12.5px !important;
+  }
+  .header-phone i {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .header-phone small {
+    color: #667085 !important;
+  }
+  .header-phone strong {
+    color: var(--nav-text) !important;
+    font-weight: 700 !important;
+    font-size: 13.5px !important;
+  }
+
+  .site-header .btn-primary {
+    background: var(--gold-btn) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .site-header .btn-primary:hover {
+    background: var(--gold-btn-hover) !important;
+    color: #FFFFFF !important;
+    transform: none !important;
+  }
+
+  .nav-toggle {
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+  }
+  .nav-toggle span {
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--nav-text) !important;
+    border-radius: 2px !important;
+    transition: 0.3s ease !important;
+    display: block !important;
+  }
+
+  @media (max-width: 1160px) {
+    .nav-toggle { display: flex !important; }
+    .main-nav {
+      position: fixed !important;
+      inset: 72px 0 0 0 !important;
+      background: #fff !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 24px !important;
+      gap: 4px !important;
+      overflow-y: auto !important;
+      transform: translateX(100%) !important;
+      transition: transform 0.3s ease !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+      z-index: 9998 !important;
+    }
+    .main-nav.open { transform: translateX(0) !important; }
+    .main-nav a, .nav-dropdown-toggle {
+      padding: 14px 8px !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      width: 100% !important;
+      font-size: 15px !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+    }
+    .dest-mega-menu {
+      min-width: unset !important;
+      grid-template-columns: 1fr !important;
+      transform: none !important;
+      left: 0 !important;
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .nav-dropdown-menu {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      display: none !important;
+    }
+    .nav-dropdown.open .nav-dropdown-menu { display: block !important; }
+  }
+  body { padding-top: 72px !important; }
+
+/* UNIVERSAL BADGE PILL HORIZONTAL CENTERING */
+.badge-pill,
+[class*="pill-badge"],
+[class*="-badge"] {
+    display: flex !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* TESTIMONIALS CENTERING & GOLDEN STARS */
+.dtm-4cards-grid,
+.dtm-grid,
+.testimonials-grid,
+.dtm-cards-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.dtm-card,
+.testimonial-card {
+    flex: 1 1 360px !important;
+    max-width: 420px !important;
+    min-width: 280px !important;
+}
+
+.dtm-rating,
+.testimonial-rating,
+.stars,
+.star-rating {
+    color: #FFB800 !important;
+}
+
+.dtm-rating i,
+.testimonial-rating i,
+.stars i,
+.star-rating i,
+.fa-star {
+    color: #FFB800 !important;
+}
+
+/* DTP SECTION LEFT ALIGNMENT FOR TWO-COLUMN HEADER */
+.dtp-header-box {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+.dtp-pill-badge,
+.dtp-header-box .dtp-pill-badge {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    display: inline-flex !important;
+    align-self: flex-start !important;
+}
+
+.dtp-title,
+.dtp-header-box .dtp-title {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.dtp-subtext,
+.dtp-header-box .dtp-subtext {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* ENFORCE GOLDEN STARS FOR ALL TESTIMONIAL RATINGS */
+.dtm-rating,
+.dtm-rating i,
+.testimonial-rating,
+.testimonial-rating i,
+.star-rating,
+.star-rating i,
+.stars,
+.stars i,
+i.fa-star,
+i.fa-solid.fa-star {
+    color: #FFB800 !important;
+}
+
+/* PREMIUM RIGHT BLUE CTA CARD STYLING FOR DTP SECTION */
+.dtp-right-blue-card,
+.dtp-right-card {
+    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
+    border-radius: 22px !important;
+    padding: 36px 30px !important;
+    color: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 12px 36px rgba(13,71,216,0.22) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    min-height: 320px !important;
+}
+
+.dtp-blue-text-box,
+.dtp-right-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.dtp-right-blue-card h3,
+.dtp-right-card h3 {
+    color: #FFFFFF !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 14px !important;
+    letter-spacing: -0.01em !important;
+    text-align: left !important;
+}
+
+.dtp-right-blue-card p,
+.dtp-right-card p {
+    color: #DBEAFE !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+    text-align: left !important;
+}
+
+.dtp-blue-btn,
+.dtp-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+    color: #0A1940 !important;
+    font-weight: 800 !important;
+    font-size: 14.5px !important;
+    padding: 14px 22px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.35) !important;
+    width: 100 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+.dtp-blue-btn:hover,
+.dtp-cta-btn:hover {
+    background: linear-gradient(135deg, #FFB800 0%, #F59E0B 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(245,158,11,0.5) !important;
+    color: #0A1940 !important;
+}
+
+.dtp-cta-note,
+.dtp-guarantee {
+    display: block !important;
+    font-size: 12px !important;
+    color: #93C5FD !important;
+    margin-top: 14px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+}
+</style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- ====== 1. SITE HEADER ====== -->
+  <!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader"></header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+
+    <!-- ====== 2. HERO SECTION ====== -->
+    <section class="ud-hero-section">
+      <div class="container">
+        <div class="ud-hero-layout">
+          
+          <!-- LEFT HERO CONTENT -->
+          <div class="ud-hero-left">
+            <nav class="ud-breadcrumb">
+              <a href="index.html">Home</a> &gt;
+              <div class="nav-dropdown">
+        <a href="universities.html" class="nav-dropdown-toggle">Universities <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown-menu uni-drop-menu">
+          <a href="universities.html" class="uni-drop-item">
+            <i class="fa-solid fa-globe uni-drop-icon"></i>
+            <div class="uni-drop-text"><strong>Browse by Country</strong><span>Find universities by destination</span></div>
+          </a>
+          <a href="universities.html?filter=ranking" class="uni-drop-item">
+            <i class="fa-solid fa-ranking-star uni-drop-icon"></i>
+            <div class="uni-drop-text"><strong>Browse by Ranking</strong><span>Top QS &amp; World ranked universities</span></div>
+          </a>
+          <a href="universities.html?filter=course" class="uni-drop-item">
+            <i class="fa-solid fa-book-open uni-drop-icon"></i>
+            <div class="uni-drop-text"><strong>Browse by Course</strong><span>Find universities by your subject</span></div>
+          </a>
+          <a href="university_search.html" class="uni-drop-item">
+            <i class="fa-solid fa-award uni-drop-icon"></i>
+            <div class="uni-drop-text"><strong>Top 25 Universities</strong><span>World's best institutions</span></div>
+          </a>
+          <div class="uni-drop-divider"></div>
+          <a href="universities.html" class="uni-drop-viewall">View All Universities <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div> &gt;
+              <span style="color: var(--ud-navy); font-weight: 600;">University of Oxford</span>
+            </nav>
+
+            <span class="ud-badge-rank1">🏆 #1 in the World (QS World University Rankings 2025)</span>
+
+            <h1 class="ud-hero-title">University of Oxford</h1>
+            <div class="ud-hero-location">Oxford, United Kingdom</div>
+
+            <p class="ud-hero-desc">
+              One of the world's oldest and most prestigious universities, the University of Oxford has a tradition of academic excellence, groundbreaking research and inspiring leaders for more than 900 years.
+            </p>
+
+            <!-- Meta Chips Row -->
+            <div class="ud-meta-chips-row">
+              <div class="ud-meta-chip">
+                <div class="ud-chip-icon"><i class="fa-solid fa-landmark"></i></div>
+                <div class="ud-chip-info">
+                  <label>ESTD</label>
+                  <strong>1096</strong>
+                </div>
+              </div>
+
+              <div class="ud-meta-chip">
+                <div class="ud-chip-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="ud-chip-info">
+                  <label>TYPE</label>
+                  <strong>Public</strong>
+                </div>
+              </div>
+
+              <div class="ud-meta-chip">
+                <div class="ud-chip-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="ud-chip-info">
+                  <label>STUDENTS</label>
+                  <strong>24,000+</strong>
+                </div>
+              </div>
+
+              <div class="ud-meta-chip">
+                <div class="ud-chip-icon"><i class="fa-solid fa-globe"></i></div>
+                <div class="ud-chip-info">
+                  <label>INTL STUDENTS</label>
+                  <strong>48%</strong>
+                </div>
+              </div>
+
+              <div class="ud-meta-chip">
+                <div class="ud-chip-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="ud-chip-info">
+                  <label>CAMPUS</label>
+                  <strong>Oxford, UK</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="ud-hero-actions">
+              <button type="button" class="btn-ud-apply">Apply Now</button>
+              <button type="button" class="btn-ud-brochure">
+                <i class="fa-solid fa-download"></i> Download Brochure
+              </button>
+              <button type="button" class="btn-ud-shortlist" id="btnUdShortlist">
+                <i class="fa-regular fa-bookmark"></i> Shortlist
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT HERO MEDIA BOX -->
+          <div class="ud-hero-media-box">
+            <div class="ud-logo-overlay">OXF</div>
+            <img src="assets/img_photo-1541829070764-84a7d30dd3f3.jpg" alt="University of Oxford Radcliffe Camera" class="ud-hero-campus-img">
+            
+            <div class="ud-qs-overlay-card">
+              <span class="top">QS Ranking 2025</span>
+              <strong>#1</strong>
+              <span class="bottom">in the World</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 3. STICKY SUB-NAV TABS ====== -->
+    <div class="ud-sticky-subnav">
+      <div class="container">
+        <nav class="ud-subnav-inner">
+          <a href="#overview" class="ud-subnav-item active"><i class="fa-solid fa-list-check"></i> Overview</a>
+          <a href="#courses" class="ud-subnav-item"><i class="fa-solid fa-graduation-cap"></i> Courses</a>
+          <a href="#admission" class="ud-subnav-item"><i class="fa-solid fa-file-signature"></i> Admission</a>
+          <a href="#fees" class="ud-subnav-item"><i class="fa-solid fa-sack-dollar"></i> Tuition &amp; Fees</a>
+          <a href="Scholarship.html" class="ud-subnav-item"><i class="fa-solid fa-award"></i> Scholarships</a>
+          <a href="#campus" class="ud-subnav-item"><i class="fa-solid fa-building-columns"></i> Campus Life</a>
+          <a href="#rankings" class="ud-subnav-item"><i class="fa-solid fa-trophy"></i> Rankings</a>
+          <a href="#accommodation" class="ud-subnav-item"><i class="fa-solid fa-house"></i> Accommodation</a>
+          <a href="#faq" class="ud-subnav-item"><i class="fa-regular fa-circle-question"></i> FAQs</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ====== 4. MAIN CONTENT GRID (LEFT 70% + SIDEBAR 30%) ====== -->
+    <section class="ud-main-section">
+      <div class="container">
+        <div class="ud-main-grid">
+
+          <!-- LEFT COLUMN CONTENT -->
+          <div class="ud-left-content">
+
+            <!-- SECTION A: ABOUT UNIVERSITY OF OXFORD -->
+            <div class="ud-section-box" id="overview">
+              <h2>About University of Oxford</h2>
+              <p class="about-desc">
+                The University of Oxford is a collegiate research university in Oxford, England. With a rich history dating back to the 11th century, Oxford is consistently ranked as one of the top universities in the world. It offers outstanding teaching, world-class research facilities, and a global community of scholars.
+              </p>
+
+              <div class="ud-bullets-grid">
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> 11th century &ndash; One of the world's oldest universities</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Innovative teaching and learning</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> 39 Colleges &amp; 6 Permanent Private Halls</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Opportunities for interdisciplinary research</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> World-class faculty and research excellence</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> State-of-the-art libraries and facilities</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Strong global alumni network</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Vibrant student life in a historic city</div>
+              </div>
+            </div>
+
+            <!-- SECTION B: POPULAR COURSES -->
+            <div class="ud-section-box" id="courses">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                <h2>Popular Courses</h2>
+                <a href="courses.html" style="font-size:13.5px; font-weight:700; color:var(--ud-primary); text-decoration:none;">View All Courses &rarr;</a>
+              </div>
+
+              <div class="ud-courses-grid">
+                <div class="ud-course-mini-card">
+                  <div class="ud-course-icon"><i class="fa-solid fa-briefcase"></i></div>
+                  <strong>MBA</strong>
+                  <span class="meta">Duration: 1 Year</span>
+                  <span class="rank">QS Rank: #1</span>
+                  <a href="course-details.html" class="link">View Details &rarr;</a>
+                </div>
+
+                <div class="ud-course-mini-card">
+                  <div class="ud-course-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                  <strong>Computer Science</strong>
+                  <span class="meta">Duration: 3 Years</span>
+                  <span class="rank">QS Rank: #1</span>
+                  <a href="course-details.html" class="link">View Details &rarr;</a>
+                </div>
+
+                <div class="ud-course-mini-card">
+                  <div class="ud-course-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                  <strong>Law</strong>
+                  <span class="meta">Duration: 3 Years</span>
+                  <span class="rank">QS Rank: #2</span>
+                  <a href="course-details.html" class="link">View Details &rarr;</a>
+                </div>
+
+                <div class="ud-course-mini-card">
+                  <div class="ud-course-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                  <strong>Medicine</strong>
+                  <span class="meta">Duration: 6 Years</span>
+                  <span class="rank">QS Rank: #3</span>
+                  <a href="course-details.html" class="link">View Details &rarr;</a>
+                </div>
+
+                <div class="ud-course-mini-card">
+                  <div class="ud-course-icon"><i class="fa-solid fa-gears"></i></div>
+                  <strong>Engineering</strong>
+                  <span class="meta">Duration: 4 Years</span>
+                  <span class="rank">QS Rank: #5</span>
+                  <a href="course-details.html" class="link">View Details &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION C: ADMISSION REQUIREMENTS -->
+            <div class="ud-section-box" id="admission">
+              <h2>Admission Requirements</h2>
+
+              <div class="ud-admission-split">
+                <div class="ud-req-list">
+                  <div class="ud-req-item">
+                    <div class="ud-req-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="ud-req-info">
+                      <strong>Academic Requirements</strong>
+                      <p>High school completion with excellent academic record. Specific subject requirements vary by course.</p>
+                    </div>
+                  </div>
+
+                  <div class="ud-req-item">
+                    <div class="ud-req-icon"><i class="fa-solid fa-language"></i></div>
+                    <div class="ud-req-info">
+                      <strong>English Language Proficiency</strong>
+                      <p>IELTS Overall 7.0+ (with no band less than 6.5) or TOEFL iBT 100+.</p>
+                    </div>
+                  </div>
+
+                  <div class="ud-req-item">
+                    <div class="ud-req-icon"><i class="fa-solid fa-file-pen"></i></div>
+                    <div class="ud-req-info">
+                      <strong>Standardized Tests</strong>
+                      <p>Some courses may require SAT / ACT / GRE / GMAT. Requirements vary by program.</p>
+                    </div>
+                  </div>
+
+                  <div class="ud-req-item">
+                    <div class="ud-req-icon"><i class="fa-solid fa-folder-open"></i></div>
+                    <div class="ud-req-info">
+                      <strong>Documents Required</strong>
+                      <p>Academic transcripts, Statement of Purpose, Letters of Recommendation, CV, Passport copy.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <img src="assets/img_photo-1589829545856-d10d557cf95f.jpg" alt="Oxford Campus Building" class="ud-admission-img">
+              </div>
+            </div>
+
+            <!-- SECTION D: CAMPUS LIFE -->
+            <div class="ud-section-box" id="campus">
+              <h2>Campus Life</h2>
+
+              <div class="ud-campus-grid">
+                <div class="ud-campus-card">
+                  <div class="ud-campus-icon"><i class="fa-solid fa-building-columns"></i></div>
+                  <strong>39 Colleges</strong>
+                  <p>A unique collegiate system for close-knit communities</p>
+                </div>
+
+                <div class="ud-campus-card">
+                  <div class="ud-campus-icon"><i class="fa-solid fa-users"></i></div>
+                  <strong>500+ Clubs</strong>
+                  <p>Academic, cultural, sports and hobby clubs</p>
+                </div>
+
+                <div class="ud-campus-card">
+                  <div class="ud-campus-icon"><i class="fa-solid fa-book-open"></i></div>
+                  <strong>Libraries</strong>
+                  <p>One of the largest university library systems in the world</p>
+                </div>
+
+                <div class="ud-campus-card">
+                  <div class="ud-campus-icon"><i class="fa-solid fa-volleyball"></i></div>
+                  <strong>Sports</strong>
+                  <p>World-class sports facilities and opportunities</p>
+                </div>
+
+                <div class="ud-campus-card">
+                  <div class="ud-campus-icon"><i class="fa-solid fa-headset"></i></div>
+                  <strong>Support Services</strong>
+                  <p>Career support, mental health, international student support</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION E: STUDENT TESTIMONIALS -->
+            <div class="ud-section-box">
+              <h2>What Students Say</h2>
+
+              <div class="ud-testimonials-grid">
+                <div class="ud-testimonial-item">
+                  <p class="ud-testimonial-quote">
+                    "Oxford has been a life-changing experience. The quality of teaching, the resources and the global exposure are unparalleled."
+                  </p>
+                  <div class="ud-testimonial-author">
+                    <img src="assets/Girl.png" alt="Ananya Sharma Avatar" class="ud-author-img">
+                    <div class="ud-author-info">
+                      <strong>Ananya Sharma</strong>
+                      <span>MBA, Class of 2024</span>
+                      <div class="stars-rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ud-testimonial-item">
+                  <p class="ud-testimonial-quote">
+                    "The faculty are leading experts in their fields and the campus environment is inspiring. Oxford truly prepares you for the future."
+                  </p>
+                  <div class="ud-testimonial-author">
+                    <img src="assets/Boy.png" alt="Rohan Mehta Avatar" class="ud-author-img">
+                    <div class="ud-author-info">
+                      <strong>Rohan Mehta</strong>
+                      <span>MSc Computer Science, Class of 2023</span>
+                      <div class="stars-rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDEBAR COLUMN -->
+          <aside class="ud-sidebar-column">
+
+            <!-- WIDGET 1: AT A GLANCE -->
+            <div class="sidebar-widget-card">
+              <h3>At a Glance</h3>
+              <div class="glance-rows-list">
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-location-dot"></i> Location</span>
+                  <span class="glance-val">Oxford, United Kingdom</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-landmark"></i> Established</span>
+                  <span class="glance-val">1096</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-building-columns"></i> University Type</span>
+                  <span class="glance-val">Public</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-users"></i> Total Students</span>
+                  <span class="glance-val">24,000+</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-globe"></i> International Students</span>
+                  <span class="glance-val">48%</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-trophy"></i> QS World Ranking 2025</span>
+                  <span class="glance-val">#1</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-link"></i> Website</span>
+                  <span class="glance-val"><a href="https://www.ox.ac.uk" target="_blank">www.ox.ac.uk <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- WIDGET 2: WHY STUDY AT OXFORD? -->
+            <div class="sidebar-widget-card">
+              <h3>Why Study at Oxford?</h3>
+              <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:#334155; font-weight:600;">
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Ranked #1 in the World (QS 2025)</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> 900+ years of academic excellence</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> World-leading research opportunities</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Global alumni network of leaders</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Beautiful historic city and campus</div>
+              </div>
+            </div>
+
+            <!-- WIDGET 3: GET EXPERT GUIDANCE FORM CARD -->
+            <div class="ud-sidebar-form-card">
+              <h4>Get Expert Guidance</h4>
+              <p>Our counsellors are here to help you at every step of your journey.</p>
+
+              <form class="ud-mini-form" id="udMiniForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                  <option value="">Interested In</option>
+                  <option value="MBA">MBA</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Law">Law</option>
+                  <option value="Medicine">Medicine</option>
+                </select>
+                <button type="submit" class="btn-ud-form-submit">Book Free Counselling</button>
+              </form>
+            </div>
+
+            <!-- WIDGET 4: DOWNLOAD UNIVERSITY GUIDE -->
+            <div class="pdf-download-widget">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
+                <div>
+                  <h3 style="font-size:15.5px; font-weight:800; color:var(--ud-navy); margin-bottom:6px;">Download University Guide</h3>
+                  <p style="font-size:12px; color:#64748B; line-height:1.4;">Get detailed information about courses, fees, scholarships, accommodation and more.</p>
+                </div>
+                <img src="assets/Books.png" alt="Brochure Booklet" style="width:50px; height:50px; object-fit:contain; flex-shrink:0;">
+              </div>
+              <button type="button" class="btn-download-pdf">
+                Download Brochure <i class="fa-solid fa-download"></i>
+              </button>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 5. CONSULTATION BANNER ====== -->
+    <div class="container">
+      <section class="ud-consultation-banner">
+        <div class="ud-banner-inner">
+          <img src="assets/Girl.png" alt="Smiling Student Counsellor" class="ud-cta-left-student">
+          
+          <div class="ud-cta-center">
+            <h2>Ready to Start Your Journey at University of Oxford?</h2>
+            <p>Connect with our experts and take the first step towards your dream education.</p>
+          </div>
+
+          <div class="ud-cta-actions">
+            <button type="button" class="btn-cta-white">Book Free Counselling</button>
+            <button type="button" class="btn-cta-outline">
+              <i class="fa-solid fa-headset"></i> Talk to an Expert
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ====== 6. SITE FOOTER ====== -->
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- ===== FLOATING RIGHT SIDE SOCIAL MEDIA DOCK ===== -->
+  <div class="social-side-dock" id="socialSideDock">
+    <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn">
+      <span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+    </a>
+    <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram">
+      <span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span>
+    </a>
+    <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook">
+      <span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span>
+    </a>
+    <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube">
+      <span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="university-details.js"></script>
+
+<!-- ===== SCROLL TO TOP BUTTON ===== -->
+<button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+.scroll-top-fab {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0D47D8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+.scroll-top-fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-fab:hover {
+  background: #0A39A6;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+}
+.scroll-top-fab i {
+  pointer-events: none;
+}
+</style>
+
+<script>
+(function() {
+  var btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+})();
+</script>
+<script src="main.js"></script>
+</body>
+</html><div class="nav-dropdown-menu">
+            <a href="Blog.html" class="uni-drop-item">
+              <i class="fa-regular fa-newspaper uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Blog</strong><span>Articles &amp; study abroad guides</span></div>
+            </a>
+            <a href="index.html#testimonials" class="uni-drop-item">
+              <i class="fa-solid fa-graduation-cap uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Success Stories</strong><span>Real student achievements</span></div>
+            </a>
+            <a href="index.html#events" class="uni-drop-item">
+              <i class="fa-solid fa-calendar-days uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Events &amp; Webinars</strong><span>Live sessions &amp; university fairs</span></div>
+            </a>
+            <a href="index.html#faq" class="uni-drop-item">
+              <i class="fa-solid fa-circle-question uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>FAQs</strong><span>Frequently asked questions</span></div>
+            </a>
+          </div>TYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University of Oxford | University Details - ISMS Global</title>
+  <meta name="description" content="Explore University of Oxford. Learn about QS World Ranking #1, popular courses, admission requirements, tuition fees, scholarships, and campus life with ISMS Global.">
+  
+  <!-- Google Fonts -->
+  
+  
+  
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="university-details.css">
+  <!-- ===== NAVBAR OVERRIDE: Exact match with index.html ===== -->
+  <style>
+  /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML */
+  :root {
+    --header-bg: #F4F8FF;
+    --header-border: #DCE5F3;
+    --nav-text: #11172A;
+    --nav-hover-bg: #E5EDFF;
+    --nav-accent: #0D47D8;
+    --dropdown-bg: #FFFFFF;
+    --gold-btn: #C79A3C;
+    --gold-btn-hover: #B5872E;
+  }
+
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background: var(--header-bg) !important;
+    border-bottom: 1px solid var(--header-border) !important;
+    box-shadow: 0 4px 20px rgba(17,23,42,0.08) !important;
+    backdrop-filter: none !important;
+  }
+
+  body {
+    padding-top: 96px !important;
+  }
+
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 72px !important;
+    gap: 12px !important;
+    max-width: 1720px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 0 2.5rem !important;
+  }
+
+  .brand-logo-img {
+    height: 48px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+
+  .main-nav a {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-nav a:hover, .main-nav a.active {
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+  }
+  .main-nav a.active::after {
+    display: none !important;
+  }
+
+  .nav-dropdown {
+    position: relative !important;
+  }
+  .nav-dropdown-toggle {
+    color: var(--nav-text) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    padding: 20px 16px !important;
+    border-bottom: 3px solid transparent !important;
+    transition: background .15s ease, border-color .15s ease !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+  .nav-dropdown-toggle i {
+    color: var(--nav-accent) !important;
+    font-size: 10px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-toggle {
+    background: var(--nav-hover-bg) !important;
+    border-bottom: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: var(--dropdown-bg) !important;
+    border: 1px solid var(--header-border) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+    box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(6px) !important;
+    transition: all 0.2s ease !important;
+    min-width: 160px !important;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(4px) !important;
+  }
+  .nav-dropdown-menu a {
+    color: var(--nav-text) !important;
+    border-left: 3px solid transparent !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    padding: 10px 22px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    background: transparent !important;
+  }
+  .nav-dropdown-menu a:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+    color: var(--nav-accent) !important;
+  }
+
+  .dest-mega-menu {
+    min-width: 680px !important;
+    padding: 16px 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(8px) !important;
+    border-radius: 18px !important;
+    background: var(--dropdown-bg) !important;
+    border-top: 3px solid var(--nav-accent) !important;
+  }
+  .nav-dropdown:hover .dest-mega-menu {
+    transform: translateX(-50%) translateY(4px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .dest-drop-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    transition: background 0.15s ease !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .dest-drop-item:hover {
+    background: var(--header-bg) !important;
+    border-left: 3px solid var(--nav-accent) !important;
+  }
+  .dest-drop-flag {
+    width: 26px !important;
+    height: 18px !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+    flex-shrink: 0 !important;
+  }
+  .dest-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.25 !important;
+  }
+  .dest-drop-text strong {
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: var(--nav-text) !important;
+  }
+  .dest-drop-text span {
+    font-size: 11px !important;
+    color: #64748B !important;
+    margin-top: 2px !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  .header-phone {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: var(--nav-text) !important;
+    text-decoration: none !important;
+    font-size: 12.5px !important;
+  }
+  .header-phone i {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: var(--nav-hover-bg) !important;
+    color: var(--nav-accent) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .header-phone small {
+    color: #667085 !important;
+  }
+  .header-phone strong {
+    color: var(--nav-text) !important;
+    font-weight: 700 !important;
+    font-size: 13.5px !important;
+  }
+
+  .site-header .btn-primary {
+    background: var(--gold-btn) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .site-header .btn-primary:hover {
+    background: var(--gold-btn-hover) !important;
+    color: #FFFFFF !important;
+    transform: none !important;
+  }
+
+  .nav-toggle {
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+  }
+  .nav-toggle span {
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--nav-text) !important;
+    border-radius: 2px !important;
+    transition: 0.3s ease !important;
+    display: block !important;
+  }
+
+  @media (max-width: 1160px) {
+    .nav-toggle { display: flex !important; }
+    .main-nav {
+      position: fixed !important;
+      inset: 72px 0 0 0 !important;
+      background: #fff !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 24px !important;
+      gap: 4px !important;
+      overflow-y: auto !important;
+      transform: translateX(100%) !important;
+      transition: transform 0.3s ease !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+      z-index: 9998 !important;
+    }
+    .main-nav.open { transform: translateX(0) !important; }
+    .main-nav a, .nav-dropdown-toggle {
+      padding: 14px 8px !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+      width: 100% !important;
+      font-size: 15px !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+    }
+    .dest-mega-menu {
+      min-width: unset !important;
+      grid-template-columns: 1fr !important;
+      transform: none !important;
+      left: 0 !important;
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .nav-dropdown-menu {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      display: none !important;
+    }
+    .nav-dropdown.open .nav-dropdown-menu { display: block !important; }
+  }
+  </style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- ====== 1. SITE HEADER ====== -->
+  <!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader"></header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+
+    <!-- ====== 2. HERO SECTION ====== -->
+    <section class="ud-hero-section">
+      <div class="container">
+        <div class="ud-hero-layout">
+          
+          <!-- LEFT HERO CONTENT -->
+          <div class="ud-hero-left">
+            <nav class="ud-breadcrumb">
+              <a href="index.html">Home</a> &gt;
+              <div class="nav-dropdown">
+        <a href="universities.html" class="nav-dropdown-toggle">Universities <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown-menu uni-drop-menu">
+          <a href="universities.html" class="uni-drop-item">
+            <i class="fa-solid fa-globe uni-drop-icon"></i>
+            <div class="uni-drop-text"><strong>Browse by Country</strong><span>Find universities by destination</span></div>
+          </a>
+          <a href="universities.html?filter=ranking" class="uni-drop-item">
+            <i class="fa-solid fa-ranking-star uni-drop-icon"></i>
+            <div class="uni-drop-text"><strong>Browse by Ranking</strong><span>Top QS &amp; World ranked universities</span></div>
+          </a>
+          <a href="universities.html?filter=course" class="uni-drop-item">
+            <i class="fa-solid fa-book-open uni-drop-icon"></i>
+            <div class="uni-drop-text"><strong>Browse by Course</strong><span>Find universities by your subject</span></div>
+          </a>
+          <a href="university_search.html" class="uni-drop-item">
+            <i class="fa-solid fa-award uni-drop-icon"></i>
+            <div class="uni-drop-text"><strong>Top 25 Universities</strong><span>World's best institutions</span></div>
+          </a>
+          <div class="uni-drop-divider"></div>
+          <a href="universities.html" class="uni-drop-viewall">View All Universities <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div> &gt;
+              <span style="color: var(--ud-navy); font-weight: 600;">University of Oxford</span>
+            </nav>
+
+            <span class="ud-badge-rank1">🏆 #1 in the World (QS World University Rankings 2025)</span>
+
+            <h1 class="ud-hero-title">University of Oxford</h1>
+            <div class="ud-hero-location">Oxford, United Kingdom</div>
+
+            <p class="ud-hero-desc">
+              One of the world's oldest and most prestigious universities, the University of Oxford has a tradition of academic excellence, groundbreaking research and inspiring leaders for more than 900 years.
+            </p>
+
+            <!-- Meta Chips Row -->
+            <div class="ud-meta-chips-row">
+              <div class="ud-meta-chip">
+                <div class="ud-chip-icon"><i class="fa-solid fa-landmark"></i></div>
+                <div class="ud-chip-info">
+                  <label>ESTD</label>
+                  <strong>1096</strong>
+                </div>
+              </div>
+
+              <div class="ud-meta-chip">
+                <div class="ud-chip-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="ud-chip-info">
+                  <label>TYPE</label>
+                  <strong>Public</strong>
+                </div>
+              </div>
+
+              <div class="ud-meta-chip">
+                <div class="ud-chip-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="ud-chip-info">
+                  <label>STUDENTS</label>
+                  <strong>24,000+</strong>
+                </div>
+              </div>
+
+              <div class="ud-meta-chip">
+                <div class="ud-chip-icon"><i class="fa-solid fa-globe"></i></div>
+                <div class="ud-chip-info">
+                  <label>INTL STUDENTS</label>
+                  <strong>48%</strong>
+                </div>
+              </div>
+
+              <div class="ud-meta-chip">
+                <div class="ud-chip-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="ud-chip-info">
+                  <label>CAMPUS</label>
+                  <strong>Oxford, UK</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="ud-hero-actions">
+              <button type="button" class="btn-ud-apply">Apply Now</button>
+              <button type="button" class="btn-ud-brochure">
+                <i class="fa-solid fa-download"></i> Download Brochure
+              </button>
+              <button type="button" class="btn-ud-shortlist" id="btnUdShortlist">
+                <i class="fa-regular fa-bookmark"></i> Shortlist
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT HERO MEDIA BOX -->
+          <div class="ud-hero-media-box">
+            <div class="ud-logo-overlay">OXF</div>
+            <img src="assets/img_photo-1541829070764-84a7d30dd3f3.jpg" alt="University of Oxford Radcliffe Camera" class="ud-hero-campus-img">
+            
+            <div class="ud-qs-overlay-card">
+              <span class="top">QS Ranking 2025</span>
+              <strong>#1</strong>
+              <span class="bottom">in the World</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 3. STICKY SUB-NAV TABS ====== -->
+    <div class="ud-sticky-subnav">
+      <div class="container">
+        <nav class="ud-subnav-inner">
+          <a href="#overview" class="ud-subnav-item active"><i class="fa-solid fa-list-check"></i> Overview</a>
+          <a href="#courses" class="ud-subnav-item"><i class="fa-solid fa-graduation-cap"></i> Courses</a>
+          <a href="#admission" class="ud-subnav-item"><i class="fa-solid fa-file-signature"></i> Admission</a>
+          <a href="#fees" class="ud-subnav-item"><i class="fa-solid fa-sack-dollar"></i> Tuition &amp; Fees</a>
+          <a href="Scholarship.html" class="ud-subnav-item"><i class="fa-solid fa-award"></i> Scholarships</a>
+          <a href="#campus" class="ud-subnav-item"><i class="fa-solid fa-building-columns"></i> Campus Life</a>
+          <a href="#rankings" class="ud-subnav-item"><i class="fa-solid fa-trophy"></i> Rankings</a>
+          <a href="#accommodation" class="ud-subnav-item"><i class="fa-solid fa-house"></i> Accommodation</a>
+          <a href="#faq" class="ud-subnav-item"><i class="fa-regular fa-circle-question"></i> FAQs</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ====== 4. MAIN CONTENT GRID (LEFT 70% + SIDEBAR 30%) ====== -->
+    <section class="ud-main-section">
+      <div class="container">
+        <div class="ud-main-grid">
+
+          <!-- LEFT COLUMN CONTENT -->
+          <div class="ud-left-content">
+
+            <!-- SECTION A: ABOUT UNIVERSITY OF OXFORD -->
+            <div class="ud-section-box" id="overview">
+              <h2>About University of Oxford</h2>
+              <p class="about-desc">
+                The University of Oxford is a collegiate research university in Oxford, England. With a rich history dating back to the 11th century, Oxford is consistently ranked as one of the top universities in the world. It offers outstanding teaching, world-class research facilities, and a global community of scholars.
+              </p>
+
+              <div class="ud-bullets-grid">
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> 11th century &ndash; One of the world's oldest universities</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Innovative teaching and learning</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> 39 Colleges &amp; 6 Permanent Private Halls</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Opportunities for interdisciplinary research</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> World-class faculty and research excellence</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> State-of-the-art libraries and facilities</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Strong global alumni network</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Vibrant student life in a historic city</div>
+              </div>
+            </div>
+
+            <!-- SECTION B: POPULAR COURSES -->
+            <div class="ud-section-box" id="courses">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                <h2>Popular Courses</h2>
+                <a href="courses.html" style="font-size:13.5px; font-weight:700; color:var(--ud-primary); text-decoration:none;">View All Courses &rarr;</a>
+              </div>
+
+              <div class="ud-courses-grid">
+                <div class="ud-course-mini-card">
+                  <div class="ud-course-icon"><i class="fa-solid fa-briefcase"></i></div>
+                  <strong>MBA</strong>
+                  <span class="meta">Duration: 1 Year</span>
+                  <span class="rank">QS Rank: #1</span>
+                  <a href="course-details.html" class="link">View Details &rarr;</a>
+                </div>
+
+                <div class="ud-course-mini-card">
+                  <div class="ud-course-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                  <strong>Computer Science</strong>
+                  <span class="meta">Duration: 3 Years</span>
+                  <span class="rank">QS Rank: #1</span>
+                  <a href="course-details.html" class="link">View Details &rarr;</a>
+                </div>
+
+                <div class="ud-course-mini-card">
+                  <div class="ud-course-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                  <strong>Law</strong>
+                  <span class="meta">Duration: 3 Years</span>
+                  <span class="rank">QS Rank: #2</span>
+                  <a href="course-details.html" class="link">View Details &rarr;</a>
+                </div>
+
+                <div class="ud-course-mini-card">
+                  <div class="ud-course-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                  <strong>Medicine</strong>
+                  <span class="meta">Duration: 6 Years</span>
+                  <span class="rank">QS Rank: #3</span>
+                  <a href="course-details.html" class="link">View Details &rarr;</a>
+                </div>
+
+                <div class="ud-course-mini-card">
+                  <div class="ud-course-icon"><i class="fa-solid fa-gears"></i></div>
+                  <strong>Engineering</strong>
+                  <span class="meta">Duration: 4 Years</span>
+                  <span class="rank">QS Rank: #5</span>
+                  <a href="course-details.html" class="link">View Details &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION C: ADMISSION REQUIREMENTS -->
+            <div class="ud-section-box" id="admission">
+              <h2>Admission Requirements</h2>
+
+              <div class="ud-admission-split">
+                <div class="ud-req-list">
+                  <div class="ud-req-item">
+                    <div class="ud-req-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="ud-req-info">
+                      <strong>Academic Requirements</strong>
+                      <p>High school completion with excellent academic record. Specific subject requirements vary by course.</p>
+                    </div>
+                  </div>
+
+                  <div class="ud-req-item">
+                    <div class="ud-req-icon"><i class="fa-solid fa-language"></i></div>
+                    <div class="ud-req-info">
+                      <strong>English Language Proficiency</strong>
+                      <p>IELTS Overall 7.0+ (with no band less than 6.5) or TOEFL iBT 100+.</p>
+                    </div>
+                  </div>
+
+                  <div class="ud-req-item">
+                    <div class="ud-req-icon"><i class="fa-solid fa-file-pen"></i></div>
+                    <div class="ud-req-info">
+                      <strong>Standardized Tests</strong>
+                      <p>Some courses may require SAT / ACT / GRE / GMAT. Requirements vary by program.</p>
+                    </div>
+                  </div>
+
+                  <div class="ud-req-item">
+                    <div class="ud-req-icon"><i class="fa-solid fa-folder-open"></i></div>
+                    <div class="ud-req-info">
+                      <strong>Documents Required</strong>
+                      <p>Academic transcripts, Statement of Purpose, Letters of Recommendation, CV, Passport copy.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <img src="assets/img_photo-1589829545856-d10d557cf95f.jpg" alt="Oxford Campus Building" class="ud-admission-img">
+              </div>
+            </div>
+
+            <!-- SECTION D: CAMPUS LIFE -->
+            <div class="ud-section-box" id="campus">
+              <h2>Campus Life</h2>
+
+              <div class="ud-campus-grid">
+                <div class="ud-campus-card">
+                  <div class="ud-campus-icon"><i class="fa-solid fa-building-columns"></i></div>
+                  <strong>39 Colleges</strong>
+                  <p>A unique collegiate system for close-knit communities</p>
+                </div>
+
+                <div class="ud-campus-card">
+                  <div class="ud-campus-icon"><i class="fa-solid fa-users"></i></div>
+                  <strong>500+ Clubs</strong>
+                  <p>Academic, cultural, sports and hobby clubs</p>
+                </div>
+
+                <div class="ud-campus-card">
+                  <div class="ud-campus-icon"><i class="fa-solid fa-book-open"></i></div>
+                  <strong>Libraries</strong>
+                  <p>One of the largest university library systems in the world</p>
+                </div>
+
+                <div class="ud-campus-card">
+                  <div class="ud-campus-icon"><i class="fa-solid fa-volleyball"></i></div>
+                  <strong>Sports</strong>
+                  <p>World-class sports facilities and opportunities</p>
+                </div>
+
+                <div class="ud-campus-card">
+                  <div class="ud-campus-icon"><i class="fa-solid fa-headset"></i></div>
+                  <strong>Support Services</strong>
+                  <p>Career support, mental health, international student support</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION E: STUDENT TESTIMONIALS -->
+            <div class="ud-section-box">
+              <h2>What Students Say</h2>
+
+              <div class="ud-testimonials-grid">
+                <div class="ud-testimonial-item">
+                  <p class="ud-testimonial-quote">
+                    "Oxford has been a life-changing experience. The quality of teaching, the resources and the global exposure are unparalleled."
+                  </p>
+                  <div class="ud-testimonial-author">
+                    <img src="assets/Girl.png" alt="Ananya Sharma Avatar" class="ud-author-img">
+                    <div class="ud-author-info">
+                      <strong>Ananya Sharma</strong>
+                      <span>MBA, Class of 2024</span>
+                      <div class="stars-rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ud-testimonial-item">
+                  <p class="ud-testimonial-quote">
+                    "The faculty are leading experts in their fields and the campus environment is inspiring. Oxford truly prepares you for the future."
+                  </p>
+                  <div class="ud-testimonial-author">
+                    <img src="assets/Boy.png" alt="Rohan Mehta Avatar" class="ud-author-img">
+                    <div class="ud-author-info">
+                      <strong>Rohan Mehta</strong>
+                      <span>MSc Computer Science, Class of 2023</span>
+                      <div class="stars-rating">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDEBAR COLUMN -->
+          <aside class="ud-sidebar-column">
+
+            <!-- WIDGET 1: AT A GLANCE -->
+            <div class="sidebar-widget-card">
+              <h3>At a Glance</h3>
+              <div class="glance-rows-list">
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-location-dot"></i> Location</span>
+                  <span class="glance-val">Oxford, United Kingdom</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-landmark"></i> Established</span>
+                  <span class="glance-val">1096</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-building-columns"></i> University Type</span>
+                  <span class="glance-val">Public</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-users"></i> Total Students</span>
+                  <span class="glance-val">24,000+</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-globe"></i> International Students</span>
+                  <span class="glance-val">48%</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-trophy"></i> QS World Ranking 2025</span>
+                  <span class="glance-val">#1</span>
+                </div>
+                <div class="glance-row-item">
+                  <span class="glance-label"><i class="fa-solid fa-link"></i> Website</span>
+                  <span class="glance-val"><a href="https://www.ox.ac.uk" target="_blank">www.ox.ac.uk <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px;"></i></a></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- WIDGET 2: WHY STUDY AT OXFORD? -->
+            <div class="sidebar-widget-card">
+              <h3>Why Study at Oxford?</h3>
+              <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:#334155; font-weight:600;">
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Ranked #1 in the World (QS 2025)</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> 900+ years of academic excellence</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> World-leading research opportunities</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Global alumni network of leaders</div>
+                <div class="ud-bullet-item"><i class="fa-solid fa-circle-check"></i> Beautiful historic city and campus</div>
+              </div>
+            </div>
+
+            <!-- WIDGET 3: GET EXPERT GUIDANCE FORM CARD -->
+            <div class="ud-sidebar-form-card">
+              <h4>Get Expert Guidance</h4>
+              <p>Our counsellors are here to help you at every step of your journey.</p>
+
+              <form class="ud-mini-form" id="udMiniForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                  <option value="">Interested In</option>
+                  <option value="MBA">MBA</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Law">Law</option>
+                  <option value="Medicine">Medicine</option>
+                </select>
+                <button type="submit" class="btn-ud-form-submit">Book Free Counselling</button>
+              </form>
+            </div>
+
+            <!-- WIDGET 4: DOWNLOAD UNIVERSITY GUIDE -->
+            <div class="pdf-download-widget">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
+                <div>
+                  <h3 style="font-size:15.5px; font-weight:800; color:var(--ud-navy); margin-bottom:6px;">Download University Guide</h3>
+                  <p style="font-size:12px; color:#64748B; line-height:1.4;">Get detailed information about courses, fees, scholarships, accommodation and more.</p>
+                </div>
+                <img src="assets/Books.png" alt="Brochure Booklet" style="width:50px; height:50px; object-fit:contain; flex-shrink:0;">
+              </div>
+              <button type="button" class="btn-download-pdf">
+                Download Brochure <i class="fa-solid fa-download"></i>
+              </button>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 5. CONSULTATION BANNER ====== -->
+    <div class="container">
+      <section class="ud-consultation-banner">
+        <div class="ud-banner-inner">
+          <img src="assets/Girl.png" alt="Smiling Student Counsellor" class="ud-cta-left-student">
+          
+          <div class="ud-cta-center">
+            <h2>Ready to Start Your Journey at University of Oxford?</h2>
+            <p>Connect with our experts and take the first step towards your dream education.</p>
+          </div>
+
+          <div class="ud-cta-actions">
+            <button type="button" class="btn-cta-white">Book Free Counselling</button>
+            <button type="button" class="btn-cta-outline">
+              <i class="fa-solid fa-headset"></i> Talk to an Expert
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ====== 6. SITE FOOTER ====== -->
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="university-details.js"></script>
+
+<!-- ===== SCROLL TO TOP BUTTON ===== -->
+<button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+.scroll-top-fab {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0D47D8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+.scroll-top-fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-fab:hover {
+  background: #0A39A6;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+}
+.scroll-top-fab i {
+  pointer-events: none;
+}
+</style>
+
+<script>
+(function() {
+  var btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
+

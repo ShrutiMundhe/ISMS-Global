@@ -1,0 +1,5434 @@
+/* =========================================================================================
+   ISMS GLOBAL EDUCATION — UNIVERSAL RESPONSIVE STYLESHEET (responsive.css)
+   =========================================================================================
+   Complete fluid responsiveness across All Screen Sizes (Desktops, Laptops, Tablets, Mobile).
+   Features:
+   - Unified Full Momentum Drawer Scrolling: ONE single fluid scroller across entire menu
+   - Zero Scroll Traps: Dropdowns expand in-flow without nested scrollbars or gesture locking
+   - Upper Menu Stability: Home, About Us, and parent headers remain 100% visible at the top
+   - Top Header Bar: Only Logo and Hamburger Menu button are visible on mobile/tablet (<= 1200px)
+   - Call Now & Get Free Counselling: Exclusively visible inside the Hamburger Menu drawer
+   - Fluid typography & touch-friendly collapsing grids (2-col on tablets, 1-col on mobile)
+   - Horizontally-scrollable data tables with touch momentum
+   - 100% Content Preservation across all 22+ pages
+   ========================================================================================= */
+
+/* =========================================================================================
+   1. GLOBAL RESET & FLUID CONTAINER SYSTEM
+   ========================================================================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  position: relative !important;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  padding-top: 72px !important;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Fluid Universal Container */
+.container,
+.header-inner,
+.content-container,
+.main-container {
+  width: 100% !important;
+  max-width: 1320px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(16px, 3.5vw, 32px) !important;
+  padding-right: clamp(16px, 3.5vw, 32px) !important;
+  box-sizing: border-box !important;
+}
+
+/* Fluid Media & SVG Scaling */
+img, picture, svg, video, canvas {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* Flag Image & Circle Preservations (Prevents oval distortion & opacity fading on mobile/responsive) */
+.hero-destinations,
+.hero-destinations .flag-row,
+.hero-destinations .flag-item,
+.flag-item {
+  position: relative !important;
+  z-index: 10 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+.flag-item .flag {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  max-width: 42px !important;
+  max-height: 42px !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  border: 1.5px solid #DCE5F3 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+  filter: none !important;
+}
+
+.flag-item .flag img {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  max-width: 42px !important;
+  max-height: 42px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 50% !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+  filter: none !important;
+}
+
+/* Push backdrop graphics behind flag items */
+.hero-landmarks-bg,
+.globe-circle,
+.hero-sketch-left,
+.hero-sketch-img {
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Fluid Typography */
+h1 {
+  font-size: clamp(1.85rem, 4vw + 0.8rem, 3.25rem) !important;
+  line-height: 1.2 !important;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.4rem) !important;
+  line-height: 1.25 !important;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw + 0.3rem, 1.65rem) !important;
+  line-height: 1.3 !important;
+}
+
+h4 {
+  font-size: clamp(1.05rem, 1.5vw + 0.2rem, 1.3rem) !important;
+}
+
+p, li, span, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Buttons Touch Target */
+.btn, .btn-primary, .btn-secondary, button {
+  min-height: 42px;
+  touch-action: manipulation;
+}
+
+/* =========================================================================================
+   2. DATA TABLES & FINANCIAL BREAKDOWNS (FLUID FULL-WIDTH FIT - NO SCROLL)
+   ========================================================================================= */
+.guide-table-responsive,
+.dcs-table-card,
+.table-responsive,
+.dates-table-container,
+.table-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: visible !important;
+  overflow: visible !important;
+  margin: 16px 0 !important;
+  border-radius: 12px !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+.dcs-table,
+.cost-table,
+.guide-table-responsive table,
+.table-responsive table,
+.dates-table-container table {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  table-layout: fixed !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.dcs-table th,
+.dcs-table td,
+.cost-table th,
+.cost-table td,
+.guide-table-responsive th,
+.guide-table-responsive td,
+table th,
+table td {
+  padding: 10px 8px !important;
+  font-size: clamp(11.5px, 1.2vw, 13.5px) !important;
+  text-align: left !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  vertical-align: middle !important;
+}
+
+.cost-table th:first-child,
+.cost-table td:first-child {
+  width: 46% !important;
+}
+
+.cost-table th:last-child,
+.cost-table td:last-child {
+  width: 54% !important;
+}
+
+.cost-row-icon {
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  min-height: 26px !important;
+  font-size: 11px !important;
+  margin-right: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 480px) {
+  .cost-table th,
+  .cost-table td {
+    padding: 8px 5px !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
+
+  .cost-table th:first-child,
+  .cost-table td:first-child {
+    width: 45% !important;
+  }
+
+  .cost-table th:last-child,
+  .cost-table td:last-child {
+    width: 55% !important;
+  }
+
+  .cost-row-icon {
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+    font-size: 10px !important;
+    margin-right: 4px !important;
+  }
+}
+
+/* =========================================================================================
+   3. DESKTOP & LARGE SCREEN NAVIGATION (> 1200px)
+   ========================================================================================= */
+@media (min-width: 1201px) {
+  html body .site-header .nav-toggle,
+  html body #siteHeader #navToggle,
+  html body .nav-toggle,
+  html body #navToggle,
+  .mobile-nav-actions {
+    display: none !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    position: static !important;
+    transform: none !important;
+    height: auto !important;
+    width: auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .dest-mega-menu {
+    min-width: 680px !important;
+  }
+
+  .footer-grid {
+    gap: 32px !important;
+  }
+}
+
+/* =========================================================================================
+   4. NAVIGATION & MOBILE HAMBURGER SYSTEM (<= 1200px)
+   ========================================================================================= */
+@media (max-width: 1200px) {
+  .site-header {
+    height: 72px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    background: #F4F8FF !important;
+    border-bottom: 1px solid #DCE5F3 !important;
+    overflow: visible !important;
+  }
+
+  .header-inner {
+    padding: 0 1.25rem !important;
+    height: 72px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  /* -------------------------------------------------------------------------
+     TOP NAVBAR ACTION BUTTONS: STRICTLY HIDDEN ON RESPONSIVE SCREENS
+     Only the hamburger toggle button is visible in the top navbar bar.
+     ------------------------------------------------------------------------- */
+  .site-header .header-actions .header-phone,
+  .site-header .header-actions .btn,
+  .site-header .header-actions .btn-primary,
+  .site-header .header-actions a[href^="tel:"],
+  .site-header .header-actions a[href*="contact"],
+  .site-header .header-actions .open-counselling-modal,
+  #siteHeader .header-actions .header-phone,
+  #siteHeader .header-actions .btn,
+  #siteHeader .header-actions .btn-primary,
+  #siteHeader .header-actions a[href^="tel:"],
+  #siteHeader .header-actions a[href*="contact"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 0 !important;
+    position: relative !important;
+    z-index: 10001 !important;
+  }
+
+  /* Hamburger Toggle Button */
+  html body .site-header .nav-toggle,
+  html body #siteHeader #navToggle,
+  html body .nav-toggle,
+  html body #navToggle,
+  button.nav-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    background: #E5EDFF !important;
+    border: 1.5px solid #CBD5E1 !important;
+    border-radius: 10px !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 10002 !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    box-shadow: 0 2px 8px rgba(13, 71, 216, 0.12) !important;
+    transition: background 0.25s ease, transform 0.2s ease !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .nav-toggle:hover,
+  html body #navToggle:hover {
+    background: #D5E3FF !important;
+    transform: scale(1.04) !important;
+  }
+
+  /* Hamburger 3 Horizontal Bars */
+  html body .nav-toggle span,
+  html body #navToggle span,
+  button.nav-toggle span {
+    width: 22px !important;
+    height: 2.5px !important;
+    min-height: 2.5px !important;
+    background-color: #0D47D8 !important;
+    border-radius: 3px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: block !important;
+    transform-origin: center !important;
+    pointer-events: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Animated Hamburger to X */
+  .nav-toggle.active span:nth-child(1),
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg) !important;
+  }
+
+  .nav-toggle.active span:nth-child(2),
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0 !important;
+    transform: scale(0) !important;
+  }
+
+  .nav-toggle.active span:nth-child(3),
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg) !important;
+  }
+
+  /* -------------------------------------------------------------------------
+     SLIDE-OUT NAVIGATION DRAWER (ONE UNIFIED HIGH-MOMENTUM SCROLLER)
+     ------------------------------------------------------------------------- */
+  .main-nav {
+    position: fixed !important;
+    top: 72px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - 72px) !important;
+    height: calc(100dvh - 72px) !important;
+    max-height: calc(100vh - 72px) !important;
+    max-height: calc(100dvh - 72px) !important;
+    background: #FFFFFF !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    padding: 16px 16px 100px 16px !important;
+    gap: 4px !important;
+    overflow-y: auto !important; /* SINGLE UNIFIED SCROLLER */
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-y: contain !important;
+    touch-action: pan-y !important;
+    pointer-events: auto !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+    z-index: 9998 !important;
+    display: flex !important;
+    box-sizing: border-box !important;
+  }
+
+  .main-nav.open {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: flex !important;
+  }
+
+  /* Top-Level Navigation Links in Drawer (Home, About Us, etc.) */
+  .main-nav a:not(.dest-drop-item):not(.uni-drop-item):not(.mobile-phone-btn):not(.mobile-cta-btn),
+  .nav-dropdown-toggle {
+    padding: 12px 14px !important;
+    border-bottom: 1px solid #EEF2F6 !important;
+    width: 100% !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    color: #11172A !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 8px !important;
+    justify-content: space-between !important;
+    display: flex !important;
+    align-items: center !important;
+    background: transparent !important;
+    transition: background 0.15s ease, color 0.15s ease !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+  }
+
+  .main-nav a:hover:not(.dest-drop-item):not(.uni-drop-item):not(.mobile-phone-btn):not(.mobile-cta-btn),
+  .main-nav a.active:not(.dest-drop-item):not(.uni-drop-item):not(.mobile-phone-btn):not(.mobile-cta-btn),
+  .nav-dropdown-toggle:hover,
+  .nav-dropdown.open .nav-dropdown-toggle {
+    background: #F4F8FF !important;
+    color: #0D47D8 !important;
+    border-left: 3px solid #0D47D8 !important;
+    border-bottom: 1px solid #EEF2F6 !important;
+  }
+
+  /* -------------------------------------------------------------------------
+     IN-FLOW VERTICAL DROPDOWN ACCORDIONS (ZERO SCROLL TRAPS, FULL IN-FLOW LIST)
+     ------------------------------------------------------------------------- */
+  .nav-dropdown {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: static !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Closed Dropdown State */
+  html body #siteHeader #mainNav div.nav-dropdown:not(.open) > div.nav-dropdown-menu,
+  html body #siteHeader #mainNav div.nav-dropdown:not(.open) > div.dest-mega-menu,
+  html body #siteHeader #mainNav div.nav-dropdown:not(.open) > div.uni-drop-menu,
+  html body .site-header .main-nav .nav-dropdown:not(.open) > .nav-dropdown-menu,
+  html body .site-header .main-nav .nav-dropdown:not(.open) > .dest-mega-menu,
+  html body .site-header .main-nav .nav-dropdown:not(.open) > .uni-drop-menu,
+  html body #mainNav .nav-dropdown:not(.open) > .nav-dropdown-menu,
+  html body #mainNav .nav-dropdown:not(.open) > .dest-mega-menu,
+  html body #mainNav .nav-dropdown:not(.open) > .uni-drop-menu,
+  html body .main-nav .nav-dropdown:not(.open) > .nav-dropdown-menu,
+  html body .main-nav .nav-dropdown:not(.open) > .dest-mega-menu,
+  html body .main-nav .nav-dropdown:not(.open) > .uni-drop-menu,
+  html body div.nav-dropdown:not(.open) > div.nav-dropdown-menu,
+  html body div.nav-dropdown:not(.open) > div.dest-mega-menu,
+  html body div.nav-dropdown:not(.open) > div.uni-drop-menu,
+  .dest-mega-menu:not(.open),
+  .uni-drop-menu:not(.open) {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  /* Open State for Dropdowns: In-Flow Accordion (Scrolls smoothly with main drawer) */
+  html body #siteHeader #mainNav div.nav-dropdown.open > div.nav-dropdown-menu,
+  html body #siteHeader #mainNav div.nav-dropdown.open > div.dest-mega-menu,
+  html body #siteHeader #mainNav div.nav-dropdown.open > div.uni-drop-menu,
+  html body .site-header .main-nav .nav-dropdown.open > .nav-dropdown-menu,
+  html body .site-header .main-nav .nav-dropdown.open > .dest-mega-menu,
+  html body .site-header .main-nav .nav-dropdown.open > .uni-drop-menu,
+  html body #mainNav .nav-dropdown.open > .nav-dropdown-menu,
+  html body #mainNav .nav-dropdown.open > .dest-mega-menu,
+  html body #mainNav .nav-dropdown.open > .uni-drop-menu,
+  html body .main-nav .nav-dropdown.open > .nav-dropdown-menu,
+  html body .main-nav .nav-dropdown.open > .dest-mega-menu,
+  html body .main-nav .nav-dropdown.open > .uni-drop-menu,
+  html body div.nav-dropdown.open > div.nav-dropdown-menu,
+  html body div.nav-dropdown.open > div.dest-mega-menu,
+  html body div.nav-dropdown.open > div.uni-drop-menu {
+    display: flex !important;
+    flex-direction: column !important; /* STRICTLY VERTICAL ONLY */
+    position: static !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    background: #F8FAFC !important;
+    border: 1.5px solid #E2E8F0 !important;
+    border-left: 3px solid #0D47D8 !important;
+    border-radius: 10px !important;
+    padding: 6px !important;
+    margin: 4px 0 8px 0 !important;
+    gap: 4px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03) !important;
+    max-height: none !important; /* EXPANDS IN-FLOW WITH MAIN DRAWER */
+    height: auto !important;
+    overflow: visible !important; /* ZERO NESTED SCROLL TRAPS */
+    z-index: 10005 !important;
+  }
+
+  .nav-dropdown-toggle i {
+    transition: transform 0.25s ease !important;
+  }
+
+  .nav-dropdown.open .nav-dropdown-toggle i {
+    transform: rotate(180deg) !important;
+  }
+
+  /* Vertical Study Destination Items (Compact & Touch-Friendly) */
+  html body .main-nav .dest-drop-item,
+  html body .site-header .main-nav .dest-drop-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 10px !important;
+    border-radius: 8px !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-left: 3px solid transparent !important;
+    transition: all 0.15s ease !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    transform: none !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .main-nav .dest-drop-item:hover,
+  html body .main-nav .dest-drop-item.active {
+    background: #EFF6FF !important;
+    border-color: #BFDBFE !important;
+    border-left: 3px solid #0D47D8 !important;
+    transform: translateX(2px) !important;
+  }
+
+  html body .main-nav .dest-drop-flag {
+    width: 24px !important;
+    height: 16px !important;
+    min-width: 24px !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  html body .main-nav .dest-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 1px !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .main-nav .dest-drop-text strong {
+    display: block !important;
+    font-size: 12.5px !important;
+    font-weight: 700 !important;
+    color: #11172A !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
+  html body .main-nav .dest-drop-text span {
+    display: block !important;
+    font-size: 10.5px !important;
+    font-weight: 400 !important;
+    color: #64748B !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
+  /* Vertical University & Resource Items (Compact & Touch-Friendly) */
+  html body .main-nav .uni-drop-item,
+  html body .site-header .main-nav .uni-drop-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 10px !important;
+    border-radius: 8px !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-left: 3px solid transparent !important;
+    transition: all 0.15s ease !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    transform: none !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .main-nav .uni-drop-item:hover,
+  html body .main-nav .uni-drop-item.active {
+    background: #EFF6FF !important;
+    border-color: #BFDBFE !important;
+    border-left: 3px solid #0D47D8 !important;
+    transform: translateX(2px) !important;
+  }
+
+  html body .main-nav .uni-drop-icon {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    border-radius: 6px !important;
+    background: #E5EDFF !important;
+    color: #0D47D8 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 12px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    transition: all 0.15s ease !important;
+  }
+
+  html body .main-nav .uni-drop-item:hover .uni-drop-icon {
+    background: #0D47D8 !important;
+    color: #FFFFFF !important;
+  }
+
+  html body .main-nav .uni-drop-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 1px !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .main-nav .uni-drop-text strong {
+    display: block !important;
+    font-size: 12.5px !important;
+    font-weight: 700 !important;
+    color: #11172A !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
+  html body .main-nav .uni-drop-text span {
+    display: block !important;
+    font-size: 10.5px !important;
+    font-weight: 400 !important;
+    color: #64748B !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
+  /* General Submenu Links */
+  .nav-dropdown-menu a:not(.dest-drop-item):not(.uni-drop-item) {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 8px 10px !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    font-size: 12.5px !important;
+    font-weight: 600 !important;
+    color: #11172A !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    transition: all 0.15s ease !important;
+    flex-shrink: 0 !important;
+  }
+
+  .nav-dropdown-menu a:hover:not(.dest-drop-item):not(.uni-drop-item) {
+    background: #EFF6FF !important;
+    color: #0D47D8 !important;
+    border-color: #BFDBFE !important;
+  }
+
+  /* -------------------------------------------------------------------------
+     MOBILE NAV ACTIONS: CALL NOW & GET FREE COUNSELLING (INSIDE DRAWER ONLY)
+     ------------------------------------------------------------------------- */
+  .mobile-nav-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 14px !important;
+    padding: 14px 0 28px 0 !important;
+    border-top: 1.5px solid #EEF2F6 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Call Now inside drawer */
+  .mobile-phone-btn {
+    display: flex !important;
+    width: 100% !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0 16px !important;
+    background: #F4F8FF !important;
+    border: 1.5px solid #DCE5F3 !important;
+    border-radius: 10px !important;
+    color: #11172A !important;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 6px rgba(13, 71, 216, 0.06) !important;
+    transition: background 0.2s ease !important;
+    cursor: pointer !important;
+  }
+
+  .mobile-phone-btn:hover {
+    background: #E5EDFF !important;
+    border-color: #0D47D8 !important;
+    color: #0D47D8 !important;
+  }
+
+  .mobile-phone-btn i {
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 50% !important;
+    background: #E5EDFF !important;
+    color: #0D47D8 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 13px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Get FREE Counselling inside drawer */
+  .mobile-cta-btn {
+    display: flex !important;
+    width: 100% !important;
+    height: 46px !important;
+    min-height: 46px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: #C79A3C !important;
+    color: #FFFFFF !important;
+    border-radius: 10px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    border: none !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 4px 12px rgba(199, 154, 60, 0.3) !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease !important;
+  }
+
+  .mobile-cta-btn:hover {
+    background: #B5872E !important;
+    color: #FFFFFF !important;
+  }
+}
+
+/* =========================================================================================
+   5. TABLET LANDSCAPE & PORTRAIT (<= 992px)
+   ========================================================================================= */
+@media (max-width: 992px) {
+  /* IELTS Hero Section Tablet Layout */
+  body .ielts-hero-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  body .ielts-hero-left {
+    order: 1 !important;
+    text-align: left !important;
+  }
+  body .ielts-hero-right {
+    order: 2 !important;
+  }
+  body .ielts-hero-pill {
+    margin: 0 auto 20px 0 !important;
+  }
+  body .ielts-hero-title {
+    font-size: 28px !important;
+    text-align: left !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.01em !important;
+  }
+  body .ielts-hero-p {
+    text-align: left !important;
+    font-size: 14.5px !important;
+  }
+
+  body .ielts-hero-info-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+  body .ielts-info-item {
+    justify-content: flex-start !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    padding: 10px 8px !important;
+  }
+
+  /* IELTS Contact Section Grid stack */
+  body .dfc-section .container > div {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  /* Two Column Split Sections -> Single Column */
+  .dcs-header-split,
+  .dss-header-split,
+  .dvs-header-split,
+  .dsl-header-split,
+  .dts-header-split,
+  .dtp-header-split,
+  .dpa-header-split,
+  .djs-header-split,
+  .dfq-header-split,
+  .dwo-grid,
+  .dgt-grid,
+  .dsa-grid,
+  .dfe-grid,
+  .dfc-grid,
+  .dce-grid,
+  .dms-top-grid,
+  .about-hero-grid,
+  .about-director-grid,
+  .contact-main-grid,
+  .contact-split-grid,
+  .cd-main-grid,
+  .cd-about-split,
+  .dmh-grid,
+  .dhs-split,
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  /* Artwork & Visual Wrappers Centering */
+  .dcs-header-right,
+  .dss-header-right,
+  .dvs-header-right,
+  .dsl-header-right,
+  .dts-header-right,
+  .dtp-header-right,
+  .dpa-header-right,
+  .djs-header-right,
+  .dfq-header-right,
+  .dwo-header-right,
+  .dgt-header-left-visual,
+  .dsa-header-right,
+  .dfe-header-right,
+  .dms-header-right,
+  .dmh-artwork-wrap,
+  .dhs-skyline-wrap {
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+  }
+
+  .dcs-arched-skyline-wrap,
+  .dss-arched-skyline-wrap,
+  .dvs-arched-skyline-wrap,
+  .dsl-arched-skyline-wrap,
+  .dts-arched-skyline-wrap,
+  .dpa-arched-skyline-wrap,
+  .djs-arched-skyline-wrap,
+  .dfq-arched-skyline-wrap,
+  .dwo-arched-skyline-wrap,
+  .dgt-arched-skyline-wrap,
+  .dsa-arched-skyline-wrap,
+  .dfe-arched-skyline-wrap {
+    width: 100% !important;
+    max-width: 480px !important;
+    margin: 0 auto !important;
+    min-height: unset !important;
+    height: auto !important;
+  }
+
+  /* Multi-Card Grids -> 2 Columns */
+  .dcs-4cards-grid,
+  .dss-5cards-grid,
+  .dvs-4cards-grid,
+  .dsl-5cards-grid,
+  .dts-3cards-grid,
+  .dtp-4cards-grid,
+  .dpa-4cards-grid,
+  .djs-4cards-grid,
+  .dcs-life-grid,
+  .dcs-realities-grid,
+  .dvs-steps-grid,
+  .dvs-eligibility-grid,
+  .dvs-no-ielts-grid,
+  .dvs-fees-grid,
+  .dcs-cost-grid,
+  .dcs-expense-grid,
+  .dcs-jobs-grid,
+  .top-unis-grid,
+  .popular-courses-grid,
+  .reasons-grid,
+  .highlights-grid,
+  .cards-grid,
+  .grid-4,
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  /* Footer Layout */
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 28px !important;
+  }
+
+  .footer-offices {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}
+
+/* =========================================================================================
+   6. MOBILE TABLETS & PHONES (<= 768px)
+   ========================================================================================= */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px !important;
+  }
+
+  .site-header {
+    height: 70px !important;
+  }
+
+  .header-inner {
+    height: 70px !important;
+    padding: 0 16px !important;
+  }
+
+  .brand-logo-img {
+    height: 38px !important;
+  }
+
+  /* Multi-Card Grids -> Single Column on Mobile */
+  .dcs-4cards-grid,
+  .dss-5cards-grid,
+  .dvs-4cards-grid,
+  .dsl-5cards-grid,
+  .dts-3cards-grid,
+  .dtp-4cards-grid,
+  .dpa-4cards-grid,
+  .djs-4cards-grid,
+  .dcs-life-grid,
+  .dcs-realities-grid,
+  .dvs-steps-grid,
+  .dvs-eligibility-grid,
+  .dvs-no-ielts-grid,
+  .dvs-fees-grid,
+  .dcs-cost-grid,
+  .dcs-expense-grid,
+  .dcs-jobs-grid,
+  .top-unis-grid,
+  .popular-courses-grid,
+  .reasons-grid,
+  .highlights-grid,
+  .cards-grid,
+  .grid-4,
+  .grid-3,
+  .grid-2,
+  .contact-cards-grid,
+  .article-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Form Rows to Stack */
+  .dce-input-row,
+  .dct-form-row2,
+  .dms-form-row2,
+  .cnf-input-row,
+  .form-row,
+  .dce-contact-cards {
+    flex-direction: column !important;
+    display: flex !important;
+    gap: 12px !important;
+  }
+
+  .dce-input-wrap,
+  .dct-input-wrap,
+  .dms-input-wrap,
+  .dce-contact-btn {
+    width: 100% !important;
+  }
+
+  /* Form Cards Padding */
+  .dce-form-card,
+  .dct-form-card,
+  .dms-form-card,
+  .dfc-card,
+  .contact-form-container {
+    padding: 24px 18px !important;
+    border-radius: 18px !important;
+  }
+
+  /* Stepper Roadmap Connectors */
+  .dvs-step-card,
+  .dcs-step-card,
+  .djs-card {
+    width: 100% !important;
+  }
+
+  /* Footer Grid -> 2 Columns */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .footer-brand {
+    grid-column: span 2 !important;
+  }
+
+  .footer-newsletter {
+    grid-column: span 2 !important;
+  }
+
+  /* Bottom Bar */
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  .footer-bottom nav {
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+
+  /* Floating Buttons */
+  .whatsapp-fab {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 22px !important;
+    right: 16px !important;
+    bottom: 16px !important;
+  }
+
+  .scroll-top-fab {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 14px !important;
+    right: 16px !important;
+    bottom: 74px !important;
+  }
+
+  /* Counselling Modal on Mobile */
+  .counselling-modal {
+    max-width: 95vw !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    border-radius: 16px !important;
+  }
+
+  .counselling-modal > div:first-child {
+    padding: 18px 20px !important;
+  }
+
+  .counselling-modal > div:last-child {
+    padding: 20px 18px !important;
+  }
+}
+
+/* =========================================================================================
+   7. COMPACT MOBILE SCREENS (<= 480px)
+   ========================================================================================= */
+@media (max-width: 480px) {
+  .header-inner {
+    padding: 0 12px !important;
+  }
+
+  .brand-logo-img {
+    height: 32px !important;
+  }
+
+  /* Footer 1 Column on Small Phones */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .footer-brand,
+  .footer-newsletter {
+    grid-column: span 1 !important;
+  }
+
+  /* Stat Badges / Google Badge */
+  .mini-stat-grid,
+  .accred-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Flight Arcs Soft Fade */
+  .dcs-flight-arc,
+  .dss-flight-arc,
+  .dvs-flight-arc,
+  .dsl-flight-arc {
+    opacity: 0.25 !important;
+  }
+
+  /* Buttons Full Width */
+  .dce-submit-btn,
+  .dct-submit-btn,
+  .dms-submit-btn,
+  .dfc-submit-btn,
+  .hero-ctas a,
+  .dwo-btn-row a {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* =========================================================================================
+   8. EXTRA SMALL SCREENS (<= 360px)
+   ========================================================================================= */
+@media (max-width: 360px) {
+  body {
+    font-size: 13px !important;
+  }
+
+  .header-inner {
+    gap: 4px !important;
+  }
+
+  .badge-pill,
+  .dce-pill-badge,
+  .dcs-pill-badge {
+    font-size: 10.5px !important;
+    padding: 4px 10px !important;
+  }
+}
+
+/* =========================================================================================
+   9. HIDE HERO FLOATING CARDS IN RESPONSIVE ENVIRONMENT
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .floating-card,
+  .fc-1,
+  .fc-2,
+  .fc-3,
+  .fc-4,
+  .fc-5 {
+    display: none !important;
+  }
+}
+
+/* =========================================================================================
+   10. GLOBAL UNIVERSITY PARTNERS STAT CARDS RESPONSIVE FIX (.prefer-grid, .prefer-trust-box)
+   ========================================================================================= */
+@media screen and (max-width: 991px) {
+  .prefer-trust-box {
+    padding: 20px 16px !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .prefer-grid,
+  div.prefer-grid[style*="grid-template-columns"],
+  .prefer-trust-box .prefer-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .prefer-item,
+  div.prefer-item[style*="border-right"] {
+    border-right: none !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    padding: 10px 8px 14px 8px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .prefer-item:last-child,
+  .prefer-item:nth-last-child(2) {
+    border-bottom: none !important;
+  }
+
+  .prefer-top strong {
+    font-size: 13.5px !important;
+  }
+
+  .prefer-item span {
+    font-size: 11.5px !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .prefer-trust-box {
+    padding: 16px 12px !important;
+  }
+
+  .prefer-grid,
+  div.prefer-grid[style*="grid-template-columns"],
+  .prefer-trust-box .prefer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .prefer-item,
+  div.prefer-item[style*="border-right"] {
+    border-right: none !important;
+    border-bottom: 1px solid #EEF2F6 !important;
+    padding: 10px 4px 12px 4px !important;
+    width: 100% !important;
+  }
+
+  .prefer-item:last-child {
+    border-bottom: none !important;
+  }
+}
+
+/* =========================================================================================
+   11. DASHED SUBSECTION TITLE SINGLE ROW LAYOUT FIX (.subsection-title-dashed)
+   ========================================================================================= */
+.subsection-title-dashed {
+  white-space: nowrap !important;
+  flex-wrap: nowrap !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  font-size: clamp(0.95rem, 2.8vw + 0.4rem, 1.5rem) !important;
+  text-align: center !important;
+}
+
+.subsection-title-dashed::before,
+.subsection-title-dashed::after {
+  content: "" !important;
+  display: inline-block !important;
+  width: clamp(14px, 3.5vw, 36px) !important;
+  height: 3px !important;
+  background: #0D47D8 !important;
+  border-radius: 2px !important;
+  flex-shrink: 0 !important;
+}
+
+/* =========================================================================================
+   12. SCHOLARSHIPS SECTION HEADER RESPONSIVE FIX (.scholar-header-wrapper)
+   ========================================================================================= */
+@media screen and (max-width: 991px) {
+  .scholar-header-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .scholar-header-left,
+  .scholar-header-right {
+    display: none !important;
+  }
+
+  .scholar-header-center {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  .scholar-header-center h2 {
+    font-size: clamp(1.35rem, 4vw + 0.4rem, 2.2rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .scholar-header-center .eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    margin-bottom: 10px !important;
+  }
+
+  .scholar-header-center .section-sub {
+    font-size: 13px !important;
+    color: #475569 !important;
+    font-weight: 500 !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 600px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* =========================================================================================
+   13. SCHOLARSHIP CARD FULL-LENGTH COVER PHOTO & SMALL CORNER FLAG FIX (.scholar-card-img)
+   ========================================================================================= */
+.scholar-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+}
+
+.scholar-card-img {
+  width: 38% !important;
+  min-width: 120px !important;
+  position: relative !important;
+  align-self: stretch !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+.scholar-card-img img.scholar-cover-photo {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Small Corner Flag Badge Lock */
+.scholar-card-img img.scholar-flag-badge,
+.scholar-card-img .scholar-flag-badge,
+img.scholar-flag-badge,
+.scholar-flag-badge {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  left: auto !important;
+  bottom: auto !important;
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  min-height: 38px !important;
+  max-width: 38px !important;
+  max-height: 38px !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  border: 2.5px solid #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  z-index: 10 !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+
+/* =========================================================================================
+   14. MINI CARD BACKGROUND FULL-HEIGHT PHOTO FIX (.mini-card-bg-wrap)
+   ========================================================================================= */
+.mini-card-bg-wrap {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  width: 44% !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+}
+
+.mini-card-bg-wrap img {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+/* =========================================================================================
+   15. GLOBAL JOURNEY BLUE CTA BANNER RESPONSIVE FIX (.global-journey-box)
+   ========================================================================================= */
+@media screen and (max-width: 1200px) {
+  .global-journey-box {
+    padding: clamp(24px, 4vw, 36px) clamp(16px, 3vw, 28px) !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .global-journey-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 1. Boy Image Container (Positioned Top & Made Smaller) */
+  .journey-right-media {
+    order: -1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 10px auto !important;
+    position: relative !important;
+  }
+
+  .journey-circle-frame {
+    width: 180px !important;
+    height: 180px !important;
+    min-width: 180px !important;
+    min-height: 180px !important;
+    max-width: 180px !important;
+    max-height: 180px !important;
+    margin: 0 auto !important;
+    border-radius: 50% !important;
+    position: relative !important;
+  }
+
+  .journey-student-img {
+    width: 160px !important;
+    height: auto !important;
+    max-width: 160px !important;
+    margin-top: -25px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* 2. Text Content (Positioned Below Boy Image) */
+  .journey-left-content {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .journey-left-content h2 {
+    font-size: clamp(1.3rem, 4vw + 0.3rem, 2.1rem) !important;
+    line-height: 1.25 !important;
+    margin: 10px 0 6px 0 !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    width: 100% !important;
+  }
+
+  .journey-left-content .eyebrow-dark,
+  .journey-left-content .eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    padding: 5px 12px !important;
+  }
+
+  .journey-desc,
+  .script-tagline {
+    text-align: center !important;
+    max-width: 550px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    font-size: 13px !important;
+  }
+
+  .journey-features-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 550px !important;
+    margin: 16px auto !important;
+  }
+
+  .journey-btn-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    align-items: center !important;
+  }
+
+  .btn-gold-cta,
+  .btn-whatsapp-outline {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. Quote Box Below Text */
+  .journey-quote-box {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 14px auto 0 auto !important;
+    max-width: 320px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .journey-features-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================================================================================
+   16. CTA COUNSELLING BANNER RESPONSIVE FIX (.cta-counselling-banner)
+   ========================================================================================= */
+@media screen and (max-width: 1200px) {
+  .cta-counselling-banner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+    padding: clamp(24px, 4vw, 32px) clamp(16px, 3.5vw, 24px) !important;
+    border-radius: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .cta-counselling-left {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .cta-counselling-icon-wrap {
+    width: 54px !important;
+    height: 54px !important;
+    min-width: 54px !important;
+    min-height: 54px !important;
+    font-size: 24px !important;
+    margin: 0 auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  .cta-counselling-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .cta-counselling-text h3 {
+    font-size: clamp(1.25rem, 3.5vw + 0.4rem, 2rem) !important;
+    line-height: 1.25 !important;
+    margin: 0 0 8px 0 !important;
+    color: #FFFFFF !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    width: 100% !important;
+  }
+
+  .cta-counselling-text p {
+    font-size: clamp(12.5px, 1.2vw, 14.5px) !important;
+    line-height: 1.45 !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+    margin: 0 !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    width: 100% !important;
+  }
+
+  .btn-white-pill {
+    width: 100% !important;
+    max-width: 320px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 14px 24px !important;
+    font-size: 15px !important;
+    margin: 4px auto 0 auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* =========================================================================================
+   17. BLOG CARDS SIDE-BY-SIDE HORIZONTAL SCROLL FIX (.blog-grid-exact)
+   ========================================================================================= */
+@media screen and (max-width: 991px) {
+  .blog-grid-exact,
+  #blogGrid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 16px !important;
+    padding-bottom: 14px !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #0D47D8 #EEF2F6 !important;
+  }
+.blog-layout {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+  .blog-grid-exact:hover .blog-subcard,
+  #blogGrid:hover .blog-subcard {
+    animation-play-state: paused !important;
+  }
+
+  .blog-grid-exact::-webkit-scrollbar,
+  #blogGrid::-webkit-scrollbar {
+    height: 6px !important;
+    display: block !important;
+  }
+
+  .blog-grid-exact::-webkit-scrollbar-track,
+  #blogGrid::-webkit-scrollbar-track {
+    background: #EEF2F6 !important;
+    border-radius: 4px !important;
+  }
+
+  .blog-grid-exact::-webkit-scrollbar-thumb,
+  #blogGrid::-webkit-scrollbar-thumb {
+    background: #0D47D8 !important;
+    border-radius: 4px !important;
+  }
+
+  .blog-subcard {
+    width: 280px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    animation: autoScrollCards 10s ease-in-out infinite !important;
+  }
+
+  .blog-subcard .subcard-media {
+    height: 150px !important;
+    min-height: 150px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .blog-subcard .subcard-media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .blog-subcard .subcard-body {
+    padding: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+  }
+
+  .blog-subcard .subcard-body h5 {
+    font-size: 14.5px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .blog-subcard .subcard-body p {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  .blog-card-footer {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 6px !important;
+    font-size: 11.5px !important;
+    margin-top: auto !important;
+    padding-top: 10px !important;
+  }
+
+  /* Process Cards Horizontal Auto-Scroll (Abroad in Just 6 Steps) */
+  .process-cards-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 16px !important;
+    padding: 10px 4px 20px 4px !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #0D47D8 #EEF2F6 !important;
+  }
+
+  .process-step-col {
+    width: 280px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    border: 1px solid #E8EDF5 !important;
+    border-radius: 16px !important;
+    padding: 16px 14px !important;
+  }
+
+  .process-step-col:first-child {
+    animation: autoScrollProcessCards 20s ease-in-out infinite !important;
+  }
+
+  .process-cards-grid:hover .process-step-col:first-child {
+    animation-play-state: paused !important;
+  }
+
+  .process-cards-grid::-webkit-scrollbar {
+    height: 6px !important;
+    display: block !important;
+  }
+
+  .process-cards-grid::-webkit-scrollbar-track {
+    background: #EEF2F6 !important;
+    border-radius: 4px !important;
+  }
+
+  .process-cards-grid::-webkit-scrollbar-thumb {
+    background: #0D47D8 !important;
+    border-radius: 4px !important;
+  }
+}
+
+/* =========================================================================================
+   18. ABOUT PAGE (about.html) HERO SECTION RESPONSIVE FIX (.about-hero-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .about-hero-section {
+    position: relative !important;
+    overflow: hidden !important;
+    padding: clamp(32px, 5vw, 60px) 0 !important;
+    background: #F4F8FF !important;
+  }
+
+  .about-hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+  }
+
+  .about-hero-content {
+    position: relative !important;
+    z-index: 10 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .about-hero-title {
+    font-size: clamp(1.6rem, 4.5vw + 0.5rem, 2.75rem) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    margin-bottom: 16px !important;
+    word-wrap: break-word !important;
+  }
+
+  .about-hero-desc {
+    font-size: clamp(13px, 1.2vw, 15px) !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    max-width: 750px !important;
+    margin: 0 auto 16px auto !important;
+    color: #1E293B !important;
+  }
+
+  .about-badge-rows,
+  .about-badge-row,
+  .about-hero-content .about-badge-rows,
+  .about-hero-content .about-badge-row {
+    display: none !important;
+  }
+
+  .a-badge,
+  .about-badge-row .a-badge,
+  .about-hero-content .a-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    width: fit-content !important;
+    text-align: left !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 10px auto 24px auto !important;
+    align-items: center !important;
+  }
+
+  .btn-dark-navy-hero,
+  .btn-outline-navy-hero {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Right Visual Column converted to Background with 0.4 opacity and grayscale filter */
+  .about-hero-visual {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0.4 !important;
+    filter: grayscale(100%) !important;
+    -webkit-filter: grayscale(100%) !important;
+    overflow: hidden !important;
+  }
+
+  .about-visual-wrapper {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .about-main-illustration {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    height: auto !important;
+    max-height: 90% !important;
+    object-fit: contain !important;
+    opacity: 1.0 !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+
+  /* Hide floating stat badges on background overlay for ultra clean reading */
+  .hero-float-plane,
+  .hero-float-cap,
+  .about-stat-stack {
+    display: none !important;
+  }
+}
+
+/* =========================================================================================
+   19. ABOUT PAGE WHAT WE DO SECTION DECORATIVE BOOKS IMAGE FIX (.supp-books-corner)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .about-support-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .supp-books-corner {
+    position: absolute !important;
+    top: 10px !important;
+    right: 15px !important;
+    width: 120px !important;
+    max-width: 120px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    opacity: 0.5 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    display: block !important;
+  }
+
+  .supp-globe-side,
+  .supp-globe-left,
+  .supp-globe-right {
+    display: none !important;
+  }
+}
+
+/* =========================================================================================
+   20. ABOUT PAGE OUR STORY SECTION BACKGROUND IMAGE FIX (.about-story-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .about-story-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .story-left-column {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0.5 !important;
+    filter: none !important;
+  }
+
+  .story-hero-img {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    max-height: 85% !important;
+    object-fit: contain !important;
+    opacity: 0.5 !important;
+    filter: none !important;
+    display: block !important;
+  }
+
+  .about-story-header,
+  .story-head-center,
+  .story-timeline-column {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+}
+
+/* =========================================================================================
+   21. ABOUT PAGE DIRECTOR / FOUNDER SECTION RESPONSIVE FIX (.about-director-grid)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .about-director-section {
+    padding: clamp(32px, 5vw, 60px) clamp(16px, 3vw, 24px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-director-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 32px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Left Director Frame Container */
+  .dir-left-frame {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Circle Frame & Photo */
+  .dir-circle-frame {
+    width: clamp(220px, 65vw, 280px) !important;
+    height: clamp(220px, 65vw, 280px) !important;
+    max-width: 280px !important;
+    max-height: 280px !important;
+    margin: 0 auto !important;
+    border-radius: 50% !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .dir-photo {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+  }
+
+  /* Graduation Cap on top of circle */
+  .dir-grad-cap {
+    width: 100px !important;
+    height: auto !important;
+    position: absolute !important;
+    top: -15px !important;
+    right: 10px !important;
+    left: auto !important;
+    z-index: 10 !important;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3)) !important;
+  }
+
+  /* Fluid Blob & Plane Arc scaled within bounds */
+  .dir-fluid-blob {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: 100% !important;
+    max-height: 320px !important;
+  }
+
+  .dir-plane-arc {
+    display: none !important;
+  }
+
+  /* Name Badge Card centered below photo */
+  .dir-name-badge {
+    position: relative !important;
+    bottom: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 16px auto 0 auto !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    padding: 14px 18px !important;
+    border-radius: 16px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    text-align: left !important;
+  }
+
+  .d-badge-info strong {
+    font-size: 14.5px !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+
+  .d-badge-role,
+  .d-badge-company {
+    font-size: 12px !important;
+    white-space: normal !important;
+  }
+
+  /* Right Quote Card Box */
+  .dir-right-quote-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: clamp(20px, 4vw, 32px) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Bottom Trust Bar (4 Columns) */
+  .dir-trust-bar {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dir-trust-bar {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================================================================================
+   22. ABOUT PAGE CTA BADGE CARDS RESPONSIVE FIX (.cta-badges-row, .c-badge-item)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .cta-badges-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 20px 0 !important;
+  }
+
+  .c-badge-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 16px !important;
+    padding: 16px 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  .c-badge-icon {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    border-radius: 50% !important;
+    background: #EEF4FF !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 10px auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  .c-badge-icon img {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: contain !important;
+  }
+
+  .c-badge-item strong {
+    font-size: 13.5px !important;
+    line-height: 1.3 !important;
+    color: #0F172A !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+
+  .c-badge-item span {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+    color: #64748B !important;
+    display: block !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cta-badges-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+}
+
+/* =========================================================================================
+   23. ABOUT PAGE CTA GRADUATE PHOTO TITLE BACKGROUND FIX (.about-cta-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .about-cta-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .about-cta-header-wrap {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .about-cta-header-text {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* Graduate Girl Photo positioned as Background behind Title */
+  .cta-graduate-visual {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.35 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .cta-grad-img,
+  .cta-graduate-img {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    opacity: 0.35 !important;
+    margin: 0 auto !important;
+    filter: none !important;
+  }
+
+  .cta-eyebrow-tag,
+  .cta-hero-title,
+  .cta-hero-subtext {
+    position: relative !important;
+    z-index: 5 !important;
+    text-align: center !important;
+  }
+}
+
+/* =========================================================================================
+   24. OUR STUDY DESTINATIONS SECTION HIDE EARTH & CAP IMAGE FIX (.dest-edge-left)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dest-edge-left {
+    display: none !important;
+  }
+
+  .about-destinations-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .dest-edge-right {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    opacity: 0.3 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    object-fit: contain !important;
+  }
+
+  .about-destinations-header,
+  .dest-head-center {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+}
+
+/* =========================================================================================
+   25. WHY CHOOSE SECTION BACKGROUND IMAGES OPACITY 0.6 FIX (.why-edge-left, .why-edge-right)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .about-why-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .why-edge-left,
+  .why-edge-right {
+    opacity: 0.6 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .about-why-header,
+  .why-head-center,
+  .why-title,
+  .why-subtext {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+}
+
+/* =========================================================================================
+   26. OUR TEAM SECTION REMOVE FLOATING GLOBE, PLANE & CAP IMAGES IN RESPONSIVE
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .team-edge-left,
+  .team-edge-right,
+  .team-cap-left,
+  .team-globe-right,
+  .team-plane-right {
+    display: none !important;
+  }
+}
+
+/* =========================================================================================
+   27. OUR TEAM CARD AVATAR PHOTOS PERFECT CIRCLE FIX (.tc-avatar-wrap, .tc-avatar-img)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .team-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .team-card-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 24px 16px !important;
+  }
+
+  .tc-avatar-wrap {
+    position: relative !important;
+    width: 120px !important;
+    height: 120px !important;
+    min-width: 120px !important;
+    min-height: 120px !important;
+    max-width: 120px !important;
+    max-height: 120px !important;
+    aspect-ratio: 1 / 1 !important;
+    margin: 0 auto 16px auto !important;
+    flex-shrink: 0 !important;
+    border-radius: 50% !important;
+  }
+
+  .tc-avatar-img {
+    width: 120px !important;
+    height: 120px !important;
+    min-width: 120px !important;
+    min-height: 120px !important;
+    max-width: 120px !important;
+    max-height: 120px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+    border: 3.5px solid #EFF6FF !important;
+    box-shadow: 0 4px 14px rgba(11, 34, 101, 0.1) !important;
+  }
+
+  .tc-linkedin-badge {
+    position: absolute !important;
+    bottom: 2px !important;
+    right: 2px !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 50% !important;
+    z-index: 10 !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .team-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* =========================================================================================
+   28. ABOUT PAGE WHO WE ARE SECTION IMAGE BEHIND TITLE (0.5 OPACITY) (.about-whoweare-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .about-whoweare-section {
+    position: relative !important;
+    overflow: hidden !important;
+    padding: clamp(32px, 5vw, 60px) clamp(16px, 3vw, 24px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .whoweare-grid-wrap {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Image positioned EXACTLY BEHIND Title with Opacity 0.5 */
+  .whoweare-visual-col {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    height: auto !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .whoweare-img-box {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    opacity: 0.5 !important;
+  }
+
+  .whoweare-main-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    opacity: 0.5 !important;
+    filter: none !important;
+  }
+
+  .wwa-float-sq {
+    display: none !important;
+  }
+
+  .whoweare-content-col {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    padding-top: 10px !important;
+  }
+
+  .whoweare-title {
+    font-size: clamp(1.4rem, 4.2vw + 0.4rem, 2.3rem) !important;
+    line-height: 1.25 !important;
+    margin: 12px 0 8px 0 !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    width: 100% !important;
+  }
+
+  .whoweare-title-underline {
+    margin: 0 auto 14px auto !important;
+  }
+
+  .whoweare-subtext {
+    font-size: clamp(13px, 1.2vw, 15px) !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    max-width: 680px !important;
+    width: 100% !important;
+    margin: 0 auto 20px auto !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* 6 Feature Cards Grid */
+  .whoweare-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 16px 0 !important;
+  }
+
+  .wwa-card-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 16px !important;
+    padding: 16px 14px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  .wwa-icon-circle {
+    margin: 0 auto 10px auto !important;
+  }
+
+  .wwa-card-item strong {
+    font-size: 13.5px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+
+  .wwa-card-item span {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+    display: block !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .whoweare-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+}
+
+/* =========================================================================================
+   29. WHO WE ARE BOTTOM STAT BAR RESPONSIVE OVERLAP FIX (.whoweare-stat-bar)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .whoweare-stat-bar {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 20px 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    border-radius: 20px !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06) !important;
+    margin-top: 24px !important;
+  }
+
+  .wws-stat-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: left !important;
+    gap: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 8px !important;
+    margin: 0 !important;
+  }
+
+  .wws-icon {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    border-radius: 50% !important;
+    background: #EEF4FF !important;
+    color: #0D47D8 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    font-size: 18px !important;
+  }
+
+  .wws-stat-item strong {
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    color: #0F172A !important;
+    display: block !important;
+    line-height: 1.2 !important;
+  }
+
+  .wws-stat-item span {
+    font-size: 12px !important;
+    color: #64748B !important;
+    display: block !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+
+  .wws-divider {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .whoweare-stat-bar {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .wws-stat-item {
+    justify-content: flex-start !important;
+  }
+}
+
+/* =========================================================================================
+   30. OUR GLOBAL IMPACT SECTION REMOVE FLOATING CAP & PLANE IMAGES IN RESPONSIVE
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .impact-edge-left,
+  .impact-edge-right,
+  .impact-cap-left,
+  .impact-plane-right,
+  .impact-globe-left {
+    display: none !important;
+  }
+}
+
+/* =========================================================================================
+   31. OUR GLOBAL IMPACT CARDS BIGGER & HORIZONTAL SCROLL FIX (.impact-cards-grid)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .impact-cards-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 16px !important;
+    padding-bottom: 16px !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #0D47D8 #EEF2F6 !important;
+  }
+
+  .impact-cards-grid::-webkit-scrollbar {
+    height: 6px !important;
+    display: block !important;
+  }
+
+  .impact-cards-grid::-webkit-scrollbar-track {
+    background: #EEF2F6 !important;
+    border-radius: 4px !important;
+  }
+
+  .impact-cards-grid::-webkit-scrollbar-thumb {
+    background: #0D47D8 !important;
+    border-radius: 4px !important;
+  }
+
+  .impact-card-box {
+    width: 250px !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 24px 18px !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .impact-card-box:first-child {
+    animation: autoScrollImpactCards 15s ease-in-out infinite !important;
+  }
+
+  .impact-cards-grid:hover .impact-card-box:first-child {
+    animation-play-state: paused !important;
+  }
+
+  .ic-icon-circle {
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    min-height: 52px !important;
+    border-radius: 50% !important;
+    background: #EEF4FF !important;
+    color: #0D47D8 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 12px auto !important;
+    font-size: 22px !important;
+  }
+
+  .ic-big-num {
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    color: #0A1940 !important;
+    line-height: 1.15 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .ic-label {
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    color: #1E293B !important;
+    margin-bottom: 8px !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+
+  .impact-card-box p {
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    color: #64748B !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+
+  .ic-line {
+    width: 36px !important;
+    height: 2px !important;
+    background: #CBD5E1 !important;
+    margin: 14px auto 0 auto !important;
+  }
+}
+
+/* =========================================================================================
+   32. GLOBAL MAP CONTINENT CARDS SMALLER & PROPER CORNER POSITIONS FIX (.map-region-card)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .impact-map-container,
+  .whoweare-map-wrap {
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 10px !important;
+  }
+
+  .map-region-card {
+    position: absolute !important;
+    z-index: 5 !important;
+    max-width: 135px !important;
+  }
+
+  .map-card-content {
+    padding: 5px 8px !important;
+    border-radius: 8px !important;
+    gap: 5px !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1) !important;
+    background: #FFFFFF !important;
+  }
+
+  .map-card-content i {
+    font-size: 11px !important;
+    margin-top: 2px !important;
+  }
+
+  .map-card-content strong {
+    font-size: 10.5px !important;
+    line-height: 1.15 !important;
+    display: block !important;
+    white-space: nowrap !important;
+  }
+
+  .map-card-content .reg-count {
+    font-size: 9.5px !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+  }
+
+  .map-card-content span {
+    display: none !important;
+  }
+
+  /* 4 Corners + Bottom Center Positions */
+  .reg-na {
+    top: 4% !important;
+    left: 2% !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .reg-as {
+    top: 4% !important;
+    right: 2% !important;
+    left: auto !important;
+    bottom: auto !important;
+  }
+
+  .reg-eu {
+    bottom: 5% !important;
+    left: 2% !important;
+    right: auto !important;
+    top: auto !important;
+  }
+
+  .reg-au {
+    bottom: 5% !important;
+    right: 2% !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .reg-af {
+    bottom: 2% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto !important;
+    top: auto !important;
+  }
+}
+
+/* =========================================================================================
+   33. GLOBAL IMPACT BOTTOM FEATURE BAR RESPONSIVE OVERLAP FIX (.impact-bottom-bar)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .impact-bottom-bar {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 20px 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    border-radius: 20px !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06) !important;
+    margin-top: 24px !important;
+  }
+
+  .ib-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 14px 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .ib-icon {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    border-radius: 50% !important;
+    background: #EEF4FF !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 10px auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  .ib-icon img {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: contain !important;
+  }
+
+  .ib-item strong {
+    font-size: 13.5px !important;
+    line-height: 1.3 !important;
+    color: #0F172A !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+
+  .ib-item span {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+    color: #64748B !important;
+    display: block !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .impact-bottom-bar {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+
+/* =========================================================================================
+   34. LET'S CONNECT CONTACT SECTION BACKGROUND IMAGES OPACITY 0.4 FIX (.contact-edge-left)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .about-contact-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .contact-edge-left,
+  .contact-edge-right {
+    opacity: 0.4 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .about-contact-header,
+  .contact-head-center,
+  .contact-title,
+  .contact-subtext {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+}
+
+/* =========================================================================================
+   35. OFFICE LOCATION CARDS IMAGE & CONTENT OVERLAP FIX (.cwl-cards-grid, .office-card-item)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .cwl-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .office-card-item {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
+    min-height: auto !important;
+  }
+
+  .office-hero-wrap {
+    position: relative !important;
+    width: 100% !important;
+    height: 140px !important;
+    min-height: 140px !important;
+    max-height: 140px !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+  }
+
+  .office-cover-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
+  .office-tag-pill {
+    position: absolute !important;
+    bottom: 10px !important;
+    left: 10px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    padding: 4px 10px !important;
+    border-radius: 20px !important;
+    z-index: 5 !important;
+  }
+
+  .office-card-body {
+    padding: 16px 14px 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: #FFFFFF !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .office-card-body h4 {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #0A1940 !important;
+    margin-bottom: 6px !important;
+    line-height: 1.25 !important;
+    word-wrap: break-word !important;
+  }
+
+  .office-card-body p {
+    font-size: 12px !important;
+    color: #64748B !important;
+    line-height: 1.45 !important;
+    margin-bottom: 12px !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  .office-phone {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: #2563EB !important;
+    line-height: 1.35 !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cwl-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* =========================================================================================
+   36. GLOBAL MAP ISMS SEAL EMBLEM RESPONSIVE FIT FIX (.isms-center-emblem, .isms-seal-img)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .isms-center-emblem {
+    width: 70px !important;
+    height: 70px !important;
+    min-width: 70px !important;
+    min-height: 70px !important;
+    border-radius: 50% !important;
+    background: #0B1F4E !important;
+    border: 3px solid #FFFFFF !important;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 4 !important;
+  }
+
+  .isms-seal-img {
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px !important;
+    min-height: 60px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+  }
+
+  .dest-flag-overlay,
+  img.dest-flag-overlay,
+  .dest-card-hero img.dest-flag-overlay {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    background: #FFFFFF !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* =========================================================================================
+   38. UK DESTINATION PAGE HERO CARD IMAGE FIT FIX (.dmh-visual-stack, .dmh-skyline-bg)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dmh-right-visual,
+  .dmh-visual-stack {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 480px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+  }
+
+  .dmh-skyline-bg {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 24px !important;
+    z-index: 1 !important;
+  }
+}
+
+/* =========================================================================================
+   39. UK DESTINATION PAGE FREE COUNSELLING CTA SECTION RESPONSIVE FIT FIX (.dfc-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dfc-section {
+    padding: clamp(32px, 5vw, 60px) clamp(16px, 3vw, 24px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .dfc-hero-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: clamp(20px, 4vw, 36px) clamp(16px, 3vw, 24px) !important;
+    border-radius: 24px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .dfc-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 32px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .dfc-left-col {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .dfc-pill-badge {
+    font-size: clamp(10.5px, 2.8vw, 12.5px) !important;
+    padding: 6px 14px !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    text-align: center !important;
+    margin: 0 auto 14px auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .dfc-title {
+    font-size: clamp(1.4rem, 4.2vw + 0.4rem, 2.3rem) !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    margin: 0 0 12px 0 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    width: 100% !important;
+  }
+
+  .dfc-subtext {
+    font-size: clamp(13px, 1.2vw, 15px) !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    max-width: 680px !important;
+    width: 100% !important;
+    margin: 0 auto 24px auto !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  .dfc-4features-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 16px 0 !important;
+  }
+
+  .dfc-feat-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 16px !important;
+    padding: 14px 12px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  .dfc-feat-icon {
+    margin: 0 auto 10px auto !important;
+  }
+
+  .dfc-feat-info h4,
+  .dfc-feat-item h4 {
+    font-size: 13.5px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    text-align: center !important;
+    color: #0A1940 !important;
+  }
+
+  .dfc-feat-info p,
+  .dfc-feat-item p {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+    display: block !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    text-align: center !important;
+    color: #475569 !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dfc-4features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+}
+
+/* =========================================================================================
+   40. HERO FLOATING BADGES ALIGNMENT ONE BELOW ANOTHER FIX (.dmh-float-badge)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dmh-float-badge {
+    position: absolute !important;
+    left: auto !important;
+    right: 16px !important;
+    transform: none !important;
+    width: auto !important;
+    max-width: 210px !important;
+    padding: 8px 12px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+    z-index: 5 !important;
+    box-sizing: border-box !important;
+  }
+
+  .dmh-float-badge.badge-top-right {
+    top: 16px !important;
+    bottom: auto !important;
+  }
+
+  .dmh-float-badge.badge-mid-right {
+    top: 96px !important;
+    bottom: auto !important;
+  }
+
+  .dmh-float-badge.badge-lower-mid-right {
+    top: 176px !important;
+    bottom: auto !important;
+  }
+
+  .dmh-float-badge.badge-bottom-right {
+    top: 256px !important;
+    bottom: auto !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dmh-float-badge {
+    right: 10px !important;
+    padding: 6px 10px !important;
+    max-width: 180px !important;
+  }
+
+  .dmh-float-badge.badge-top-right {
+    top: 12px !important;
+  }
+
+  .dmh-float-badge.badge-mid-right {
+    top: 84px !important;
+  }
+
+  .dmh-float-badge.badge-lower-mid-right {
+    top: 156px !important;
+  }
+
+  .dmh-float-badge.badge-bottom-right {
+    top: 228px !important;
+  }
+
+  .dfb-icon {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    font-size: 11px !important;
+  }
+
+  .dmh-float-badge strong {
+    font-size: 11px !important;
+  }
+
+  .dmh-float-badge span {
+    font-size: 9.5px !important;
+  }
+}
+
+/* =========================================================================================
+   41. IRELAND HERO SECTION IMAGE BACKGROUND FIX WITH 0.5 OPACITY (.dubai-main-hero-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dubai-main-hero-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .dubai-main-hero-section .dmh-grid {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .dubai-main-hero-section .dmh-right-visual {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: 100% !important;
+    max-height: 520px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .dubai-main-hero-section .dmh-visual-stack,
+  .dubai-main-hero-section .dmh-skyline-bg,
+  .dubai-main-hero-section .dmh-student-cutout {
+    opacity: 0.5 !important;
+  }
+
+  .dubai-main-hero-section .dmh-left {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .dubai-main-hero-section .dmh-pill-badge,
+  .dubai-main-hero-section .dmh-title,
+  .dubai-main-hero-section .dmh-sub-p1,
+  .dubai-main-hero-section .dmh-sub-p2,
+  .dubai-main-hero-section .dmh-4features-grid,
+  .dubai-main-hero-section .dmh-cta-row,
+  .dubai-main-hero-section .dmh-check-bar,
+  .dubai-main-hero-section .dmh-expert-note {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+}
+
+/* =========================================================================================
+   42. IRELAND SECOND HERO SECTION IMAGE BACKGROUND FIX WITH 0.5 OPACITY (.dubai-hero-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dubai-hero-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .dubai-hero-top-grid {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .dubai-hero-section .dh-right-visual {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: 100% !important;
+    max-height: 480px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .dubai-hero-section .dh-arched-image-wrap,
+  .dubai-hero-section .dh-hero-img {
+    opacity: 0.5 !important;
+  }
+
+  .dubai-hero-section .dh-left-content {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .dubai-hero-section .dh-pill-badge,
+  .dubai-hero-section .dh-title,
+  .dubai-hero-section .dh-title-line,
+  .dubai-hero-section .dh-paragraph {
+    position: relative !important;
+    z-index: 5 !important;
+    text-align: center !important;
+  }
+}
+
+/* =========================================================================================
+   44. IRELAND TOP UNIVERSITIES SECTION IMAGE BACKGROUND FIX WITH 0.5 OPACITY (.dubai-top-unis-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dubai-top-unis-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .dtu-header-split {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .dubai-top-unis-section .dtu-header-right {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: 100% !important;
+    max-height: 360px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .dubai-top-unis-section .dtu-arched-skyline-wrap,
+  .dubai-top-unis-section .dtu-skyline-img {
+    opacity: 0.5 !important;
+  }
+
+  .dubai-top-unis-section .dtu-header-left {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .dubai-top-unis-section .dtu-pill-badge,
+  .dubai-top-unis-section .dtu-title,
+  .dubai-top-unis-section .dtu-title-line,
+  .dubai-top-unis-section .dtu-subtext {
+    position: relative !important;
+    z-index: 5 !important;
+    text-align: center !important;
+  }
+}
+
+/* =========================================================================================
+   45. IRELAND POPULAR COURSES SECTION IMAGE BACKGROUND FIX WITH 0.5 OPACITY (.dubai-popular-courses-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dubai-popular-courses-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .dpc-header-split {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .dubai-popular-courses-section .dpc-header-right {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: 100% !important;
+    max-height: 380px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .dubai-popular-courses-section .dpc-arched-skyline-wrap,
+  .dubai-popular-courses-section .dpc-skyline-img {
+    opacity: 0.5 !important;
+  }
+
+  .dubai-popular-courses-section .dpc-header-left {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .dubai-popular-courses-section .dpc-pill-badge,
+  .dubai-popular-courses-section .dpc-title,
+  .dubai-popular-courses-section .dpc-title-line,
+  .dubai-popular-courses-section .dpc-subtext {
+    position: relative !important;
+    z-index: 5 !important;
+    text-align: center !important;
+  }
+}
+
+/* =========================================================================================
+   46. POPULAR COURSE CARDS RESPONSIVE FIT & WRAPPING FIX (.dpc-6cards-grid, .dpc-card)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dpc-6cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .dpc-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: clamp(16px, 3vw, 24px) !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    min-width: 0 !important;
+  }
+
+  .dpc-card h3 {
+    font-size: clamp(15px, 1.8vw, 18px) !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    margin-bottom: 8px !important;
+  }
+
+  .dpc-card p {
+    font-size: clamp(12.5px, 1.2vw, 14px) !important;
+    line-height: 1.5 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .dpc-6cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .dpc-card {
+    padding: 18px 16px !important;
+  }
+
+  .dpc-card h3 {
+    font-size: 16px !important;
+  }
+}
+
+/* =========================================================================================
+   47. IRELAND COMPLETE SUPPORT SECTION IMAGE BACKGROUND FIX WITH 0.2 OPACITY (.dubai-complete-support-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dubai-complete-support-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .dcs-header-split {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .dubai-complete-support-section .dcs-header-right {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: 100% !important;
+    max-height: 380px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.2 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .dubai-complete-support-section .dcs-arched-skyline-wrap,
+  .dubai-complete-support-section .dcs-skyline-img {
+    opacity: 0.2 !important;
+  }
+
+  .dubai-complete-support-section .dcs-header-left {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .dubai-complete-support-section .dcs-pill-badge,
+  .dubai-complete-support-section .dcs-title,
+  .dubai-complete-support-section .dcs-title-line,
+  .dubai-complete-support-section .dcs-subtext {
+    position: relative !important;
+    z-index: 5 !important;
+    text-align: center !important;
+  }
+}
+
+/* =========================================================================================
+   48. IRELAND HIGHLIGHTS SECTION BACKGROUND IMAGE BEHIND TITLE (.dubai-highlights-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dubai-highlights-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .dsh-skyline-footer-wrap {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 680px !important;
+    height: 320px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+  }
+
+  .dsh-panoramic-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    opacity: 0.5 !important;
+  }
+
+  .dsh-header {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+
+  .dsh-pill-badge,
+  .dsh-title,
+  .dsh-title-line,
+  .dsh-subtext {
+    position: relative !important;
+    z-index: 5 !important;
+    text-align: center !important;
+  }
+}
+
+/* =========================================================================================
+   49. COMPLETE SUPPORT STEP CARDS RESPONSIVE FIT & WRAPPING FIX (.dcs-7steps-grid, .dcs-step-card)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dcs-7steps-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+  }
+
+  .dcs-step-card {
+    position: relative !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: clamp(16px, 3vw, 24px) 18px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  .dcs-card-icon,
+  .dcs-step-icon,
+  .dcs-card-icon i,
+  .dcs-step-icon i,
+  .dcs-step-card i {
+    color: #2563EB !important;
+    background: #EFF6FF !important;
+    border-color: #BFDBFE !important;
+  }
+
+  .dcs-step-num {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+
+  .dcs-step-card h3 {
+    font-size: clamp(15px, 1.8vw, 18px) !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin-bottom: 8px !important;
+    padding-right: 28px !important;
+  }
+
+  .dcs-step-card p {
+    font-size: clamp(12.5px, 1.2vw, 14px) !important;
+    line-height: 1.5 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .dcs-7steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .dcs-step-card {
+    padding: 20px 18px !important;
+  }
+
+  .dcs-step-card h3 {
+    font-size: 16.5px !important;
+    padding-right: 32px !important;
+  }
+}
+
+/* =========================================================================================
+   50. IRELAND VISA GUIDANCE SECTION IMAGE BACKGROUND FIX WITH 0.5 OPACITY (.dubai-visa-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dubai-visa-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .dvg-header-split {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .dubai-visa-section .dvg-header-right {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: 100% !important;
+    max-height: 380px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .dubai-visa-section .dvg-arched-wrap,
+  .dubai-visa-section .dvg-hero-img {
+    opacity: 0.5 !important;
+  }
+
+  .dubai-visa-section .dvg-header-left {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .dubai-visa-section .dvg-pill-badge,
+  .dubai-visa-section .dvg-title,
+  .dubai-visa-section .dvg-title-line,
+  .dubai-visa-section .dvg-subtext {
+    position: relative !important;
+    z-index: 5 !important;
+    text-align: center !important;
+  }
+}
+
+/* =========================================================================================
+   51. HIDE RIPON BUILDING IMAGE IN RESPONSIVE ENVIRONMENT (.ripon-building-wrap)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .ripon-building-wrap,
+  img[src*="Ripon Building"],
+  img[alt*="Ripon Building"] {
+    display: none !important;
+  }
+}
+
+/* =========================================================================================
+   52. IRELAND STUDENT LIFE SECTION IMAGE BACKGROUND FIX WITH 0.4 OPACITY (.dubai-student-life-section)
+   ========================================================================================= */
+@media screen and (max-width: 1080px) {
+  .dubai-student-life-section {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .dsl-header-split {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .dubai-student-life-section .dsl-header-right {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: 100% !important;
+    max-height: 380px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.4 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .dubai-student-life-section .dsl-arched-wrap,
+  .dubai-student-life-section .dsl-hero-img {
+    opacity: 0.4 !important;
+  }
+
+  .dubai-student-life-section .dsl-header-left {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .dubai-student-life-section .dsl-pill-badge,
+  .dubai-student-life-section .dsl-title,
+  .dubai-student-life-section .dsl-title-line,
+  .dubai-student-life-section .dsl-subtext {
+    position: relative !important;
+    z-index: 5 !important;
+    text-align: center !important;
+  }
+}
+
+/* =========================================================================================
+   53. HERO SECTION STUDENT PHOTO BACKGROUND & SINGLE ROW FLAGS RESPONSIVENESS FIXES
+   ========================================================================================= */
+@media (max-width: 1080px) {
+  .hero-inner {
+    position: relative !important;
+  }
+  .hero-content {
+    position: static !important;
+  }
+  .hero-media {
+    display: none !important;
+  }
+  .hero-photo {
+    position: absolute !important;
+    z-index: -1 !important;
+    opacity: 0.5 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .hero-landmarks-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .hero-media-glow {
+    display: none !important;
+  }
+  .flag-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 999 !important;
+    opacity: 1 !important;
+  }
+  .flag-item {
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
+  }
+  .flag-item .flag {
+    opacity: 1 !important;
+    z-index: 999 !important;
+  }
+  .flag-item .flag img {
+    opacity: 1 !important;
+    z-index: 999 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .flag-row {
+    gap: 4px !important;
+  }
+  .flag-item {
+    font-size: 9px !important;
+    gap: 4px !important;
+  }
+  .flag-item .flag {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+  }
+  .flag-item .flag img {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+  }
+}
+
+/* Global Keyframe Animations for Horizontal Auto-Scrolls */
+@keyframes autoScrollCards {
+  0%, 15% {
+    transform: translateX(0);
+  }
+  20%, 35% {
+    transform: translateX(calc(-280px - 16px));
+  }
+  40%, 55% {
+    transform: translateX(calc(-560px - 32px));
+  }
+  60%, 75% {
+    transform: translateX(calc(-840px - 48px));
+  }
+  80%, 100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes autoScrollProcessCards {
+  0%, 12% {
+    margin-left: 0;
+  }
+  15%, 27% {
+    margin-left: calc(-280px - 16px);
+  }
+  30%, 42% {
+    margin-left: calc(-560px - 32px);
+  }
+  45%, 57% {
+    margin-left: calc(-840px - 48px);
+  }
+  60%, 72% {
+    margin-left: calc(-1120px - 64px);
+  }
+  75%, 87% {
+    margin-left: calc(-1400px - 80px);
+  }
+  90%, 100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes autoScrollImpactCards {
+  0%, 12% {
+    margin-left: 0;
+  }
+  15%, 27% {
+    margin-left: calc(-250px - 16px);
+  }
+  30%, 42% {
+    margin-left: calc(-500px - 32px);
+  }
+  45%, 57% {
+    margin-left: calc(-750px - 48px);
+  }
+  60%, 72% {
+    margin-left: calc(-1000px - 64px);
+  }
+  75%, 87% {
+    margin-left: calc(-1250px - 80px);
+  }
+  90%, 100% {
+    margin-left: 0;
+  }
+}
+/* ============================================================
+   GLOBAL RESPONSIVE STYLES - ISMS GLOBAL
+   Covers: Header, Nav Dropdown, Footer, and shared patterns
+   for universities.html, contact.html, services.html, ielts.html
+   ============================================================ */
+
+/* ─── Reset / Base ─── */
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: clip !important; }
+body { overflow-x: clip !important; }
+html:has(.svc-stepper-bar),
+body:has(.svc-stepper-bar) {
+  overflow-x: visible !important;
+}
+img { max-width: 100%; height: auto; display: block; }
+
+/* City card images need height: 100% to fill their fixed-height wrapper */
+.ct-city-img-wrap {
+  height: 110px !important;
+  overflow: hidden !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+.ct-city-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* ============================================================
+   MOBILE NAV — 1160px and below
+   KEY FIXES:
+   - overflow-x: hidden on .main-nav stops ALL children from
+     escaping the slide-in panel sideways
+   - max-width: 100% + min-width: unset on every dropdown menu
+     overrides the desktop min-width: 160px / 680px values
+   - box-sizing: border-box ensures padding never adds width
+   ============================================================ */
+@media (max-width: 1160px) {
+
+  /* Hamburger button */
+  body #navToggle.nav-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+    z-index: 10000 !important;
+  }
+  body #navToggle.nav-toggle span {
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--nav-text, #11172A) !important;
+    border-radius: 2px !important;
+    display: block !important;
+    transition: 0.3s ease !important;
+  }
+  body #navToggle.nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg) !important; }
+  body #navToggle.nav-toggle.active span:nth-child(2) { opacity: 0 !important; }
+  body #navToggle.nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg) !important; }
+
+  /* Slide-in nav panel — MUST clip overflow so no child can escape */
+  body #mainNav.main-nav {
+    position: fixed !important;
+    inset: 72px 0 0 0 !important;
+    background: #fff !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 16px !important;
+    gap: 2px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;        /* ← KEY: stops menus bleeding right */
+    transform: translateX(100%) !important;
+    transition: transform 0.3s ease !important;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.12) !important;
+    z-index: 9998 !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  body #mainNav.main-nav.open {
+    transform: translateX(0) !important;
+  }
+
+  /* Every top-level nav link and dropdown toggle */
+  body #mainNav.main-nav > a,
+  body #mainNav.main-nav .nav-dropdown-toggle {
+    padding: 14px 12px !important;
+    border-bottom: 1px solid #F1F5F9 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    justify-content: space-between !important;
+    white-space: normal !important;
+  }
+
+  /* The .nav-dropdown container itself */
+  body #mainNav.main-nav .nav-dropdown {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    position: static !important;
+  }
+
+  /* ── ALL dropdown menus: reset every desktop absolute/fixed value ── */
+  body #mainNav.main-nav .nav-dropdown-menu,
+  body #mainNav.main-nav .uni-drop-menu,
+  body #mainNav.main-nav .course-drop-menu,
+  body #mainNav.main-nav .service-drop-menu {
+    position: static !important;          /* was absolute — caused overflow */
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;           /* was translateY — caused overlap */
+    display: none !important;             /* hidden until .open */
+    box-shadow: none !important;
+    border: 1px solid #F1F5F9 !important;
+    border-top: none !important;
+    border-radius: 8px !important;
+    margin-top: 4px !important;
+    min-width: unset !important;          /* ← KEY: kills min-width:160px */
+    width: 100% !important;              /* ← KEY: fills panel, never overflows */
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  /* Links inside any dropdown */
+  body #mainNav.main-nav .nav-dropdown-menu a,
+  body #mainNav.main-nav .uni-drop-menu a,
+  body #mainNav.main-nav .course-drop-menu a,
+  body #mainNav.main-nav .service-drop-menu a {
+    white-space: normal !important;
+    word-break: break-word !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ── Destinations mega menu ── */
+  body #mainNav.main-nav .dest-mega-menu {
+    position: static !important;
+    display: none !important;
+    min-width: unset !important;          /* ← KEY: kills min-width:680px */
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    grid-template-columns: 1fr 1fr !important;
+    transform: none !important;           /* ← KEY: kills translateX(-50%) */
+    left: auto !important;
+    right: auto !important;
+    box-shadow: none !important;
+    border: 1px solid #F1F5F9 !important;
+    border-top: none !important;
+    margin-top: 4px !important;
+    border-radius: 8px !important;
+    padding: 8px !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Open states */
+  body #mainNav.main-nav .nav-dropdown.open > .nav-dropdown-menu,
+  body #mainNav.main-nav .nav-dropdown.open > .uni-drop-menu,
+  body #mainNav.main-nav .nav-dropdown.open > .course-drop-menu,
+  body #mainNav.main-nav .nav-dropdown.open > .service-drop-menu {
+    display: block !important;
+  }
+  body #mainNav.main-nav .nav-dropdown.open > .dest-mega-menu {
+    display: grid !important;
+  }
+
+  /* Hide phone number text in header to save space */
+  body .header-phone span,
+  body .header-phone small {
+    display: none !important;
+  }
+  body .header-inner {
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+  body .uni-main-layout {
+    grid-template-columns: 1fr !important;
+    padding: 0 20px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 24px !important;
+  }
+  body .uni-filter-sidebar {
+    width: 92% !important;
+    max-width: 480px !important;
+    box-sizing: border-box !important;
+    margin: 0 auto 24px auto !important;
+    position: static !important;
+  }
+
+  /* Consultation Banner Mobile Layout */
+  body .uni-consultation-banner {
+    padding: 32px 20px !important;
+    margin: 40px auto 0 auto !important;
+    width: 92% !important;
+    max-width: 480px !important;
+    box-sizing: border-box !important;
+    border-radius: 16px !important; /* Make it a complete rounded card on mobile */
+  }
+  body .uni-banner-inner {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+    min-height: auto !important;
+  }
+  body .uni-cta-left-student {
+    display: none !important;
+  }
+  body .uni-banner-plane-wrap {
+    display: none !important;
+  }
+  body .uni-cta-center {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+  body .uni-cta-center h2 {
+    font-size: 22px !important;
+  }
+  body .uni-cta-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    gap: 12px !important;
+  }
+  body .btn-cta-white {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  body .svc-stepper-bar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 72px !important;
+    z-index: 9999 !important;
+  }
+}
+
+/* ============================================================
+   768px — tablet / large phone
+   ============================================================ */
+@media (max-width: 768px) {
+  body .header-inner {
+    padding: 0 14px !important;
+    height: 64px !important;
+    box-sizing: border-box !important;
+  }
+  body { padding-top: 64px !important; }
+  body #mainNav.main-nav { inset: 64px 0 0 0 !important; }
+  body .brand-logo-img {
+    height: 38px !important;
+    max-width: 140px !important;
+  }
+  body .site-header .btn-primary {
+    font-size: 11px !important;
+    padding: 0 10px !important;
+    height: 32px !important;
+    white-space: nowrap !important;
+    max-width: 130px !important;
+  }
+  /* Destination grid: 1 column on tablet */
+  body #mainNav.main-nav .dest-mega-menu {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Universities Hero Centering & Badge Relocation */
+  body .uni-hero-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  body .uni-hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  body .uni-breadcrumb {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  body .uni-hero-badge-floating {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin: 20px auto 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: fit-content !important;
+    z-index: 5 !important;
+  }
+  body .uni-hero-bg-img {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 100% !important;
+    opacity: 0.5 !important;
+    object-position: center top !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+  body .uni-hero-sub {
+    color: #000000 !important;
+    font-weight: 500 !important;
+  }
+  body .uni-stats-highlights-row-simple {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px 12px !important;
+    padding: 16px !important;
+    text-align: left !important;
+  }
+  body .uni-stat-simple-item {
+    justify-content: flex-start !important;
+    font-size: 13.5px !important;
+  }
+  body .uni-main-layout {
+    padding: 0 16px !important;
+  }
+  body .uni-filter-sidebar {
+    width: 92% !important;
+    max-width: 480px !important;
+    box-sizing: border-box !important;
+    margin: 0 auto 20px auto !important;
+  }
+  body .uni-top-bar {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-align: center !important;
+  }
+  body .uni-controls-right {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  /* Services Page Hero Mobile Layout */
+  body .svc-hero-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: auto !important;
+  }
+  body .svc-hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  body .svc-breadcrumb {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  body .svc-hero-title {
+    text-align: center !important;
+    font-size: 30px !important;
+  }
+  body .svc-hero-sub {
+    text-align: center !important;
+    color: #000000 !important;
+    font-weight: 500 !important;
+    margin-bottom: 20px !important;
+  }
+  body .svc-hero-stats-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 20px auto 0 auto !important;
+  }
+  body .svc-stat-pill {
+    white-space: normal !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 12.5px !important;
+    padding: 10px 8px !important;
+    height: 100% !important;
+  }
+  body .svc-hero-image-wrapper {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+  }
+  body .svc-hero-student-img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    opacity: 0.25 !important;
+    object-position: left top !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+  body .svc-stepper-bar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 64px !important;
+    z-index: 9999 !important;
+  }
+
+  /* Services Step Cards mobile layout */
+  body .svc-card-media {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  body .svc-card-media img.bg-photo {
+    height: 180px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+  body .svc-floating-overlay-card {
+    position: static !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 20px 16px !important;
+    margin: 0 !important;
+    background: #FFFFFF !important;
+  }
+
+  /* IELTS Page mobile layout */
+  body .ielts-forms-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  body .ielts-hero-card {
+    padding: 24px 16px !important;
+  }
+}
+
+/* ============================================================
+   480px — phones
+   ============================================================ */
+@media (max-width: 480px) {
+  body .header-inner {
+    padding: 0 12px !important;
+    height: 60px !important;
+    box-sizing: border-box !important;
+  }
+  body { padding-top: 60px !important; }
+  body #mainNav.main-nav { inset: 60px 0 0 0 !important; }
+  body .brand-logo-img {
+    height: 34px !important;
+    max-width: 120px !important;
+  }
+  /* Hide CTA button on very small screens */
+  body .site-header .btn-primary { display: none !important; }
+  body #mainNav.main-nav .dest-mega-menu { grid-template-columns: 1fr !important; }
+
+  /* iPhone SE (320px screen width) Safe Filters layout */
+  body .uni-filter-sidebar {
+    padding: 16px 12px !important;
+    width: 94% !important;
+    margin: 0 auto 16px auto !important;
+  }
+  body .uni-checkbox-row {
+    font-size: 12.5px !important;
+    gap: 8px !important;
+  }
+
+  /* Services Hero Stats stack on very small screens */
+  body .svc-hero-stats-row {
+    grid-template-columns: 1fr !important;
+    max-width: 290px !important;
+    margin: 16px auto 0 auto !important;
+  }
+  body .svc-stepper-bar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 60px !important;
+    z-index: 9999 !important;
+  }
+
+  /* IELTS Page extra-small screen overrides */
+  body .ielts-hero-info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  body .ielts-info-item {
+    justify-content: center !important;
+  }
+  body .dfc-section .container > div > div:first-child > div {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+
+/* ─── FOOTER ─── */
+@media (max-width: 768px) {
+  body .site-footer .footer-grid,
+  body footer .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+  body .site-footer .footer-brand,
+  body footer .footer-brand {
+    grid-column: 1 / -1 !important;
+  }
+  body .site-footer .footer-bottom,
+  body footer .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+}
+@media (max-width: 480px) {
+  body .site-footer .footer-grid,
+  body footer .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─── Shared section headings ─── */
+@media (max-width: 768px) {
+  body .section-header-center,
+  body .section-head {
+    padding: 0 4px !important;
+  }
+  body .section-title-bold,
+  body .section-head h2 {
+    font-size: 26px !important;
+  }
+  body .section-subtitle-text,
+  body .section-sub {
+    font-size: 14px !important;
+  }
+
+  /* IELTS Page Mobile Overrides */
+  body .countries-10grid,
+  body .prereq-5grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  body .prep-tips-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  body .tip-card {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+  body .tip-num-badge {
+    width: 32px !important;
+    height: 32px !important;
+    aspect-ratio: 1 / 1 !important;
+    flex-shrink: 0 !important;
+    border-radius: 50% !important;
+  }
+}
+
+/* =========================================================================================
+   AUSTRALIA DESTINATION — WHY CHOOSE ISMS GLOBAL SECTION WHITESPACE FIX
+   ========================================================================================= */
+@media (max-width: 1024px) {
+  .dtp-left-content {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .dtp-header-box {
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    min-height: unset !important;
+    height: auto !important;
+  }
+
+  .dtp-top-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .dtp-section {
+    padding: 40px 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dtp-left-content {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .dtp-header-box {
+    justify-content: flex-start !important;
+    height: auto !important;
+    min-height: unset !important;
+    padding-bottom: 0 !important;
+  }
+
+  .dtp-6cards-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  .dtp-section {
+    padding: 32px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .dtp-6cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================================================================================
+   CONTACT PAGE — MAP SECTION RESPONSIVE FIX
+   ========================================================================================= */
+@media (max-width: 768px) {
+  .ct-map-faq-section {
+    padding: 16px 0 40px 0 !important;
+  }
+
+  .ct-map-faq-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Map card: full width, fixed height that works on mobile */
+  .ct-map-card {
+    width: 100% !important;
+    height: 320px !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  /* iframe fills the card exactly */
+  .ct-map-iframe {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    border: none !important;
+  }
+
+  /* Overlay box: compact & doesn't obscure the map */
+  .ct-map-overlay-box {
+    max-width: 60% !important;
+    width: auto !important;
+    top: 10px !important;
+    left: 10px !important;
+    padding: 8px 12px !important;
+    border-radius: 10px !important;
+  }
+
+  .ct-map-overlay-box strong {
+    font-size: 12px !important;
+  }
+
+  .ct-map-overlay-box span {
+    font-size: 10px !important;
+  }
+
+  .ct-map-overlay-box a {
+    font-size: 11px !important;
+  }
+}
+   Makes the counsellor image fill the entire hero section as a background
+   with 0.6 opacity so text stays readable.
+   ========================================================================================= */
+@media (max-width: 768px) {
+  /* Stretch the image container to cover the full section */
+  .ct-hero-landmarks-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    right: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    z-index: 1 !important;
+  }
+
+  /* Remove the mask/blend, make image full-cover at 0.6 opacity */
+  .ct-hero-bg-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    opacity: 0.6 !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    filter: none !important;
+  }
+}
+
+/* =========================================================================================
+   UNIVERSITY SEARCH PAGE — RESPONSIVE STYLES
+   ========================================================================================= */
+@media (max-width: 1100px) {
+  .us-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .us-hero h1 { font-size: 26px !important; }
+  .us-hero p  { font-size: 14px !important; }
+  .us-hero-stats { gap: 20px !important; flex-wrap: wrap !important; justify-content: center !important; }
+  .us-hero-stat strong { font-size: 22px !important; }
+
+  .us-filter-bar { top: 64px !important; padding: 10px 0 !important; }
+  .us-filter-inner { flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; }
+  .us-search-box { max-width: 100% !important; width: 100% !important; }
+  .us-filter-pills { gap: 6px !important; flex-wrap: wrap !important; }
+  .us-filter-pill { font-size: 11.5px !important; padding: 6px 12px !important; }
+
+  .us-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .us-country-heading h2 { font-size: 17px !important; }
+  .us-card-top { padding: 14px 14px 10px !important; gap: 12px !important; }
+  .us-card-body { padding: 12px 14px 14px !important; }
+  .us-logo-wrap, .us-logo-placeholder { width: 48px !important; height: 48px !important; font-size: 16px !important; }
+  .us-card-meta h3 { font-size: 14px !important; }
+  .us-card-desc { font-size: 12.5px !important; }
+  .us-course-tag { font-size: 11px !important; padding: 2px 8px !important; }
+}
+
+@media (max-width: 480px) {
+  .us-hero { padding: 32px 0 36px !important; }
+  .us-hero h1 { font-size: 22px !important; }
+  .us-hero-stats { gap: 16px !important; }
+  .us-hero-stat strong { font-size: 20px !important; }
+  .us-filter-pill { font-size: 11px !important; padding: 5px 10px !important; }
+  .us-country-count { display: none !important; }
+}
+
+/* =========================================================================================
+   IELTS PAGE — WHY TAKE IELTS CARD 2x2 LAYOUT ON DESKTOP
+   ========================================================================================= */
+@media (min-width: 769px) {
+  .ielts-hero-info-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, auto) !important;
+    gap: 12px !important;
+    margin-top: 20px !important;
+  }
+
+  .ielts-info-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+}
+
+/* =========================================================================================
+   USA DESTINATION PAGE — REMOVE SEAL/WATERMARK IMAGE
+   ========================================================================================= */
+.dfc-skyline-bg {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* =========================================================================================
+   INDEX PAGE — HIDE IMAGES IN 6 STEPS SECTION CARDS
+   ========================================================================================= */
+.process-step-img {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* =========================================================================================
+   INDEX PAGE — REMOVE BORDERS FROM 6 STEPS SECTION (PLAIN LAYOUT)
+   ========================================================================================= */
+.process-step-col {
+  border: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-top: none !important;
+}
+
+.process-step-col:nth-child(1),
+.process-step-col:nth-child(2),
+.process-step-col:nth-child(3),
+.process-step-col:nth-child(4),
+.process-step-col:nth-child(5),
+.process-step-col:nth-child(6),
+.process-step-col:nth-child(even),
+.process-step-col:nth-child(odd),
+.process-step-col:last-child {
+  border: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-top: none !important;
+}
+
+/* Also remove any top decorative lines if present */
+.process-cards-grid::before,
+.process-cards-grid::after {
+  display: none !important;
+  border: none !important;
+}
+
+/* Remove the horizontal line above the 6 steps cards */
+.process-cards-grid {
+  border-top: none !important;
+  border: none !important;
+  padding-top: 0 !important;
+}
+
+/* =========================================================================================
+   INDEX PAGE — INCREASE OPACITY OF CORNER LANDMARK IMAGES (6 STEPS SECTION)
+   ========================================================================================= */
+.process-sketch-left {
+  opacity: 0.6 !important;
+  left: 0px !important;
+  height: 100% !important;
+  width: auto !important;
+  max-width: 280px !important;
+  top: -200px !important;
+  object-fit: contain !important;
+}
+
+.process-sketch-right {
+  opacity: 0.6 !important;
+  right: 0px !important;
+  height: 100% !important;
+  width: auto !important;
+  max-width: 280px !important;
+  top: -200px !important;
+  object-fit: contain !important;
+}
+
+.process-sketch {
+  mix-blend-mode: normal !important;
+  filter: none !important;
+}
+
+
+/* =========================================================================================
+   Students Review Page Responsiveness
+   ========================================================================================= */
+@media (max-width: 1024px) {
+  body .sr-testimonials-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+  }
+  body .sr-reels-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body .sr-hero h1 {
+    font-size: 32px !important;
+  }
+  body .sr-testimonials-grid {
+    grid-template-columns: 1fr !important;
+  }
+  body .sr-reels-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+  body .sr-section {
+    padding: 40px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body .sr-hero h1 {
+    font-size: 26px !important;
+  }
+  body .sr-reels-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+}
+
+
+/* Student Review Hero Responsiveness */
+@media (max-width: 991px) {
+  body .sr-hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    text-align: center !important;
+  }
+  body .sr-hero-content {
+    text-align: center !important;
+  }
+  body .sr-hero-media {
+    order: -1 !important;
+  }
+  body .sr-hero-img-container {
+    margin: 0 auto !important;
+    max-width: 380px !important;
+  }
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   FINAL WEBSITE ALIGNMENT
+   ========================================================= */
+
+:root {
+    --site-container-width: 1320px;
+    --site-container-padding: 32px;
+}
+
+
+/* ALL MAIN CONTAINERS */
+.container,
+.header-inner,
+.content-container,
+.main-container {
+    width: 100% !important;
+    max-width: var(--site-container-width) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: var(--site-container-padding) !important;
+    padding-right: var(--site-container-padding) !important;
+    box-sizing: border-box !important;
+}
+
+
+/* HERO */
+.hero,
+.hero-section {
+    padding-right: 0 !important;
+}
+
+.hero-inner {
+    padding-right: 0 !important;
+}
+
+
+/* WHY CHOOSE */
+#why-choose .why-trust-card-block {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+#why-choose .why-trust-grid {
+    width: 100% !important;
+    max-width: none !important;
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    gap: 16px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+/* WHY CHOOSE — TOP 4 */
+#why-choose .why-trust-item:nth-child(1),
+#why-choose .why-trust-item:nth-child(2),
+#why-choose .why-trust-item:nth-child(3),
+#why-choose .why-trust-item:nth-child(4) {
+    grid-column: span 3 !important;
+    width: 100% !important;
+}
+
+
+/* WHY CHOOSE — BOTTOM 3 */
+#why-choose .why-trust-item:nth-child(5),
+#why-choose .why-trust-item:nth-child(6),
+#why-choose .why-trust-item:nth-child(7) {
+    grid-column: span 4 !important;
+    width: 100% !important;
+}
+
+
+/* 6 STEP PROCESS */
+.process-card-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+/* TABLET */
+@media (max-width: 768px) {
+    :root {
+        --site-container-padding: 20px;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 480px) {
+    :root {
+        --site-container-padding: 16px;
+    }
+}
+
+/* =========================================================================================
+   BLOG SECTION — FULL WIDTH LAYOUT WITHOUT WHITE CONTAINER
+   ========================================================================================= */
+/* Make blog section container match default site container width (1480px) */
+/*.blog-exact-section .container {*/
+/*  max-width: 1480px !important;*/
+/*  width: 100% !important;*/
+/*  margin: 0 auto !important;*/
+/*  padding-left: 24px !important;*/
+/*  padding-right: 24px !important;*/
+/*}*/
+.blog-exact-section .container {
+    max-width: none !important;
+    width: calc(100% + 48px) !important;
+    margin-left: -24px !important;
+    margin-right: -24px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* Blog grid inherits container width naturally */
+.blog-layout {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Section header and chip row also match container */
+.blog-exact-section .section-head,
+.blog-exact-section .chip-row {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* =========================================================================================
+   BLOG SECTION — REMOVE ALL WHITE BACKGROUNDS AND CONTAINERS
+   ========================================================================================= */
+/* Remove any wrapper or container backgrounds */
+.blog-exact-section,
+.blog-exact-section .container,
+.blog-exact-section .section-head,
+.blog-exact-section .chip-row,
+.blog-exact-section > div,
+.blog-exact-section *:not(.featured-blog-card):not(.blog-card):not(.btn):not(.chip) {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Remove box styling from blog section */
+.blog-exact-section {
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+/* If there's a white wrapper div, make it transparent */
+.blog-exact-section::before,
+.blog-exact-section::after {
+  display: none !important;
+}
+
+/* Ensure section background is inherited from body */
+body .blog-exact-section {
+  background: transparent !important;
+}
+
+/* Remove any parent container backgrounds */
+.section.blog-exact-section {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* =========================================================================================
+   FAQ SECTION — REMOVE ALL WHITE BACKGROUNDS AND CONTAINERS
+   ========================================================================================= */
+/* Remove any wrapper or container backgrounds */
+.faq-exact-section,
+.faq-exact-section .container,
+.faq-exact-section .section-head,
+.faq-exact-section > div {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Remove box styling from FAQ section */
+.faq-exact-section {
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* If there's a white wrapper div, make it transparent */
+.faq-exact-section::before,
+.faq-exact-section::after {
+  display: none !important;
+}
+
+/* Make FAQ section container match default site container width (1480px) */
+.faq-exact-section .container {
+  max-width: 1480px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+/* FAQ layout and content inherit container width naturally */
+.faq-exact-section .section-head,
+.faq-layout,
+.faq-grid {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

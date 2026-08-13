@@ -1,0 +1,2086 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Courses | ISMS Global - Undergraduate, Postgraduate & Diploma Courses</title>
+  <meta name="description"
+    content="Discover 1000+ undergraduate, postgraduate and diploma courses from top universities across the world. Filter by country, subject, degree level and study mode with ISMS Global.">
+
+  <!-- Google Fonts -->
+
+
+
+
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Site Styles & Custom Courses Page Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="courses.css">
+  <!-- ===== NAVBAR OVERRIDE: Exact match with index.html ===== -->
+  <style>
+    /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML */
+    :root {
+      --header-bg: #F4F8FF;
+      --header-border: #DCE5F3;
+      --nav-text: #11172A;
+      --nav-hover-bg: #E5EDFF;
+      --nav-accent: #0D47D8;
+      --dropdown-bg: #FFFFFF;
+      --gold-btn: #C79A3C;
+      --gold-btn-hover: #B5872E;
+    }
+
+    .site-header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 9999 !important;
+      background: var(--header-bg) !important;
+      border-bottom: 1px solid var(--header-border) !important;
+      box-shadow: 0 4px 20px rgba(17, 23, 42, 0.08) !important;
+      backdrop-filter: none !important;
+    }
+
+    body {
+      padding-top: 96px !important;
+    }
+
+    .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      height: 72px !important;
+      gap: 12px !important;
+      max-width: 1720px !important;
+      width: 95% !important;
+      margin: 0 auto !important;
+      padding: 0 2.5rem !important;
+    }
+
+    .brand-logo-img {
+      height: 48px !important;
+      width: auto !important;
+      max-width: 200px !important;
+      object-fit: contain !important;
+      display: block !important;
+    }
+
+    .main-nav {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0 !important;
+      flex: 1 !important;
+      justify-content: center !important;
+      font-family: 'Inter', Arial, sans-serif !important;
+    }
+
+    .main-nav a {
+      color: var(--nav-text) !important;
+      font-size: 14.5px !important;
+      font-weight: 600 !important;
+      padding: 20px 16px !important;
+      border-bottom: 3px solid transparent !important;
+      transition: background .15s ease, border-color .15s ease !important;
+      opacity: 1 !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      background: var(--nav-hover-bg) !important;
+      color: var(--nav-accent) !important;
+      border-bottom: 3px solid var(--nav-accent) !important;
+    }
+
+    .main-nav a.active::after {
+      display: none !important;
+    }
+
+    .nav-dropdown {
+      position: relative !important;
+    }
+
+    .nav-dropdown-toggle {
+      color: var(--nav-text) !important;
+      font-size: 14.5px !important;
+      font-weight: 600 !important;
+      padding: 20px 16px !important;
+      border-bottom: 3px solid transparent !important;
+      transition: background .15s ease, border-color .15s ease !important;
+      opacity: 1 !important;
+      background: transparent !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      white-space: nowrap !important;
+      font-family: 'Inter', Arial, sans-serif !important;
+    }
+
+    .nav-dropdown-toggle i {
+      color: var(--nav-accent) !important;
+      font-size: 10px !important;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-toggle {
+      background: var(--nav-hover-bg) !important;
+      border-bottom: 3px solid var(--nav-accent) !important;
+      color: var(--nav-accent) !important;
+    }
+
+    .nav-dropdown-menu {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      background: var(--dropdown-bg) !important;
+      border: 1px solid var(--header-border) !important;
+      border-top: 3px solid var(--nav-accent) !important;
+      box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+      border-radius: 14px !important;
+      padding: 8px !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(6px) !important;
+      transition: all 0.2s ease !important;
+      min-width: 160px !important;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(4px) !important;
+    }
+
+    .nav-dropdown-menu a {
+      color: var(--nav-text) !important;
+      border-left: 3px solid transparent !important;
+      border-bottom: none !important;
+      border-top: none !important;
+      padding: 10px 22px !important;
+      font-size: 13.5px !important;
+      font-weight: 500 !important;
+      background: transparent !important;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: var(--header-bg) !important;
+      border-left: 3px solid var(--nav-accent) !important;
+      color: var(--nav-accent) !important;
+    }
+
+    .dest-mega-menu {
+      min-width: 680px !important;
+      padding: 16px 20px !important;
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 8px 12px !important;
+      left: 50% !important;
+      transform: translateX(-50%) translateY(8px) !important;
+      border-radius: 18px !important;
+      background: var(--dropdown-bg) !important;
+      border-top: 3px solid var(--nav-accent) !important;
+    }
+
+    .nav-dropdown:hover .dest-mega-menu {
+      transform: translateX(-50%) translateY(4px) !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .dest-drop-item {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      padding: 10px 12px !important;
+      border-radius: 12px !important;
+      border-bottom: none !important;
+      border-top: none !important;
+      transition: background 0.15s ease !important;
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    .dest-drop-item:hover {
+      background: var(--header-bg) !important;
+      border-left: 3px solid var(--nav-accent) !important;
+    }
+
+    .dest-drop-flag {
+      width: 26px !important;
+      height: 18px !important;
+      object-fit: cover !important;
+      border-radius: 3px !important;
+      flex-shrink: 0 !important;
+    }
+
+    .dest-drop-text {
+      display: flex !important;
+      flex-direction: column !important;
+      line-height: 1.25 !important;
+    }
+
+    .dest-drop-text strong {
+      font-size: 13.5px !important;
+      font-weight: 700 !important;
+      color: var(--nav-text) !important;
+    }
+
+    .dest-drop-text span {
+      font-size: 11px !important;
+      color: #64748B !important;
+      margin-top: 2px !important;
+    }
+
+    .header-actions {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      flex-shrink: 0 !important;
+    }
+
+    .header-phone {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      color: var(--nav-text) !important;
+      text-decoration: none !important;
+      font-size: 12.5px !important;
+    }
+
+    .header-phone i {
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 50% !important;
+      background: var(--nav-hover-bg) !important;
+      color: var(--nav-accent) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .header-phone small {
+      color: #667085 !important;
+    }
+
+    .header-phone strong {
+      color: var(--nav-text) !important;
+      font-weight: 700 !important;
+      font-size: 13.5px !important;
+    }
+
+    .site-header .btn-primary {
+      background: var(--gold-btn) !important;
+      color: #FFFFFF !important;
+      border: none !important;
+      font-weight: 700 !important;
+      box-shadow: none !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .site-header .btn-primary:hover {
+      background: var(--gold-btn-hover) !important;
+      color: #FFFFFF !important;
+      transform: none !important;
+    }
+
+    .nav-toggle {
+      display: none !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      gap: 5px !important;
+      background: none !important;
+      border: none !important;
+      padding: 8px !important;
+      cursor: pointer !important;
+    }
+
+    .nav-toggle span {
+      width: 24px !important;
+      height: 2px !important;
+      background: var(--nav-text) !important;
+      border-radius: 2px !important;
+      transition: 0.3s ease !important;
+      display: block !important;
+    }
+
+    @media (max-width: 1160px) {
+      .nav-toggle {
+        display: flex !important;
+      }
+
+      .main-nav {
+        position: fixed !important;
+        inset: 72px 0 0 0 !important;
+        background: #fff !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 24px !important;
+        gap: 4px !important;
+        overflow-y: auto !important;
+        transform: translateX(100%) !important;
+        transition: transform 0.3s ease !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+        z-index: 9998 !important;
+      }
+
+      .main-nav.open {
+        transform: translateX(0) !important;
+      }
+
+      .main-nav a,
+      .nav-dropdown-toggle {
+        padding: 14px 8px !important;
+        border-bottom: 1px solid #E2E8F0 !important;
+        width: 100% !important;
+        font-size: 15px !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+      }
+
+      .dest-mega-menu {
+        min-width: unset !important;
+        grid-template-columns: 1fr !important;
+        transform: none !important;
+        left: 0 !important;
+        position: static !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      .nav-dropdown-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: none !important;
+      }
+
+      .nav-dropdown.open .nav-dropdown-menu {
+        display: block !important;
+      }
+    }
+  body { padding-top: 72px !important; }
+
+/* UNIVERSAL BADGE PILL HORIZONTAL CENTERING */
+.badge-pill,
+[class*="pill-badge"],
+[class*="-badge"] {
+    display: flex !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* TESTIMONIALS CENTERING & GOLDEN STARS */
+.dtm-4cards-grid,
+.dtm-grid,
+.testimonials-grid,
+.dtm-cards-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.dtm-card,
+.testimonial-card {
+    flex: 1 1 360px !important;
+    max-width: 420px !important;
+    min-width: 280px !important;
+}
+
+.dtm-rating,
+.testimonial-rating,
+.stars,
+.star-rating {
+    color: #FFB800 !important;
+}
+
+.dtm-rating i,
+.testimonial-rating i,
+.stars i,
+.star-rating i,
+.fa-star {
+    color: #FFB800 !important;
+}
+
+/* DTP SECTION LEFT ALIGNMENT FOR TWO-COLUMN HEADER */
+.dtp-header-box {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+.dtp-pill-badge,
+.dtp-header-box .dtp-pill-badge {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    display: inline-flex !important;
+    align-self: flex-start !important;
+}
+
+.dtp-title,
+.dtp-header-box .dtp-title {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.dtp-subtext,
+.dtp-header-box .dtp-subtext {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* ENFORCE GOLDEN STARS FOR ALL TESTIMONIAL RATINGS */
+.dtm-rating,
+.dtm-rating i,
+.testimonial-rating,
+.testimonial-rating i,
+.star-rating,
+.star-rating i,
+.stars,
+.stars i,
+i.fa-star,
+i.fa-solid.fa-star {
+    color: #FFB800 !important;
+}
+
+/* PREMIUM RIGHT BLUE CTA CARD STYLING FOR DTP SECTION */
+.dtp-right-blue-card,
+.dtp-right-card {
+    background: linear-gradient(135deg, #0A1940 0%, #1D4ED8 100%) !important;
+    border-radius: 22px !important;
+    padding: 36px 30px !important;
+    color: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 12px 36px rgba(13,71,216,0.22) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    min-height: 320px !important;
+}
+
+.dtp-blue-text-box,
+.dtp-right-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.dtp-right-blue-card h3,
+.dtp-right-card h3 {
+    color: #FFFFFF !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 14px !important;
+    letter-spacing: -0.01em !important;
+    text-align: left !important;
+}
+
+.dtp-right-blue-card p,
+.dtp-right-card p {
+    color: #DBEAFE !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+    text-align: left !important;
+}
+
+.dtp-blue-btn,
+.dtp-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+    color: #0A1940 !important;
+    font-weight: 800 !important;
+    font-size: 14.5px !important;
+    padding: 14px 22px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 6px 20px rgba(245,158,11,0.35) !important;
+    width: 100 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+.dtp-blue-btn:hover,
+.dtp-cta-btn:hover {
+    background: linear-gradient(135deg, #FFB800 0%, #F59E0B 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(245,158,11,0.5) !important;
+    color: #0A1940 !important;
+}
+
+.dtp-cta-note,
+.dtp-guarantee {
+    display: block !important;
+    font-size: 12px !important;
+    color: #93C5FD !important;
+    margin-top: 14px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+}
+</style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+  <!-- ====== 1. HEADER (SITE NAVBAR) ====== -->
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="siteHeader"></header>
+
+  <!-- MAIN CONTENT WRAPPER -->
+  <main>
+
+    <!-- ====== 2. HERO SECTION ====== -->
+    <section class="courses-hero-section">
+      <div class="hero-bg-landmarks">
+        <img src="assets/course-hero.png" alt="World Landmarks Scene Sketch Background" class="hero-scene-sketch-img">
+      </div>
+
+      <!-- Airplane Vector -->
+      <!-- <img src="assets/plane.png" class="hero-vector-plane" alt="Airplane Vector"> -->
+
+      <div class="container">
+        <div class="courses-hero-inner">
+          <div class="courses-hero-content">
+            <nav class="courses-breadcrumb">
+              <a href="index.html">Home</a>
+              <span class="sep">&gt;</span>
+              <span class="current">Courses</span>
+            </nav>
+            <h1 class="courses-hero-title">
+              Trending UG &amp; PG Courses<br>
+              <span class="blue-text">Across the Globe</span>
+            </h1>
+            <p class="courses-hero-sub">
+              Explore top courses offered by leading universities worldwide. Use the filters to find the right program
+              based on your preferred course, study level, destination, and more.
+            </p>
+          </div>
+
+          <!-- <div class="courses-hero-image-wrapper">
+            <img src="assets/Girl.png" alt="Smiling Student Girl with Notebooks" class="hero-student-img">
+          </div>
+        </div> -->
+        </div>
+    </section>
+
+    <!-- ====== 3. FLOATING SEARCH & FILTER CARD ====== -->
+    <div class="container">
+      <div class="courses-search-wrapper">
+        <div class="search-filter-card">
+          <!-- Tab Switcher -->
+          <div class="search-tabs-row">
+            <button type="button" class="tab-pill active">Find Courses</button>
+            <button type="button" class="tab-pill outline">Browse by Stream</button>
+          </div>
+
+          <!-- Form Fields Grid -->
+          <div class="search-form-grid">
+            <!-- Course Search Input -->
+            <div class="form-group">
+              <label for="heroSearchInput">Search Courses</label>
+              <div class="search-input-box">
+                <input type="text" id="heroSearchInput" placeholder="Search for courses, e.g., MBA, Engineering...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+
+            <!-- Study Destination Dropdown -->
+            <div class="form-group">
+              <label for="heroDestSelect">Study Destination</label>
+              <div class="select-box-wrapper">
+                <select id="heroDestSelect">
+                  <option value="all">All Countries</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Canada">Canada</option>
+                  <option value="United States">United States</option>
+                  <option value="Germany">Germany</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+
+            <!-- Course Level Dropdown -->
+            <div class="form-group">
+              <label for="heroLevelSelect">Course Level</label>
+              <div class="select-box-wrapper">
+                <select id="heroLevelSelect">
+                  <option value="all">All Levels</option>
+                  <option value="Undergraduate">Undergraduate</option>
+                  <option value="Postgraduate">Postgraduate</option>
+                  <option value="Diploma">Diploma</option>
+                  <option value="Doctorate">Doctorate</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+
+            <!-- Course Type Dropdown -->
+            <div class="form-group">
+              <label for="heroTypeSelect">Course Type</label>
+              <div class="select-box-wrapper">
+                <select id="heroTypeSelect">
+                  <option value="all">All Types</option>
+                  <option value="Full-time">Full-time</option>
+                  <option value="Part-time">Part-time</option>
+                  <option value="Online">Online</option>
+                  <option value="Distance Learning">Distance Learning</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" class="btn-search-submit" id="btnSearchSubmit">
+              <i class="fa-solid fa-magnifying-glass"></i> Search Courses
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== 4. STATS HIGHLIGHTS ROW ====== -->
+      <div class="stats-highlights-row">
+        <div class="stat-item-card">
+          <i class="fa-solid fa-layer-group" style="color: var(--c-primary); font-size: 18px;"></i>
+          <div class="stat-info">
+            <strong>1000+ Courses</strong>
+            <span>Wide Range of Options</span>
+          </div>
+        </div>
+
+        <div class="stat-item-card">
+          <i class="fa-solid fa-globe" style="color: var(--c-primary); font-size: 18px;"></i>
+          <div class="stat-info">
+            <strong>20+ Countries</strong>
+            <span>Top Study Destinations</span>
+          </div>
+        </div>
+
+        <div class="stat-item-card">
+          <i class="fa-solid fa-building-columns" style="color: var(--c-primary); font-size: 18px;"></i>
+          <div class="stat-info">
+            <strong>500+ Universities</strong>
+            <span>World-Class Institutions</span>
+          </div>
+        </div>
+
+        <div class="stat-item-card">
+          <i class="fa-solid fa-user-tie" style="color: var(--c-primary); font-size: 18px;"></i>
+          <div class="stat-info">
+            <strong>Expert Guidance</strong>
+            <span>At Every Step</span>
+          </div>
+        </div>
+
+        <div class="stat-item-card">
+          <i class="fa-solid fa-shield-halved" style="color: var(--c-primary); font-size: 18px;"></i>
+          <div class="stat-info">
+            <strong>100% Free</strong>
+            <span>Counselling Support</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== 5. MAIN CONTENT LAYOUT (SIDEBAR + GRID) ====== -->
+      <div class="courses-main-layout">
+
+        <!-- LEFT SIDEBAR FILTER PANEL -->
+        <aside class="filter-sidebar-card">
+          <div class="filter-sidebar-header">
+            <h3>Filter Courses</h3>
+            <button type="button" class="btn-clear-all" id="btnClearAll">Clear All</button>
+          </div>
+
+          <!-- Filter Group 1: Study Destination -->
+          <div class="filter-group-section">
+            <div class="filter-title-toggle">
+              <span>Study Destination</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="filter-options-list">
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="all" checked>
+                <span>All Countries</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="United Kingdom">
+                <span>United Kingdom</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="Australia">
+                <span>Australia</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="Canada">
+                <span>Canada</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="United States">
+                <span>United States</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="Germany">
+                <span>Germany</span>
+              </label>
+              <div class="extra-options" style="display: none; flex-direction: column; gap: 10px;">
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="Ireland">
+                  <span>Ireland</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="Dubai">
+                  <span>Dubai / UAE</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="France">
+                  <span>France</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="Spain">
+                  <span>Spain</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="Netherlands">
+                  <span>Netherlands</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="New Zealand">
+                  <span>New Zealand</span>
+                </label>
+              </div>
+              <button type="button" class="btn-show-more">+ Show More</button>
+            </div>
+          </div>
+
+          <!-- Filter Group 2: Course Level -->
+          <div class="filter-group-section">
+            <div class="filter-title-toggle">
+              <span>Course Level</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="filter-options-list">
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="level_filter" value="all" checked>
+                <span>All Levels</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="level_filter" value="Undergraduate">
+                <span>Undergraduate</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="level_filter" value="Postgraduate">
+                <span>Postgraduate</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="level_filter" value="Diploma">
+                <span>Diploma</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="level_filter" value="Doctorate">
+                <span>Doctorate</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group 3: Course Type -->
+          <div class="filter-group-section">
+            <div class="filter-title-toggle">
+              <span>Course Type</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="filter-options-list">
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="type_filter" value="all" checked>
+                <span>All Types</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="type_filter" value="Full-time">
+                <span>Full-time</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="type_filter" value="Part-time">
+                <span>Part-time</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="type_filter" value="Online">
+                <span>Online</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="type_filter" value="Distance Learning">
+                <span>Distance Learning</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group 4: Study Area -->
+          <div class="filter-group-section">
+            <div class="filter-title-toggle">
+              <span>Study Area</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="filter-options-list">
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="all" checked>
+                <span>All Subjects</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="Business & Management">
+                <span>Business &amp; Management</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="Engineering">
+                <span>Engineering</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="Computer Science">
+                <span>Computer Science</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="Medicine & Health">
+                <span>Medicine &amp; Health</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="Law">
+                <span>Law</span>
+              </label>
+              <div class="extra-options" style="display: none; flex-direction: column; gap: 10px;">
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="subject_filter" value="Design & Media">
+                  <span>Design &amp; Media</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="subject_filter" value="Law & Governance">
+                  <span>Law &amp; Governance</span>
+                </label>
+              </div>
+              <button type="button" class="btn-show-more">+ Show More</button>
+            </div>
+          </div>
+
+          <!-- Apply Filters Button -->
+          <button type="button" class="btn-apply-filters" id="btnApplyFilters">
+            <i class="fa-solid fa-filter"></i> Apply Filters
+          </button>
+        </aside>
+
+        <!-- RIGHT COURSE LISTING COLUMN -->
+        <div class="courses-listing-content">
+          <!-- Top Results Bar -->
+          <div class="courses-top-bar">
+            <div class="results-count-text" id="resultsCountText">
+              Showing 1-12 of 1,248 Courses
+            </div>
+
+            <div class="results-controls-right">
+              <div class="sort-wrapper">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect" class="sort-select">
+                  <option value="popularity">Popularity</option>
+                  <option value="name">Course Name</option>
+                  <option value="duration">Duration</option>
+                </select>
+              </div>
+
+              <div class="view-toggle-btns">
+                <button type="button" class="btn-view-toggle active" id="btnGridView" aria-label="Grid View">
+                  <i class="fa-solid fa-table-cells-large"></i>
+                </button>
+                <button type="button" class="btn-view-toggle" id="btnListView" aria-label="List View">
+                  <i class="fa-solid fa-list"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- COURSE CARDS GRID (Populated Dynamically via courses.js) -->
+          <div class="course-cards-grid" id="courseCardsContainer"></div>
+
+          <!-- PAGINATION -->
+          <div class="pagination-container">
+            <button type="button" class="page-nav-btn" aria-label="Previous Page"><i
+                class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" class="page-nav-btn active">1</button>
+            <button type="button" class="page-nav-btn">2</button>
+            <button type="button" class="page-nav-btn">3</button>
+            <button type="button" class="page-nav-btn">4</button>
+            <span class="page-dots">...</span>
+            <button type="button" class="page-nav-btn">104</button>
+            <button type="button" class="page-nav-btn" aria-label="Next Page"><i
+                class="fa-solid fa-chevron-right"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FULL-WIDTH SCREEN EDGE-TO-EDGE SKYLINE BANNER -->
+      <!-- <div class="fullwidth-skyline-section">
+        <img src="assets/dest-globe.png" alt="Destination Globe Graphic" class="skyline-dest-globe-img">
+        <img src="assets/dubai-panoramic-skyline.png" alt="Dubai Panoramic Skyline Graphic" class="skyline-bg-img">
+      </div> -->
+
+      <!-- ====== 5. VALUE PROPOSITION & HELP BANNER ====== -->
+      <section class="value-prop-section">
+        <div class="value-prop-grid">
+          <div class="value-pillars-list">
+            <div class="pillar-item">
+              <div class="pillar-icon-box"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="pillar-info">
+                <strong>Career Focused Courses</strong>
+                <span>Industry relevant curriculum</span>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box"><i class="fa-solid fa-award"></i></div>
+              <div class="pillar-info">
+                <strong>Global Recognition</strong>
+                <span>World class degree &amp; recognition</span>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="pillar-info">
+                <strong>Scholarship Opportunities</strong>
+                <span>Merit based &amp; need based scholarships</span>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+              <div class="pillar-info">
+                <strong>Education Loan Assistance</strong>
+                <span>Low interest &amp; easy EMI options</span>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box"><i class="fa-solid fa-headset"></i></div>
+              <div class="pillar-info">
+                <strong>Dedicated Support</strong>
+                <span>From shortlisting to visa &amp; beyond.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Expert Help Blue Card -->
+          <div class="expert-help-card">
+            <div class="expert-help-text">
+              <h4>Not Sure Which Course is Right for You?</h4>
+              <p>Our experts will help you choose the perfect course based on your profile and goals.</p>
+              <button type="button" class="btn-talk-expert">
+                Talk to an Expert <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <img src="assets/books1.png" alt="Graduation Cap and Books" class="expert-help-img">
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ====== 6. BLUE CONSULTATION BANNER ====== -->
+    <section class="consultation-cta-banner">
+      <div class="container">
+        <div class="consultation-banner-inner">
+          <img src="assets/boy1.png" alt="Smiling Student Counsellor" class="cta-left-student">
+
+          <div class="cta-center-content">
+            <h2>Let Our Experts Help You Find the Right Course</h2>
+            <p>Book a free one-to-one counseling session and get personalized advice from our experienced counsellors.</p>
+          </div>
+
+          <div class="cta-right-actions">
+            <button type="button" class="btn-cta-gold">Book Free Counselling</button>
+            <button type="button" class="btn-cta-outline-white">
+              <i class="fa-solid fa-headset"></i> Talk to an Expert
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== 7. FOOTER ====== -->
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- ===== FLOATING RIGHT SIDE SOCIAL MEDIA DOCK ===== -->
+  <div class="social-side-dock" id="socialSideDock">
+    <a href="https://www.linkedin.com/company/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab linkedin" title="LinkedIn">
+      <span class="social-side-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+    </a>
+    <a href="https://www.instagram.com/ismsglobaledu/" target="_blank" rel="noopener" class="social-side-tab instagram" title="Instagram">
+      <span class="social-side-icon"><i class="fa-brands fa-instagram"></i></span>
+    </a>
+    <a href="https://www.facebook.com/share/1D1DVkQMGR/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-side-tab facebook" title="Facebook">
+      <span class="social-side-icon"><i class="fa-brands fa-facebook-f"></i></span>
+    </a>
+    <a href="https://www.youtube.com/@ismsglobaledu" target="_blank" rel="noopener" class="social-side-tab youtube" title="YouTube">
+      <span class="social-side-icon"><i class="fa-brands fa-youtube"></i></span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="courses.js"></script>
+
+  <!-- ===== SCROLL TO TOP BUTTON ===== -->
+  <button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <style>
+    .scroll-top-fab {
+      position: fixed;
+      bottom: 96px;
+      right: 24px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #0D47D8;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+      z-index: 9000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+    }
+
+    .scroll-top-fab.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-top-fab:hover {
+      background: #0A39A6;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+    }
+
+    .scroll-top-fab i {
+      pointer-events: none;
+    }
+  </style>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('scrollTopBtn');
+      if (!btn) return;
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+      }, { passive: true });
+    })();
+  </script>
+<script src="main.js"></script>
+</body>
+
+</html<div class="nav-dropdown-menu">
+            <a href="Blog.html" class="uni-drop-item">
+              <i class="fa-regular fa-newspaper uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Blog</strong><span>Articles &amp; study abroad guides</span></div>
+            </a>
+            <a href="index.html#testimonials" class="uni-drop-item">
+              <i class="fa-solid fa-graduation-cap uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Success Stories</strong><span>Real student achievements</span></div>
+            </a>
+            <a href="index.html#events" class="uni-drop-item">
+              <i class="fa-solid fa-calendar-days uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>Events &amp; Webinars</strong><span>Live sessions &amp; university fairs</span></div>
+            </a>
+            <a href="index.html#faq" class="uni-drop-item">
+              <i class="fa-solid fa-circle-question uni-drop-icon"></i>
+              <div class="uni-drop-text"><strong>FAQs</strong><span>Frequently asked questions</span></div>
+            </a>
+          </div>TYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Courses | ISMS Global - Undergraduate, Postgraduate & Diploma Courses</title>
+  <meta name="description"
+    content="Discover 1000+ undergraduate, postgraduate and diploma courses from top universities across the world. Filter by country, subject, degree level and study mode with ISMS Global.">
+
+  <!-- Google Fonts -->
+
+
+
+
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Site Styles & Custom Courses Page Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="courses.css">
+  <!-- ===== NAVBAR OVERRIDE: Exact match with index.html ===== -->
+  <style>
+    /* Navigation Bar Theme Overrides - EXACT MATCH WITH INDEX.HTML */
+    :root {
+      --header-bg: #F4F8FF;
+      --header-border: #DCE5F3;
+      --nav-text: #11172A;
+      --nav-hover-bg: #E5EDFF;
+      --nav-accent: #0D47D8;
+      --dropdown-bg: #FFFFFF;
+      --gold-btn: #C79A3C;
+      --gold-btn-hover: #B5872E;
+    }
+
+    .site-header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 9999 !important;
+      background: var(--header-bg) !important;
+      border-bottom: 1px solid var(--header-border) !important;
+      box-shadow: 0 4px 20px rgba(17, 23, 42, 0.08) !important;
+      backdrop-filter: none !important;
+    }
+
+    body {
+      padding-top: 96px !important;
+    }
+
+    .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      height: 72px !important;
+      gap: 12px !important;
+      max-width: 1720px !important;
+      width: 95% !important;
+      margin: 0 auto !important;
+      padding: 0 2.5rem !important;
+    }
+
+    .brand-logo-img {
+      height: 48px !important;
+      width: auto !important;
+      max-width: 200px !important;
+      object-fit: contain !important;
+      display: block !important;
+    }
+
+    .main-nav {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0 !important;
+      flex: 1 !important;
+      justify-content: center !important;
+      font-family: 'Inter', Arial, sans-serif !important;
+    }
+
+    .main-nav a {
+      color: var(--nav-text) !important;
+      font-size: 14.5px !important;
+      font-weight: 600 !important;
+      padding: 20px 16px !important;
+      border-bottom: 3px solid transparent !important;
+      transition: background .15s ease, border-color .15s ease !important;
+      opacity: 1 !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      background: var(--nav-hover-bg) !important;
+      color: var(--nav-accent) !important;
+      border-bottom: 3px solid var(--nav-accent) !important;
+    }
+
+    .main-nav a.active::after {
+      display: none !important;
+    }
+
+    .nav-dropdown {
+      position: relative !important;
+    }
+
+    .nav-dropdown-toggle {
+      color: var(--nav-text) !important;
+      font-size: 14.5px !important;
+      font-weight: 600 !important;
+      padding: 20px 16px !important;
+      border-bottom: 3px solid transparent !important;
+      transition: background .15s ease, border-color .15s ease !important;
+      opacity: 1 !important;
+      background: transparent !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      white-space: nowrap !important;
+      font-family: 'Inter', Arial, sans-serif !important;
+    }
+
+    .nav-dropdown-toggle i {
+      color: var(--nav-accent) !important;
+      font-size: 10px !important;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-toggle {
+      background: var(--nav-hover-bg) !important;
+      border-bottom: 3px solid var(--nav-accent) !important;
+      color: var(--nav-accent) !important;
+    }
+
+    .nav-dropdown-menu {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      background: var(--dropdown-bg) !important;
+      border: 1px solid var(--header-border) !important;
+      border-top: 3px solid var(--nav-accent) !important;
+      box-shadow: 0 14px 30px rgba(13, 71, 216, 0.08) !important;
+      border-radius: 14px !important;
+      padding: 8px !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(6px) !important;
+      transition: all 0.2s ease !important;
+      min-width: 160px !important;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(4px) !important;
+    }
+
+    .nav-dropdown-menu a {
+      color: var(--nav-text) !important;
+      border-left: 3px solid transparent !important;
+      border-bottom: none !important;
+      border-top: none !important;
+      padding: 10px 22px !important;
+      font-size: 13.5px !important;
+      font-weight: 500 !important;
+      background: transparent !important;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: var(--header-bg) !important;
+      border-left: 3px solid var(--nav-accent) !important;
+      color: var(--nav-accent) !important;
+    }
+
+    .dest-mega-menu {
+      min-width: 680px !important;
+      padding: 16px 20px !important;
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 8px 12px !important;
+      left: 50% !important;
+      transform: translateX(-50%) translateY(8px) !important;
+      border-radius: 18px !important;
+      background: var(--dropdown-bg) !important;
+      border-top: 3px solid var(--nav-accent) !important;
+    }
+
+    .nav-dropdown:hover .dest-mega-menu {
+      transform: translateX(-50%) translateY(4px) !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .dest-drop-item {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      padding: 10px 12px !important;
+      border-radius: 12px !important;
+      border-bottom: none !important;
+      border-top: none !important;
+      transition: background 0.15s ease !important;
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    .dest-drop-item:hover {
+      background: var(--header-bg) !important;
+      border-left: 3px solid var(--nav-accent) !important;
+    }
+
+    .dest-drop-flag {
+      width: 26px !important;
+      height: 18px !important;
+      object-fit: cover !important;
+      border-radius: 3px !important;
+      flex-shrink: 0 !important;
+    }
+
+    .dest-drop-text {
+      display: flex !important;
+      flex-direction: column !important;
+      line-height: 1.25 !important;
+    }
+
+    .dest-drop-text strong {
+      font-size: 13.5px !important;
+      font-weight: 700 !important;
+      color: var(--nav-text) !important;
+    }
+
+    .dest-drop-text span {
+      font-size: 11px !important;
+      color: #64748B !important;
+      margin-top: 2px !important;
+    }
+
+    .header-actions {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      flex-shrink: 0 !important;
+    }
+
+    .header-phone {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      color: var(--nav-text) !important;
+      text-decoration: none !important;
+      font-size: 12.5px !important;
+    }
+
+    .header-phone i {
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 50% !important;
+      background: var(--nav-hover-bg) !important;
+      color: var(--nav-accent) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .header-phone small {
+      color: #667085 !important;
+    }
+
+    .header-phone strong {
+      color: var(--nav-text) !important;
+      font-weight: 700 !important;
+      font-size: 13.5px !important;
+    }
+
+    .site-header .btn-primary {
+      background: var(--gold-btn) !important;
+      color: #FFFFFF !important;
+      border: none !important;
+      font-weight: 700 !important;
+      box-shadow: none !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .site-header .btn-primary:hover {
+      background: var(--gold-btn-hover) !important;
+      color: #FFFFFF !important;
+      transform: none !important;
+    }
+
+    .nav-toggle {
+      display: none !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      gap: 5px !important;
+      background: none !important;
+      border: none !important;
+      padding: 8px !important;
+      cursor: pointer !important;
+    }
+
+    .nav-toggle span {
+      width: 24px !important;
+      height: 2px !important;
+      background: var(--nav-text) !important;
+      border-radius: 2px !important;
+      transition: 0.3s ease !important;
+      display: block !important;
+    }
+
+    @media (max-width: 1160px) {
+      .nav-toggle {
+        display: flex !important;
+      }
+
+      .main-nav {
+        position: fixed !important;
+        inset: 72px 0 0 0 !important;
+        background: #fff !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 24px !important;
+        gap: 4px !important;
+        overflow-y: auto !important;
+        transform: translateX(100%) !important;
+        transition: transform 0.3s ease !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+        z-index: 9998 !important;
+      }
+
+      .main-nav.open {
+        transform: translateX(0) !important;
+      }
+
+      .main-nav a,
+      .nav-dropdown-toggle {
+        padding: 14px 8px !important;
+        border-bottom: 1px solid #E2E8F0 !important;
+        width: 100% !important;
+        font-size: 15px !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+      }
+
+      .dest-mega-menu {
+        min-width: unset !important;
+        grid-template-columns: 1fr !important;
+        transform: none !important;
+        left: 0 !important;
+        position: static !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      .nav-dropdown-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: none !important;
+      }
+
+      .nav-dropdown.open .nav-dropdown-menu {
+        display: block !important;
+      }
+    }
+  </style>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+  <!-- ====== 1. HEADER (SITE NAVBAR) ====== -->
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="siteHeader"></header>
+
+  <!-- MAIN CONTENT WRAPPER -->
+  <main>
+
+    <!-- ====== 2. HERO SECTION ====== -->
+    <section class="courses-hero-section">
+      <div class="hero-bg-landmarks">
+        <img src="assets/course-hero.png" alt="World Landmarks Scene Sketch Background" class="hero-scene-sketch-img">
+      </div>
+
+      <!-- Airplane Vector -->
+      <!-- <img src="assets/plane.png" class="hero-vector-plane" alt="Airplane Vector"> -->
+
+      <div class="container">
+        <div class="courses-hero-inner">
+          <div class="courses-hero-content">
+            <nav class="courses-breadcrumb">
+              <a href="index.html">Home</a>
+              <span class="sep">&gt;</span>
+              <span class="current">Courses</span>
+            </nav>
+            <h1 class="courses-hero-title">
+              Trending UG &amp; PG Courses<br>
+              <span class="blue-text">Across the Globe</span>
+            </h1>
+            <p class="courses-hero-sub">
+              Explore top courses offered by leading universities worldwide. Use the filters to find the right program
+              based on your preferred course, study level, destination, and more.
+            </p>
+          </div>
+
+          <!-- <div class="courses-hero-image-wrapper">
+            <img src="assets/Girl.png" alt="Smiling Student Girl with Notebooks" class="hero-student-img">
+          </div>
+        </div> -->
+        </div>
+    </section>
+
+    <!-- ====== 3. FLOATING SEARCH & FILTER CARD ====== -->
+    <div class="container">
+      <div class="courses-search-wrapper">
+        <div class="search-filter-card">
+          <!-- Tab Switcher -->
+          <div class="search-tabs-row">
+            <button type="button" class="tab-pill active">Find Courses</button>
+            <button type="button" class="tab-pill outline">Browse by Stream</button>
+          </div>
+
+          <!-- Form Fields Grid -->
+          <div class="search-form-grid">
+            <!-- Course Search Input -->
+            <div class="form-group">
+              <label for="heroSearchInput">Search Courses</label>
+              <div class="search-input-box">
+                <input type="text" id="heroSearchInput" placeholder="Search for courses, e.g., MBA, Engineering...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+
+            <!-- Study Destination Dropdown -->
+            <div class="form-group">
+              <label for="heroDestSelect">Study Destination</label>
+              <div class="select-box-wrapper">
+                <select id="heroDestSelect">
+                  <option value="all">All Countries</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Canada">Canada</option>
+                  <option value="United States">United States</option>
+                  <option value="Germany">Germany</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+
+            <!-- Course Level Dropdown -->
+            <div class="form-group">
+              <label for="heroLevelSelect">Course Level</label>
+              <div class="select-box-wrapper">
+                <select id="heroLevelSelect">
+                  <option value="all">All Levels</option>
+                  <option value="Undergraduate">Undergraduate</option>
+                  <option value="Postgraduate">Postgraduate</option>
+                  <option value="Diploma">Diploma</option>
+                  <option value="Doctorate">Doctorate</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+
+            <!-- Course Type Dropdown -->
+            <div class="form-group">
+              <label for="heroTypeSelect">Course Type</label>
+              <div class="select-box-wrapper">
+                <select id="heroTypeSelect">
+                  <option value="all">All Types</option>
+                  <option value="Full-time">Full-time</option>
+                  <option value="Part-time">Part-time</option>
+                  <option value="Online">Online</option>
+                  <option value="Distance Learning">Distance Learning</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" class="btn-search-submit" id="btnSearchSubmit">
+              <i class="fa-solid fa-magnifying-glass"></i> Search Courses
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== 4. STATS HIGHLIGHTS ROW ====== -->
+      <div class="stats-highlights-row">
+        <div class="stat-item-card">
+          <i class="fa-solid fa-layer-group" style="color: var(--c-primary); font-size: 18px;"></i>
+          <div class="stat-info">
+            <strong>1000+ Courses</strong>
+            <span>Wide Range of Options</span>
+          </div>
+        </div>
+
+        <div class="stat-item-card">
+          <i class="fa-solid fa-globe" style="color: var(--c-primary); font-size: 18px;"></i>
+          <div class="stat-info">
+            <strong>20+ Countries</strong>
+            <span>Top Study Destinations</span>
+          </div>
+        </div>
+
+        <div class="stat-item-card">
+          <i class="fa-solid fa-building-columns" style="color: var(--c-primary); font-size: 18px;"></i>
+          <div class="stat-info">
+            <strong>500+ Universities</strong>
+            <span>World-Class Institutions</span>
+          </div>
+        </div>
+
+        <div class="stat-item-card">
+          <i class="fa-solid fa-user-tie" style="color: var(--c-primary); font-size: 18px;"></i>
+          <div class="stat-info">
+            <strong>Expert Guidance</strong>
+            <span>At Every Step</span>
+          </div>
+        </div>
+
+        <div class="stat-item-card">
+          <i class="fa-solid fa-shield-halved" style="color: var(--c-primary); font-size: 18px;"></i>
+          <div class="stat-info">
+            <strong>100% Free</strong>
+            <span>Counselling Support</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== 5. MAIN CONTENT LAYOUT (SIDEBAR + GRID) ====== -->
+      <div class="courses-main-layout">
+
+        <!-- LEFT SIDEBAR FILTER PANEL -->
+        <aside class="filter-sidebar-card">
+          <div class="filter-sidebar-header">
+            <h3>Filter Courses</h3>
+            <button type="button" class="btn-clear-all" id="btnClearAll">Clear All</button>
+          </div>
+
+          <!-- Filter Group 1: Study Destination -->
+          <div class="filter-group-section">
+            <div class="filter-title-toggle">
+              <span>Study Destination</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="filter-options-list">
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="all" checked>
+                <span>All Countries</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="United Kingdom">
+                <span>United Kingdom</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="Australia">
+                <span>Australia</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="Canada">
+                <span>Canada</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="United States">
+                <span>United States</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="dest_filter" value="Germany">
+                <span>Germany</span>
+              </label>
+              <div class="extra-options" style="display: none; flex-direction: column; gap: 10px;">
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="Ireland">
+                  <span>Ireland</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="Dubai">
+                  <span>Dubai / UAE</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="France">
+                  <span>France</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="Spain">
+                  <span>Spain</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="Netherlands">
+                  <span>Netherlands</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="dest_filter" value="New Zealand">
+                  <span>New Zealand</span>
+                </label>
+              </div>
+              <button type="button" class="btn-show-more">+ Show More</button>
+            </div>
+          </div>
+
+          <!-- Filter Group 2: Course Level -->
+          <div class="filter-group-section">
+            <div class="filter-title-toggle">
+              <span>Course Level</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="filter-options-list">
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="level_filter" value="all" checked>
+                <span>All Levels</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="level_filter" value="Undergraduate">
+                <span>Undergraduate</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="level_filter" value="Postgraduate">
+                <span>Postgraduate</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="level_filter" value="Diploma">
+                <span>Diploma</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="level_filter" value="Doctorate">
+                <span>Doctorate</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group 3: Course Type -->
+          <div class="filter-group-section">
+            <div class="filter-title-toggle">
+              <span>Course Type</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="filter-options-list">
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="type_filter" value="all" checked>
+                <span>All Types</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="type_filter" value="Full-time">
+                <span>Full-time</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="type_filter" value="Part-time">
+                <span>Part-time</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="type_filter" value="Online">
+                <span>Online</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="type_filter" value="Distance Learning">
+                <span>Distance Learning</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group 4: Study Area -->
+          <div class="filter-group-section">
+            <div class="filter-title-toggle">
+              <span>Study Area</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="filter-options-list">
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="all" checked>
+                <span>All Subjects</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="Business & Management">
+                <span>Business &amp; Management</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="Engineering">
+                <span>Engineering</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="Computer Science">
+                <span>Computer Science</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="Medicine & Health">
+                <span>Medicine &amp; Health</span>
+              </label>
+              <label class="custom-checkbox-row">
+                <input type="checkbox" name="subject_filter" value="Law">
+                <span>Law</span>
+              </label>
+              <div class="extra-options" style="display: none; flex-direction: column; gap: 10px;">
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="subject_filter" value="Design & Media">
+                  <span>Design &amp; Media</span>
+                </label>
+                <label class="custom-checkbox-row">
+                  <input type="checkbox" name="subject_filter" value="Law & Governance">
+                  <span>Law &amp; Governance</span>
+                </label>
+              </div>
+              <button type="button" class="btn-show-more">+ Show More</button>
+            </div>
+          </div>
+
+          <!-- Apply Filters Button -->
+          <button type="button" class="btn-apply-filters" id="btnApplyFilters">
+            <i class="fa-solid fa-filter"></i> Apply Filters
+          </button>
+        </aside>
+
+        <!-- RIGHT COURSE LISTING COLUMN -->
+        <div class="courses-listing-content">
+          <!-- Top Results Bar -->
+          <div class="courses-top-bar">
+            <div class="results-count-text" id="resultsCountText">
+              Showing 1-12 of 1,248 Courses
+            </div>
+
+            <div class="results-controls-right">
+              <div class="sort-wrapper">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect" class="sort-select">
+                  <option value="popularity">Popularity</option>
+                  <option value="name">Course Name</option>
+                  <option value="duration">Duration</option>
+                </select>
+              </div>
+
+              <div class="view-toggle-btns">
+                <button type="button" class="btn-view-toggle active" id="btnGridView" aria-label="Grid View">
+                  <i class="fa-solid fa-table-cells-large"></i>
+                </button>
+                <button type="button" class="btn-view-toggle" id="btnListView" aria-label="List View">
+                  <i class="fa-solid fa-list"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- COURSE CARDS GRID (Populated Dynamically via courses.js) -->
+          <div class="course-cards-grid" id="courseCardsContainer"></div>
+
+          <!-- PAGINATION -->
+          <div class="pagination-container">
+            <button type="button" class="page-nav-btn" aria-label="Previous Page"><i
+                class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" class="page-nav-btn active">1</button>
+            <button type="button" class="page-nav-btn">2</button>
+            <button type="button" class="page-nav-btn">3</button>
+            <button type="button" class="page-nav-btn">4</button>
+            <span class="page-dots">...</span>
+            <button type="button" class="page-nav-btn">104</button>
+            <button type="button" class="page-nav-btn" aria-label="Next Page"><i
+                class="fa-solid fa-chevron-right"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FULL-WIDTH SCREEN EDGE-TO-EDGE SKYLINE BANNER -->
+      <!-- <div class="fullwidth-skyline-section">
+        <img src="assets/dest-globe.png" alt="Destination Globe Graphic" class="skyline-dest-globe-img">
+        <img src="assets/dubai-panoramic-skyline.png" alt="Dubai Panoramic Skyline Graphic" class="skyline-bg-img">
+      </div> -->
+
+      <!-- ====== 5. VALUE PROPOSITION & HELP BANNER ====== -->
+      <section class="value-prop-section">
+        <div class="value-prop-grid">
+          <div class="value-pillars-list">
+            <div class="pillar-item">
+              <div class="pillar-icon-box"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="pillar-info">
+                <strong>Career Focused Courses</strong>
+                <span>Industry relevant curriculum</span>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box"><i class="fa-solid fa-award"></i></div>
+              <div class="pillar-info">
+                <strong>Global Recognition</strong>
+                <span>World class degree &amp; recognition</span>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="pillar-info">
+                <strong>Scholarship Opportunities</strong>
+                <span>Merit based &amp; need based scholarships</span>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+              <div class="pillar-info">
+                <strong>Education Loan Assistance</strong>
+                <span>Low interest &amp; easy EMI options</span>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box"><i class="fa-solid fa-headset"></i></div>
+              <div class="pillar-info">
+                <strong>Dedicated Support</strong>
+                <span>From shortlisting to visa &amp; beyond.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Expert Help Blue Card -->
+          <div class="expert-help-card">
+            <div class="expert-help-text">
+              <h4>Not Sure Which Course is Right for You?</h4>
+              <p>Our experts will help you choose the perfect course based on your profile and goals.</p>
+              <button type="button" class="btn-talk-expert">
+                Talk to an Expert <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <img src="assets/books1.png" alt="Graduation Cap and Books" class="expert-help-img">
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ====== 6. BLUE CONSULTATION BANNER ====== -->
+    <section class="consultation-cta-banner">
+      <div class="container">
+        <div class="consultation-banner-inner">
+          <img src="assets/boy1.png" alt="Smiling Student Counsellor" class="cta-left-student">
+
+          <div class="cta-center-content">
+            <h2>Let Our Experts Help You Find the Right Course</h2>
+            <p>Book a free one-to-one counseling session and get personalized advice from our experienced counsellors.</p>
+          </div>
+
+          <div class="cta-right-actions">
+            <button type="button" class="btn-cta-gold">Book Free Counselling</button>
+            <button type="button" class="btn-cta-outline-white">
+              <i class="fa-solid fa-headset"></i> Talk to an Expert
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== 7. FOOTER ====== -->
+  <footer class="site-footer" id="siteFooter"></footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="courses.js"></script>
+
+  <!-- ===== SCROLL TO TOP BUTTON ===== -->
+  <button class="scroll-top-fab" id="scrollTopBtn" aria-label="Scroll to top"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <style>
+    .scroll-top-fab {
+      position: fixed;
+      bottom: 96px;
+      right: 24px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #0D47D8;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 6px 20px rgba(13, 71, 216, 0.35);
+      z-index: 9000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+    }
+
+    .scroll-top-fab.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-top-fab:hover {
+      background: #0A39A6;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(13, 71, 216, 0.45);
+    }
+
+    .scroll-top-fab i {
+      pointer-events: none;
+    }
+  </style>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('scrollTopBtn');
+      if (!btn) return;
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+      }, { passive: true });
+    })();
+  </script>
+</body>
+
+</html>

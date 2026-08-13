@@ -1,0 +1,911 @@
+/* ============================================================
+   UNIVERSITIES LISTING PAGE STYLES - ISMS GLOBAL
+   ============================================================ */
+
+:root {
+  --uni-primary: #0D47D8;
+  --uni-primary-hover: #0A39A6;
+  --uni-primary-light: #EEF4FF;
+  --uni-navy: #0A1233;
+  --uni-text-gray: #64748B;
+  --uni-border: #E2E8F0;
+  --uni-bg-light: #F8FAFC;
+}
+
+html {
+  height: 100%;
+  background: #0A1233;
+}
+
+body {
+  background-color: var(--uni-bg-light);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--uni-navy);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==================== 1. HERO SECTION ==================== */
+.uni-hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #EBF1FA 0%, #F5F8FE 100%);
+  padding: 80px 0 180px 0;
+  border-bottom: 1px solid var(--uni-border);
+  overflow: hidden;
+}
+
+.uni-hero-bg-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right bottom;
+  z-index: 1;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 30%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 30%);
+}
+
+.uni-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  z-index: 3;
+}
+
+.uni-hero-content {
+  max-width: 680px;
+}
+
+.uni-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--uni-text-gray);
+  margin-bottom: 16px;
+}
+
+.uni-breadcrumb a {
+  color: var(--uni-text-gray);
+  text-decoration: none;
+}
+
+.uni-breadcrumb a:hover {
+  color: var(--uni-primary);
+}
+
+.uni-hero-title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--uni-navy);
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.uni-hero-sub {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--uni-text-gray);
+  max-width: 580px;
+}
+
+.uni-hero-media {
+  position: relative;
+  flex-shrink: 0;
+  max-width: 480px;
+}
+
+.uni-hero-badge-floating {
+  position: absolute;
+  top: -35px;
+  right: 0px;
+  background: #FFFFFF;
+  padding: 10px 16px;
+  border-radius: 5px;
+  box-shadow: 0 12px 24px rgba(10, 18, 51, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 4;
+}
+
+.uni-badge-icon {
+  width: 34px;
+  height: 34px;
+  background-color: var(--uni-primary-light);
+  color: var(--uni-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.uni-badge-text {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--uni-navy);
+  line-height: 1.4;
+}
+
+.uni-hero-student-img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 28px rgba(10, 18, 51, 0.12));
+}
+
+/* Floating Search & Filter Card */
+.uni-search-wrapper {
+  position: relative;
+  z-index: 10;
+  margin-top: -68px;
+  margin-bottom: 32px;
+  max-width: 1000px;
+}
+
+.uni-search-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 16px 40px rgba(13, 71, 216, 0.09);
+  border: 1px solid var(--uni-border);
+}
+
+.uni-search-form-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1.3fr 1.3fr 1.4fr;
+  gap: 16px;
+  align-items: end;
+}
+
+.uni-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.uni-form-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--uni-navy);
+}
+
+.uni-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.uni-input-box i {
+  position: absolute;
+  right: 14px;
+  color: #94A3B8;
+  font-size: 15px;
+}
+
+.uni-input-box input {
+  width: 100%;
+  height: 48px;
+  padding: 0 42px 0 16px;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
+  font-size: 14px;
+  color: var(--uni-navy);
+  outline: none;
+}
+
+.uni-select-wrapper {
+  position: relative;
+}
+
+.uni-select-wrapper select {
+  width: 100%;
+  height: 48px;
+  padding: 0 36px 0 16px;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
+  font-size: 14px;
+  color: var(--uni-navy);
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.uni-select-wrapper i {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748B;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.btn-uni-search {
+  height: 48px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--uni-primary);
+  color: #FFFFFF;
+  font-size: 14.5px;
+  font-weight: 700;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(13, 71, 216, 0.28);
+  transition: background-color 0.2s ease;
+  margin-left: 0;
+}
+
+.btn-uni-search:hover {
+  background-color: var(--uni-primary-hover);
+}
+
+/* Stats Highlights Row */
+.uni-stats-highlights-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--uni-border);
+}
+
+.uni-stat-item-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid var(--uni-border);
+  box-shadow: 0 2px 8px rgba(10, 18, 51, 0.04);
+}
+
+.uni-stat-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: var(--uni-primary-light);
+  color: var(--uni-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.uni-stat-info strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--uni-navy);
+  display: block;
+}
+
+.uni-stat-info span {
+  font-size: 12px;
+  color: var(--uni-text-gray);
+}
+
+/* ==================== 2. MAIN LAYOUT (SIDEBAR + GRID) ==================== */
+.uni-main-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 24px;
+  margin-bottom: 50px;
+  align-items: start;
+}
+
+/* Sidebar Filter Panel */
+.uni-filter-sidebar {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 22px 18px;
+  border: 1px solid var(--uni-border);
+  box-shadow: 0 4px 16px rgba(10, 18, 51, 0.04);
+  position: sticky;
+  top: 95px;
+}
+
+.uni-filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 14px;
+}
+
+.uni-filter-header h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--uni-navy);
+}
+
+.btn-uni-clear {
+  font-size: 13px;
+  color: var(--uni-primary);
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.uni-filter-section {
+  border-bottom: 1px solid #F1F5F9;
+  padding: 14px 0;
+}
+
+.uni-filter-section:last-of-type {
+  border-bottom: none;
+}
+
+.uni-filter-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--uni-navy);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.uni-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.uni-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #334155;
+  cursor: pointer;
+}
+
+.uni-checkbox-row input[type="checkbox"] {
+  accent-color: var(--uni-primary);
+  width: 16px;
+  height: 16px;
+}
+
+.uni-checkbox-row span.count {
+  margin-left: auto;
+  color: #94A3B8;
+  font-size: 12px;
+}
+
+.uni-range-slider-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.uni-range-slider-wrap input[type="range"] {
+  width: 100%;
+  accent-color: var(--uni-primary);
+}
+
+.uni-range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.btn-apply-uni-filter {
+  width: 100%;
+  height: 44px;
+  border-radius: 12px;
+  background-color: var(--uni-primary);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-apply-uni-filter:hover {
+  background-color: var(--uni-primary-hover);
+}
+
+/* Right Content Area */
+.uni-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 0 0 16px 0;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 16px;
+}
+
+.uni-results-count {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--uni-navy);
+}
+
+.uni-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.uni-sort-select {
+  height: 38px;
+  padding: 0 28px 0 12px;
+  border-radius: 8px;
+  border: 1px solid #CBD5E1;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--uni-navy);
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+/* University Cards Grid (4 Columns) */
+.uni-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.uni-card-item {
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid var(--uni-border);
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(10, 18, 51, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.uni-card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(13, 71, 216, 0.13);
+}
+
+.uni-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 165px;
+  background-color: #E2E8F0;
+  overflow: hidden;
+}
+
+.uni-card-img-wrap img.campus-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.uni-card-item:hover img.campus-photo {
+  transform: scale(1.05);
+}
+
+.uni-badge-logo-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--uni-primary);
+  border: 1.5px solid var(--uni-border);
+  z-index: 2;
+}
+
+.uni-card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  text-align: left;
+}
+
+.uni-flag-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748B;
+  margin-bottom: 6px;
+}
+
+.uni-card-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--uni-navy);
+  line-height: 1.25;
+  margin-bottom: 8px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.uni-qs-rank-chip {
+  width: auto;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--uni-primary);
+  background: #EEF4FF;
+  border: 1px solid #DBEAFE;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-align: left;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.uni-location-text {
+  font-size: 12px;
+  color: #64748B;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.uni-courses-count {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--uni-navy);
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.uni-card-actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.btn-uni-details {
+  flex: 1;
+  height: 36px;
+  border-radius: 8px;
+  border: 1.5px solid var(--uni-primary);
+  background: #FFFFFF;
+  color: var(--uni-primary);
+  font-size: 12.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-uni-details:hover {
+  background-color: var(--uni-primary);
+  color: #FFFFFF;
+}
+
+.btn-uni-bookmark {
+  flex: 1;
+  height: 36px;
+  border-radius: 8px;
+  border: 1.5px solid var(--uni-primary);
+  background: #FFFFFF;
+  color: var(--uni-primary);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-uni-bookmark:hover {
+  background-color: var(--uni-primary);
+  color: #FFFFFF;
+}
+
+/* ==================== 3. GLOBAL UNIVERSITY PARTNERS ==================== */
+.uni-partners-section {
+  border-top: 1px solid #E2E8F0;
+  margin-top: 36px;
+  padding: 28px 0 10px 0;
+  text-align: center;
+}
+
+.uni-partners-section h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--uni-navy);
+  margin-bottom: 24px;
+}
+
+.uni-partners-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.partner-logo-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--uni-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(10, 18, 51, 0.03);
+  height: 64px;
+}
+
+.partner-logo-card img {
+  max-height: 38px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.btn-view-partners {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--uni-primary);
+  color: var(--uni-primary);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-view-partners:hover {
+  background-color: var(--uni-primary-light);
+}
+
+/* ==================== 4. 6 STATS HIGHLIGHTS BAR ==================== */
+.uni-6stats-bar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  padding: 32px 24px;
+  margin-bottom: 40px;
+  background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 16px rgba(10, 18, 51, 0.02);
+}
+
+.uni-6stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.uni-6stat-icon {
+  background: transparent;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.uni-6stat-item strong {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--uni-navy);
+  line-height: 1.2;
+}
+
+.uni-6stat-item span {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--uni-text-gray);
+}
+
+/* ==================== 5. CONSULTATION BANNER ==================== */
+.uni-consultation-banner {
+  background: linear-gradient(90deg, #002BB0 0%, #0044E0 50%, #0036C8 100%);
+  border-radius: 16px 16px 0 0;
+  margin: 55px 0 0 0;
+  padding: 0 40px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: visible;
+}
+
+.uni-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 155px;
+  position: relative;
+}
+
+.uni-cta-left-student {
+  height: 210px;
+  margin-top: -55px;
+  margin-bottom: 0;
+  object-fit: contain;
+  flex-shrink: 0;
+  align-self: flex-end;
+  position: relative;
+  z-index: 5;
+}
+
+.uni-banner-plane-wrap {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 260px;
+  height: 100px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.uni-cta-center {
+  flex: 1;
+  max-width: 540px;
+  z-index: 2;
+}
+
+.uni-cta-center h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.uni-cta-center p {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.45;
+}
+
+.uni-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  z-index: 2;
+  margin-top: auto;
+  margin-bottom: 8px;
+}
+
+.btn-cta-white {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  color: #2563EB;
+  font-size: 13.5px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease;
+}
+
+.btn-cta-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 1024px) {
+  .uni-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1180px) {
+  .uni-main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .uni-filter-sidebar {
+    position: static;
+  }
+
+  .uni-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .uni-search-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .uni-partners-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .uni-6stats-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .uni-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .uni-hero-title {
+    font-size: 32px;
+  }
+
+  .uni-search-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uni-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uni-partners-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .uni-6stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
