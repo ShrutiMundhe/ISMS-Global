@@ -8,7 +8,7 @@
  */
 
 (function () {
-  'use strict';
+  "use strict";
 
   // Prevent multiple executions
   if (window.__ISMS_MAIN_JS_INITIALIZED__) return;
@@ -19,45 +19,54 @@
      ========================================================================================= */
   function injectStylesAndFonts() {
     // 1.1 Google Fonts (Inter)
-    if (!document.querySelector('link[href*="fonts.googleapis.com/css2?family=Inter"]')) {
-      const preconnect1 = document.createElement('link');
-      preconnect1.rel = 'preconnect';
-      preconnect1.href = 'https://fonts.googleapis.com';
+    if (
+      !document.querySelector(
+        'link[href*="fonts.googleapis.com/css2?family=Inter"]',
+      )
+    ) {
+      const preconnect1 = document.createElement("link");
+      preconnect1.rel = "preconnect";
+      preconnect1.href = "https://fonts.googleapis.com";
       document.head.appendChild(preconnect1);
 
-      const preconnect2 = document.createElement('link');
-      preconnect2.rel = 'preconnect';
-      preconnect2.href = 'https://fonts.gstatic.com';
-      preconnect2.crossOrigin = 'anonymous';
+      const preconnect2 = document.createElement("link");
+      preconnect2.rel = "preconnect";
+      preconnect2.href = "https://fonts.gstatic.com";
+      preconnect2.crossOrigin = "anonymous";
       document.head.appendChild(preconnect2);
 
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'stylesheet';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap';
+      const fontLink = document.createElement("link");
+      fontLink.rel = "stylesheet";
+      fontLink.href =
+        "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap";
       document.head.appendChild(fontLink);
     }
 
     // 1.2 Font Awesome 6.5.1
-    if (!document.querySelector('link[href*="font-awesome"]') && !document.querySelector('link[href*="fontawesome"]')) {
-      const faLink = document.createElement('link');
-      faLink.rel = 'stylesheet';
-      faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+    if (
+      !document.querySelector('link[href*="font-awesome"]') &&
+      !document.querySelector('link[href*="fontawesome"]')
+    ) {
+      const faLink = document.createElement("link");
+      faLink.rel = "stylesheet";
+      faLink.href =
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
       document.head.appendChild(faLink);
     }
 
     // 1.3 Auto-link responsive.css if not already present
     if (!document.querySelector('link[href*="responsive.css"]')) {
-      const respLink = document.createElement('link');
-      respLink.rel = 'stylesheet';
-      respLink.href = 'responsive.css';
+      const respLink = document.createElement("link");
+      respLink.rel = "stylesheet";
+      respLink.href = "responsive.css";
       document.head.appendChild(respLink);
     }
 
     // 1.4 Guaranteed High-Priority Mobile Drawer Style Tag (Injected at End of Head)
-    let dynamicStyle = document.getElementById('isms-dynamic-mobile-override');
+    let dynamicStyle = document.getElementById("isms-dynamic-mobile-override");
     if (!dynamicStyle) {
-      dynamicStyle = document.createElement('style');
-      dynamicStyle.id = 'isms-dynamic-mobile-override';
+      dynamicStyle = document.createElement("style");
+      dynamicStyle.id = "isms-dynamic-mobile-override";
       document.head.appendChild(dynamicStyle);
     }
 
@@ -295,7 +304,7 @@
               </div>
             </a>
             <!-- 5. Germany -->
-            <a href="index.html#destinations" class="dest-drop-item">
+            <a href="germany-destination.html" class="dest-drop-item">
               <img src="assets/flag_w40_de.png" alt="Germany Flag" class="dest-drop-flag">
               <div class="dest-drop-text">
                 <strong>Germany</strong>
@@ -682,37 +691,44 @@
      5. INJECTION ENGINE
      ========================================================================================= */
   function injectHeader() {
-    let headerEl = document.getElementById('siteHeader') || document.querySelector('header.site-header') || document.getElementById('header');
+    let headerEl =
+      document.getElementById("siteHeader") ||
+      document.querySelector("header.site-header") ||
+      document.getElementById("header");
     if (!headerEl) {
-      headerEl = document.createElement('header');
-      headerEl.className = 'site-header';
-      headerEl.id = 'siteHeader';
+      headerEl = document.createElement("header");
+      headerEl.className = "site-header";
+      headerEl.id = "siteHeader";
       document.body.insertBefore(headerEl, document.body.firstChild);
     } else {
-      headerEl.className = 'site-header';
-      headerEl.id = 'siteHeader';
+      headerEl.className = "site-header";
+      headerEl.id = "siteHeader";
     }
     headerEl.innerHTML = getHeaderHTML();
   }
 
   function injectFooter() {
-    let footerEl = document.getElementById('siteFooter') || document.querySelector('footer.site-footer') || document.querySelector('footer') || document.getElementById('footer');
+    let footerEl =
+      document.getElementById("siteFooter") ||
+      document.querySelector("footer.site-footer") ||
+      document.querySelector("footer") ||
+      document.getElementById("footer");
     if (!footerEl) {
-      footerEl = document.createElement('footer');
-      footerEl.className = 'site-footer';
-      footerEl.id = 'siteFooter';
+      footerEl = document.createElement("footer");
+      footerEl.className = "site-footer";
+      footerEl.id = "siteFooter";
       document.body.appendChild(footerEl);
     } else {
-      footerEl.className = 'site-footer';
-      footerEl.id = 'siteFooter';
+      footerEl.className = "site-footer";
+      footerEl.id = "siteFooter";
     }
     footerEl.innerHTML = getFooterHTML();
   }
 
   function injectModalsAndFabs() {
-    if (!document.getElementById('counsellingModalOverlay')) {
-      const container = document.createElement('div');
-      container.id = 'isms-injected-modals-and-fabs';
+    if (!document.getElementById("counsellingModalOverlay")) {
+      const container = document.createElement("div");
+      container.id = "isms-injected-modals-and-fabs";
       container.innerHTML = getModalAndFabsHTML();
       document.body.appendChild(container);
     }
@@ -722,71 +738,96 @@
      6. PRECISE ACTIVE LINK HIGHLIGHTING (ONLY THE CURRENTLY OPENED PAGE)
      ========================================================================================= */
   function setActiveNavLink() {
-    let currentFile = window.location.pathname.split('/').pop().split('?')[0].split('#')[0].toLowerCase();
-    if (!currentFile || currentFile === '' || currentFile === '/') {
-      currentFile = 'index.html';
+    let currentFile = window.location.pathname
+      .split("/")
+      .pop()
+      .split("?")[0]
+      .split("#")[0]
+      .toLowerCase();
+    if (!currentFile || currentFile === "" || currentFile === "/") {
+      currentFile = "index.html";
     }
     try {
       currentFile = decodeURIComponent(currentFile);
     } catch (e) {}
 
-    const navLinks = document.querySelectorAll('.main-nav a');
-    navLinks.forEach(link => {
-      link.classList.remove('active');
+    const navLinks = document.querySelectorAll(".main-nav a");
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
     });
 
-    document.querySelectorAll('.nav-dropdown-toggle').forEach(t => t.classList.remove('active'));
+    document
+      .querySelectorAll(".nav-dropdown-toggle")
+      .forEach((t) => t.classList.remove("active"));
 
     // 6.1 Homepage: ONLY match exact "Home" (index.html) link
-    if (currentFile === 'index.html') {
-      navLinks.forEach(link => {
-        const rawHref = link.getAttribute('href');
-        if (rawHref === 'index.html') {
-          link.classList.add('active');
+    if (currentFile === "index.html") {
+      navLinks.forEach((link) => {
+        const rawHref = link.getAttribute("href");
+        if (rawHref === "index.html") {
+          link.classList.add("active");
         }
       });
       return;
     }
 
     // 6.2 Destination Pages: Highlight destination item + Study Destinations toggle
-    if (currentFile.includes('destination') || currentFile.includes('dubai') || currentFile.includes('uk-')) {
-      navLinks.forEach(link => {
-        const rawHref = link.getAttribute('href');
+    if (
+      currentFile.includes("destination") ||
+      currentFile.includes("dubai") ||
+      currentFile.includes("uk-")
+    ) {
+      navLinks.forEach((link) => {
+        const rawHref = link.getAttribute("href");
         if (!rawHref) return;
-        let linkFile = rawHref.split('?')[0].split('#')[0].toLowerCase();
-        try { linkFile = decodeURIComponent(linkFile); } catch(e) {}
+        let linkFile = rawHref.split("?")[0].split("#")[0].toLowerCase();
+        try {
+          linkFile = decodeURIComponent(linkFile);
+        } catch (e) {}
 
-        if (linkFile === currentFile && !rawHref.includes('#')) {
-          link.classList.add('active');
+        if (linkFile === currentFile && !rawHref.includes("#")) {
+          link.classList.add("active");
         }
       });
-      const destToggle = document.querySelector('.nav-dropdown-toggle[href*="Destination"], .nav-dropdown-toggle[href*="destination"]');
-      if (destToggle) destToggle.classList.add('active');
+      const destToggle = document.querySelector(
+        '.nav-dropdown-toggle[href*="Destination"], .nav-dropdown-toggle[href*="destination"]',
+      );
+      if (destToggle) destToggle.classList.add("active");
       return;
     }
 
     // 6.3 University Pages: Highlight Universities toggle
-    if (currentFile.includes('universit')) {
-      const uniToggle = document.querySelector('.nav-dropdown-toggle[href*="universities"]');
-      if (uniToggle) uniToggle.classList.add('active');
+    if (currentFile.includes("universit")) {
+      const uniToggle = document.querySelector(
+        '.nav-dropdown-toggle[href*="universities"]',
+      );
+      if (uniToggle) uniToggle.classList.add("active");
       return;
     }
 
     // 6.4 General Pages: Match exact file without # hash anchors
-    navLinks.forEach(link => {
-      const rawHref = link.getAttribute('href');
-      if (!rawHref || rawHref === '#' || rawHref.startsWith('tel:') || rawHref.startsWith('mailto:')) return;
-      if (rawHref.includes('#') && !rawHref.endsWith('#')) return;
+    navLinks.forEach((link) => {
+      const rawHref = link.getAttribute("href");
+      if (
+        !rawHref ||
+        rawHref === "#" ||
+        rawHref.startsWith("tel:") ||
+        rawHref.startsWith("mailto:")
+      )
+        return;
+      if (rawHref.includes("#") && !rawHref.endsWith("#")) return;
 
-      let linkFile = rawHref.split('?')[0].split('#')[0].toLowerCase();
-      try { linkFile = decodeURIComponent(linkFile); } catch(e) {}
+      let linkFile = rawHref.split("?")[0].split("#")[0].toLowerCase();
+      try {
+        linkFile = decodeURIComponent(linkFile);
+      } catch (e) {}
 
       if (linkFile === currentFile) {
-        link.classList.add('active');
-        const parentDropdown = link.closest('.nav-dropdown');
+        link.classList.add("active");
+        const parentDropdown = link.closest(".nav-dropdown");
         if (parentDropdown) {
-          const toggle = parentDropdown.querySelector('.nav-dropdown-toggle');
-          if (toggle && toggle !== link) toggle.classList.add('active');
+          const toggle = parentDropdown.querySelector(".nav-dropdown-toggle");
+          if (toggle && toggle !== link) toggle.classList.add("active");
         }
       }
     });
@@ -796,177 +837,226 @@
      7. ROBUST CAPTURE-PHASE EVENT LISTENERS & ZERO-JUMP ACCORDIONS
      ========================================================================================= */
   function applyDropdownVisibility(parent, isOpen) {
-    const dropMenu = parent.querySelector('.nav-dropdown-menu, .dest-mega-menu, .uni-drop-menu');
+    const dropMenu = parent.querySelector(
+      ".nav-dropdown-menu, .dest-mega-menu, .uni-drop-menu",
+    );
     if (dropMenu) {
       if (isOpen) {
-        dropMenu.style.setProperty('display', 'flex', 'important');
-        dropMenu.style.setProperty('flex-direction', 'column', 'important');
-        dropMenu.style.setProperty('position', 'static', 'important');
-        dropMenu.style.setProperty('transform', 'none', 'important');
-        dropMenu.style.setProperty('-webkit-transform', 'none', 'important');
-        dropMenu.style.setProperty('top', 'auto', 'important');
-        dropMenu.style.setProperty('left', 'auto', 'important');
-        dropMenu.style.setProperty('right', 'auto', 'important');
-        dropMenu.style.setProperty('bottom', 'auto', 'important');
-        dropMenu.style.setProperty('width', '100%', 'important');
-        dropMenu.style.setProperty('min-width', '100%', 'important');
-        dropMenu.style.setProperty('max-width', '100%', 'important');
-        dropMenu.style.setProperty('max-height', 'none', 'important');
-        dropMenu.style.setProperty('height', 'auto', 'important');
-        dropMenu.style.setProperty('overflow', 'visible', 'important');
-        dropMenu.style.setProperty('opacity', '1', 'important');
-        dropMenu.style.setProperty('visibility', 'visible', 'important');
-        dropMenu.style.setProperty('pointer-events', 'auto', 'important');
-        dropMenu.style.setProperty('box-sizing', 'border-box', 'important');
+        dropMenu.style.setProperty("display", "flex", "important");
+        dropMenu.style.setProperty("flex-direction", "column", "important");
+        dropMenu.style.setProperty("position", "static", "important");
+        dropMenu.style.setProperty("transform", "none", "important");
+        dropMenu.style.setProperty("-webkit-transform", "none", "important");
+        dropMenu.style.setProperty("top", "auto", "important");
+        dropMenu.style.setProperty("left", "auto", "important");
+        dropMenu.style.setProperty("right", "auto", "important");
+        dropMenu.style.setProperty("bottom", "auto", "important");
+        dropMenu.style.setProperty("width", "100%", "important");
+        dropMenu.style.setProperty("min-width", "100%", "important");
+        dropMenu.style.setProperty("max-width", "100%", "important");
+        dropMenu.style.setProperty("max-height", "none", "important");
+        dropMenu.style.setProperty("height", "auto", "important");
+        dropMenu.style.setProperty("overflow", "visible", "important");
+        dropMenu.style.setProperty("opacity", "1", "important");
+        dropMenu.style.setProperty("visibility", "visible", "important");
+        dropMenu.style.setProperty("pointer-events", "auto", "important");
+        dropMenu.style.setProperty("box-sizing", "border-box", "important");
       } else {
-        dropMenu.style.setProperty('display', 'none', 'important');
-        dropMenu.style.setProperty('opacity', '0', 'important');
-        dropMenu.style.setProperty('visibility', 'hidden', 'important');
-        dropMenu.style.setProperty('pointer-events', 'none', 'important');
+        dropMenu.style.setProperty("display", "none", "important");
+        dropMenu.style.setProperty("opacity", "0", "important");
+        dropMenu.style.setProperty("visibility", "hidden", "important");
+        dropMenu.style.setProperty("pointer-events", "none", "important");
       }
     }
   }
 
   function bindEvents() {
     // Ensure Hamburger Button has 3 spans
-    document.querySelectorAll('.nav-toggle, #navToggle').forEach(btn => {
-      if (!btn.querySelector('span')) {
-        btn.innerHTML = '<span></span><span></span><span></span>';
+    document.querySelectorAll(".nav-toggle, #navToggle").forEach((btn) => {
+      if (!btn.querySelector("span")) {
+        btn.innerHTML = "<span></span><span></span><span></span>";
       }
     });
 
     // 7.1 Global Delegated Click Listener in Capture Phase
-    document.addEventListener('click', function (e) {
-      // 1. Toggle Hamburger Menu Button
-      const toggleBtn = e.target.closest('#navToggle, .nav-toggle');
-      if (toggleBtn) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        const mainNav = document.getElementById('mainNav') || document.querySelector('.main-nav');
-        if (mainNav) {
-          const isNowOpen = mainNav.classList.toggle('open');
-          toggleBtn.classList.toggle('active', isNowOpen);
-          toggleBtn.setAttribute('aria-expanded', isNowOpen ? 'true' : 'false');
-          if (isNowOpen) {
-            mainNav.scrollTop = 0; // Always start clean at the top so Home & About Us are visible
-          }
-        }
-        return;
-      }
-
-      // 2. Mobile Dropdown Accordion Toggle (Open AND Close in place with ZERO unexpected jumps)
-      const dropToggle = e.target.closest('.nav-dropdown-toggle, .dropdown-toggle');
-      if (dropToggle && window.innerWidth <= 1200) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-
-        const parent = dropToggle.closest('.nav-dropdown') || dropToggle.parentElement;
-        if (parent) {
-          const isAlreadyOpen = parent.classList.contains('open');
-
-          // Close all other dropdowns
-          document.querySelectorAll('.nav-dropdown.open').forEach(el => {
-            if (el !== parent) {
-              el.classList.remove('open');
-              applyDropdownVisibility(el, false);
+    document.addEventListener(
+      "click",
+      function (e) {
+        // 1. Toggle Hamburger Menu Button
+        const toggleBtn = e.target.closest("#navToggle, .nav-toggle");
+        if (toggleBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          const mainNav =
+            document.getElementById("mainNav") ||
+            document.querySelector(".main-nav");
+          if (mainNav) {
+            const isNowOpen = mainNav.classList.toggle("open");
+            toggleBtn.classList.toggle("active", isNowOpen);
+            toggleBtn.setAttribute(
+              "aria-expanded",
+              isNowOpen ? "true" : "false",
+            );
+            if (isNowOpen) {
+              mainNav.scrollTop = 0; // Always start clean at the top so Home & About Us are visible
             }
-          });
-
-          // Toggle this dropdown: If already open -> Close it! If closed -> Open it!
-          if (isAlreadyOpen) {
-            parent.classList.remove('open');
-            applyDropdownVisibility(parent, false);
-          } else {
-            parent.classList.add('open');
-            applyDropdownVisibility(parent, true);
           }
+          return;
         }
-        return;
-      }
 
-      // 3. Navigation leaf links close the menu drawer
-      const navLink = e.target.closest('.main-nav a:not(.nav-dropdown-toggle)');
-      if (navLink && window.innerWidth <= 1200) {
-        const mainNav = document.getElementById('mainNav') || document.querySelector('.main-nav');
-        const navToggle = document.getElementById('navToggle') || document.querySelector('.nav-toggle');
-        if (mainNav) mainNav.classList.remove('open');
-        if (navToggle) {
-          navToggle.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
+        // 2. Mobile Dropdown Accordion Toggle (Open AND Close in place with ZERO unexpected jumps)
+        const dropToggle = e.target.closest(
+          ".nav-dropdown-toggle, .dropdown-toggle",
+        );
+        if (dropToggle && window.innerWidth <= 1200) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+
+          const parent =
+            dropToggle.closest(".nav-dropdown") || dropToggle.parentElement;
+          if (parent) {
+            const isAlreadyOpen = parent.classList.contains("open");
+
+            // Close all other dropdowns
+            document.querySelectorAll(".nav-dropdown.open").forEach((el) => {
+              if (el !== parent) {
+                el.classList.remove("open");
+                applyDropdownVisibility(el, false);
+              }
+            });
+
+            // Toggle this dropdown: If already open -> Close it! If closed -> Open it!
+            if (isAlreadyOpen) {
+              parent.classList.remove("open");
+              applyDropdownVisibility(parent, false);
+            } else {
+              parent.classList.add("open");
+              applyDropdownVisibility(parent, true);
+            }
+          }
+          return;
         }
-      }
 
-      // 4. Clicking outside mainNav closes mobile menu
-      const mainNav = document.getElementById('mainNav') || document.querySelector('.main-nav');
-      if (mainNav && mainNav.classList.contains('open')) {
-        const navToggle = document.getElementById('navToggle') || document.querySelector('.nav-toggle');
-        if (!mainNav.contains(e.target) && (!navToggle || !navToggle.contains(e.target))) {
-          mainNav.classList.remove('open');
+        // 3. Navigation leaf links close the menu drawer
+        const navLink = e.target.closest(
+          ".main-nav a:not(.nav-dropdown-toggle)",
+        );
+        if (navLink && window.innerWidth <= 1200) {
+          const mainNav =
+            document.getElementById("mainNav") ||
+            document.querySelector(".main-nav");
+          const navToggle =
+            document.getElementById("navToggle") ||
+            document.querySelector(".nav-toggle");
+          if (mainNav) mainNav.classList.remove("open");
           if (navToggle) {
-            navToggle.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.classList.remove("active");
+            navToggle.setAttribute("aria-expanded", "false");
           }
         }
-      }
 
-      // 5. Open Counselling Modal
-      const counselBtn = e.target.closest('a[href*="#contact"], a[href*="#consultation"], .open-counselling-modal, .mobile-cta-btn');
-      if (counselBtn && (counselBtn.textContent.indexOf('Counselling') !== -1 || counselBtn.classList.contains('open-counselling-modal') || counselBtn.classList.contains('mobile-cta-btn'))) {
-        e.preventDefault();
-        const modal = document.getElementById('counsellingModalOverlay');
-        if (modal) {
-          modal.style.opacity = '1';
-          modal.style.visibility = 'visible';
+        // 4. Clicking outside mainNav closes mobile menu
+        const mainNav =
+          document.getElementById("mainNav") ||
+          document.querySelector(".main-nav");
+        if (mainNav && mainNav.classList.contains("open")) {
+          const navToggle =
+            document.getElementById("navToggle") ||
+            document.querySelector(".nav-toggle");
+          if (
+            !mainNav.contains(e.target) &&
+            (!navToggle || !navToggle.contains(e.target))
+          ) {
+            mainNav.classList.remove("open");
+            if (navToggle) {
+              navToggle.classList.remove("active");
+              navToggle.setAttribute("aria-expanded", "false");
+            }
+          }
         }
-      }
 
-      // 6. Close Counselling Modal
-      if (e.target.id === 'modalCloseBtn' || e.target.id === 'counsellingModalOverlay') {
-        const modal = document.getElementById('counsellingModalOverlay');
-        if (modal) {
-          modal.style.opacity = '0';
-          modal.style.visibility = 'hidden';
+        // 5. Open Counselling Modal
+        const counselBtn = e.target.closest(
+          'a[href*="#contact"], a[href*="#consultation"], .open-counselling-modal, .mobile-cta-btn',
+        );
+        if (
+          counselBtn &&
+          (counselBtn.textContent.indexOf("Counselling") !== -1 ||
+            counselBtn.classList.contains("open-counselling-modal") ||
+            counselBtn.classList.contains("mobile-cta-btn"))
+        ) {
+          e.preventDefault();
+          const modal = document.getElementById("counsellingModalOverlay");
+          if (modal) {
+            modal.style.opacity = "1";
+            modal.style.visibility = "visible";
+          }
         }
-      }
-    }, true); // TRUE = CAPTURE PHASE
+
+        // 6. Close Counselling Modal
+        if (
+          e.target.id === "modalCloseBtn" ||
+          e.target.id === "counsellingModalOverlay"
+        ) {
+          const modal = document.getElementById("counsellingModalOverlay");
+          if (modal) {
+            modal.style.opacity = "0";
+            modal.style.visibility = "hidden";
+          }
+        }
+      },
+      true,
+    ); // TRUE = CAPTURE PHASE
 
     // 7.2 Escape Key Handler
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        const mainNav = document.getElementById('mainNav') || document.querySelector('.main-nav');
-        const navToggle = document.getElementById('navToggle') || document.querySelector('.nav-toggle');
-        if (mainNav && mainNav.classList.contains('open')) {
-          mainNav.classList.remove('open');
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        const mainNav =
+          document.getElementById("mainNav") ||
+          document.querySelector(".main-nav");
+        const navToggle =
+          document.getElementById("navToggle") ||
+          document.querySelector(".nav-toggle");
+        if (mainNav && mainNav.classList.contains("open")) {
+          mainNav.classList.remove("open");
           if (navToggle) {
-            navToggle.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.classList.remove("active");
+            navToggle.setAttribute("aria-expanded", "false");
           }
         }
-        const modal = document.getElementById('counsellingModalOverlay');
-        if (modal && modal.style.visibility === 'visible') {
-          modal.style.opacity = '0';
-          modal.style.visibility = 'hidden';
+        const modal = document.getElementById("counsellingModalOverlay");
+        if (modal && modal.style.visibility === "visible") {
+          modal.style.opacity = "0";
+          modal.style.visibility = "hidden";
         }
       }
     });
 
     // 7.3 Window Resize Handler
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 1200) {
-        const mainNav = document.getElementById('mainNav') || document.querySelector('.main-nav');
-        const navToggle = document.getElementById('navToggle') || document.querySelector('.nav-toggle');
-        if (mainNav) mainNav.classList.remove('open');
-        if (navToggle) {
-          navToggle.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
+    window.addEventListener(
+      "resize",
+      function () {
+        if (window.innerWidth > 1200) {
+          const mainNav =
+            document.getElementById("mainNav") ||
+            document.querySelector(".main-nav");
+          const navToggle =
+            document.getElementById("navToggle") ||
+            document.querySelector(".nav-toggle");
+          if (mainNav) mainNav.classList.remove("open");
+          if (navToggle) {
+            navToggle.classList.remove("active");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
         }
-      }
-    }, { passive: true });
+      },
+      { passive: true },
+    );
 
     // 7.4 Dynamic Year
-    const yearEl = document.getElementById('year');
+    const yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
@@ -982,8 +1072,8 @@
     bindEvents();
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }
@@ -993,7 +1083,6 @@
     injectFooter: injectFooter,
     injectModals: injectModalsAndFabs,
     injectStyles: injectStylesAndFonts,
-    init: init
+    init: init,
   };
-
 })();
