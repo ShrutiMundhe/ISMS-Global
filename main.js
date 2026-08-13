@@ -62,6 +62,50 @@
     }
 
     dynamicStyle.textContent = `
+      @media (min-width: 1201px) {
+        html body .main-nav > a,
+        html body .nav-dropdown-toggle {
+          position: relative !important;
+          border-bottom: none !important;
+        }
+
+        html body .main-nav > a::after,
+        html body .nav-dropdown-toggle::after {
+          content: '' !important;
+          position: absolute !important;
+          bottom: 4px !important;
+          left: 11px !important;
+          right: 11px !important;
+          height: 3px !important;
+          background-color: #0D47D8 !important;
+          transform: scaleX(0) !important;
+          transition: transform 0.2s ease !important;
+          transform-origin: center !important;
+          border-radius: 2px !important;
+        }
+
+        html body .main-nav > a:hover::after,
+        html body .main-nav > a.active::after,
+        html body .nav-dropdown:hover > .nav-dropdown-toggle::after,
+        html body .nav-dropdown-toggle.active::after {
+          transform: scaleX(1) !important;
+        }
+
+        html body .main-nav > a:hover,
+        html body .main-nav > a.active,
+        html body .nav-dropdown:hover > .nav-dropdown-toggle,
+        html body .nav-dropdown-toggle.active {
+          background: transparent !important;
+          border-bottom: none !important;
+        }
+
+        html body .main-nav .nav-dropdown-menu a,
+        html body .main-nav .dest-mega-menu a,
+        html body .main-nav .uni-drop-menu a {
+          border-bottom: none !important;
+        }
+      }
+
       @media (max-width: 1200px) {
         html body .site-header,
         html body #siteHeader {
