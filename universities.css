@@ -780,7 +780,8 @@ main {
 }
 
 .uni-cta-left-student {
-  height: 210px;
+  height: 210px !important;
+  width: auto !important;
   margin-top: -55px;
   margin-bottom: 0;
   object-fit: contain;

@@ -1070,7 +1070,8 @@ body {
 }
 
 .cta-left-student {
-  height: 200px;
+  height: 200px !important;
+  width: auto !important;
   margin-top: -30px;
   margin-bottom: -1px;
   object-fit: contain;
